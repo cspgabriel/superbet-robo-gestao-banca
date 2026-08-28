@@ -1,6 +1,8 @@
 id,ticket_id,sessao,data_hora,casa,partida,campeonato,minuto,mercado,selecao,odd,stake_brl,stake_tipo,retorno_potencial_brl,cashout_atual_brl,status
-1,SB-20260828-01,1,2026-08-28 18:05,Superbet,Alavés x Villarreal,LaLiga,80 (2T),Resultado Final (1X2),Alavés Vence,1.42,5.00,Dinheiro Real,7.10,7.10,GREEN
-2,SB-20260828-02,1,2026-08-28 18:05,Superbet,Alavés x Villarreal,LaLiga,80 (2T),2º Gol / Total de Gols,Under 1.5 FT,2.35,5.00,Dinheiro Real,11.75,11.75,GREEN
-4,SB-20260828-04,2,2026-08-28 18:31,Superbet,Comerciantes Unidos x FC Cajamarca,Peru,2T (0x2),Total de Gols,Menos de 3.5 FT,1.92,5.00,Dinheiro Real,9.60,4.60,EM ABERTO
-5,SB-20260828-05,2,2026-08-28 18:31,Superbet,Comerciantes Under 3.5 + Mushuc Vence,Peru + Equador,2T,Múltipla In-Play,Under 3.5 + Casa Vence,3.74,5.00,Dinheiro Real,18.72,4.76,EM ABERTO
-6,SB-20260828-06,2,2026-08-28 18:41,Superbet,Cherevko + Buse + Wolny,TT + Tênis,Fim,Tripla Rápida,Vencedores In-Play,1.84,3.85,Dinheiro Real,7.11,2.59,EM ABERTO
+1,SB-20260828-01,1,2026-08-28 18:05,Superbet,Alavés x Villarreal,LaLiga,80 (2T),Resultado Final,Alavés Vence,1.42,5.00,Dinheiro Real,7.10,7.10,GREEN
+2,SB-20260828-02,1,2026-08-28 18:05,Superbet,Alavés x Villarreal,LaLiga,80 (2T),Total de Gols,Under 1.5 FT,2.35,5.00,Dinheiro Real,11.75,11.75,GREEN
+4,SB-20260828-04,2,2026-08-28 18:31,Superbet,Comerciantes x Cajamarca,Peru,2T,Total de Gols,Under 3.5 FT,1.92,5.00,Dinheiro Real,0.00,0.00,RED
+5,SB-20260828-05,2,2026-08-28 18:31,Superbet,Comerciantes + Mushuc,Peru + Equador,2T,Múltipla In-Play,Under 3.5 + Casa,3.74,5.00,Dinheiro Real,0.00,0.00,RED
+6,SB-20260828-06,2,2026-08-28 18:41,Superbet,Cherevko + Buse + Wolny,TT + Tênis,Fim,Tripla Rápida,Vencedores In-Play,1.84,3.85,Dinheiro Real,0.00,0.00,RED
+7,SB-20260828-07,3,2026-08-28 18:52,Superbet,Mushuc Runa x Delfín,Equador,55 (2T / 0x0),Total de Gols,Menos de 1.5 FT,1.30,5.00,Dinheiro Real,6.50,4.67,EM ABERTO
+8,SB-20260828-08,3,2026-08-28 18:52,Superbet,Mushuc Under 1.5 + Comerciantes Under 5.5,Equador + Peru,55-61 (2T),Múltipla Proteção,Under 1.5 + Under 5.5,1.79,5.00,Dinheiro Real,8.97,4.39,EM ABERTO
