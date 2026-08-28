@@ -4,5 +4,6 @@ id,ticket_id,sessao,data_hora,casa,partida,campeonato,minuto,mercado,selecao,odd
 4,SB-20260828-04,2,2026-08-28 18:31,Superbet,Comerciantes x Cajamarca,Peru,2T,Total de Gols,Under 3.5 FT,1.92,5.00,Dinheiro Real,0.00,0.00,RED
 5,SB-20260828-05,2,2026-08-28 18:31,Superbet,Comerciantes + Mushuc,Peru + Equador,2T,Múltipla In-Play,Under 3.5 + Casa,3.74,5.00,Dinheiro Real,0.00,0.00,RED
 6,SB-20260828-06,2,2026-08-28 18:41,Superbet,Cherevko + Buse + Wolny,TT + Tênis,Fim,Tripla Rápida,Vencedores In-Play,1.84,3.85,Dinheiro Real,0.00,0.00,RED
-7,SB-20260828-07,3,2026-08-28 18:52,Superbet,Mushuc Runa x Delfín,Equador,55 (2T / 0x0),Total de Gols,Menos de 1.5 FT,1.30,5.00,Dinheiro Real,6.50,4.67,EM ABERTO
-8,SB-20260828-08,3,2026-08-28 18:52,Superbet,Mushuc Under 1.5 + Comerciantes Under 5.5,Equador + Peru,55-61 (2T),Múltipla Proteção,Under 1.5 + Under 5.5,1.79,5.00,Dinheiro Real,8.97,4.39,EM ABERTO
+7,SB-20260828-07,3,2026-08-28 18:52,Superbet,Mushuc Runa x Delfín,Equador,76 (2T / 1x0),Total de Gols,Menos de 1.5 FT,1.30,5.00,Dinheiro Real,6.50,3.31,EM ABERTO
+8,SB-20260828-08,3,2026-08-28 18:52,Superbet,Mushuc Under 1.5 + Comerciantes Under 5.5,Equador + Peru,76-82 (2T),Múltipla Proteção,Under 1.5 + Under 5.5,1.79,5.00,Dinheiro Real,8.97,4.76,EM ABERTO
+9,SB-20260828-09,3,2026-08-28 19:14,Superbet,SuperMúltipla 4 Seleções,Eq + Peru + Tênis + Arg,Reta Final,Super Múltipla 4x,Eq 1x0 + Peru 2x2 + Buse + Arg Under 2.5,4.13,10.00,Dinheiro Real,42.92,8.09,EM ABERTO
