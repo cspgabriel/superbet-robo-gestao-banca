@@ -3,24 +3,24 @@
   "versao": "3.1.0-TRANSPARENCY-AUDIT",
   "nivel_sobrevivencia": "NORMAL (STAKE DINÂMICO & RESERVA BLINDADA)",
   "sessao_ativa": 3,
-  "ultima_atualizacao": "2026-08-28T22:31:51.234Z",
+  "ultima_atualizacao": "2026-08-28T22:38:25.538Z",
   "target_goal": 100,
   "conexao_cdp": "Ativa (Porta 9222 / 3 Abas Paralelas)",
   "banca": {
     "banca_inicial": 50,
-    "saldo_livre_em_conta": 10,
-    "saldo_em_jogo": 30,
-    "retorno_potencial_ativo": 56.04,
+    "saldo_livre_em_conta": 25.47,
+    "saldo_em_jogo": 20,
+    "retorno_potencial_ativo": 40.57,
     "banca_alvo_projetada": 66.04,
     "moeda": "BRL"
   },
   "metricas_acumuladas": {
     "total_entradas_historico": 11,
-    "entradas_ativas_inplay": 3,
-    "greens_liquidados": 3,
+    "entradas_ativas_inplay": 1,
+    "greens_liquidados": 5,
     "reds_liquidados": 4,
-    "taxa_acerto_historica_pct": 50,
-    "pnl_liquido_fechado_brl": -13.6
+    "taxa_acerto_historica_pct": 55.6,
+    "pnl_liquido_fechado_brl": 1.87
   },
   "historico_completo_ordens": [
     {
@@ -89,8 +89,8 @@
       "stake": 5,
       "retorno_potencial": 8.97,
       "cashout_atual": 4.98,
-      "resultado": "EM ABERTO",
-      "pnl": 0
+      "resultado": "GREEN",
+      "pnl": 3.97
     },
     {
       "id": 7,
@@ -106,8 +106,8 @@
       "stake": 5,
       "retorno_potencial": 6.5,
       "cashout_atual": 3.31,
-      "resultado": "EM ABERTO",
-      "pnl": 0
+      "resultado": "GREEN",
+      "pnl": 1.5
     },
     {
       "id": 6,
@@ -212,5 +212,5 @@
       "pnl": 2.1
     }
   ],
-  "heartbeat_pulse": 112
+  "heartbeat_pulse": 136
 }
