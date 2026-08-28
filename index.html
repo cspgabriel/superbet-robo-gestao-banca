@@ -67,8 +67,8 @@
     .glow-green {
       box-shadow: 0 0 20px rgba(0, 230, 118, 0.25);
     }
-    .glow-red {
-      box-shadow: 0 0 20px rgba(239, 68, 68, 0.25);
+    .glow-blue {
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.25);
     }
   </style>
 </head>
@@ -87,21 +87,21 @@
             <h1 class="text-xl font-black text-white tracking-tight">Automaton Quant Trader &middot; Superbet</h1>
             <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-brand-500/20 text-brand-500 border border-brand-500/40 flex items-center gap-1.5 font-mono">
               <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span>
-              SURVIVAL TIER: NORMAL
+              SURVIVAL TIER: NORMAL (PROTEGIDO)
             </span>
           </div>
-          <p class="text-xs text-gray-400 font-medium">Instinto de Sobrevivência &middot; Dixon-Coles Poisson &middot; Meta Alvo: R$ 100,00</p>
+          <p class="text-xs text-gray-400 font-medium">Instinto de Sobrevivência &middot; Capital Base Blindado &middot; Meta Alvo: R$ 100,00</p>
         </div>
       </div>
 
       <div class="flex flex-wrap items-center gap-2">
-        <div class="px-3 py-1.5 rounded-xl bg-dark-700/80 border border-white/5 text-xs text-gray-300 flex items-center gap-2 font-mono">
-          <i data-lucide="wallet" class="w-3.5 h-3.5 text-brand-400"></i>
-          <span>Saldo Livre: R$ 31,04 | Em Jogo: R$ 35,00</span>
+        <div class="px-3 py-1.5 rounded-xl bg-brand-500/10 border border-brand-500/30 text-xs font-bold text-brand-400 flex items-center gap-2 font-mono glow-green">
+          <i data-lucide="wallet" class="w-3.5 h-3.5"></i>
+          <span>Saldo Real em Conta: R$ 55,96</span>
         </div>
-        <div class="px-3 py-1.5 rounded-xl bg-brand-500/10 border border-brand-500/30 text-xs font-bold text-brand-400 flex items-center gap-1.5 font-mono">
-          <i data-lucide="target" class="w-3.5 h-3.5"></i>
-          Alvo: R$ 111,18 / R$ 100,00
+        <div class="px-3 py-1.5 rounded-xl bg-dark-700/80 border border-white/5 text-xs text-gray-300 flex items-center gap-1.5 font-mono">
+          <i data-lucide="target" class="w-3.5 h-3.5 text-purple-400"></i>
+          Meta: R$ 100,00 (56.0% Atingido)
         </div>
         <button onclick="window.location.reload()" class="px-3.5 py-1.5 rounded-xl bg-brand-500 text-dark-900 font-bold text-xs flex items-center gap-1.5 hover:bg-brand-600 transition shadow-lg shadow-brand-500/20">
           <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
@@ -115,24 +115,21 @@
       <div class="flex justify-between items-center text-xs font-mono">
         <span class="font-bold text-gray-300 flex items-center gap-2">
           <i data-lucide="trending-up" class="w-4 h-4 text-brand-400"></i>
-          PROGRESSO DA META: R$ 50,00 (START) &rarr; R$ 100,00 (META) &rarr; R$ 111,18 (PROJETADO)
+          PROGRESSO DA META: R$ 50,00 (START) &rarr; R$ 55,96 (SALDO ATUAL) &rarr; R$ 100,00 (ALVO)
         </span>
-        <span class="font-extrabold text-brand-400">66.0% REALIZADO &bull; 111.2% COM TICKET #SB-12</span>
+        <span class="font-extrabold text-brand-400">55.96% CONSOLIDADOS EM CAIXA (+11.9% LUCRO LÍQUIDO)</span>
       </div>
       <div class="w-full bg-dark-900 rounded-full h-4 p-0.5 border border-white/10 overflow-hidden relative">
-        <div class="bg-gradient-to-r from-blue-500 via-emerald-400 to-brand-500 h-full rounded-full transition-all duration-1000 shadow-lg shadow-brand-500/50" style="width: 66.04%;"></div>
-        <!-- Target Marker 100% -->
-        <div class="absolute right-[11.2%] top-0 bottom-0 w-0.5 bg-purple-400 z-10"></div>
+        <div class="bg-gradient-to-r from-blue-500 via-emerald-400 to-brand-500 h-full rounded-full transition-all duration-1000 shadow-lg shadow-brand-500/50" style="width: 55.96%;"></div>
       </div>
       <div class="flex justify-between text-[11px] font-mono text-gray-400">
         <span>Banca Inicial: R$ 50,00</span>
-        <span class="text-emerald-400 font-bold">Saldo Realizado: R$ 66,04</span>
-        <span class="text-purple-400 font-bold">Meta R$ 100,00</span>
-        <span class="text-brand-400 font-bold">Alvo #SB-12: R$ 111,18</span>
+        <span class="text-emerald-400 font-bold">Saldo Atual: R$ 55,96</span>
+        <span class="text-purple-400 font-bold">Meta Final: R$ 100,00</span>
       </div>
     </div>
 
-    <!-- PERFORMANCE CARDS: BANCA INICIAL, GREENS, REDS, ENTRADAS TOTAIS -->
+    <!-- PERFORMANCE CARDS: BANCA INICIAL, GREENS, REDS, CASHOUTS, TOTAL -->
     <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
       <!-- CARD BANCA INICIAL -->
       <div class="glass-card rounded-2xl p-5 border-l-4 border-l-blue-500">
@@ -144,7 +141,7 @@
           <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-400 font-mono text-[10px] font-bold">START</span>
         </div>
         <div class="text-3xl font-black text-white font-mono mt-2">R$ 50,00</div>
-        <div class="text-xs text-blue-300 font-mono mt-1 font-semibold">Capital Base Alocado</div>
+        <div class="text-xs text-blue-300 font-mono mt-1 font-semibold">Capital Base 100% Salvo</div>
       </div>
 
       <!-- CARD GREENS -->
@@ -161,7 +158,7 @@
       </div>
 
       <!-- CARD REDS -->
-      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-red-500 glow-red">
+      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-red-500">
         <div class="flex items-center justify-between">
           <div class="text-xs font-bold font-mono uppercase tracking-wider text-red-400 flex items-center gap-1.5">
             <i data-lucide="x-circle" class="w-4 h-4 text-red-500"></i>
@@ -173,30 +170,30 @@
         <div class="text-xs text-red-300 font-mono mt-1 font-semibold">-R$ 23,85 Auditadas</div>
       </div>
 
-      <!-- CARD ENTRADAS ATIVAS -->
+      <!-- CARD CASHOUTS TÁTICOS -->
       <div class="glass-card rounded-2xl p-5 border-l-4 border-l-purple-500">
         <div class="flex items-center justify-between">
           <div class="text-xs font-bold font-mono uppercase tracking-wider text-purple-400 flex items-center gap-1.5">
-            <i data-lucide="activity" class="w-4 h-4 text-purple-400"></i>
-            Em Aberto (In-Play)
+            <i data-lucide="shield" class="w-4 h-4 text-purple-400"></i>
+            Cashouts Táticos
           </div>
-          <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-400 font-mono text-[10px] font-bold">1 TICKET</span>
+          <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-400 font-mono text-[10px] font-bold">2 EXEC</span>
         </div>
-        <div class="text-3xl font-black text-purple-400 font-mono mt-2">R$ 35,00</div>
-        <div class="text-xs text-purple-300 font-mono mt-1 font-semibold">Alvo R$ 80,14 (#SB-12)</div>
+        <div class="text-3xl font-black text-purple-400 font-mono mt-2">R$ 39,92</div>
+        <div class="text-xs text-purple-300 font-mono mt-1 font-semibold">Resgates #SB-10 e #SB-12</div>
       </div>
 
-      <!-- CARD TOTAL OPERAÇÕES -->
-      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-cyan-500">
+      <!-- CARD SALDO TOTAL -->
+      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-brand-400 glow-green">
         <div class="flex items-center justify-between">
-          <div class="text-xs font-bold font-mono uppercase tracking-wider text-cyan-400 flex items-center gap-1.5">
-            <i data-lucide="layers" class="w-4 h-4 text-cyan-400"></i>
-            Total Ordens
+          <div class="text-xs font-bold font-mono uppercase tracking-wider text-brand-400 flex items-center gap-1.5">
+            <i data-lucide="wallet" class="w-4 h-4 text-brand-400"></i>
+            Saldo em Conta
           </div>
-          <span class="px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-400 font-mono text-[10px] font-bold">100% AUDIT</span>
+          <span class="px-2 py-0.5 rounded bg-brand-500/20 text-brand-400 font-mono text-[10px] font-bold">+11.9% PnL</span>
         </div>
-        <div class="text-3xl font-black text-white font-mono mt-2">12 ORDENS</div>
-        <div class="text-xs text-cyan-300 font-mono mt-1 font-semibold">10 Fechadas &bull; 1 Ativa</div>
+        <div class="text-3xl font-black text-brand-400 font-mono mt-2">R$ 55,96</div>
+        <div class="text-xs text-brand-300 font-mono mt-1 font-semibold">Livre para Operar</div>
       </div>
     </div>
 
@@ -208,12 +205,12 @@
           <div>
             <h3 class="text-lg font-bold text-white flex items-center gap-2">
               <i data-lucide="line-chart" class="w-5 h-5 text-brand-400"></i>
-              Curva de Crescimento &amp; Evolução da Banca (R$ 50,00 &rarr; R$ 111,18)
+              Curva de Crescimento &amp; Evolução da Banca (R$ 50,00 &rarr; R$ 55,96)
             </h3>
-            <p class="text-xs text-gray-400">Histórico de PnL por bilhete liquidado e projeção do Ticket #SB-12</p>
+            <p class="text-xs text-gray-400">Histórico de PnL por bilhete liquidado com cashouts táticos</p>
           </div>
           <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-brand-500/10 text-brand-400 border border-brand-500/30">
-            +65.1% PnL REALIZADO
+            +11.9% PnL LÍQUIDO REALIZADO
           </span>
         </div>
 
@@ -246,64 +243,9 @@
             <div class="text-[10px] text-gray-400">40.0%</div>
           </div>
           <div class="bg-dark-900/60 p-2 rounded-xl border border-white/5">
-            <div class="text-purple-400 font-bold">1 ATIVO</div>
-            <div class="text-[10px] text-gray-400">Em Jogo</div>
+            <div class="text-purple-400 font-bold">2 CASHOUT</div>
+            <div class="text-[10px] text-gray-400">Proteção</div>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- LIVE IN-PLAY ACTIVE POSITION CARD: TICKET #SB-12 -->
-    <div class="glass-card rounded-2xl p-6 border-l-4 border-l-purple-500 space-y-4">
-      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-        <div>
-          <div class="flex items-center gap-2 mb-1">
-            <span class="w-2.5 h-2.5 rounded-full bg-purple-400 animate-ping"></span>
-            <span class="text-xs font-extrabold uppercase tracking-wider text-purple-400">Posição Ativa &bull; Ticket #SB-12</span>
-            <span class="text-xs font-mono px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 font-bold">SÉRIE B + CHILE</span>
-          </div>
-          <h2 class="text-xl font-black text-white">Tripla de Margem Ampla (Under Gols FT)</h2>
-        </div>
-        <div class="text-right font-mono">
-          <div class="text-[10px] font-bold text-gray-400 uppercase">Odd Combinada</div>
-          <div class="text-2xl font-black text-purple-400">@ 2.28</div>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 font-mono text-xs">
-        <div class="bg-dark-900/60 p-3 rounded-xl border border-white/5">
-          <div class="font-bold text-white font-sans text-sm">🇧🇷 Novorizontino × Sport Recife</div>
-          <div class="text-purple-400 font-semibold mt-1">Menos de 3.5 FT @ 1.29</div>
-          <div class="text-gray-400 text-[11px] mt-0.5">0x0 (12' 1ºT no Jorjão) &bull; Margem: 3 gols</div>
-        </div>
-        <div class="bg-dark-900/60 p-3 rounded-xl border border-white/5">
-          <div class="font-bold text-white font-sans text-sm">🇨🇱 Cobresal × Palestino</div>
-          <div class="text-purple-400 font-semibold mt-1">Menos de 3.5 FT @ 1.25</div>
-          <div class="text-gray-400 text-[11px] mt-0.5">1x0 (54' 2ºT no Chile) &bull; Margem: +2 gols</div>
-        </div>
-        <div class="bg-dark-900/60 p-3 rounded-xl border border-white/5">
-          <div class="font-bold text-white font-sans text-sm">🇧🇷 Goiás × São Bernardo</div>
-          <div class="text-purple-400 font-semibold mt-1">Menos de 2.5 FT @ 1.42</div>
-          <div class="text-gray-400 text-[11px] mt-0.5">1x0 (49' 2ºT na Serrinha) &bull; Margem: +1 gol</div>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono pt-3 border-t border-white/5">
-        <div class="bg-dark-900/60 p-2.5 rounded-xl border border-white/5">
-          <div class="text-gray-400 text-[10px]">Stake Alocada</div>
-          <div class="text-sm font-bold text-white mt-0.5">R$ 35,00</div>
-        </div>
-        <div class="bg-dark-900/60 p-2.5 rounded-xl border border-white/5">
-          <div class="text-gray-400 text-[10px]">Retorno Alvo</div>
-          <div class="text-sm font-bold text-brand-400 mt-0.5">R$ 80,14</div>
-        </div>
-        <div class="bg-dark-900/60 p-2.5 rounded-xl border border-white/5">
-          <div class="text-gray-400 text-[10px]">Cashout Atual</div>
-          <div class="text-sm font-bold text-blue-400 mt-0.5">R$ 31,84</div>
-        </div>
-        <div class="bg-dark-900/60 p-2.5 rounded-xl border border-white/5">
-          <div class="text-gray-400 text-[10px]">Banca Projetada</div>
-          <div class="text-sm font-bold text-emerald-400 mt-0.5">R$ 111,18 🎯</div>
         </div>
       </div>
     </div>
@@ -345,7 +287,7 @@
             </tr>
           </thead>
           <tbody class="divide-y divide-white/5 font-mono">
-            <!-- TICKET 12 -->
+            <!-- TICKET 12 (CASHOUT) -->
             <tr class="hover:bg-white/[0.02] transition bg-purple-500/[0.05]">
               <td class="py-4 px-4 font-bold text-purple-400">#SB-12</td>
               <td class="py-4 px-4"><span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-400 text-xs">Sessão 4</span></td>
@@ -355,15 +297,15 @@
               </td>
               <td class="py-4 px-4">
                 <div class="font-sans font-semibold text-purple-400">Tripla Under Gols FT</div>
-                <div class="text-xs text-gray-300">Novo U3.5 (1.29) + Cobresal U3.5 (1.25) + Goiás U2.5 (1.42)</div>
+                <div class="text-xs text-gray-300">Cashout aos 64m após empate 1x1 no Goiás</div>
               </td>
               <td class="py-4 px-4 text-purple-400 font-extrabold text-base">@ 2.28</td>
               <td class="py-4 px-4 font-bold text-white">R$ 35,00</td>
               <td class="py-4 px-4 font-bold text-brand-400">R$ 80,14</td>
               <td class="py-4 px-4">
                 <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-purple-500/20 text-purple-400 border border-purple-500/40 flex items-center gap-1.5 w-max">
-                  <span class="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"></span>
-                  AO VIVO (Cashout R$ 31,84)
+                  <i data-lucide="shield" class="w-3.5 h-3.5"></i>
+                  CASHOUT (R$ 24,92)
                 </span>
               </td>
             </tr>
@@ -387,6 +329,29 @@
                 <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1.5 w-max">
                   <i data-lucide="check-circle" class="w-3.5 h-3.5"></i>
                   GREEN (+R$ 20,57)
+                </span>
+              </td>
+            </tr>
+
+            <!-- TICKET 10 (CASHOUT) -->
+            <tr class="hover:bg-white/[0.02] transition bg-purple-500/[0.03]">
+              <td class="py-4 px-4 font-bold text-purple-400">#SB-10</td>
+              <td class="py-4 px-4"><span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-400 text-xs">Sessão 3</span></td>
+              <td class="py-4 px-4">
+                <div class="font-sans font-bold text-white">SuperMúltipla 6 Seleções</div>
+                <div class="text-xs text-gray-400">Multi-Esporte &middot; In-Play</div>
+              </td>
+              <td class="py-4 px-4">
+                <div class="font-sans font-semibold text-purple-400">Super Múltipla Alavancada</div>
+                <div class="text-xs text-gray-300">Cashout tático preventivo</div>
+              </td>
+              <td class="py-4 px-4 text-purple-400 font-extrabold text-base">@ 12.50</td>
+              <td class="py-4 px-4 font-bold text-white">R$ 15,00</td>
+              <td class="py-4 px-4 font-bold text-gray-400">R$ 187,50</td>
+              <td class="py-4 px-4">
+                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-purple-500/20 text-purple-400 border border-purple-500/40 flex items-center gap-1.5 w-max">
+                  <i data-lucide="shield" class="w-3.5 h-3.5"></i>
+                  CASHOUT (R$ 15,00)
                 </span>
               </td>
             </tr>
@@ -747,7 +712,7 @@
 
     <!-- FOOTER -->
     <footer class="text-center text-xs text-gray-500 font-mono py-4">
-      Automaton Quant Trader &middot; Sistema Autônomo Conway-Research &middot; Última Atualização: 28/08/2026, 20:41:44
+      Automaton Quant Trader &middot; Sistema Autônomo Conway-Research &middot; Última Atualização: 28/08/2026, 20:57:07
     </footer>
 
   </div>
@@ -767,11 +732,11 @@
     new Chart(ctxBankroll, {
       type: 'line',
       data: {
-        labels: ['Start (R$ 50)', '#SB-01', '#SB-02', '#SB-03', '#SB-04', '#SB-05', '#SB-06', '#SB-07', '#SB-08', '#SB-09', '#SB-10', '#SB-11', '#SB-12 (Alvo)'],
+        labels: ['Start (R$ 50)', '#SB-01', '#SB-02', '#SB-03', '#SB-04', '#SB-05', '#SB-06', '#SB-07', '#SB-08', '#SB-09', '#SB-10', '#SB-11', '#SB-12 (Cashout)'],
         datasets: [
           {
             label: 'Evolução Realizada da Banca (R$)',
-            data: [50.00, 52.10, 58.85, 60.25, 55.25, 50.25, 46.40, 47.90, 51.87, 41.87, 45.47, 66.04, 111.18],
+            data: [50.00, 52.10, 58.85, 60.25, 55.25, 50.25, 46.40, 47.90, 51.87, 41.87, 45.47, 66.04, 55.96],
             borderColor: '#00e676',
             borderWidth: 3,
             backgroundColor: gradient,
@@ -780,7 +745,7 @@
             pointBackgroundColor: '#00e676',
             pointBorderColor: '#04060a',
             pointBorderWidth: 2,
-            pointRadius: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6, 8],
+            pointRadius: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6],
             pointHoverRadius: 8
           },
           {
@@ -833,7 +798,7 @@
               callback: function(value) { return 'R$ ' + value; }
             },
             min: 30,
-            max: 120
+            max: 110
           }
         }
       }
@@ -844,9 +809,9 @@
     new Chart(ctxDist, {
       type: 'doughnut',
       data: {
-        labels: ['GREENS', 'REDS', 'EM ABERTO'],
+        labels: ['GREENS', 'REDS', 'CASHOUTS'],
         datasets: [{
-          data: [6, 4, 1],
+          data: [6, 4, 2],
           backgroundColor: ['#00e676', '#ef4444', '#a855f7'],
           borderColor: '#0d1322',
           borderWidth: 3
