@@ -3,7 +3,7 @@
   "versao": "3.1.0-TRANSPARENCY-AUDIT",
   "nivel_sobrevivencia": "NORMAL (STAKE DINÂMICO & RESERVA BLINDADA)",
   "sessao_ativa": 3,
-  "ultima_atualizacao": "2026-08-28T23:27:14.060Z",
+  "ultima_atualizacao": "2026-08-28T23:37:31.474Z",
   "target_goal": 100,
   "conexao_cdp": "Ativa (Porta 9222 / 3 Abas Paralelas)",
   "banca": {
@@ -229,5 +229,5 @@
       "pnl": 2.1
     }
   ],
-  "heartbeat_pulse": 332
+  "heartbeat_pulse": 376
 }

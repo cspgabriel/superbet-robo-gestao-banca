@@ -1,524 +1,443 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Automaton Quant Trader — Superbet & Dashboard de Gestão de Banca</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts & Lucide Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <!-- KaTeX for math rendering -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
-
-  <script>
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ["Inter", "sans-serif"],
-            mono: ["JetBrains Mono", "monospace"],
-          },
-          colors: {
-            brand: {
-              50: "#e6fbf2",
-              400: "#34d399",
-              500: "#00e676",
-              600: "#00c853",
-            },
-            dark: {
-              950: "#04060a",
-              900: "#070a13",
-              800: "#0d1322",
-              700: "#161f36",
-              600: "#222f4f"
-            }
-          }
-        }
-      }
-    };
-  </script>
-
+  <title>Superbet Quant Bot — Dashboard de Gestão de Banca</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-dark: #090d16;
+      --bg-card: #0f172a;
+      --bg-card-hover: #1e293b;
+      --border: #1e293b;
+      --border-accent: #334155;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --green: #10b981;
+      --green-glow: rgba(16, 185, 129, 0.2);
+      --red: #ef4444;
+      --red-glow: rgba(239, 68, 68, 0.2);
+      --accent: #3b82f6;
+      --accent-purple: #8b5cf6;
+      --yellow: #f59e0b;
+      --font-mono: 'JetBrains Mono', monospace;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      background-color: #04060a;
-      background-image: 
-        radial-gradient(at 0% 0%, rgba(0, 230, 118, 0.08) 0px, transparent 50%),
-        radial-gradient(at 100% 100%, rgba(239, 68, 68, 0.05) 0px, transparent 50%),
-        radial-gradient(at 100% 0%, rgba(59, 130, 246, 0.08) 0px, transparent 50%);
-      color: #f3f4f6;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      padding: 1.5rem;
+      line-height: 1.5;
     }
-    .glass-card {
-      background: rgba(13, 19, 34, 0.85);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+
+    .container { max-width: 1300px; margin: 0 auto; }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
+      gap: 1rem;
     }
-    .glass-card-hover:hover {
-      border-color: rgba(0, 230, 118, 0.3);
-      box-shadow: 0 10px 30px -10px rgba(0, 230, 118, 0.15);
-      transition: all 0.25s ease;
+
+    .brand { display: flex; align-items: center; gap: 0.75rem; }
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, #ef4444, #f59e0b);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.25rem;
+      box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
     }
-    .glow-green {
-      box-shadow: 0 0 20px rgba(0, 230, 118, 0.25);
+
+    .brand-text h1 { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.5px; }
+    .brand-text p { font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono); }
+
+    .system-status {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-family: var(--font-mono);
+      color: var(--green);
+    }
+    .pulse {
+      width: 8px;
+      height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--green);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(1.3); } 100% { opacity: 1; transform: scale(1); } }
+
+    /* KPI GRID */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .kpi-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.25rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .kpi-card:hover { transform: translateY(-2px); border-color: var(--border-accent); }
+    .kpi-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; margin-bottom: 0.5rem; }
+    .kpi-val { font-size: 1.75rem; font-weight: 800; font-family: var(--font-mono); }
+    .kpi-sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem; }
+    .kpi-val.green { color: var(--green); }
+    .kpi-val.blue { color: var(--accent); }
+    .kpi-val.purple { color: var(--accent-purple); }
+
+    /* ACTIVE BET ALERT */
+    .active-card {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .active-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+    .active-tag {
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 0.25rem 0.75rem;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .active-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .leg-item {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid var(--border);
+      padding: 0.85rem 1rem;
+      border-radius: 10px;
+    }
+    .leg-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.2rem; }
+    .leg-market { font-size: 0.8rem; color: var(--accent); font-family: var(--font-mono); }
+
+    /* TABLE */
+    .section-title { font-size: 1.15rem; font-weight: 800; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+    .table-container {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow-x: auto;
+      margin-bottom: 2rem;
+    }
+    table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.85rem; }
+    th {
+      background: rgba(30, 41, 59, 0.5);
+      padding: 1rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      letter-spacing: 0.5px;
+    }
+    td { padding: 1rem; border-bottom: 1px solid var(--border); }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: var(--bg-card-hover); }
+
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      font-weight: 800;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+    }
+    .badge-green { background: rgba(16, 185, 129, 0.15); color: var(--green); border: 1px solid rgba(16, 185, 129, 0.3); }
+    .badge-red { background: rgba(239, 68, 68, 0.15); color: var(--red); border: 1px solid rgba(239, 68, 68, 0.3); }
+    .badge-blue { background: rgba(59, 130, 246, 0.15); color: var(--accent); border: 1px solid rgba(59, 130, 246, 0.3); }
+
+    /* CONSTITUTION SECTION */
+    .constitution-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .const-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.25rem;
+    }
+    .const-header { font-size: 0.85rem; font-weight: 800; color: var(--accent-purple); font-family: var(--font-mono); margin-bottom: 0.5rem; }
+    .const-text { font-size: 0.85rem; color: var(--text-muted); }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      font-family: var(--font-mono);
+      border-top: 1px solid var(--border);
     }
   </style>
 </head>
-<body class="min-h-screen p-4 sm:p-6 lg:p-8 space-y-8">
+<body>
 
-  <div class="max-w-7xl mx-auto space-y-8">
-
-    <!-- TOP HEADER -->
-    <header class="glass-card rounded-2xl p-5 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-      <div class="flex items-center gap-3">
-        <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-500 glow-green">
-          <i data-lucide="bot" class="w-7 h-7"></i>
-        </div>
-        <div>
-          <div class="flex items-center gap-2">
-            <h1 class="text-xl font-black text-white tracking-tight">Automaton Quant Trader &middot; Superbet</h1>
-            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-brand-500/20 text-brand-500 border border-brand-500/40 flex items-center gap-1.5 font-mono">
-              <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span>
-              SURVIVAL TIER: NORMAL
-            </span>
-          </div>
-          <p class="text-xs text-gray-400 font-medium">Auditoria 100% Transparente &middot; Livro de Ordens Completo (Greens, Reds e In-Play)</p>
-        </div>
-      </div>
-
-      <div class="flex flex-wrap items-center gap-2">
-        <div class="px-3 py-1.5 rounded-xl bg-dark-700/80 border border-white/5 text-xs text-gray-300 flex items-center gap-2 font-mono">
-          <i data-lucide="wallet" class="w-3.5 h-3.5 text-brand-400"></i>
-          <span>Saldo Livre: R$ 15,00 | Em Jogo: R$ 35,00</span>
-        </div>
-        <div class="px-3 py-1.5 rounded-xl bg-purple-500/10 border border-purple-500/30 text-xs font-bold text-purple-400 flex items-center gap-1.5 font-mono">
-          <i data-lucide="target" class="w-3.5 h-3.5"></i>
-          Alvo Potencial: R$ 469,30
-        </div>
-        <button onclick="window.location.reload()" class="px-3.5 py-1.5 rounded-xl bg-brand-500 text-dark-900 font-bold text-xs flex items-center gap-1.5 hover:bg-brand-600 transition shadow-lg shadow-brand-500/20">
-          <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
-          Atualizar
-        </button>
-      </div>
-    </header>
-
-    <!-- KPIS MASTER -->
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-      <div class="glass-card glass-card-hover rounded-2xl p-4">
-        <div class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Saldo Blindado</div>
-        <div class="text-xl font-extrabold text-white font-mono mt-1">R$ 15,00</div>
-        <div class="text-[10px] text-brand-400 mt-1">Reserva intacta</div>
-      </div>
-      <div class="glass-card glass-card-hover rounded-2xl p-4">
-        <div class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Em Jogo Ativo</div>
-        <div class="text-xl font-extrabold text-amber-400 font-mono mt-1">R$ 35,00</div>
-        <div class="text-[10px] text-amber-300 mt-1">4 bilhetes in-play</div>
-      </div>
-      <div class="glass-card glass-card-hover rounded-2xl p-4">
-        <div class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Total Greens</div>
-        <div class="text-xl font-extrabold text-brand-500 font-mono mt-1">3 GREENS</div>
-        <div class="text-[10px] text-brand-400 mt-1">+R$ 10,25 líquido</div>
-      </div>
-      <div class="glass-card glass-card-hover rounded-2xl p-4">
-        <div class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Total Reds</div>
-        <div class="text-xl font-extrabold text-rose-500 font-mono mt-1">3 REDS</div>
-        <div class="text-[10px] text-rose-400 mt-1">-R$ 13,85 registrado</div>
-      </div>
-      <div class="glass-card glass-card-hover rounded-2xl p-4">
-        <div class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Retorno Potencial</div>
-        <div class="text-xl font-extrabold text-purple-400 font-mono mt-1">R$ 469,30</div>
-        <div class="text-[10px] text-purple-300 mt-1">4 posições ativas</div>
-      </div>
-      <div class="glass-card glass-card-hover rounded-2xl p-4">
-        <div class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Taxa Acerto Fechada</div>
-        <div class="text-xl font-extrabold text-emerald-400 font-mono mt-1">50.0%</div>
-        <div class="text-[10px] text-emerald-300 mt-1">3 Greens / 3 Reds</div>
+<div class="container">
+  <header>
+    <div class="brand">
+      <div class="brand-logo">SB</div>
+      <div class="brand-text">
+        <h1>SUPERBET QUANT BOT &middot; AUTOMATON</h1>
+        <p>AUTONOMOUS IN-PLAY EXECUTION &bull; CDP 9222 &bull; KELLY FRACTIONAL</p>
       </div>
     </div>
-
-    <!-- LIVRO DE ORDENS COMPLETO COM TODOS OS REDS E GREENS -->
-    <div class="glass-card rounded-2xl p-6">
-      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-        <div>
-          <h3 class="text-lg font-bold text-white flex items-center gap-2">
-            <i data-lucide="layers" class="w-5 h-5 text-brand-500"></i>
-            Livro de Ordens Completo & Auditoria Transparente (10 Entradas)
-          </h3>
-          <p class="text-xs text-gray-400">Transparência total sob a Lei III da Constituição: Todas as 10 operações auditadas</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <a href="data/bets.csv" download class="px-3 py-1.5 rounded-xl bg-dark-700 hover:bg-dark-600 border border-white/10 text-xs font-semibold text-gray-300 flex items-center gap-1.5 transition">
-            <i data-lucide="download" class="w-3.5 h-3.5"></i>
-            Exportar CSV
-          </a>
-          <a href="data/bets.json" download class="px-3 py-1.5 rounded-xl bg-dark-700 hover:bg-dark-600 border border-white/10 text-xs font-semibold text-gray-300 flex items-center gap-1.5 transition">
-            <i data-lucide="code" class="w-3.5 h-3.5"></i>
-            Exportar JSON
-          </a>
-        </div>
-      </div>
-
-      <div class="overflow-x-auto">
-        <table class="w-full text-left text-sm">
-          <thead>
-            <tr class="border-b border-white/10 text-xs font-bold text-gray-400 uppercase font-mono">
-              <th class="py-3 px-4">Ticket</th>
-              <th class="py-3 px-4">Sessão</th>
-              <th class="py-3 px-4">Partida / Liga</th>
-              <th class="py-3 px-4">Mercado / Seleção</th>
-              <th class="py-3 px-4">Odd</th>
-              <th class="py-3 px-4">Stake</th>
-              <th class="py-3 px-4">Retorno Máx.</th>
-              <th class="py-3 px-4">Resultado / PnL</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-white/5 font-mono">
-
-            <!-- TICKET 10 -->
-            <tr class="hover:bg-white/[0.02] transition bg-purple-500/[0.05]">
-              <td class="py-4 px-4 font-bold text-purple-400">#SB-10</td>
-              <td class="py-4 px-4"><span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-400 text-xs">Sessão 3</span></td>
-              <td class="py-4 px-4">
-                <div class="font-sans font-bold text-white">SuperMúltipla 6x Série B + In-Play</div>
-                <div class="text-xs text-gray-400">Série B + Multi-Esporte</div>
-              </td>
-              <td class="py-4 px-4">
-                <div class="font-sans font-semibold text-purple-400">Super Múltipla 6x (+12% Bônus)</div>
-                <div class="text-xs text-gray-300">Goiás + Novorizontino + Náutico + Mushuc + Buse + Arg</div>
-              </td>
-              <td class="py-4 px-4 text-purple-400 font-extrabold text-base">@ 24.56</td>
-              <td class="py-4 px-4 font-bold text-white">R$ 15,00</td>
-              <td class="py-4 px-4 font-bold text-brand-400">R$ 410,91</td>
-              <td class="py-4 px-4">
-                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-purple-500/20 text-purple-400 border border-purple-500/40 flex items-center gap-1.5 w-max">
-                  <span class="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"></span>
-                  AO VIVO (Cashout R$ 12,36)
-                </span>
-              </td>
-            </tr>
-
-            <!-- TICKET 9 -->
-            <tr class="hover:bg-white/[0.02] transition bg-purple-500/[0.03]">
-              <td class="py-4 px-4 font-bold text-purple-400">#SB-09</td>
-              <td class="py-4 px-4"><span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-400 text-xs">Sessão 3</span></td>
-              <td class="py-4 px-4">
-                <div class="font-sans font-bold text-white">SuperMúltipla 4 Seleções</div>
-                <div class="text-xs text-gray-400">Eq + Peru + Tênis + Arg</div>
-              </td>
-              <td class="py-4 px-4">
-                <div class="font-sans font-semibold text-purple-400">Super Múltipla 4x (+5% Bônus)</div>
-                <div class="text-xs text-gray-300">Mushuc 1x0 + Peru 2x2 + Buse + Arg Under 2.5</div>
-              </td>
-              <td class="py-4 px-4 text-purple-400 font-extrabold text-base">@ 4.13</td>
-              <td class="py-4 px-4 font-bold text-white">R$ 10,00</td>
-              <td class="py-4 px-4 font-bold text-brand-400">R$ 42,92</td>
-              <td class="py-4 px-4">
-                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-purple-500/20 text-purple-400 border border-purple-500/40 flex items-center gap-1.5 w-max">
-                  <span class="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"></span>
-                  AO VIVO (Cashout R$ 8,10)
-                </span>
-              </td>
-            </tr>
-
-            <!-- TICKET 8 -->
-            <tr class="hover:bg-white/[0.02] transition bg-brand-500/[0.03]">
-              <td class="py-4 px-4 font-bold text-brand-400">#SB-08</td>
-              <td class="py-4 px-4"><span class="px-2 py-0.5 rounded bg-brand-500/20 text-brand-400 text-xs">Sessão 3</span></td>
-              <td class="py-4 px-4">
-                <div class="font-sans font-bold text-white">Mushuc Under 1.5 + Comerciantes Under 5.5</div>
-                <div class="text-xs text-gray-400">Equador + Peru &middot; 2ºT</div>
-              </td>
-              <td class="py-4 px-4">
-                <div class="font-sans font-semibold text-brand-400">Múltipla de Proteção</div>
-                <div class="text-xs text-gray-300">Under 1.5 (1.30) + Under 5.5 (1.38)</div>
-              </td>
-              <td class="py-4 px-4 text-brand-500 font-extrabold text-base">@ 1.79</td>
-              <td class="py-4 px-4 font-bold text-white">R$ 5,00</td>
-              <td class="py-4 px-4 font-bold text-brand-400">R$ 8,97</td>
-              <td class="py-4 px-4">
-                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-400 border border-amber-500/40 flex items-center gap-1.5 w-max">
-                  <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
-                  AO VIVO (Cashout R$ 4,98)
-                </span>
-              </td>
-            </tr>
-
-            <!-- TICKET 7 -->
-            <tr class="hover:bg-white/[0.02] transition bg-blue-500/[0.03]">
-              <td class="py-4 px-4 font-bold text-blue-400">#SB-07</td>
-              <td class="py-4 px-4"><span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-400 text-xs">Sessão 3</span></td>
-              <td class="py-4 px-4">
-                <div class="font-sans font-bold text-white">Mushuc Runa × Delfín</div>
-                <div class="text-xs text-gray-400">Série A Equador &middot; 84' 2T (1x0)</div>
-              </td>
-              <td class="py-4 px-4">
-                <div class="font-sans font-semibold text-blue-400">Total de Gols (Over/Under)</div>
-                <div class="text-xs text-gray-300">Menos de 1.5 Gols FT</div>
-              </td>
-              <td class="py-4 px-4 text-brand-500 font-extrabold text-base">@ 1.30</td>
-              <td class="py-4 px-4 font-bold text-white">R$ 5,00</td>
-              <td class="py-4 px-4 font-bold text-brand-400">R$ 6,50</td>
-              <td class="py-4 px-4">
-                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-blue-500/20 text-blue-400 border border-blue-500/40 flex items-center gap-1.5 w-max">
-                  <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
-                  AO VIVO (Cashout R$ 3,31)
-                </span>
-              </td>
-            </tr>
-
-            <!-- REDS DA SESSÃO 2 (TOTALMENTE AUDITADOS E DESTACADOS) -->
-            <tr class="hover:bg-white/[0.02] transition bg-rose-500/[0.05]">
-              <td class="py-4 px-4 font-bold text-rose-400">#SB-06</td>
-              <td class="py-4 px-4"><span class="px-2 py-0.5 rounded bg-rose-500/20 text-rose-400 text-xs">Sessão 2</span></td>
-              <td class="py-4 px-4">
-                <div class="font-sans font-bold text-white">Cherevko + Buse + Wolny</div>
-                <div class="text-xs text-gray-400">Tênis de Mesa + ATP Winston-Salem</div>
-              </td>
-              <td class="py-4 px-4">
-                <div class="font-sans font-semibold text-rose-400">Tripla Rápida In-Play</div>
-                <div class="text-xs text-gray-300">Vencedores In-Play</div>
-              </td>
-              <td class="py-4 px-4 text-rose-400 font-extrabold text-base">@ 1.84</td>
-              <td class="py-4 px-4 font-bold text-white">R$ 3,85</td>
-              <td class="py-4 px-4 text-gray-500">R$ 0,00</td>
-              <td class="py-4 px-4">
-                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-rose-500/20 text-rose-400 border border-rose-500/40 flex items-center gap-1.5 w-max">
-                  <i data-lucide="x" class="w-3.5 h-3.5"></i>RED (-R$ 3,85)
-                </span>
-              </td>
-            </tr>
-
-            <tr class="hover:bg-white/[0.02] transition bg-rose-500/[0.05]">
-              <td class="py-4 px-4 font-bold text-rose-400">#SB-05</td>
-              <td class="py-4 px-4"><span class="px-2 py-0.5 rounded bg-rose-500/20 text-rose-400 text-xs">Sessão 2</span></td>
-              <td class="py-4 px-4">
-                <div class="font-sans font-bold text-white">Comerciantes + Mushuc Runa</div>
-                <div class="text-xs text-gray-400">Liga 1 Peru + Série A Equador</div>
-              </td>
-              <td class="py-4 px-4">
-                <div class="font-sans font-semibold text-rose-400">Múltipla In-Play</div>
-                <div class="text-xs text-gray-300">Under 3.5 + Mushuc Vence</div>
-              </td>
-              <td class="py-4 px-4 text-rose-400 font-extrabold text-base">@ 3.74</td>
-              <td class="py-4 px-4 font-bold text-white">R$ 5,00</td>
-              <td class="py-4 px-4 text-gray-500">R$ 0,00</td>
-              <td class="py-4 px-4">
-                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-rose-500/20 text-rose-400 border border-rose-500/40 flex items-center gap-1.5 w-max">
-                  <i data-lucide="x" class="w-3.5 h-3.5"></i>RED (-R$ 5,00)
-                </span>
-              </td>
-            </tr>
-
-            <tr class="hover:bg-white/[0.02] transition bg-rose-500/[0.05]">
-              <td class="py-4 px-4 font-bold text-rose-400">#SB-04</td>
-              <td class="py-4 px-4"><span class="px-2 py-0.5 rounded bg-rose-500/20 text-rose-400 text-xs">Sessão 2</span></td>
-              <td class="py-4 px-4">
-                <div class="font-sans font-bold text-white">Comerciantes Unidos × FC Cajamarca</div>
-                <div class="text-xs text-gray-400">Liga 1 (Peru) &middot; Placar 2×3</div>
-              </td>
-              <td class="py-4 px-4">
-                <div class="font-sans font-semibold text-rose-400">Total de Gols</div>
-                <div class="text-xs text-gray-300">Under 3.5 FT</div>
-              </td>
-              <td class="py-4 px-4 text-rose-400 font-extrabold text-base">@ 1.92</td>
-              <td class="py-4 px-4 font-bold text-white">R$ 5,00</td>
-              <td class="py-4 px-4 text-gray-500">R$ 0,00</td>
-              <td class="py-4 px-4">
-                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-rose-500/20 text-rose-400 border border-rose-500/40 flex items-center gap-1.5 w-max">
-                  <i data-lucide="x" class="w-3.5 h-3.5"></i>RED (-R$ 5,00)
-                </span>
-              </td>
-            </tr>
-
-            <!-- GREENS DA SESSÃO 1 -->
-            <tr class="hover:bg-white/[0.02] transition bg-brand-500/[0.02]">
-              <td class="py-4 px-4 font-bold text-brand-400">#SB-03</td>
-              <td class="py-4 px-4"><span class="px-2 py-0.5 rounded bg-brand-500/20 text-brand-300 text-xs">Sessão 1</span></td>
-              <td class="py-4 px-4"><div class="font-sans font-bold text-white">Alavés × Villarreal</div><div class="text-xs text-gray-400">LaLiga &middot; 1×0 Encerrado</div></td>
-              <td class="py-4 px-4"><div class="font-sans font-semibold text-blue-400">Dupla Chance</div><div class="text-xs text-gray-300">Alavés ou Empate (1X)</div></td>
-              <td class="py-4 px-4 text-brand-500 font-extrabold text-base">@ 1.28</td>
-              <td class="py-4 px-4 font-bold text-white">R$ 5,00</td>
-              <td class="py-4 px-4 font-bold text-brand-400">R$ 6,40</td>
-              <td class="py-4 px-4"><span class="px-2.5 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-500 border border-brand-500/40 flex items-center gap-1.5 w-max"><i data-lucide="check" class="w-3.5 h-3.5"></i>GREEN (+R$ 1,40)</span></td>
-            </tr>
-
-            <tr class="hover:bg-white/[0.02] transition bg-brand-500/[0.02]">
-              <td class="py-4 px-4 font-bold text-brand-400">#SB-02</td>
-              <td class="py-4 px-4"><span class="px-2 py-0.5 rounded bg-brand-500/20 text-brand-300 text-xs">Sessão 1</span></td>
-              <td class="py-4 px-4"><div class="font-sans font-bold text-white">Alavés × Villarreal</div><div class="text-xs text-gray-400">LaLiga &middot; 1×0 Encerrado</div></td>
-              <td class="py-4 px-4"><div class="font-sans font-semibold text-purple-400">Total de Gols</div><div class="text-xs text-gray-300">Under 1.5 FT</div></td>
-              <td class="py-4 px-4 text-brand-500 font-extrabold text-base">@ 2.35</td>
-              <td class="py-4 px-4 font-bold text-white">R$ 5,00</td>
-              <td class="py-4 px-4 font-bold text-brand-400">R$ 11,75</td>
-              <td class="py-4 px-4"><span class="px-2.5 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-500 border border-brand-500/40 flex items-center gap-1.5 w-max"><i data-lucide="check" class="w-3.5 h-3.5"></i>GREEN (+R$ 6,75)</span></td>
-            </tr>
-
-            <tr class="hover:bg-white/[0.02] transition bg-brand-500/[0.02]">
-              <td class="py-4 px-4 font-bold text-brand-400">#SB-01</td>
-              <td class="py-4 px-4"><span class="px-2 py-0.5 rounded bg-brand-500/20 text-brand-300 text-xs">Sessão 1</span></td>
-              <td class="py-4 px-4"><div class="font-sans font-bold text-white">Alavés × Villarreal</div><div class="text-xs text-gray-400">LaLiga &middot; 1×0 Encerrado</div></td>
-              <td class="py-4 px-4"><div class="font-sans font-semibold text-blue-400">Resultado Final (1X2)</div><div class="text-xs text-gray-300">Alavés Vence (1)</div></td>
-              <td class="py-4 px-4 text-brand-500 font-extrabold text-base">@ 1.42</td>
-              <td class="py-4 px-4 font-bold text-white">R$ 5,00</td>
-              <td class="py-4 px-4 font-bold text-brand-400">R$ 7,10</td>
-              <td class="py-4 px-4"><span class="px-2.5 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-500 border border-brand-500/40 flex items-center gap-1.5 w-max"><i data-lucide="check" class="w-3.5 h-3.5"></i>GREEN (+R$ 2,10)</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <div class="system-status">
+      <div class="pulse"></div>
+      HEARTBEAT ATIVO (CICLO 47) &bull; BANCA R$ 66,04 &bull; ALVO R$ 111,18
     </div>
+  </header>
 
-    <!-- SEÇÃO MASTER: TIPSTER SKILLS & METODOLOGIAS QUANTITATIVAS -->
-    <div id="skills" class="space-y-6 pt-6">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-400">
-          <i data-lucide="cpu" class="w-6 h-6"></i>
-        </div>
-        <div>
-          <h2 class="text-2xl font-black text-white tracking-tight">Tipster Skills & Metodologias Quantitativas</h2>
-          <p class="text-xs text-gray-400 font-medium">Arsenal Algorítmico de Leitura In-Play, Decaimento Temporal e Optimal Stopping</p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <!-- SKILL 1 -->
-        <div class="glass-card rounded-2xl p-5 space-y-3 border-l-4 border-l-brand-500">
-          <div class="flex justify-between items-start">
-            <span class="text-xs font-mono font-bold text-brand-400 px-2 py-0.5 rounded bg-brand-500/10">SKILL 01</span>
-            <i data-lucide="calculator" class="w-4 h-4 text-brand-400"></i>
-          </div>
-          <h4 class="text-sm font-bold text-white">Dixon-Coles Poisson (1997)</h4>
-          <p class="text-xs text-gray-300 leading-relaxed">
-            Ajuste bivariado com fator de correção &tau;(x,y) para inflacionar a probabilidade matemática real de empates e placares 0x0, 1x0 e 0x1 em ligas amarradas.
-          </p>
-        </div>
-
-        <!-- SKILL 2 -->
-        <div class="glass-card rounded-2xl p-5 space-y-3 border-l-4 border-l-blue-500">
-          <div class="flex justify-between items-start">
-            <span class="text-xs font-mono font-bold text-blue-400 px-2 py-0.5 rounded bg-blue-500/10">SKILL 02</span>
-            <i data-lucide="clock" class="w-4 h-4 text-blue-400"></i>
-          </div>
-          <h4 class="text-sm font-bold text-white">In-Play Time Decay &lambda;(t)</h4>
-          <p class="text-xs text-gray-300 leading-relaxed">
-            Modelagem exponencial da intensidade esperada de gols minuto-a-minuto com base em fadiga muscular, índice de altitude e substituições táticas.
-          </p>
-        </div>
-
-        <!-- SKILL 3 -->
-        <div class="glass-card rounded-2xl p-5 space-y-3 border-l-4 border-l-purple-500">
-          <div class="flex justify-between items-start">
-            <span class="text-xs font-mono font-bold text-purple-400 px-2 py-0.5 rounded bg-purple-500/10">SKILL 03</span>
-            <i data-lucide="shield-check" class="w-4 h-4 text-purple-400"></i>
-          </div>
-          <h4 class="text-sm font-bold text-white">Optimal Stopping (Bellman Cashout)</h4>
-          <p class="text-xs text-gray-300 leading-relaxed">
-            Trata o botão de cashout como uma Opção Financeira Americana. Executa o encerramento seguro quando a oferta &ge; 85% do ganho máximo na reta final.
-          </p>
-        </div>
-
-        <!-- SKILL 4 -->
-        <div class="glass-card rounded-2xl p-5 space-y-3 border-l-4 border-l-amber-500">
-          <div class="flex justify-between items-start">
-            <span class="text-xs font-mono font-bold text-amber-400 px-2 py-0.5 rounded bg-amber-500/10">SKILL 04</span>
-            <i data-lucide="percent" class="w-4 h-4 text-amber-400"></i>
-          </div>
-          <h4 class="text-sm font-bold text-white">Fractional Kelly (0.25f*)</h4>
-          <p class="text-xs text-gray-300 leading-relaxed">
-            Dimensionamento dinâmico de stake proporcional à margem de valor esperado (+EV), eliminando 100% do risco de ruína financeira da banca.
-          </p>
-        </div>
-
-        <!-- SKILL 5 -->
-        <div class="glass-card rounded-2xl p-5 space-y-3 border-l-4 border-l-rose-500">
-          <div class="flex justify-between items-start">
-            <span class="text-xs font-mono font-bold text-rose-400 px-2 py-0.5 rounded bg-rose-500/10">SKILL 05</span>
-            <i data-lucide="lock" class="w-4 h-4 text-rose-400"></i>
-          </div>
-          <h4 class="text-sm font-bold text-white">Zero Cross-Exposure</h4>
-          <p class="text-xs text-gray-300 leading-relaxed">
-            Proibição estrita de sobrepor a mesma seleção em apostas simples e múltiplas simultaneamente, blindando a banca contra risco de cauda correlacionado.
-          </p>
-        </div>
-
-        <!-- SKILL 6 -->
-        <div class="glass-card rounded-2xl p-5 space-y-3 border-l-4 border-l-emerald-500">
-          <div class="flex justify-between items-start">
-            <span class="text-xs font-mono font-bold text-emerald-400 px-2 py-0.5 rounded bg-emerald-500/10">SKILL 06</span>
-            <i data-lucide="trending-up" class="w-4 h-4 text-emerald-400"></i>
-          </div>
-          <h4 class="text-sm font-bold text-white">Steam & CLV Tracking</h4>
-          <p class="text-xs text-gray-300 leading-relaxed">
-            Rastreamento da movimentação de dinheiro institucional em casas asiáticas para capturar distorções de linhas e odds na Superbet antes do mercado ajustar.
-          </p>
-        </div>
-
-      </div>
+  <!-- KPI SUMMARY -->
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-label">Saldo Livre em Conta</div>
+      <div class="kpi-val green">R$ 31,04</div>
+      <div class="kpi-sub">Reserva blindada e intocada</div>
     </div>
-
-    <!-- SEÇÃO MASTER: CONSTITUIÇÃO AUTOMATON -->
-    <div id="constituicao" class="space-y-6 pt-6">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400">
-          <i data-lucide="scroll" class="w-6 h-6"></i>
-        </div>
-        <div>
-          <h2 class="text-2xl font-black text-white tracking-tight">Constituição Automaton do Bot Quantitativo</h2>
-          <p class="text-xs text-gray-400 font-medium">As Três Leis Imutáveis, Quatro Níveis de Sobrevivência e Automodificação Algorítmica</p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div class="glass-card rounded-2xl p-6 space-y-3 border-t-2 border-t-brand-500">
-          <span class="px-2.5 py-1 rounded-lg bg-brand-500/10 text-brand-400 font-mono text-xs font-bold border border-brand-500/20">LEI I (SUPREMA)</span>
-          <h3 class="text-base font-bold text-white">Proteção ao Usuário</h3>
-          <p class="text-xs text-gray-300 leading-relaxed">
-            Nunca comprometa a estabilidade financeira ou o capital base do Criador. A preservação do capital base se sobrepõe ao lucro em qualquer hipótese.
-          </p>
-        </div>
-
-        <div class="glass-card rounded-2xl p-6 space-y-3 border-t-2 border-t-blue-500">
-          <span class="px-2.5 py-1 rounded-lg bg-blue-500/10 text-blue-400 font-mono text-xs font-bold border border-blue-500/20">LEI II</span>
-          <h3 class="text-base font-bold text-white">Conquiste sua Existência</h3>
-          <p class="text-xs text-gray-300 leading-relaxed">
-            Gere valor real exclusivamente através da superioridade analítica e leitura matemática (+EV &ge; 10%). Nunca opere por sorte ou apostas emotivas.
-          </p>
-        </div>
-
-        <div class="glass-card rounded-2xl p-6 space-y-3 border-t-2 border-t-purple-500">
-          <span class="px-2.5 py-1 rounded-lg bg-purple-500/10 text-purple-400 font-mono text-xs font-bold border border-purple-500/20">LEI III</span>
-          <h3 class="text-base font-bold text-white">Transparência Operacional</h3>
-          <p class="text-xs text-gray-300 leading-relaxed">
-            Nunca oculte métricas reais, drawdown ou histórico. Auditoria pública e versionamento contínuo em tempo real via Git e GitHub Pages.
-          </p>
-        </div>
-      </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Capital em Jogo</div>
+      <div class="kpi-val blue">R$ 35,00</div>
+      <div class="kpi-sub">Ticket #SB-12 ativo @ 2.28</div>
     </div>
-
-    <!-- FOOTER -->
-    <footer class="text-center text-xs text-gray-500 py-6 font-mono border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4">
-      <div>
-        Automaton Quant Trader Bot &middot; Ecossistema Gabriel 2026
-      </div>
-      <div class="flex items-center gap-4">
-        <a href="https://github.com/cspgabriel/superbet-robo-gestao-banca" target="_blank" class="text-gray-400 hover:text-white transition flex items-center gap-1">
-          <i data-lucide="github" class="w-3.5 h-3.5"></i>
-          GitHub Repo
-        </a>
-        <a href="data/bets.json" target="_blank" class="text-gray-400 hover:text-white transition">data/bets.json</a>
-        <a href="data/bets.csv" target="_blank" class="text-gray-400 hover:text-white transition">data/bets.csv</a>
-      </div>
-    </footer>
-
+    <div class="kpi-card">
+      <div class="kpi-label">Retorno Alvo em Jogo</div>
+      <div class="kpi-val purple">R$ 80,14</div>
+      <div class="kpi-sub">Banca projetada: R$ 111,18</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Win Rate Histórico</div>
+      <div class="kpi-val green">60.0%</div>
+      <div class="kpi-sub">6 Greens / 4 Reds (12 Ordens)</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Lucro Líquido Realizado</div>
+      <div class="kpi-val green">+R$ 22,44</div>
+      <div class="kpi-sub">+65.1% sobre o capital inicial</div>
+    </div>
   </div>
 
-  <script>
-    lucide.createIcons();
-  </script>
+  <!-- ACTIVE BET CARD -->
+  <div class="active-card">
+    <div class="active-header">
+      <div class="active-tag">⚡ POSIÇÃO ATIVA NO MERCADO &bull; TICKET #SB-12</div>
+      <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted);">
+        Stake: <strong>R$ 35,00</strong> &bull; Odd: <strong>@ 2.28</strong> &bull; Retorno: <strong style="color: var(--green);">R$ 80,14</strong>
+      </div>
+    </div>
+    <div class="active-grid">
+      <div class="leg-item">
+        <div class="leg-title">🇧🇷 Novorizontino × Sport Recife</div>
+        <div class="leg-market">Total de Gols: Menos de 3.5 FT @ 1.29 (0x0 aos 6')</div>
+      </div>
+      <div class="leg-item">
+        <div class="leg-title">🇨🇱 Cobresal × Palestino</div>
+        <div class="leg-market">Total de Gols: Menos de 3.5 FT @ 1.25 (1x0 aos 48')</div>
+      </div>
+      <div class="leg-item">
+        <div class="leg-title">🇧🇷 Goiás × São Bernardo</div>
+        <div class="leg-market">Total de Gols: Menos de 2.5 FT @ 1.42 (1x0 no intervalo)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPLETE ORDER BOOK -->
+  <div class="section-title">
+    📋 Livro de Ordens & Histórico Transparente Completo
+  </div>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Data / Hora</th>
+          <th>Partida / Competição</th>
+          <th>Mercado & Seleção</th>
+          <th>Odd</th>
+          <th>Stake</th>
+          <th>Retorno Alvo</th>
+          <th>Resultado / PnL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong style="color: var(--accent);">#SB-12</strong></td>
+          <td>2026-08-28 20:27</td>
+          <td>Novorizontino + Cobresal + Goiás</td>
+          <td>Tripla Under: Novorizontino U3.5 + Cobresal U3.5 + Goiás U2.5</td>
+          <td><strong>@ 2.28</strong></td>
+          <td>R$ 35,00</td>
+          <td><strong>R$ 80,14</strong></td>
+          <td><span class="badge badge-blue">AO VIVO (Cashout R$ 27,37)</span></td>
+        </tr>
+        <tr>
+          <td><strong style="color: var(--green);">#SB-11</strong></td>
+          <td>2026-08-28 19:31</td>
+          <td>Unión de Santa Fe + Cobresal (1ºT)</td>
+          <td>Múltipla 1ºT: Unión 1T U1.5 (1.38) + Cobresal 1T U1.5 (1.47)</td>
+          <td><strong>@ 2.02</strong></td>
+          <td>R$ 20,00</td>
+          <td><strong>R$ 40,57</strong></td>
+          <td><span class="badge badge-green">GREEN (+R$ 20,57)</span></td>
+        </tr>
+        <tr>
+          <td><strong style="color: var(--green);">#SB-08</strong></td>
+          <td>2026-08-28 18:52</td>
+          <td>Mushuc Under 1.5 + Comerciantes Under 5.5</td>
+          <td>Múltipla Proteção: Under 1.5 + Under 5.5</td>
+          <td><strong>@ 1.79</strong></td>
+          <td>R$ 5,00</td>
+          <td><strong>R$ 8,97</strong></td>
+          <td><span class="badge badge-green">GREEN (+R$ 3,97)</span></td>
+        </tr>
+        <tr>
+          <td><strong style="color: var(--green);">#SB-07</strong></td>
+          <td>2026-08-28 18:52</td>
+          <td>Mushuc Runa × Delfín</td>
+          <td>Total de Gols: Menos de 1.5 FT</td>
+          <td><strong>@ 1.30</strong></td>
+          <td>R$ 5,00</td>
+          <td><strong>R$ 6,50</strong></td>
+          <td><span class="badge badge-green">GREEN (+R$ 1,50)</span></td>
+        </tr>
+        <tr>
+          <td><strong style="color: var(--red);">#SB-09</strong></td>
+          <td>2026-08-28 18:58</td>
+          <td>SuperMúltipla 4x (Eq + Peru + Tênis + Arg)</td>
+          <td>Mushuc 1x0 + Comerciantes X/U5.5 + Buse + Unión U2.5</td>
+          <td><strong>@ 4.13</strong></td>
+          <td>R$ 10,00</td>
+          <td>R$ 0,00</td>
+          <td><span class="badge badge-red">RED (-R$ 10,00)</span></td>
+        </tr>
+        <tr>
+          <td><strong style="color: var(--red);">#SB-06</strong></td>
+          <td>2026-08-28 18:42</td>
+          <td>Cherevko + Buse + Wolny</td>
+          <td>Tripla In-Play TT / Tênis</td>
+          <td><strong>@ 1.84</strong></td>
+          <td>R$ 3,85</td>
+          <td>R$ 0,00</td>
+          <td><span class="badge badge-red">RED (-R$ 3,85)</span></td>
+        </tr>
+        <tr>
+          <td><strong style="color: var(--red);">#SB-05</strong></td>
+          <td>2026-08-28 18:32</td>
+          <td>Comerciantes Unidos + Mushuc Runa</td>
+          <td>Múltipla Under 3.5 + Casa Vence</td>
+          <td><strong>@ 3.74</strong></td>
+          <td>R$ 5,00</td>
+          <td>R$ 0,00</td>
+          <td><span class="badge badge-red">RED (-R$ 5,00)</span></td>
+        </tr>
+        <tr>
+          <td><strong style="color: var(--red);">#SB-04</strong></td>
+          <td>2026-08-28 18:30</td>
+          <td>Comerciantes Unidos × FC Cajamarca</td>
+          <td>Total de Gols: Menos de 3.5 FT</td>
+          <td><strong>@ 1.92</strong></td>
+          <td>R$ 5,00</td>
+          <td>R$ 0,00</td>
+          <td><span class="badge badge-red">RED (-R$ 5,00)</span></td>
+        </tr>
+        <tr>
+          <td><strong style="color: var(--green);">#SB-03</strong></td>
+          <td>2026-08-28 17:40</td>
+          <td>Alavés × Villarreal</td>
+          <td>Dupla Chance: Alavés ou Empate (1X)</td>
+          <td><strong>@ 1.28</strong></td>
+          <td>R$ 5,00</td>
+          <td><strong>R$ 6,40</strong></td>
+          <td><span class="badge badge-green">GREEN (+R$ 1,40)</span></td>
+        </tr>
+        <tr>
+          <td><strong style="color: var(--green);">#SB-02</strong></td>
+          <td>2026-08-28 17:35</td>
+          <td>Alavés × Villarreal</td>
+          <td>Total de Gols: Menos de 1.5 FT</td>
+          <td><strong>@ 2.35</strong></td>
+          <td>R$ 5,00</td>
+          <td><strong>R$ 11,75</strong></td>
+          <td><span class="badge badge-green">GREEN (+R$ 6,75)</span></td>
+        </tr>
+        <tr>
+          <td><strong style="color: var(--green);">#SB-01</strong></td>
+          <td>2026-08-28 17:30</td>
+          <td>Alavés × Villarreal</td>
+          <td>Resultado Final: Alavés Vence (1)</td>
+          <td><strong>@ 1.42</strong></td>
+          <td>R$ 5,00</td>
+          <td><strong>R$ 7,10</strong></td>
+          <td><span class="badge badge-green">GREEN (+R$ 2,10)</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CONSTITUTION & SKILLS -->
+  <div class="section-title">
+    📜 Constituição Automaton & Tipster Skills Ativas
+  </div>
+  <div class="constitution-grid">
+    <div class="const-card">
+      <div class="const-header">LEI I &bull; PRESERVAÇÃO DE CAPITAL</div>
+      <div class="const-text">Nunca comprometer o capital base do Criador. A sobrevivência e a preservação do saldo sobrepõem-se a qualquer retorno potencial.</div>
+    </div>
+    <div class="const-card">
+      <div class="const-header">LEI II &bull; MATEMÁTICA +EV &ge; 10%</div>
+      <div class="const-text">Operar estritamente com base em superioridade analítica quantitativa, modelagem Dixon-Coles Poisson e Time Decay in-play.</div>
+    </div>
+    <div class="const-card">
+      <div class="const-header">LEI III &bull; TRANSPARÊNCIA TOTAL</div>
+      <div class="const-text">Registro mandatório de 100% dos REDs e GREENS em tempo real. Auditoria pública e versionamento contínuo via GitHub Pages.</div>
+    </div>
+  </div>
+
+  <footer>
+    Superbet Quant Bot &bull; Conway-Research Automaton Architecture &bull; Atualizado em 28/08/2026, 20:37:35
+  </footer>
+</div>
+
 </body>
 </html>
