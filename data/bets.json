@@ -3,19 +3,19 @@
   "versao": "3.1.0-TRANSPARENCY-AUDIT",
   "nivel_sobrevivencia": "NORMAL (STAKE DINÂMICO & RESERVA BLINDADA)",
   "sessao_ativa": 3,
-  "ultima_atualizacao": "2026-08-28T22:24:36.289Z",
+  "ultima_atualizacao": "2026-08-28T22:31:51.234Z",
   "target_goal": 100,
   "conexao_cdp": "Ativa (Porta 9222 / 3 Abas Paralelas)",
   "banca": {
     "banca_inicial": 50,
-    "saldo_livre_em_conta": 15,
-    "saldo_em_jogo": 25,
-    "retorno_potencial_ativo": 426.38,
-    "banca_alvo_projetada": 484.3,
+    "saldo_livre_em_conta": 10,
+    "saldo_em_jogo": 30,
+    "retorno_potencial_ativo": 56.04,
+    "banca_alvo_projetada": 66.04,
     "moeda": "BRL"
   },
   "metricas_acumuladas": {
-    "total_entradas_historico": 10,
+    "total_entradas_historico": 11,
     "entradas_ativas_inplay": 3,
     "greens_liquidados": 3,
     "reds_liquidados": 4,
@@ -23,6 +23,23 @@
     "pnl_liquido_fechado_brl": -13.6
   },
   "historico_completo_ordens": [
+    {
+      "id": 11,
+      "ticket_id": "SB-20260828-11-HT",
+      "sessao": 3,
+      "data_hora": "2026-08-28 19:31",
+      "casa": "Superbet",
+      "partida": "Unión de Santa Fe + Cobresal (1º Tempos)",
+      "campeonato": "Liga Argentina + Campeonato Chileno",
+      "mercado": "Múltipla 1º Tempo (Under 1.5 HT)",
+      "selecao": "Unión 1T Under 1.5 (1.38) + Cobresal 1T Under 1.5 (1.47)",
+      "odd": 2.02,
+      "stake": 20,
+      "retorno_potencial": 40.57,
+      "cashout_atual": 17.44,
+      "resultado": "EM ABERTO",
+      "pnl": 0
+    },
     {
       "id": 10,
       "ticket_id": "SB-20260828-10-SERIEB",
@@ -195,5 +212,5 @@
       "pnl": 2.1
     }
   ],
-  "heartbeat_pulse": 84
+  "heartbeat_pulse": 112
 }
