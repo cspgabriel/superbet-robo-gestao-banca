@@ -2,26 +2,41 @@
   "robo_status": "ONLINE",
   "versao": "2.4.0",
   "sessao_ativa": 2,
-  "ultima_atualizacao": "2026-08-28T18:32:00-03:00",
+  "ultima_atualizacao": "2026-08-28T18:42:00-03:00",
   "conexao_cdp": "Ativa (Porta 9222)",
   "banca": {
-    "banca_inicial_sessao_1": 50,
-    "lucro_sessao_1_liquidado": 13.85,
-    "banca_inicio_sessao_2": 63.85,
-    "saldo_livre_em_conta": 53.85,
-    "saldo_em_jogo_sessao_2": 10,
-    "teto_limite_sessao": 10,
+    "banca_inicial_base": 50,
+    "saldo_livre_em_conta": 50,
+    "saldo_em_jogo_total": 13.85,
+    "lucro_liquidado_sessao_1": 13.85,
     "moeda": "BRL"
   },
   "metricas_acumuladas": {
-    "total_entradas_historico": 5,
-    "entradas_ativas_inplay": 2,
+    "total_entradas_historico": 6,
+    "entradas_ativas_inplay": 3,
     "taxa_acerto_historica_pct": 100,
-    "lucro_liquidado_total": 13.85,
-    "retorno_projetado_sessao_2": 28.32,
-    "roi_projetado_sessao_2_pct": 183.2
+    "retorno_potencial_total_ativo": 35.43,
+    "roi_projetado_ativo_pct": 155.8
   },
   "entradas_ativas": [
+    {
+      "id": 6,
+      "ticket_id": "SB-20260828-06-FAST",
+      "sessao": 2,
+      "data_hora": "2026-08-28 18:41",
+      "casa": "Superbet",
+      "partida": "Cherevko (TT) + Buse (Tênis) + Wolny (TT)",
+      "campeonato": "TT Cup + ATP Winston-Salem + TT Elite",
+      "minuto_entrada": "Fase Final (10-15m)",
+      "mercado": "Tripla Rápida de Vencedores In-Play",
+      "selecao": "Cherevko (1.57) + Buse (1.07) + Wolny",
+      "odd": 1.84,
+      "stake": 3.85,
+      "stake_tipo": "Dinheiro Real (Centavos de Lucro)",
+      "retorno_potencial": 7.11,
+      "cashout_atual": 2.59,
+      "status": "EM ABERTO"
+    },
     {
       "id": 4,
       "ticket_id": "SB-20260828-04",
@@ -30,7 +45,7 @@
       "casa": "Superbet",
       "partida": "Comerciantes Unidos x FC Cajamarca",
       "campeonato": "Liga 1 (Peru)",
-      "minuto_entrada": "45 (Intervalo / 0x2)",
+      "minuto_entrada": "2ºT (0x2)",
       "mercado": "Total de Gols (Over/Under)",
       "selecao": "Menos de 3.5 Gols FT",
       "odd": 1.92,
@@ -48,39 +63,15 @@
       "casa": "Superbet",
       "partida": "Comerciantes Under 3.5 + Mushuc Runa Vence",
       "campeonato": "Liga 1 Peru + Série A Equador",
-      "minuto_entrada": "45 (Intervalo)",
+      "minuto_entrada": "2ºT",
       "mercado": "Múltipla Estratégica In-Play",
       "selecao": "Under 3.5 (1.92) + Mushuc Vence (1.95)",
       "odd": 3.74,
       "stake": 5,
       "stake_tipo": "Dinheiro Real (Kelly 0.25f*)",
       "retorno_potencial": 18.72,
-      "cashout_atual": 4.34,
+      "cashout_atual": 4.76,
       "status": "EM ABERTO"
-    }
-  ],
-  "historico_finalizado": [
-    {
-      "id": 1,
-      "ticket_id": "SB-20260828-01",
-      "sessao": 1,
-      "partida": "Alavés x Villarreal",
-      "selecao": "Alavés Vence (1)",
-      "odd": 1.42,
-      "stake": 5,
-      "retorno": 7.1,
-      "resultado": "GREEN (+R$ 2,10)"
-    },
-    {
-      "id": 2,
-      "ticket_id": "SB-20260828-02",
-      "sessao": 1,
-      "partida": "Alavés x Villarreal",
-      "selecao": "Nenhuma Equipe 2º Gol (Under 1.5 FT)",
-      "odd": 2.35,
-      "stake": 5,
-      "retorno": 11.75,
-      "resultado": "GREEN (+R$ 6,75)"
     }
   ]
 }
