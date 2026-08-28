@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard de Gestao de Banca - Superbet Ao Vivo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card-bg: rgba(22, 30, 49, 0.75);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --accent: #00e676;
+      --accent-glow: rgba(0, 230, 118, 0.25);
+      --primary: #3b82f6;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Inter", sans-serif; }
+    body { background: var(--bg); color: var(--text); padding: 24px; min-height: 100vh; }
+    .container { max-width: 1280px; margin: 0 auto; }
+    header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; border-bottom: 1px solid var(--card-border); padding-bottom: 16px; }
+    .title h1 { font-size: 22px; font-weight: 800; display: flex; align-items: center; gap: 8px; }
+    .badge-live { background: rgba(239, 68, 68, 0.2); color: #ef4444; padding: 4px 10px; border-radius: 99px; font-size: 11px; font-weight: 700; border: 1px solid rgba(239, 68, 68, 0.4); }
+    .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+    .kpi-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px; padding: 18px; backdrop-filter: blur(12px); }
+    .kpi-label { font-size: 12px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; margin-bottom: 6px; }
+    .kpi-value { font-size: 24px; font-weight: 800; font-family: "JetBrains Mono", monospace; }
+    .kpi-sub { font-size: 11px; color: var(--accent); margin-top: 4px; }
+    .section { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px; padding: 20px; margin-bottom: 24px; backdrop-filter: blur(12px); }
+    .section-title { font-size: 16px; font-weight: 700; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; }
+    table { width: 100%; border-collapse: collapse; text-align: left; }
+    th { padding: 12px 14px; font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; border-bottom: 1px solid var(--card-border); }
+    td { padding: 14px; font-size: 13px; border-bottom: 1px solid rgba(255, 255, 255, 0.04); vertical-align: middle; }
+    .tag { display: inline-block; padding: 3px 8px; border-radius: 6px; font-size: 11px; font-weight: 600; }
+    .tag-open { background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }
+    .tag-green { background: rgba(0, 230, 118, 0.2); color: #00e676; border: 1px solid rgba(0, 230, 118, 0.3); }
+    .tag-live { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+    .mono { font-family: "JetBrains Mono", monospace; }
+    .rules-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+    .rule-box { background: rgba(0, 0, 0, 0.25); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 14px; }
+    .rule-box h4 { font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--accent); }
+    .rule-box p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="title">
+        <h1>Dashboard de Gestao de Banca e In-Play Trading <span class="badge-live">AO VIVO</span></h1>
+      </div>
+      <div style="font-size: 12px; color: var(--text-muted); font-family: JetBrains Mono;">
+        Sessao: 28/08/2026 18:05 | Superbet API
+      </div>
+    </header>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-label">Banca Inicial</div>
+        <div class="kpi-value mono">R$ 50,00</div>
+        <div class="kpi-sub" style="color: var(--text-muted);">Saldo base de partida</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Saldo Disponivel</div>
+        <div class="kpi-value mono" style="color: #60a5fa;">R$ 45,00</div>
+        <div class="kpi-sub">Livre em conta</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Volume em Jogo</div>
+        <div class="kpi-value mono" style="color: var(--warning);">R$ 10,00</div>
+        <div class="kpi-sub">2 entradas (100% limite)</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Retorno Projetado</div>
+        <div class="kpi-value mono" style="color: var(--accent);">R$ 18,85</div>
+        <div class="kpi-sub">+R$ 8,85 (+88.5% ROI)</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Cashout Atual</div>
+        <div class="kpi-value mono" style="color: #a78bfa;">R$ 10,88</div>
+        <div class="kpi-sub">+R$ 0,88 ja garantido</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <span>Entradas Ativas da Sessao</span>
+        <span class="tag tag-live">2 Posicoes Abertas</span>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Partida / Campeonato</th>
+            <th>Min. Entrada</th>
+            <th>Mercado / Selecao</th>
+            <th>Odd</th>
+            <th>Stake</th>
+            <th>Retorno</th>
+            <th>Cashout</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mono">#01</td>
+            <td><strong>Alaves x Villarreal</strong><br><small style="color: var(--text-muted);">LaLiga (Espanha)</small></td>
+            <td><span class="tag tag-open">80 2T</span></td>
+            <td><strong>Resultado Final</strong><br><small>Alaves Vence (1)</small></td>
+            <td class="mono" style="font-weight: 700; color: #60a5fa;">@ 1.42</td>
+            <td class="mono">R$ 5,00</td>
+            <td class="mono" style="color: var(--accent); font-weight: 700;">R$ 7,10</td>
+            <td class="mono" style="color: #a78bfa;">R$ 5,00</td>
+            <td><span class="tag tag-open">EM ABERTO</span></td>
+          </tr>
+          <tr>
+            <td class="mono">#02</td>
+            <td><strong>Alaves x Villarreal</strong><br><small style="color: var(--text-muted);">LaLiga (Espanha)</small></td>
+            <td><span class="tag tag-open">80 2T</span></td>
+            <td><strong>2 Gol / Total Gols</strong><br><small>Nenhuma Equipe (Under 1.5)</small></td>
+            <td class="mono" style="font-weight: 700; color: #60a5fa;">@ 2.35</td>
+            <td class="mono">R$ 5,00</td>
+            <td class="mono" style="color: var(--accent); font-weight: 700;">R$ 11,75</td>
+            <td class="mono" style="color: #a78bfa;">R$ 5,88</td>
+            <td><span class="tag tag-open">EM ABERTO</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <span>Politicas Quantitativas e Estrategia de Cashout Automatico</span>
+      </div>
+      <div class="rules-grid">
+        <div class="rule-box">
+          <h4>Fractional Kelly (0.25f*)</h4>
+          <p>Dimensionamento de unidades fracionarias para suprimir drawdowns e garantir sobrevivencia estatistica a longo prazo.</p>
+        </div>
+        <div class="rule-box">
+          <h4>Stop Gain nos 90+</h4>
+          <p>Encerramento automatico se o cashout oferecer >= 85% do retorno maximo durante acrescimos sob pressao adversaria.</p>
+        </div>
+        <div class="rule-box">
+          <h4>Stop Loss Dinamico</h4>
+          <p>Protecao imediata de capital em caso de cartao vermelho ou penalti/VAR com inversao drastica de probabilidade.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
