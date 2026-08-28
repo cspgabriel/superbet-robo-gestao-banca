@@ -1,29 +1,23 @@
 {
   "robo_status": "ONLINE",
   "versao": "2.4.0",
-  "ultima_atualizacao": "2026-08-28T18:08:00-03:00",
+  "ultima_atualizacao": "2026-08-28T18:13:00-03:00",
   "conexao_cdp": "Ativa (Porta 9222)",
   "banca": {
     "banca_inicial": 50,
     "saldo_disponivel": 45,
     "saldo_em_jogo": 10,
-    "limite_sessao_max": 10,
-    "stop_loss_sessao": 10,
-    "stop_gain_sessao": 15,
+    "aposta_gratis_utilizada": 2,
     "moeda": "BRL"
   },
   "metricas_acumuladas": {
-    "total_entradas": 2,
-    "entradas_ativas": 2,
-    "entradas_vencidas": 0,
-    "entradas_perdidas": 0,
-    "win_rate_pct": 100,
-    "volume_total_apostado": 10,
-    "retorno_projetado": 18.85,
-    "lucro_projetado": 8.85,
-    "roi_projetado_pct": 88.5,
-    "cashout_total_momento": 11.11,
-    "lucro_garantido_cashout": 1.11
+    "total_entradas": 3,
+    "entradas_ativas": 3,
+    "volume_total_apostado_real": 10,
+    "volume_aposta_gratis": 2,
+    "retorno_projetado_total": 30.51,
+    "lucro_projetado_total": 20.51,
+    "roi_projetado_pct": 205.1
   },
   "entradas": [
     {
@@ -38,17 +32,10 @@
       "selecao": "Alavés Vence (1)",
       "odd": 1.42,
       "stake": 5,
-      "stake_pct": 10,
+      "stake_tipo": "Dinheiro Real",
       "retorno_potencial": 7.1,
-      "cashout_atual": 5,
-      "status": "EM ABERTO",
-      "xg_momento": {
-        "casa": 0.76,
-        "fora": 0.92,
-        "xgot_fora": 0.21
-      },
-      "placar_momento": "1-0",
-      "justificativa": "Alavés com controle de duelos e Villarreal gerando volume estéril sem finalizações perigosas no alvo nos 10 min finais."
+      "cashout_atual": 5.3,
+      "status": "EM ABERTO"
     },
     {
       "id": 2,
@@ -62,17 +49,27 @@
       "selecao": "Nenhuma Equipe Marcará (Under 1.5 FT)",
       "odd": 2.35,
       "stake": 5,
-      "stake_pct": 10,
+      "stake_tipo": "Dinheiro Real",
       "retorno_potencial": 11.75,
-      "cashout_atual": 6.11,
-      "status": "EM ABERTO",
-      "xg_momento": {
-        "casa": 0.76,
-        "fora": 0.92,
-        "xgot_fora": 0.21
-      },
-      "placar_momento": "1-0",
-      "justificativa": "Super cotação @ 2.35 para retenção de 10 min + acréscimos com tempo útil de bola rolando caindo rapidamente."
+      "cashout_atual": 6.38,
+      "status": "EM ABERTO"
+    },
+    {
+      "id": 3,
+      "ticket_id": "SB-20260828-03-FREEBET",
+      "data_hora": "2026-08-28 18:12",
+      "casa": "Superbet",
+      "partida": "Mushuc Runa x Delfín + Comerciantes x Cajamarca",
+      "campeonato": "Liga Pro Equador + Liga 1 Peru",
+      "minuto_entrada": "43 (1ºT)",
+      "mercado": "Múltipla: 1º Gol Nenhum (3.30) + Under 3.5 (2.07)",
+      "selecao": "Dupla Estratégica In-Play",
+      "odd": 6.83,
+      "stake": 2,
+      "stake_tipo": "Aposta Grátis (R$ 0 risco)",
+      "retorno_potencial": 11.66,
+      "cashout_atual": 1.69,
+      "status": "EM ABERTO"
     }
   ]
 }
