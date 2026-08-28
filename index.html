@@ -65,6 +65,9 @@
     .glow-green {
       box-shadow: 0 0 20px rgba(0, 230, 118, 0.25);
     }
+    .glow-red {
+      box-shadow: 0 0 20px rgba(239, 68, 68, 0.25);
+    }
   </style>
 </head>
 <body class="min-h-screen p-4 sm:p-6 lg:p-8 space-y-8">
@@ -105,6 +108,61 @@
       </div>
     </header>
 
+    <!-- PERFORMANCE CARDS: TOTAL DE GREENS, TOTAL DE REDS, ATIVAS, TOTAL GERAL -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <!-- CARD GREENS -->
+      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-brand-500 glow-green">
+        <div class="flex items-center justify-between">
+          <div class="text-xs font-bold font-mono uppercase tracking-wider text-brand-400 flex items-center gap-1.5">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500"></i>
+            Total de Greens
+          </div>
+          <span class="px-2 py-0.5 rounded bg-brand-500/20 text-brand-400 font-mono text-xs font-bold">60.0% WIN</span>
+        </div>
+        <div class="text-3xl font-black text-white font-mono mt-2">6 GREENS</div>
+        <div class="text-xs text-brand-400 font-mono mt-1 font-semibold">+R$ 46,29 Lucro Bruto</div>
+      </div>
+
+      <!-- CARD REDS -->
+      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-red-500 glow-red">
+        <div class="flex items-center justify-between">
+          <div class="text-xs font-bold font-mono uppercase tracking-wider text-red-400 flex items-center gap-1.5">
+            <i data-lucide="x-circle" class="w-4 h-4 text-red-500"></i>
+            Total de Reds
+          </div>
+          <span class="px-2 py-0.5 rounded bg-red-500/20 text-red-400 font-mono text-xs font-bold">40.0% LOSS</span>
+        </div>
+        <div class="text-3xl font-black text-red-400 font-mono mt-2">4 REDS</div>
+        <div class="text-xs text-red-300 font-mono mt-1 font-semibold">-R$ 23,85 Perdas Auditadas</div>
+      </div>
+
+      <!-- CARD ENTRADAS ATIVAS -->
+      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-purple-500">
+        <div class="flex items-center justify-between">
+          <div class="text-xs font-bold font-mono uppercase tracking-wider text-purple-400 flex items-center gap-1.5">
+            <i data-lucide="activity" class="w-4 h-4 text-purple-400"></i>
+            Em Aberto (In-Play)
+          </div>
+          <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-400 font-mono text-xs font-bold">1 TICKET</span>
+        </div>
+        <div class="text-3xl font-black text-purple-400 font-mono mt-2">R$ 35,00</div>
+        <div class="text-xs text-purple-300 font-mono mt-1 font-semibold">Buscando R$ 80,14 (#SB-12)</div>
+      </div>
+
+      <!-- CARD TOTAL OPERAÇÕES -->
+      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-blue-500">
+        <div class="flex items-center justify-between">
+          <div class="text-xs font-bold font-mono uppercase tracking-wider text-blue-400 flex items-center gap-1.5">
+            <i data-lucide="layers" class="w-4 h-4 text-blue-400"></i>
+            Total Operações
+          </div>
+          <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-400 font-mono text-xs font-bold">100% AUDIT</span>
+        </div>
+        <div class="text-3xl font-black text-white font-mono mt-2">12 ORDENS</div>
+        <div class="text-xs text-blue-300 font-mono mt-1 font-semibold">10 Encerradas &bull; 1 Ativa</div>
+      </div>
+    </div>
+
     <!-- LIVE IN-PLAY ACTIVE POSITION CARD: TICKET #SB-12 -->
     <div class="glass-card rounded-2xl p-6 border-l-4 border-l-purple-500 space-y-4">
       <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
@@ -126,17 +184,17 @@
         <div class="bg-dark-900/60 p-3 rounded-xl border border-white/5">
           <div class="font-bold text-white font-sans text-sm">🇧🇷 Novorizontino × Sport Recife</div>
           <div class="text-purple-400 font-semibold mt-1">Menos de 3.5 FT @ 1.29</div>
-          <div class="text-gray-400 text-[11px] mt-0.5">0x0 (8' 1ºT no Jorjão) &bull; Margem: 3 gols</div>
+          <div class="text-gray-400 text-[11px] mt-0.5">0x0 (11' 1ºT no Jorjão) &bull; Margem: 3 gols</div>
         </div>
         <div class="bg-dark-900/60 p-3 rounded-xl border border-white/5">
           <div class="font-bold text-white font-sans text-sm">🇨🇱 Cobresal × Palestino</div>
           <div class="text-purple-400 font-semibold mt-1">Menos de 3.5 FT @ 1.25</div>
-          <div class="text-gray-400 text-[11px] mt-0.5">1x0 (50' 2ºT no Chile) &bull; Margem: +2 gols</div>
+          <div class="text-gray-400 text-[11px] mt-0.5">1x0 (53' 2ºT no Chile) &bull; Margem: +2 gols</div>
         </div>
         <div class="bg-dark-900/60 p-3 rounded-xl border border-white/5">
           <div class="font-bold text-white font-sans text-sm">🇧🇷 Goiás × São Bernardo</div>
           <div class="text-purple-400 font-semibold mt-1">Menos de 2.5 FT @ 1.42</div>
-          <div class="text-gray-400 text-[11px] mt-0.5">1x0 (Intervalo na Serrinha) &bull; Margem: +1 gol</div>
+          <div class="text-gray-400 text-[11px] mt-0.5">1x0 (48' 2ºT na Serrinha) &bull; Margem: +1 gol</div>
         </div>
       </div>
 
@@ -151,7 +209,7 @@
         </div>
         <div class="bg-dark-900/60 p-2.5 rounded-xl border border-white/5">
           <div class="text-gray-400 text-[10px]">Cashout Atual</div>
-          <div class="text-sm font-bold text-blue-400 mt-0.5">R$ 30,44</div>
+          <div class="text-sm font-bold text-blue-400 mt-0.5">R$ 31,84</div>
         </div>
         <div class="bg-dark-900/60 p-2.5 rounded-xl border border-white/5">
           <div class="text-gray-400 text-[10px]">Banca Projetada</div>
@@ -160,7 +218,7 @@
       </div>
     </div>
 
-    <!-- KPIS MASTER -->
+    <!-- KPIS MASTER FINANCEIROS -->
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
       <div class="glass-card glass-card-hover rounded-2xl p-4">
         <div class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Saldo Livre</div>
@@ -183,9 +241,9 @@
         <div class="text-[10px] text-emerald-300 mt-1">111.2% da meta 🎯</div>
       </div>
       <div class="glass-card glass-card-hover rounded-2xl p-4">
-        <div class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Win Rate Histórico</div>
-        <div class="text-xl font-extrabold text-purple-400 font-mono mt-1">60.0%</div>
-        <div class="text-[10px] text-purple-300 mt-1">6 Greens / 4 Reds</div>
+        <div class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Meta do Criador</div>
+        <div class="text-xl font-extrabold text-purple-400 font-mono mt-1">R$ 100,00</div>
+        <div class="text-[10px] text-purple-300 mt-1">Superada em +11.18%</div>
       </div>
       <div class="glass-card glass-card-hover rounded-2xl p-4">
         <div class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Lucro Realizado</div>
@@ -249,7 +307,7 @@
               <td class="py-4 px-4">
                 <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-purple-500/20 text-purple-400 border border-purple-500/40 flex items-center gap-1.5 w-max">
                   <span class="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"></span>
-                  AO VIVO (Cashout R$ 30,44)
+                  AO VIVO (Cashout R$ 31,84)
                 </span>
               </td>
             </tr>
@@ -633,7 +691,7 @@
 
     <!-- FOOTER -->
     <footer class="text-center text-xs text-gray-500 font-mono py-4">
-      Automaton Quant Trader &middot; Sistema Autônomo Conway-Research &middot; Última Atualização: 28/08/2026, 20:40:02
+      Automaton Quant Trader &middot; Sistema Autônomo Conway-Research &middot; Última Atualização: 28/08/2026, 20:41:08
     </footer>
 
   </div>
