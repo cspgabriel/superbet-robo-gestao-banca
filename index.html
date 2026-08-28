@@ -6,6 +6,8 @@
   <title>Automaton Quant Trader — Superbet & Dashboard de Gestão de Banca</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <!-- Google Fonts & Lucide Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -99,7 +101,7 @@
         </div>
         <div class="px-3 py-1.5 rounded-xl bg-brand-500/10 border border-brand-500/30 text-xs font-bold text-brand-400 flex items-center gap-1.5 font-mono">
           <i data-lucide="target" class="w-3.5 h-3.5"></i>
-          Alvo Projetado: R$ 111,18 / R$ 100,00
+          Alvo: R$ 111,18 / R$ 100,00
         </div>
         <button onclick="window.location.reload()" class="px-3.5 py-1.5 rounded-xl bg-brand-500 text-dark-900 font-bold text-xs flex items-center gap-1.5 hover:bg-brand-600 transition shadow-lg shadow-brand-500/20">
           <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
@@ -108,8 +110,43 @@
       </div>
     </header>
 
-    <!-- PERFORMANCE CARDS: TOTAL DE GREENS, TOTAL DE REDS, ATIVAS, TOTAL GERAL -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <!-- PROGRESS BAR DA META DOS R$ 100,00 -->
+    <div class="glass-card rounded-2xl p-5 space-y-3">
+      <div class="flex justify-between items-center text-xs font-mono">
+        <span class="font-bold text-gray-300 flex items-center gap-2">
+          <i data-lucide="trending-up" class="w-4 h-4 text-brand-400"></i>
+          PROGRESSO DA META: R$ 50,00 (START) &rarr; R$ 100,00 (META) &rarr; R$ 111,18 (PROJETADO)
+        </span>
+        <span class="font-extrabold text-brand-400">66.0% REALIZADO &bull; 111.2% COM TICKET #SB-12</span>
+      </div>
+      <div class="w-full bg-dark-900 rounded-full h-4 p-0.5 border border-white/10 overflow-hidden relative">
+        <div class="bg-gradient-to-r from-blue-500 via-emerald-400 to-brand-500 h-full rounded-full transition-all duration-1000 shadow-lg shadow-brand-500/50" style="width: 66.04%;"></div>
+        <!-- Target Marker 100% -->
+        <div class="absolute right-[11.2%] top-0 bottom-0 w-0.5 bg-purple-400 z-10"></div>
+      </div>
+      <div class="flex justify-between text-[11px] font-mono text-gray-400">
+        <span>Banca Inicial: R$ 50,00</span>
+        <span class="text-emerald-400 font-bold">Saldo Realizado: R$ 66,04</span>
+        <span class="text-purple-400 font-bold">Meta R$ 100,00</span>
+        <span class="text-brand-400 font-bold">Alvo #SB-12: R$ 111,18</span>
+      </div>
+    </div>
+
+    <!-- PERFORMANCE CARDS: BANCA INICIAL, GREENS, REDS, ENTRADAS TOTAIS -->
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+      <!-- CARD BANCA INICIAL -->
+      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-blue-500">
+        <div class="flex items-center justify-between">
+          <div class="text-xs font-bold font-mono uppercase tracking-wider text-blue-400 flex items-center gap-1.5">
+            <i data-lucide="landmark" class="w-4 h-4 text-blue-400"></i>
+            Banca Inicial
+          </div>
+          <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-400 font-mono text-[10px] font-bold">START</span>
+        </div>
+        <div class="text-3xl font-black text-white font-mono mt-2">R$ 50,00</div>
+        <div class="text-xs text-blue-300 font-mono mt-1 font-semibold">Capital Base Alocado</div>
+      </div>
+
       <!-- CARD GREENS -->
       <div class="glass-card rounded-2xl p-5 border-l-4 border-l-brand-500 glow-green">
         <div class="flex items-center justify-between">
@@ -117,10 +154,10 @@
             <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500"></i>
             Total de Greens
           </div>
-          <span class="px-2 py-0.5 rounded bg-brand-500/20 text-brand-400 font-mono text-xs font-bold">60.0% WIN</span>
+          <span class="px-2 py-0.5 rounded bg-brand-500/20 text-brand-400 font-mono text-[10px] font-bold">60.0% WIN</span>
         </div>
         <div class="text-3xl font-black text-white font-mono mt-2">6 GREENS</div>
-        <div class="text-xs text-brand-400 font-mono mt-1 font-semibold">+R$ 46,29 Lucro Bruto</div>
+        <div class="text-xs text-brand-400 font-mono mt-1 font-semibold">+R$ 46,29 Ganho Bruto</div>
       </div>
 
       <!-- CARD REDS -->
@@ -130,10 +167,10 @@
             <i data-lucide="x-circle" class="w-4 h-4 text-red-500"></i>
             Total de Reds
           </div>
-          <span class="px-2 py-0.5 rounded bg-red-500/20 text-red-400 font-mono text-xs font-bold">40.0% LOSS</span>
+          <span class="px-2 py-0.5 rounded bg-red-500/20 text-red-400 font-mono text-[10px] font-bold">40.0% LOSS</span>
         </div>
         <div class="text-3xl font-black text-red-400 font-mono mt-2">4 REDS</div>
-        <div class="text-xs text-red-300 font-mono mt-1 font-semibold">-R$ 23,85 Perdas Auditadas</div>
+        <div class="text-xs text-red-300 font-mono mt-1 font-semibold">-R$ 23,85 Auditadas</div>
       </div>
 
       <!-- CARD ENTRADAS ATIVAS -->
@@ -143,23 +180,76 @@
             <i data-lucide="activity" class="w-4 h-4 text-purple-400"></i>
             Em Aberto (In-Play)
           </div>
-          <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-400 font-mono text-xs font-bold">1 TICKET</span>
+          <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-400 font-mono text-[10px] font-bold">1 TICKET</span>
         </div>
         <div class="text-3xl font-black text-purple-400 font-mono mt-2">R$ 35,00</div>
-        <div class="text-xs text-purple-300 font-mono mt-1 font-semibold">Buscando R$ 80,14 (#SB-12)</div>
+        <div class="text-xs text-purple-300 font-mono mt-1 font-semibold">Alvo R$ 80,14 (#SB-12)</div>
       </div>
 
       <!-- CARD TOTAL OPERAÇÕES -->
-      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-blue-500">
+      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-cyan-500">
         <div class="flex items-center justify-between">
-          <div class="text-xs font-bold font-mono uppercase tracking-wider text-blue-400 flex items-center gap-1.5">
-            <i data-lucide="layers" class="w-4 h-4 text-blue-400"></i>
-            Total Operações
+          <div class="text-xs font-bold font-mono uppercase tracking-wider text-cyan-400 flex items-center gap-1.5">
+            <i data-lucide="layers" class="w-4 h-4 text-cyan-400"></i>
+            Total Ordens
           </div>
-          <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-400 font-mono text-xs font-bold">100% AUDIT</span>
+          <span class="px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-400 font-mono text-[10px] font-bold">100% AUDIT</span>
         </div>
         <div class="text-3xl font-black text-white font-mono mt-2">12 ORDENS</div>
-        <div class="text-xs text-blue-300 font-mono mt-1 font-semibold">10 Encerradas &bull; 1 Ativa</div>
+        <div class="text-xs text-cyan-300 font-mono mt-1 font-semibold">10 Fechadas &bull; 1 Ativa</div>
+      </div>
+    </div>
+
+    <!-- CHARTS SECTION: CURVA DE EVOLUÇÃO DA BANCA (CHART.JS) + DISTRIBUIÇÃO -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- MAIN EVOLUTION CHART (2 COLS) -->
+      <div class="glass-card rounded-2xl p-6 lg:col-span-2 space-y-4">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+          <div>
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+              <i data-lucide="line-chart" class="w-5 h-5 text-brand-400"></i>
+              Curva de Crescimento &amp; Evolução da Banca (R$ 50,00 &rarr; R$ 111,18)
+            </h3>
+            <p class="text-xs text-gray-400">Histórico de PnL por bilhete liquidado e projeção do Ticket #SB-12</p>
+          </div>
+          <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-brand-500/10 text-brand-400 border border-brand-500/30">
+            +65.1% PnL REALIZADO
+          </span>
+        </div>
+
+        <div class="h-64 w-full">
+          <canvas id="bankrollChart"></canvas>
+        </div>
+      </div>
+
+      <!-- OUTCOME DISTRIBUTION CHART (1 COL) -->
+      <div class="glass-card rounded-2xl p-6 space-y-4">
+        <div>
+          <h3 class="text-lg font-bold text-white flex items-center gap-2">
+            <i data-lucide="pie-chart" class="w-5 h-5 text-purple-400"></i>
+            Distribuição de Resultados
+          </h3>
+          <p class="text-xs text-gray-400">Proporção de operações liquidadas</p>
+        </div>
+
+        <div class="h-48 w-full flex items-center justify-center">
+          <canvas id="distributionChart"></canvas>
+        </div>
+
+        <div class="grid grid-cols-3 gap-2 text-center text-xs font-mono pt-2 border-t border-white/5">
+          <div class="bg-dark-900/60 p-2 rounded-xl border border-white/5">
+            <div class="text-brand-400 font-bold">6 GREENS</div>
+            <div class="text-[10px] text-gray-400">60.0%</div>
+          </div>
+          <div class="bg-dark-900/60 p-2 rounded-xl border border-white/5">
+            <div class="text-red-400 font-bold">4 REDS</div>
+            <div class="text-[10px] text-gray-400">40.0%</div>
+          </div>
+          <div class="bg-dark-900/60 p-2 rounded-xl border border-white/5">
+            <div class="text-purple-400 font-bold">1 ATIVO</div>
+            <div class="text-[10px] text-gray-400">Em Jogo</div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -184,17 +274,17 @@
         <div class="bg-dark-900/60 p-3 rounded-xl border border-white/5">
           <div class="font-bold text-white font-sans text-sm">🇧🇷 Novorizontino × Sport Recife</div>
           <div class="text-purple-400 font-semibold mt-1">Menos de 3.5 FT @ 1.29</div>
-          <div class="text-gray-400 text-[11px] mt-0.5">0x0 (11' 1ºT no Jorjão) &bull; Margem: 3 gols</div>
+          <div class="text-gray-400 text-[11px] mt-0.5">0x0 (12' 1ºT no Jorjão) &bull; Margem: 3 gols</div>
         </div>
         <div class="bg-dark-900/60 p-3 rounded-xl border border-white/5">
           <div class="font-bold text-white font-sans text-sm">🇨🇱 Cobresal × Palestino</div>
           <div class="text-purple-400 font-semibold mt-1">Menos de 3.5 FT @ 1.25</div>
-          <div class="text-gray-400 text-[11px] mt-0.5">1x0 (53' 2ºT no Chile) &bull; Margem: +2 gols</div>
+          <div class="text-gray-400 text-[11px] mt-0.5">1x0 (54' 2ºT no Chile) &bull; Margem: +2 gols</div>
         </div>
         <div class="bg-dark-900/60 p-3 rounded-xl border border-white/5">
           <div class="font-bold text-white font-sans text-sm">🇧🇷 Goiás × São Bernardo</div>
           <div class="text-purple-400 font-semibold mt-1">Menos de 2.5 FT @ 1.42</div>
-          <div class="text-gray-400 text-[11px] mt-0.5">1x0 (48' 2ºT na Serrinha) &bull; Margem: +1 gol</div>
+          <div class="text-gray-400 text-[11px] mt-0.5">1x0 (49' 2ºT na Serrinha) &bull; Margem: +1 gol</div>
         </div>
       </div>
 
@@ -215,40 +305,6 @@
           <div class="text-gray-400 text-[10px]">Banca Projetada</div>
           <div class="text-sm font-bold text-emerald-400 mt-0.5">R$ 111,18 🎯</div>
         </div>
-      </div>
-    </div>
-
-    <!-- KPIS MASTER FINANCEIROS -->
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-      <div class="glass-card glass-card-hover rounded-2xl p-4">
-        <div class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Saldo Livre</div>
-        <div class="text-xl font-extrabold text-white font-mono mt-1">R$ 31,04</div>
-        <div class="text-[10px] text-brand-400 mt-1">100% blindado</div>
-      </div>
-      <div class="glass-card glass-card-hover rounded-2xl p-4">
-        <div class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Em Jogo Ativo</div>
-        <div class="text-xl font-extrabold text-amber-400 font-mono mt-1">R$ 35,00</div>
-        <div class="text-[10px] text-amber-300 mt-1">Ticket #SB-12 (@ 2.28)</div>
-      </div>
-      <div class="glass-card glass-card-hover rounded-2xl p-4">
-        <div class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Retorno Potencial</div>
-        <div class="text-xl font-extrabold text-brand-500 font-mono mt-1">R$ 80,14</div>
-        <div class="text-[10px] text-brand-400 mt-1">+R$ 45,14 líquido</div>
-      </div>
-      <div class="glass-card glass-card-hover rounded-2xl p-4">
-        <div class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Banca Projetada</div>
-        <div class="text-xl font-extrabold text-emerald-400 font-mono mt-1">R$ 111,18</div>
-        <div class="text-[10px] text-emerald-300 mt-1">111.2% da meta 🎯</div>
-      </div>
-      <div class="glass-card glass-card-hover rounded-2xl p-4">
-        <div class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Meta do Criador</div>
-        <div class="text-xl font-extrabold text-purple-400 font-mono mt-1">R$ 100,00</div>
-        <div class="text-[10px] text-purple-300 mt-1">Superada em +11.18%</div>
-      </div>
-      <div class="glass-card glass-card-hover rounded-2xl p-4">
-        <div class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Lucro Realizado</div>
-        <div class="text-xl font-extrabold text-brand-400 font-mono mt-1">+R$ 22,44</div>
-        <div class="text-[10px] text-brand-300 mt-1">+65.1% sobre inicial</div>
       </div>
     </div>
 
@@ -691,13 +747,120 @@
 
     <!-- FOOTER -->
     <footer class="text-center text-xs text-gray-500 font-mono py-4">
-      Automaton Quant Trader &middot; Sistema Autônomo Conway-Research &middot; Última Atualização: 28/08/2026, 20:41:08
+      Automaton Quant Trader &middot; Sistema Autônomo Conway-Research &middot; Última Atualização: 28/08/2026, 20:41:44
     </footer>
 
   </div>
 
+  <!-- CHART.JS INITIALIZATION SCRIPT -->
   <script>
     lucide.createIcons();
+
+    // Bankroll Evolution Chart
+    const ctxBankroll = document.getElementById('bankrollChart').getContext('2d');
+    
+    // Create gradient
+    const gradient = ctxBankroll.createLinearGradient(0, 0, 0, 250);
+    gradient.addColorStop(0, 'rgba(0, 230, 118, 0.35)');
+    gradient.addColorStop(1, 'rgba(0, 230, 118, 0.0)');
+
+    new Chart(ctxBankroll, {
+      type: 'line',
+      data: {
+        labels: ['Start (R$ 50)', '#SB-01', '#SB-02', '#SB-03', '#SB-04', '#SB-05', '#SB-06', '#SB-07', '#SB-08', '#SB-09', '#SB-10', '#SB-11', '#SB-12 (Alvo)'],
+        datasets: [
+          {
+            label: 'Evolução Realizada da Banca (R$)',
+            data: [50.00, 52.10, 58.85, 60.25, 55.25, 50.25, 46.40, 47.90, 51.87, 41.87, 45.47, 66.04, 111.18],
+            borderColor: '#00e676',
+            borderWidth: 3,
+            backgroundColor: gradient,
+            fill: true,
+            tension: 0.3,
+            pointBackgroundColor: '#00e676',
+            pointBorderColor: '#04060a',
+            pointBorderWidth: 2,
+            pointRadius: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6, 8],
+            pointHoverRadius: 8
+          },
+          {
+            label: 'Meta R$ 100,00',
+            data: [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100],
+            borderColor: '#c084fc',
+            borderWidth: 2,
+            borderDash: [6, 6],
+            fill: false,
+            pointRadius: 0
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: true,
+            labels: {
+              color: '#94a3b8',
+              font: { family: 'JetBrains Mono', size: 11 }
+            }
+          },
+          tooltip: {
+            backgroundColor: '#0d1322',
+            titleColor: '#f8fafc',
+            bodyColor: '#00e676',
+            borderColor: 'rgba(255,255,255,0.1)',
+            borderWidth: 1,
+            padding: 10,
+            displayColors: false,
+            callbacks: {
+              label: function(context) {
+                return ' Saldo: R$ ' + context.parsed.y.toFixed(2);
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+            ticks: { color: '#64748b', font: { family: 'JetBrains Mono', size: 10 } }
+          },
+          y: {
+            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+            ticks: {
+              color: '#64748b',
+              font: { family: 'JetBrains Mono', size: 10 },
+              callback: function(value) { return 'R$ ' + value; }
+            },
+            min: 30,
+            max: 120
+          }
+        }
+      }
+    });
+
+    // Distribution Donut Chart
+    const ctxDist = document.getElementById('distributionChart').getContext('2d');
+    new Chart(ctxDist, {
+      type: 'doughnut',
+      data: {
+        labels: ['GREENS', 'REDS', 'EM ABERTO'],
+        datasets: [{
+          data: [6, 4, 1],
+          backgroundColor: ['#00e676', '#ef4444', '#a855f7'],
+          borderColor: '#0d1322',
+          borderWidth: 3
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: '70%',
+        plugins: {
+          legend: { display: false }
+        }
+      }
+    });
   </script>
 </body>
 </html>
