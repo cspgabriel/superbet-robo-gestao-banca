@@ -3,25 +3,43 @@
   "versao": "3.0.0-AUTOMATON",
   "nivel_sobrevivencia": "NORMAL (STAKE PADRÃO QUARTER-KELLY 0.25f*)",
   "sessao_ativa": 3,
-  "ultima_atualizacao": "2026-08-28T22:15:11.116Z",
+  "ultima_atualizacao": "2026-08-28T22:19:27.851Z",
   "target_goal": 100,
   "progresso_meta_pct": 88.4,
   "conexao_cdp": "Ativa (Porta 9222 / 3 Abas Paralelas)",
   "banca": {
     "banca_inicial": 50,
-    "saldo_livre_em_conta": 30,
-    "saldo_em_jogo": 20,
-    "retorno_potencial_ativo": 58.39,
-    "banca_alvo_projetada": 88.39,
+    "saldo_livre_em_conta": 15,
+    "saldo_em_jogo": 35,
+    "retorno_potencial_ativo": 469.3,
+    "banca_alvo_projetada": 484.3,
     "moeda": "BRL"
   },
   "metricas_acumuladas": {
-    "total_entradas_historico": 9,
-    "entradas_ativas_inplay": 3,
+    "total_entradas_historico": 10,
+    "entradas_ativas_inplay": 4,
     "greens_liquidados": 2,
     "taxa_preservacao_capital_pct": 100
   },
   "entradas_ativas": [
+    {
+      "id": 10,
+      "ticket_id": "SB-20260828-10-SERIEB",
+      "sessao": 3,
+      "data_hora": "2026-08-28 19:18",
+      "casa": "Superbet",
+      "partida": "SuperMúltipla 6x Série B + In-Play",
+      "campeonato": "Brasileirão Série B + Multi-Esporte",
+      "minuto_entrada": "Pré-Jogo / In-Play",
+      "mercado": "Super Múltipla 6 Seleções (+12% Bônus)",
+      "selecao": "Goiás Vence + Novorizontino Vence + Náutico Vence + Mushuc 1x0 + Buse Vence + Unión Under 2.5",
+      "odd": 24.56,
+      "stake": 15,
+      "stake_tipo": "Dinheiro Real (Kelly 0.25f*)",
+      "retorno_potencial": 410.91,
+      "cashout_atual": 11.33,
+      "status": "EM ABERTO"
+    },
     {
       "id": 9,
       "ticket_id": "SB-20260828-09-SUPER",
@@ -76,5 +94,6 @@
       "cashout_atual": 3.31,
       "status": "EM ABERTO"
     }
-  ]
+  ],
+  "heartbeat_pulse": 60
 }
