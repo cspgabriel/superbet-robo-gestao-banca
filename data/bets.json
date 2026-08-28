@@ -3,26 +3,43 @@
   "versao": "3.1.0-TRANSPARENCY-AUDIT",
   "nivel_sobrevivencia": "NORMAL (STAKE DINÂMICO & RESERVA BLINDADA)",
   "sessao_ativa": 3,
-  "ultima_atualizacao": "2026-08-28T23:20:21.466Z",
+  "ultima_atualizacao": "2026-08-28T23:27:14.060Z",
   "target_goal": 100,
   "conexao_cdp": "Ativa (Porta 9222 / 3 Abas Paralelas)",
   "banca": {
     "banca_inicial": 50,
-    "saldo_livre_em_conta": 66.04,
-    "saldo_em_jogo": 0,
-    "retorno_potencial_ativo": 0,
-    "banca_alvo_projetada": 100,
+    "saldo_livre_em_conta": 31.04,
+    "saldo_em_jogo": 35,
+    "retorno_potencial_ativo": 80.14,
+    "banca_alvo_projetada": 111.18,
     "moeda": "BRL"
   },
   "metricas_acumuladas": {
-    "total_entradas_historico": 11,
-    "entradas_ativas_inplay": 0,
+    "total_entradas_historico": 12,
+    "entradas_ativas_inplay": 1,
     "greens_liquidados": 6,
     "reds_liquidados": 4,
     "taxa_acerto_historica_pct": 60,
     "pnl_liquido_fechado_brl": 22.44
   },
   "historico_completo_ordens": [
+    {
+      "id": 12,
+      "ticket_id": "SB-20260828-12-SERIEB",
+      "sessao": 4,
+      "data_hora": "2026-08-28 20:27",
+      "casa": "Superbet",
+      "partida": "Novorizontino + Cobresal + Goiás",
+      "campeonato": "Brasileirão Série B + Liga Chilena",
+      "mercado": "Tripla Defensiva Under Gols FT",
+      "selecao": "Novorizontino Under 3.5 (1.29) + Cobresal Under 3.5 (1.25) + Goiás Under 2.5 (1.42)",
+      "odd": 2.28,
+      "stake": 35,
+      "retorno_potencial": 80.14,
+      "cashout_atual": 29.18,
+      "resultado": "EM ABERTO",
+      "pnl": 0
+    },
     {
       "id": 11,
       "ticket_id": "SB-20260828-11-HT",
@@ -212,5 +229,5 @@
       "pnl": 2.1
     }
   ],
-  "heartbeat_pulse": 304
+  "heartbeat_pulse": 332
 }
