@@ -3,7 +3,7 @@
   "versao": "3.0.0-AUTOMATON",
   "nivel_sobrevivencia": "NORMAL (STAKE PADRÃO QUARTER-KELLY 0.25f*)",
   "sessao_ativa": 3,
-  "ultima_atualizacao": "2026-08-28T22:19:27.851Z",
+  "ultima_atualizacao": "2026-08-28T22:21:28.365Z",
   "target_goal": 100,
   "progresso_meta_pct": 88.4,
   "conexao_cdp": "Ativa (Porta 9222 / 3 Abas Paralelas)",
@@ -95,5 +95,5 @@
       "status": "EM ABERTO"
     }
   ],
-  "heartbeat_pulse": 60
+  "heartbeat_pulse": 72
 }
