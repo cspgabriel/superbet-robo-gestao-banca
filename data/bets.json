@@ -3,24 +3,24 @@
   "versao": "3.1.0-TRANSPARENCY-AUDIT",
   "nivel_sobrevivencia": "NORMAL (STAKE DINÂMICO & RESERVA BLINDADA)",
   "sessao_ativa": 3,
-  "ultima_atualizacao": "2026-08-28T22:23:12.247Z",
+  "ultima_atualizacao": "2026-08-28T22:24:36.289Z",
   "target_goal": 100,
   "conexao_cdp": "Ativa (Porta 9222 / 3 Abas Paralelas)",
   "banca": {
     "banca_inicial": 50,
     "saldo_livre_em_conta": 15,
-    "saldo_em_jogo": 35,
-    "retorno_potencial_ativo": 469.3,
+    "saldo_em_jogo": 25,
+    "retorno_potencial_ativo": 426.38,
     "banca_alvo_projetada": 484.3,
     "moeda": "BRL"
   },
   "metricas_acumuladas": {
     "total_entradas_historico": 10,
-    "entradas_ativas_inplay": 4,
+    "entradas_ativas_inplay": 3,
     "greens_liquidados": 3,
-    "reds_liquidados": 3,
+    "reds_liquidados": 4,
     "taxa_acerto_historica_pct": 50,
-    "pnl_liquido_fechado_brl": -3.6
+    "pnl_liquido_fechado_brl": -13.6
   },
   "historico_completo_ordens": [
     {
@@ -54,8 +54,9 @@
       "stake": 10,
       "retorno_potencial": 42.92,
       "cashout_atual": 8.1,
-      "resultado": "EM ABERTO",
-      "pnl": 0
+      "resultado": "RED",
+      "pnl": -10,
+      "motivo_perda": "Gol do Cajamarca aos 89 min (2x3) quebrou a seleção de Empate X"
     },
     {
       "id": 8,
@@ -193,5 +194,6 @@
       "resultado": "GREEN",
       "pnl": 2.1
     }
-  ]
+  ],
+  "heartbeat_pulse": 84
 }
