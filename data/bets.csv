@@ -1,17 +1,17 @@
-id,ticket_id,sessao,data_hora,casa,partida,campeonato,minuto,mercado,selecao,odd,stake_brl,stake_tipo,retorno_potencial_brl,cashout_atual_brl,status
-1,SB-20260828-01,1,2026-08-28 18:05,Superbet,Alavés x Villarreal,LaLiga,80 (2T),Resultado Final,Alavés Vence,1.42,5.00,Dinheiro Real,7.10,7.10,GREEN
-2,SB-20260828-02,1,2026-08-28 18:05,Superbet,Alavés x Villarreal,LaLiga,80 (2T),Total de Gols,Under 1.5 FT,2.35,5.00,Dinheiro Real,11.75,11.75,GREEN
-3,SB-20260828-03,1,2026-08-28 18:05,Superbet,Alavés x Villarreal,LaLiga,80 (2T),Dupla Chance,Alavés ou Empate (1X),1.28,5.00,Dinheiro Real,6.40,6.40,GREEN
-4,SB-20260828-04,2,2026-08-28 18:31,Superbet,Comerciantes x Cajamarca,Peru,2T,Total de Gols,Under 3.5 FT,1.92,5.00,Dinheiro Real,0.00,0.00,RED
-5,SB-20260828-05,2,2026-08-28 18:31,Superbet,Comerciantes + Mushuc,Peru + Equador,2T,Múltipla In-Play,Under 3.5 + Casa,3.74,5.00,Dinheiro Real,0.00,0.00,RED
-6,SB-20260828-06,2,2026-08-28 18:41,Superbet,Cherevko + Buse + Wolny,TT + Tênis,Fim,Tripla Rápida,Vencedores In-Play,1.84,3.85,Dinheiro Real,0.00,0.00,RED
-7,SB-20260828-07,3,2026-08-28 18:52,Superbet,Mushuc Runa x Delfín,Equador,Fim (1x0),Total de Gols,Menos de 1.5 FT,1.30,5.00,Dinheiro Real,6.50,6.50,GREEN
-8,SB-20260828-08,3,2026-08-28 18:52,Superbet,Mushuc Under 1.5 + Comerciantes Under 5.5,Equador + Peru,Fim (1x0 / 2x3),Múltipla Proteção,Under 1.5 + Under 5.5,1.79,5.00,Dinheiro Real,8.97,8.97,GREEN
-9,SB-20260828-09,3,2026-08-28 19:14,Superbet,SuperMúltipla 4 Seleções,Eq + Peru + Tênis + Arg,89m (2x3),Super Múltipla 4x,Eq 1x0 + Peru 2x2 + Buse + Arg Under 2.5,4.13,10.00,Dinheiro Real,0.00,0.00,RED
-10,SB-20260828-10,3,2026-08-28 19:25,Superbet,SuperMúltipla 6 Seleções,Multi-Esporte,In-Play,Super Múltipla 6x,Alavancagem In-Play,12.50,15.00,Dinheiro Real,15.00,15.00,CASHOUT NEUTRO (R$ 15.00)
-11,SB-20260828-11,3,2026-08-28 20:10,Superbet,Unión de Santa Fe + Cobresal,Arg + Chile,HT (1x0 / 1x0),Múltipla 1º Tempo,Unión 1T U1.5 + Cobresal 1T U1.5,2.02,20.00,Dinheiro Real,40.57,40.57,GREEN
-12,SB-20260828-12,4,2026-08-28 20:26,Superbet,Novorizontino + Cobresal + Goiás,Série B + Chile,64 (2T / 1x1),Tripla Under Gols FT,Novo U3.5 + Cobresal U3.5 + Goiás U2.5,2.28,35.00,Dinheiro Real,24.92,24.92,CASHOUT RED (R$ 24.92)
-13,SB-20260828-13,4,2026-08-28 21:01,Superbet,Cobresal + Goiás + Novo + Boca,Chile + Brasil + Arg,90+1m (2x1),Quádrupla Under FT,Cobresal U2.5 + Goiás U3.5 + Novo U2.5 + Boca U3.5,3.81,15.96,Dinheiro Real,0.00,0.00,RED
-14,SB-20260828-14,4,2026-08-28 21:03,Superbet,Cobresal + Novo + Náutico 1T,Chile + Série B,90+1m (2x1),Tripla Under In-Play,Cobresal U2.5 + Novo U2.5 + Náutico 1T U1.5,2.30,20.00,Dinheiro Real,0.00,0.00,RED
-15,SB-20260828-15,4,2026-08-28 21:34,Superbet,Novorizontino + Boca + Náutico,Série B + Argentina,74m (1x1),Tripla Under In-Play,Novo U2.5 + Boca U3.5 + Náutico U2.5,3.31,8.00,Dinheiro Real,8.17,8.17,CASHOUT GREEN (R$ 8.17)
-16,SB-20260828-16,4,2026-08-28 22:13,Superbet,SuperMúltipla Grade Noturna + Ao Vivo,México + Argentina + Brasil,90+1m (2x1),Super Múltipla 5x,Novo U2.5 + Boca U3.5 + Náutico U2.5 + Necaxa U3.5 + Atlante U3.5,4.98,8.17,Dinheiro Real,0.00,0.00,RED
+id,ticket_id,sessao,data_hora,casa,partida,campeonato,minuto,mercado,selecao,odd,stake_brl,stake_tipo,retorno_potencial_brl,cashout_atual_brl,status,observacoes
+1,SB-20260828-01,1,2026-08-28 18:05,Superbet,Alavés x Villarreal,LaLiga,80 (2T),Resultado Final,Alavés Vence,1.42,5.00,Dinheiro Real,7.10,7.10,GREEN,Placar final 1x0
+2,SB-20260828-02,1,2026-08-28 18:05,Superbet,Alavés x Villarreal,LaLiga,80 (2T),Total de Gols,Under 1.5 FT,2.35,5.00,Dinheiro Real,11.75,11.75,GREEN,Placar final 1x0
+3,SB-20260828-03,1,2026-08-28 18:05,Superbet,Alavés x Villarreal,LaLiga,80 (2T),Dupla Chance,Alavés ou Empate (1X),1.28,5.00,Dinheiro Real,6.40,6.40,GREEN,Placar final 1x0
+4,SB-20260828-04,2,2026-08-28 18:31,Superbet,Comerciantes x Cajamarca,Peru,2T,Total de Gols,Under 3.5 FT,1.92,5.00,Dinheiro Real,0.00,0.00,RED,Placar final 2x3 (5 gols)
+5,SB-20260828-05,2,2026-08-28 18:31,Superbet,Comerciantes + Mushuc,Peru + Equador,2T,Múltipla In-Play,Under 3.5 + Casa,3.74,5.00,Dinheiro Real,0.00,0.00,RED,Peru estourou gols
+6,SB-20260828-06,2,2026-08-28 18:41,Superbet,Cherevko + Buse + Wolny,TT + Tênis,Fim,Tripla Rápida,Vencedores In-Play,1.84,3.85,Dinheiro Real,0.00,0.00,RED,Cherevko perdeu 5 set
+7,SB-20260828-07,3,2026-08-28 18:52,Superbet,Mushuc Runa x Delfín,Equador,Fim (1x0),Total de Gols,Menos de 1.5 FT,1.30,5.00,Dinheiro Real,6.50,6.50,GREEN,Placar final 1x0
+8,SB-20260828-08,3,2026-08-28 18:52,Superbet,Mushuc Under 1.5 + Comerciantes Under 5.5,Equador + Peru,Fim (1x0 / 2x3),Múltipla Proteção,Under 1.5 + Under 5.5,1.79,5.00,Dinheiro Real,8.97,8.97,GREEN,Proteção funcionou
+9,SB-20260828-09,3,2026-08-28 19:14,Superbet,SuperMúltipla 4 Seleções,Eq + Peru + Tênis + Arg,89m (2x3),Super Múltipla 4x,Eq 1x0 + Peru 2x2 + Buse + Arg Under 2.5,4.13,10.00,Dinheiro Real,0.00,0.00,RED,Gol do Cajamarca aos 89m
+10,SB-20260828-10,3,2026-08-28 19:25,Superbet,SuperMúltipla 6 Seleções,Multi-Esporte,In-Play,Super Múltipla 6x,Alavancagem In-Play,12.50,15.00,Dinheiro Real,15.00,15.00,CASHOUT NEUTRO,Encerramento a par (0% PnL)
+11,SB-20260828-11,3,2026-08-28 20:10,Superbet,Unión de Santa Fe + Cobresal,Arg + Chile,HT (1x0 / 1x0),Múltipla 1º Tempo,Unión 1T U1.5 + Cobresal 1T U1.5,2.02,20.00,Dinheiro Real,40.57,40.57,GREEN,Ambos 1x0 no 1T
+12,SB-20260828-12,4,2026-08-28 20:26,Superbet,Novorizontino + Cobresal + Goiás,Série B + Chile,64 (2T / 1x1),Tripla Under Gols FT,Novo U3.5 + Cobresal U3.5 + Goiás U2.5,2.28,35.00,Dinheiro Real,24.92,24.92,CASHOUT RED,Resgate aos 64m salvou R$ 24.92
+13,SB-20260828-13,4,2026-08-28 21:01,Superbet,Cobresal + Goiás + Novo + Boca,Chile + Brasil + Arg,90+1m (2x1),Quádrupla Under FT,Cobresal U2.5 + Goiás U3.5 + Novo U2.5 + Boca U3.5,3.81,15.96,Dinheiro Real,0.00,0.00,RED,Gol Sport 90+1m
+14,SB-20260828-14,4,2026-08-28 21:03,Superbet,Cobresal + Novo + Náutico 1T,Chile + Série B,90+1m (2x1),Tripla Under In-Play,Cobresal U2.5 + Novo U2.5 + Náutico 1T U1.5,2.30,20.00,Dinheiro Real,0.00,0.00,RED,Gol Sport 90+1m
+15,SB-20260828-15,4,2026-08-28 21:34,Superbet,Novorizontino + Boca + Náutico,Série B + Argentina,74m (1x1),Tripla Under In-Play,Novo U2.5 + Boca U3.5 + Náutico U2.5,3.31,8.00,Dinheiro Real,8.17,8.17,CASHOUT GREEN,Resgate no 1x1 com lucro R$ 8.17
+16,SB-20260828-16,4,2026-08-28 22:13,Superbet,SuperMúltipla Grade Noturna + Ao Vivo,México + Argentina + Brasil,90+1m (2x1),Super Múltipla 5x,Novo U2.5 + Boca U3.5 + Náutico U2.5 + Necaxa U3.5 + Atlante U3.5,4.98,8.17,Dinheiro Real,0.00,0.00,RED,Gol Sport 90+1m

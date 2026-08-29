@@ -1,12 +1,12 @@
 {
-  "robo_status": "ONLINE (AUTONOMOUS DAEMON ACTIVE)",
-  "versao": "3.12.0-MASTER",
-  "nivel_sobrevivencia": "CONSERVADOR (CAPITAL BLINDADO EM R$ 70,00)",
+  "robo_status": "SESSÃO ENCERRADA (FINAL AUDITED STATE)",
+  "versao": "3.13.0-FINAL",
+  "nivel_sobrevivencia": "ENCERRADO (SALDO FINAL R$ 70,00 PRESERVADO PARA SAQUE)",
   "sessao_ativa": 4,
-  "ultima_atualizacao": "2026-08-29T01:23:07.490Z",
+  "ultima_atualizacao": "2026-08-29T01:25:48.999Z",
   "target_goal": 100,
   "progresso_meta_pct": 70,
-  "conexao_cdp": "Ativa (Porta 9222 / 3 Abas Paralelas)",
+  "conexao_cdp": "Encerrada",
   "banca": {
     "banca_inicial_start": 50,
     "deposito_adicional": 58,
@@ -16,62 +16,9 @@
     "cashouts_soma_atual": 0,
     "patrimonio_liquido_realizavel": 70,
     "lucro_liquido_atual": -38,
-    "retorno_potencial_ativo": 0,
-    "banca_alvo_projetada": 100,
+    "taxa_preservacao_capital_pct": 64.81,
     "moeda": "BRL"
   },
-  "projecao_composta_20pct": [
-    {
-      "dia": 1,
-      "banca_alvo": 84,
-      "status": "EM ANDAMENTO (BASE R$ 70,00)"
-    },
-    {
-      "dia": 2,
-      "banca_alvo": 100.8,
-      "status": "PROJETADO"
-    },
-    {
-      "dia": 3,
-      "banca_alvo": 120.96,
-      "status": "PROJETADO"
-    },
-    {
-      "dia": 4,
-      "banca_alvo": 145.15,
-      "status": "PROJETADO"
-    },
-    {
-      "dia": 5,
-      "banca_alvo": 174.18,
-      "status": "PROJETADO"
-    },
-    {
-      "dia": 10,
-      "banca_alvo": 433.42,
-      "status": "PROJETADO"
-    },
-    {
-      "dia": 15,
-      "banca_alvo": 1078.5,
-      "status": "PROJETADO"
-    },
-    {
-      "dia": 20,
-      "banca_alvo": 2683.74,
-      "status": "PROJETADO"
-    },
-    {
-      "dia": 25,
-      "banca_alvo": 6678.07,
-      "status": "PROJETADO"
-    },
-    {
-      "dia": 30,
-      "banca_alvo": 16617.15,
-      "status": "PROJETADO"
-    }
-  ],
   "metricas_acumuladas": {
     "total_entradas_historico": 16,
     "entradas_ativas_inplay": 0,
@@ -83,7 +30,14 @@
       "cashout_red": 1,
       "cashout_green": 1
     },
-    "taxa_preservacao_capital_pct": 64.81
+    "ganho_bruto_greens_brl": 46.46,
+    "perda_bruta_reds_brl": 68.03,
+    "volume_total_movimentado_brl": 189.98
+  },
+  "post_mortem_analise": {
+    "ponto_critico": "Novorizontino 2x0 Sport (78' 2T)",
+    "erro_identificado": "Falha de execução de cashout aos 78' com lucro positivo de R$ 59,03 no caixa (+R$ 137,20 total). Aposta foi levada aos acréscimos onde o gol aos 90+1' estourou a margem zero do Under 2.5.",
+    "licao_aprendida": "Regra mandatória de cashout imediato e incondicional sempre que um evento atingir margem de erro zero (1 gol para estourar o mercado)."
   },
   "entradas_ativas": []
 }
