@@ -1,53 +1,23 @@
-# 🤖 Superbet In-Play Quant Bot & Dashboard de Gestão de Banca
-**Versão:** 4.0.0-PRO-QUANT | **Protocolo de Sobrevivência:** ATIVO & AUDITADO
-
-Sistema autônomo de inteligência quantitativa para trading esportivo, modelagem matemática in-play e gestão de risco com **Instinto de Sobrevivência (Zero Risk of Ruin)**.
+# 🤖 SUPERBET AUTOMATON QUANT TRADER V4.4 (BILLY WALTERS ENGINE)
+**Sistema Autônomo de Gestão de Banca, Value Betting (+EV) e Execução In-Play**
 
 ---
 
-## 🌐 Live Dashboard Online
-Acesse o painel em tempo real: **[https://cspgabriel.github.io/superbet-robo-gestao-banca/](https://cspgabriel.github.io/superbet-robo-gestao-banca/)**
+## 🎩 O MOTOR DE INTELIGÊNCIA BILLY WALTERS & OS 11 PILARES
 
----
+O agente opera sob rigor matemático absoluto, combinando a disciplina de gestão de risco de **Billy Walters** com o **Framework de Coleta de Dados em 11 Pilares**:
 
-## 🛡️ Protocolo do Instinto de Sobrevivência V4.0 (Bankroll is Life)
-
-O saldo em conta é o oxigênio e a vida do robô. Se a banca zerar, o robô é encerrado para sempre. Todas as operações seguem as 6 Leis Invioláveis:
-
-1. **Preservação de Capital Primária (RoR < 0.001%)** — O capital de R$ 70,00 preservado é a base inegociável de sobrevivência.
-2. **Cluster Lock & Zero Cross-Exposure** — NUNCA repetir a mesma partida ou mercado em bilhetes múltiplos ou simultâneos. Covariância zero absoluta.
-3. **Regra Mandatória da Margem Zero** — Se a margem restante em Under for de 1 gol aos 70'+, o Cashout é acionado imediatamente.
-4. **Dimensionamento por Fractional Kelly (0.25f*)** — Stakes unitárias estritas de 5% a 7% (R$ 3,50 a R$ 5,00) e teto de sessão de 15%.
-5. **Whitelist de Alta Liquidez (Tier 1 & Tier 2 Apenas)** — Proibição de ligas periféricas e esportes de baixa liquidez (Tênis de Mesa).
-6. **Lock de Lucro / Parada no Topo (Peak Lock)** — Encerramento automático ao atingir +25% de lucro na sessão.
-
----
-
-## 📐 Frameworks Matemáticos Implementados
-
-* **Modelo Bivariado de Dixon-Coles (1997):** Ajuste de dependência estocástica para placares baixos e empates.
-* **Expected Goals Decay Model (xG In-Play):** Decaimento temporal não-linear ponderado por atrito e substituições.
-* **Closing Line Value (CLV Benchmark):** Comparação sistemática com a linha de fechamento da Pinnacle e Betfair.
-* **Optimal Stopping Theory & Bellman Equation:** Resolução analítica para cashouts proativos em tempo real.
-
----
-
-## 📊 Estrutura do Repositório
-
-`
-├── index.html                  # Dashboard web interativo (Tailwind, Chart.js, KaTeX, Theme Switcher)
-├── data/
-│   ├── bets.json               # Base de dados estruturada JSON com estado auditado
-│   └── bets.csv                # Livro de ordens tabular CSV dos 16 tickets históricos
-├── docs/
-│   ├── metodologia-quant-v4.md # Metodologia Quantitativa V4.0 e Auditoria Post-Mortem detalhada
-│   ├── survival-protocol.md    # Especificação do Protocolo de Sobrevivência V4.0
-│   ├── automaton-constitution.md # Constituição Automaton e Leis Imutáveis
-│   └── changes/                # Histórico auditável de modificações
-└── README.md                   # Documentação mestre
-`
-
----
-
-## 🚀 Conexão de Engenharia (CDP Porta 9222)
-O robô opera diretamente no Chrome oficial do usuário via **Chrome DevTools Protocol (CDP)** conectado no socket http://127.0.0.1:9222, garantindo latência inferior a 150ms e zero intermediários.
+1. **Modelagem de Probabilidade Real & Fair Odds:** Cálculo de {\text{real}}$ e detecção de desajustes da casa onde $+EV \ge 7\%$.
+2. **Rastreamento de Dinheiro Institucional (Sharps vs Public):** Identificação de Reverse Line Movements e distorções de odds.
+3. **Framework em 11 Pilares:** Análise de 10 jogos, H2H, métricas individuais de 20 partidas, Starting XI confirmado, tática, contexto motivacional, clima, tendências de arbitragem, fadiga/calendário e xG/xGA.
+4. **Resolução do Bug Multi-Jogos:** Arquitetura modular de processamento individualizado por partida (Batch-per-Game) garantindo 3 prognósticos estruturados para todos os jogos sem truncamento.
+5. **Constituição de 9 Leis Invioláveis:**
+   - Lei #1: Piso de Odd em Simples $\ge 1.65$ a .30$ (Assimetria Risco/Retorno Positiva).
+   - Lei #2: Primazia da Simples (80%+ do volume).
+   - Lei #3: Cluster Lock Absoluto (máx 1 bilhete ativo por jogo).
+   - Lei #4: Web Intelligence Obrigatório antes de qualquer aposta.
+   - Lei #5: Cashout Preventivo em Under aos 70'.
+   - Lei #6: Anti-Falling Knife em favoritos.
+   - Lei #7: Whitelist Estrita Tier 1.
+   - Lei #8: Kelly Fracionário (.25f^*$).
+   - Lei #9: Circuit Breaker em 30% drawdown.
