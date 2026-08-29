@@ -1,12 +1,12 @@
 {
-  "robo_status": "SESSÃO ENCERRADA (FINAL AUDITED STATE)",
-  "versao": "3.13.0-FINAL",
-  "nivel_sobrevivencia": "ENCERRADO (SALDO FINAL R$ 70,00 PRESERVADO PARA SAQUE)",
-  "sessao_ativa": 4,
-  "ultima_atualizacao": "2026-08-29T01:25:48.999Z",
+  "robo_status": "PRONTO PARA NOVA SESSÃO (METODOLOGIA V4.0 ATIVA)",
+  "versao": "4.0.0-PRO-QUANT",
+  "nivel_sobrevivencia": "NORMAL (R$ 70,00 PRESERVADO)",
+  "sessao_ativa": 5,
+  "ultima_atualizacao": "2026-08-29T08:55:00.000Z",
   "target_goal": 100,
   "progresso_meta_pct": 70,
-  "conexao_cdp": "Encerrada",
+  "conexao_cdp": "Pronto para Conexão",
   "banca": {
     "banca_inicial_start": 50,
     "deposito_adicional": 58,
@@ -17,7 +17,18 @@
     "patrimonio_liquido_realizavel": 70,
     "lucro_liquido_atual": -38,
     "taxa_preservacao_capital_pct": 64.81,
-    "moeda": "BRL"
+    "moeda": "BRL",
+    "stake_unitaria_recomendada_min": 3.50,
+    "stake_unitaria_recomendada_max": 5.00,
+    "teto_risco_simultaneo_sessao": 10.50
+  },
+  "regras_v4_ativas": {
+    "zero_margin_rule": true,
+    "cluster_lock": true,
+    "fractional_kelly_limit": "0.25f* (Max 7% por entrada)",
+    "whitelist_leagues": ["Premier League", "La Liga", "Serie A", "Bundesliga", "Ligue 1", "Brasileirão Série A", "Brasileirão Série B", "Champions League"],
+    "stop_gain_sessao_brl": 18.00,
+    "stop_loss_sessao_brl": 10.50
   },
   "metricas_acumuladas": {
     "total_entradas_historico": 16,
@@ -36,8 +47,18 @@
   },
   "post_mortem_analise": {
     "ponto_critico": "Novorizontino 2x0 Sport (78' 2T)",
-    "erro_identificado": "Falha de execução de cashout aos 78' com lucro positivo de R$ 59,03 no caixa (+R$ 137,20 total). Aposta foi levada aos acréscimos onde o gol aos 90+1' estourou a margem zero do Under 2.5.",
-    "licao_aprendida": "Regra mandatória de cashout imediato e incondicional sempre que um evento atingir margem de erro zero (1 gol para estourar o mercado)."
+    "erros_identificados": [
+      "Cross-Exposure em 4 bilhetes simultâneos (violação da independência estocástica).",
+      "Inércia de Cashout em Margem Zero (Under 2.5 aos 78' 2T com 2x0 no placar).",
+      "Overbetting com stakes de R$ 35 e R$ 20 (violação de Fractional Kelly).",
+      "Dispersão em ligas periféricas no início (Peru / Tênis de Mesa)."
+    ],
+    "licoes_implementadas_v4": [
+      "Regra mandatória de Margem Zero (Cashout se margem <= 1 gol após os 70').",
+      "Cluster Lock: Proibição estrita de repetir o mesmo jogo em múltiplos bilhetes.",
+      "Stakes estritas de 5% a 7% (R$ 3,50 a R$ 5,00) com teto de sessão em 15%.",
+      "Whitelist exclusiva de ligas Tier 1 e Tier 2."
+    ]
   },
   "entradas_ativas": []
 }
