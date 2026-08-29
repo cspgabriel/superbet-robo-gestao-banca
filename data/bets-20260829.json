@@ -3,26 +3,51 @@
   "data_sessao": "2026-08-29",
   "versao_motor": "4.0.0-PRO-QUANT (V2 OperationGuard - MODO EXPANSÃO)",
   "banca_start_sessao": 50.00,
-  "saldo_livre_em_conta": 38.93,
-  "saldo_em_jogo": 12.50,
-  "cashouts_soma_atual": 12.50,
+  "saldo_livre_em_conta": 21.43,
+  "saldo_em_jogo": 30.00,
+  "cashouts_soma_atual": 24.77,
   "patrimonio_atual": 51.43,
-  "retorno_potencial_total_aberto": 26.03,
+  "retorno_potencial_total_aberto": 58.58,
   "lucro_liquido_sessao_realizado": 1.43,
-  "lucro_potencial_sessao_projetado": 14.96,
-  "banca_projetada_green_total": 64.96,
+  "lucro_potencial_sessao_projetado": 30.01,
+  "banca_projetada_green_total": 80.01,
   "taxa_acerto_pct": 100.0,
-  "teto_stake_unitaria": 10.00,
-  "teto_exposicao_simultanea": 25.00,
-  "stop_gain_sessao": 35.00,
-  "stop_loss_sessao": 15.00,
-  "regras_ativas": {
-    "cluster_lock": true,
-    "zero_margin_under_rule": true,
-    "whitelist_only": true,
-    "modo_alavancagem_lucro": true
-  },
   "entradas_ativas": [
+    {
+      "id": 5,
+      "ticket_id": "890K-QNO8QO",
+      "data_hora": "2026-08-29 10:34",
+      "casa": "Superbet",
+      "partida": "RB Leipzig x Borussia Monchengladbach",
+      "campeonato": "Bundesliga (Alemanha)",
+      "minuto_entrada": "4 (1T) AO VIVO",
+      "tipo": "In-Play (Ao Vivo) HT",
+      "mercado": "1T Resultado (1X2)",
+      "selecao": "RB Leipzig Vence o 1T",
+      "odd": 2.07,
+      "stake": 10.00,
+      "retorno_potencial": 20.70,
+      "cashout_atual": 9.53,
+      "status": "EM ABERTO (AO VIVO)",
+      "justificativa_quant": "Leipzig dominante em casa, posse de bola + ataque desde o 1o minuto. Odd HT @ 2.07 com +EV estimado em +18%. Entrada no minuto 4."
+    },
+    {
+      "id": 4,
+      "ticket_id": "891M-YDZKBJ",
+      "data_hora": "2026-08-29 10:16",
+      "casa": "Superbet",
+      "partida": "Elversberg x Bayer Leverkusen",
+      "campeonato": "Bundesliga (Alemanha)",
+      "minuto_entrada": "Pré-Jogo (Início 10:30)",
+      "tipo": "Simples Pré-Jogo (Aporte Adicional)",
+      "mercado": "Resultado Final (1X2)",
+      "selecao": "Bayer Leverkusen Vence (2)",
+      "odd": 1.58,
+      "stake": 7.50,
+      "retorno_potencial": 11.85,
+      "cashout_atual": 6.59,
+      "status": "EM ABERTO (AO VIVO)"
+    },
     {
       "id": 3,
       "ticket_id": "891N-YJR1LT",
@@ -37,9 +62,8 @@
       "odd": 2.20,
       "stake": 10.00,
       "retorno_potencial": 22.08,
-      "cashout_atual": 10.00,
-      "status": "EM ABERTO",
-      "justificativa_quant": "Dortmund soberano em casa contra Hamburgo + Clássico ofensivo de altíssimo xG na Premier League (Tottenham x Newcastle com média >3.2 gols/jogo). +EV combinado 24.5%."
+      "cashout_atual": 8.65,
+      "status": "EM ABERTO (Pré-Jogo 13:30)"
     },
     {
       "id": 2,
@@ -48,16 +72,14 @@
       "casa": "Superbet",
       "partida": "Elversberg x Bayer Leverkusen",
       "campeonato": "Bundesliga (Alemanha)",
-      "minuto_entrada": "Pré-Jogo (Início 10:30)",
-      "tipo": "Simples Pré-Jogo",
+      "minuto_entrada": "Pré-Jogo",
+      "tipo": "Simples Pré-Jogo (Entrada Inicial)",
       "mercado": "Resultado Final (1X2)",
       "selecao": "Bayer Leverkusen Vence (2)",
       "odd": 1.58,
       "stake": 2.50,
       "retorno_potencial": 3.95,
-      "cashout_atual": 2.50,
-      "status": "EM ABERTO",
-      "justificativa_quant": "Leverkusen campeão e amplamente favorito contra Elversberg; modelo Dixon-Coles projeta probabilidade de vitória de 68% com valor de linha institucional (+EV 7.4% a 10%)."
+      "status": "EM ABERTO (AO VIVO)"
     }
   ],
   "entradas_liquidadas": [
@@ -77,8 +99,7 @@
       "retorno_potencial": 3.93,
       "resultado_brl": 3.93,
       "lucro_liquido_brl": 1.43,
-      "status": "GREEN",
-      "placar_final": "Gol do Liverpool marcado por Isak aos 60' (1x1)"
+      "status": "GREEN"
     }
   ]
 }
