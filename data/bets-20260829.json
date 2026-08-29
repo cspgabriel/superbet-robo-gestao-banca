@@ -2,15 +2,43 @@
   "sessao_id": 5,
   "data_sessao": "2026-08-29",
   "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
-  "diretriz_operacional": "BILLY WALTERS MULTI-MARKET VALUE ENGINE - DUPLA IN-PLAY ALAVANCAGEM SEGURA + DIVERSIFICACAO",
+  "diretriz_operacional": "BILLY WALTERS VALUE ENGINE - ALAVANCAGEM TOTAL E RECICLAGEM DINAMICA DE BANCA",
   "banca_start_sessao": 50.00,
-  "saldo_livre_em_conta": 4.64,
-  "saldo_em_jogo": 20.00,
+  "saldo_livre_em_conta": 0.00,
+  "saldo_em_jogo": 24.64,
   "patrimonio_atual": 24.64,
-  "retorno_potencial_total_aberto": 40.63,
+  "retorno_potencial_total_aberto": 49.21,
   "lucro_liquido_sessao_realizado": 0.74,
   "taxa_acerto_simples_pct": 75.0,
   "entradas_ativas": [
+    {
+      "id": 16,
+      "ticket_id": "890L-LENS-1G-16",
+      "data_hora": "2026-08-29 12:36",
+      "casa": "Superbet",
+      "formato": "Simples",
+      "qtd_selecoes": 1,
+      "timing": "In-Play (23' 1T • Bola Rolando)",
+      "categoria_mercado": "Proximo_Gol",
+      "tempo_resolucao_alvo": "In-Play (90')",
+      "odd_total": 1.85,
+      "stake_brl": 4.64,
+      "retorno_potencial": 8.58,
+      "cashout_atual": 4.64,
+      "status": "EM ABERTO",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "Strasbourg x Lens",
+          "campeonato": "Ligue 1 (França)",
+          "mercado": "1º Gol",
+          "selecao": "Lens Marca o 1º Gol",
+          "odd_individual": 1.85,
+          "status_perna": "Em andamento (0x0 aos 23' 1T com bola rolando)"
+        }
+      ],
+      "justificativa_quant": "Simples Padrao G1. Alocacao total do saldo residual de R$ 4.64 no 1º Gol do Lens, equipe que pressiona fora de casa na Ligue 1. Odd 1.85 com +EV."
+    },
     {
       "id": 15,
       "ticket_id": "890D-DUPLA-INPLAY-15",
@@ -34,7 +62,7 @@
           "mercado": "Resultado Final",
           "selecao": "Bournemouth Vence a Partida",
           "odd_individual": 1.28,
-          "status_perna": "Em andamento (1x0 aos 80' com controle absoluto)"
+          "status_perna": "Em andamento (1x0 aos 82' com controle absoluto)"
         },
         {
           "perna": 2,
@@ -43,7 +71,7 @@
           "mercado": "Total de Gols",
           "selecao": "Mais de 1.5 Gols na Partida",
           "odd_individual": 1.30,
-          "status_perna": "Em andamento (0x0 aos 22' 1T)"
+          "status_perna": "Em andamento (0x0 aos 23' 1T)"
         }
       ],
       "justificativa_quant": "Dupla In-Play de Alavancagem com altissima probabilidade. Bournemouth administra 1x0 na reta final sem ameacas do Everton e Strasbourg x Lens com perfil de gols na Ligue 1. Odd combinada 1.66 com +EV."
@@ -71,7 +99,7 @@
           "mercado": "Resultado Final",
           "selecao": "Real Betis Vence a Partida",
           "odd_individual": 2.40,
-          "status_perna": "Em andamento (1x0 aos 34' 1T com mais de 56 min de jogo)"
+          "status_perna": "Em andamento (1x0 aos 36' 1T com mais de 54 min de jogo)"
         }
       ],
       "justificativa_quant": "Simples Padrao G1 Billy Walters em Mercado 1X2. Real Betis com 100% de vitórias (2J, 2V) e zero gols sofridos vs Levante zerado no ataque (17º lugar). H2H: Betis invicto ha 5 jogos. Odd 2.40 com +EV de +24%."
