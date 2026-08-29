@@ -2,17 +2,18 @@
   "sessao_id": 5,
   "data_sessao": "2026-08-29",
   "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
-  "diretriz_operacional": "FASE 3 ATIVA - TICKET #22 (DUPLA IN-PLAY JUVENTUS 1.22 + LYON 1.42 @ 1.73) ABERTO - CAIXA R$ 23.58 LIVRE",
+  "diretriz_operacional": "FASE 3 CONCLUIDA - PREPARANDO GRADE NOTURNA FASE 4 (BRASILEIRAO SERIE A 18H30 / 20H00 / 21H20) - SALDO R$ 23.58",
   "banca_start_sessao": 50.00,
   "deposito_adicional_brl": 61.00,
   "saldo_livre_em_conta": 23.58,
-  "saldo_em_jogo": 25.00,
-  "patrimonio_atual": 48.58,
-  "retorno_potencial_total_aberto": 43.31,
-  "lucro_liquido_sessao_realizado": 13.68,
+  "saldo_em_jogo": 0.00,
+  "patrimonio_atual": 23.58,
+  "retorno_potencial_total_aberto": 0.00,
+  "lucro_liquido_sessao_realizado": -11.32,
   "meta_goal_final_brl": 500.00,
   "taxa_acerto_simples_pct": 71.4,
-  "entradas_ativas": [
+  "entradas_ativas": [],
+  "entradas_liquidadas": [
     {
       "id": 22,
       "ticket_id": "891R-YITKVS",
@@ -25,9 +26,9 @@
       "tempo_resolucao_alvo": "Full-Time (17h35)",
       "odd_total": 1.73,
       "stake_brl": 25.00,
-      "retorno_potencial": 43.31,
-      "cashout_atual": 23.39,
-      "status": "EM ABERTO",
+      "resultado_brl": 0.00,
+      "lucro_liquido_brl": -25.00,
+      "status": "RED",
       "selecoes_detalhadas": [
         {
           "perna": 1,
@@ -36,7 +37,7 @@
           "mercado": "Resultado Final",
           "selecao": "Juventus Vence",
           "odd_individual": 1.22,
-          "status_perna": "Em andamento (4' 1T)"
+          "status_perna": "GREEN (Juventus 2x0 Parma)"
         },
         {
           "perna": 2,
@@ -45,13 +46,11 @@
           "mercado": "Resultado Final",
           "selecao": "Olympique Lyon Vence",
           "odd_individual": 1.42,
-          "status_perna": "Em andamento (6' 1T)"
+          "status_perna": "RED (Lyon 1x1 Le Havre)"
         }
       ],
-      "justificativa_quant": "Dupla Institucional de Elite da Fase 3. Dois gigantes jogando em casa (Juventus no Allianz Stadium e Lyon no Groupama Stadium) com favoritismo massivo e dominancia tecnica. Odd combinada 1.73 com alto +EV."
-    }
-  ],
-  "entradas_liquidadas": [
+      "observacoes": "Juventus venceu por 2x0 (Green). Lyon dominou com 34 finalizações mas cedeu empate aos 88' (1x1 - Red)."
+    },
     {
       "id": 21,
       "ticket_id": "891Y-YJV8WE",
