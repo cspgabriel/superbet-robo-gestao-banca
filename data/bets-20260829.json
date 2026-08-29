@@ -2,17 +2,46 @@
   "sessao_id": 5,
   "data_sessao": "2026-08-29",
   "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
-  "diretriz_operacional": "BILLY WALTERS VALUE ENGINE - GREEN CONFIRMADO NO TICKET #20 (DORTMUND VENCEU 2X0 - RETORNO R$ 19.95) - SALDO LIVRE R$ 49.36",
+  "diretriz_operacional": "FASE 3 ATIVA - TICKET #21 (JUVENTUS VENCE @ 1.20) ABERTO - CAIXA R$ 29.36 LIVRE",
   "banca_start_sessao": 50.00,
   "deposito_adicional_brl": 61.00,
-  "saldo_livre_em_conta": 49.36,
-  "saldo_em_jogo": 0.00,
+  "saldo_livre_em_conta": 29.36,
+  "saldo_em_jogo": 20.00,
   "patrimonio_atual": 49.36,
-  "retorno_potencial_total_aberto": 0.00,
+  "retorno_potencial_total_aberto": 24.00,
   "lucro_liquido_sessao_realizado": 14.46,
   "meta_goal_final_brl": 500.00,
   "taxa_acerto_simples_pct": 71.4,
-  "entradas_ativas": [],
+  "entradas_ativas": [
+    {
+      "id": 21,
+      "ticket_id": "891Y-YJV8WE",
+      "data_hora": "2026-08-29 15:44",
+      "casa": "Superbet",
+      "formato": "Simples",
+      "qtd_selecoes": 1,
+      "timing": "Pre-Jogo (15h45)",
+      "categoria_mercado": "Resultado_Final_1X2",
+      "tempo_resolucao_alvo": "Full-Time (17h35)",
+      "odd_total": 1.20,
+      "stake_brl": 20.00,
+      "retorno_potencial": 24.00,
+      "cashout_atual": 20.00,
+      "status": "EM ABERTO",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "Juventus x Parma",
+          "campeonato": "Serie A (Itália)",
+          "mercado": "Resultado Final",
+          "selecao": "Juventus Vence a Partida",
+          "odd_individual": 1.20,
+          "status_perna": "Inicia às 15h45"
+        }
+      ],
+      "justificativa_quant": "Simples Institucional Padrao G1 Billy Walters. Juventus no Allianz Stadium com dominancia historica e elenco superior vs Parma. Odd 1.20 com probabilidade real calculada em 88.0%."
+    }
+  ],
   "entradas_liquidadas": [
     {
       "id": 20,
