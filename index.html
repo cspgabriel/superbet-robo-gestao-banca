@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR" class="dark scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,19 +46,57 @@
   </script>
 
   <style>
-    body {
+    /* Dark Mode Defaults */
+    html.dark body {
       background-color: #04060a;
       background-image: 
         radial-gradient(at 0% 0%, rgba(0, 230, 118, 0.08) 0px, transparent 50%),
         radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.08) 0px, transparent 50%);
       color: #f3f4f6;
     }
-    .glass-card {
+    html.dark .glass-card {
       background: rgba(13, 19, 34, 0.85);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #f3f4f6;
     }
+    html.dark .sub-card {
+      background: rgba(7, 10, 19, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Light Mode */
+    html:not(.dark) body {
+      background-color: #f8fafc;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(0, 200, 83, 0.06) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(37, 99, 235, 0.06) 0px, transparent 50%);
+      color: #0f172a;
+    }
+    html:not(.dark) .glass-card {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+      color: #0f172a;
+    }
+    html:not(.dark) .sub-card {
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      color: #1e293b;
+    }
+    html:not(.dark) .text-white {
+      color: #0f172a !important;
+    }
+    html:not(.dark) .text-gray-300 {
+      color: #334155 !important;
+    }
+    html:not(.dark) .text-gray-400 {
+      color: #64748b !important;
+    }
+
     .glow-green {
       box-shadow: 0 0 20px rgba(0, 230, 118, 0.25);
     }
@@ -70,7 +108,7 @@
     }
   </style>
 </head>
-<body class="min-h-screen p-4 sm:p-6 lg:p-8 space-y-8">
+<body class="min-h-screen p-4 sm:p-6 lg:p-8 space-y-8 transition-colors duration-300">
 
   <div class="max-w-7xl mx-auto space-y-8">
 
@@ -83,9 +121,9 @@
         <div>
           <div class="flex items-center gap-2">
             <h1 class="text-xl font-black text-white tracking-tight">Automaton Quant Trader &middot; Superbet</h1>
-            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-brand-500/20 text-brand-500 border border-brand-500/40 flex items-center gap-1.5 font-mono">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-brand-500/20 text-brand-600 dark:text-brand-400 border border-brand-500/40 flex items-center gap-1.5 font-mono">
               <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span>
-              BANCA TOTAL APORTADA: R$ 108,00 | PATRIMÔNIO: R$ 141,46
+              BANCA TOTAL APORTADA: R$ 108,00 | PATRIMÔNIO: R$ 152,68
             </span>
           </div>
           <p class="text-xs text-gray-400 font-medium">Gestão Quantitativa de Sobrevivência &middot; Alvo Final: R$ 203,57</p>
@@ -93,13 +131,19 @@
       </div>
 
       <div class="flex flex-wrap items-center gap-2">
-        <div class="px-3 py-1.5 rounded-xl bg-dark-700/80 border border-white/5 text-xs text-gray-300 flex items-center gap-2 font-mono">
-          <i data-lucide="wallet" class="w-3.5 h-3.5 text-blue-400"></i>
-          <span>Saldo Livre: R$ 70,00 | Cashouts: R$ 71,46</span>
+        <!-- THEME TOGGLE BUTTON -->
+        <button id="themeToggleBtn" onclick="toggleTheme()" class="px-3.5 py-1.5 rounded-xl sub-card text-xs font-bold flex items-center gap-1.5 hover:opacity-80 transition cursor-pointer">
+          <i id="themeIcon" data-lucide="sun" class="w-4 h-4 text-amber-500"></i>
+          <span id="themeText">Tema Light</span>
+        </button>
+
+        <div class="px-3 py-1.5 rounded-xl sub-card text-xs text-gray-300 flex items-center gap-2 font-mono">
+          <i data-lucide="wallet" class="w-3.5 h-3.5 text-blue-500"></i>
+          <span>Saldo Livre: R$ 70,00 | Cashouts: R$ 82,68</span>
         </div>
-        <div class="px-3 py-1.5 rounded-xl bg-brand-500/10 border border-brand-500/30 text-xs font-bold text-brand-400 flex items-center gap-1.5 font-mono glow-green">
+        <div class="px-3 py-1.5 rounded-xl bg-brand-500/10 border border-brand-500/30 text-xs font-bold text-brand-600 dark:text-brand-400 flex items-center gap-1.5 font-mono glow-green">
           <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
-          Patrimônio Realizável: R$ 141,46 🎯
+          Patrimônio: R$ 152,68 (+41.4%) 🎯
         </div>
         <button onclick="window.location.reload()" class="px-3.5 py-1.5 rounded-xl bg-brand-500 text-dark-900 font-bold text-xs flex items-center gap-1.5 hover:bg-brand-600 transition shadow-lg shadow-brand-500/20">
           <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
@@ -113,66 +157,66 @@
       <!-- CARD BANCA TOTAL APORTADA (R$ 50 + R$ 58 = R$ 108) -->
       <div class="glass-card rounded-2xl p-5 border-l-4 border-l-blue-500">
         <div class="flex items-center justify-between">
-          <div class="text-xs font-bold font-mono uppercase tracking-wider text-blue-400 flex items-center gap-1.5">
-            <i data-lucide="landmark" class="w-4 h-4 text-blue-400"></i>
+          <div class="text-xs font-bold font-mono uppercase tracking-wider text-blue-500 flex items-center gap-1.5">
+            <i data-lucide="landmark" class="w-4 h-4 text-blue-500"></i>
             Banca Aportada
           </div>
-          <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-400 font-mono text-[10px] font-bold">50 + 58</span>
+          <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-600 dark:text-blue-400 font-mono text-[10px] font-bold">50 + 58</span>
         </div>
         <div class="text-3xl font-black text-white font-mono mt-2">R$ 108,00</div>
-        <div class="text-xs text-blue-300 font-mono mt-1 font-semibold">R$ 50 Init + R$ 58 Depósito</div>
+        <div class="text-xs text-blue-500 font-mono mt-1 font-semibold">R$ 50 Start + R$ 58 Depósito</div>
       </div>
 
       <!-- CARD GREENS -->
       <div class="glass-card rounded-2xl p-5 border-l-4 border-l-brand-500 glow-green">
         <div class="flex items-center justify-between">
-          <div class="text-xs font-bold font-mono uppercase tracking-wider text-brand-400 flex items-center gap-1.5">
+          <div class="text-xs font-bold font-mono uppercase tracking-wider text-brand-600 dark:text-brand-400 flex items-center gap-1.5">
             <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500"></i>
             Total de Greens
           </div>
-          <span class="px-2 py-0.5 rounded bg-brand-500/20 text-brand-400 font-mono text-[10px] font-bold">60.0% WIN</span>
+          <span class="px-2 py-0.5 rounded bg-brand-500/20 text-brand-600 dark:text-brand-400 font-mono text-[10px] font-bold">60.0% WIN</span>
         </div>
         <div class="text-3xl font-black text-white font-mono mt-2">6 GREENS</div>
-        <div class="text-xs text-brand-400 font-mono mt-1 font-semibold">+R$ 46,29 Ganho Bruto</div>
+        <div class="text-xs text-brand-600 dark:text-brand-400 font-mono mt-1 font-semibold">+R$ 46,29 Ganho Bruto</div>
       </div>
 
       <!-- CARD REDS -->
       <div class="glass-card rounded-2xl p-5 border-l-4 border-l-red-500">
         <div class="flex items-center justify-between">
-          <div class="text-xs font-bold font-mono uppercase tracking-wider text-red-400 flex items-center gap-1.5">
+          <div class="text-xs font-bold font-mono uppercase tracking-wider text-red-500 flex items-center gap-1.5">
             <i data-lucide="x-circle" class="w-4 h-4 text-red-500"></i>
             Total de Reds
           </div>
-          <span class="px-2 py-0.5 rounded bg-red-500/20 text-red-400 font-mono text-[10px] font-bold">40.0% LOSS</span>
+          <span class="px-2 py-0.5 rounded bg-red-500/20 text-red-600 dark:text-red-400 font-mono text-[10px] font-bold">40.0% LOSS</span>
         </div>
-        <div class="text-3xl font-black text-red-400 font-mono mt-2">4 REDS</div>
-        <div class="text-xs text-red-300 font-mono mt-1 font-semibold">-R$ 23,85 Auditadas</div>
+        <div class="text-3xl font-black text-red-500 font-mono mt-2">4 REDS</div>
+        <div class="text-xs text-red-500 font-mono mt-1 font-semibold">-R$ 23,85 Auditadas</div>
       </div>
 
       <!-- CARD CASHOUTS TÁTICOS -->
       <div class="glass-card rounded-2xl p-5 border-l-4 border-l-purple-500">
         <div class="flex items-center justify-between">
-          <div class="text-xs font-bold font-mono uppercase tracking-wider text-purple-400 flex items-center gap-1.5">
-            <i data-lucide="shield" class="w-4 h-4 text-purple-400"></i>
+          <div class="text-xs font-bold font-mono uppercase tracking-wider text-purple-500 flex items-center gap-1.5">
+            <i data-lucide="shield" class="w-4 h-4 text-purple-500"></i>
             Cashouts Ativos
           </div>
-          <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-400 font-mono text-[10px] font-bold">3 GREENS</span>
+          <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-600 dark:text-purple-400 font-mono text-[10px] font-bold">3 GREENS</span>
         </div>
-        <div class="text-3xl font-black text-purple-400 font-mono mt-2">R$ 71,46</div>
-        <div class="text-xs text-purple-300 font-mono mt-1 font-semibold">+R$ 27,50 Lucro Travado</div>
+        <div class="text-3xl font-black text-purple-600 dark:text-purple-400 font-mono mt-2">R$ 82,68</div>
+        <div class="text-xs text-purple-500 font-mono mt-1 font-semibold">+R$ 38,72 Lucro Travado</div>
       </div>
 
       <!-- CARD PATRIMÔNIO ATUAL REALIZÁVEL -->
-      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-emerald-400 glow-green">
+      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-emerald-500 glow-green">
         <div class="flex items-center justify-between">
-          <div class="text-xs font-bold font-mono uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
-            <i data-lucide="target" class="w-4 h-4 text-emerald-400"></i>
+          <div class="text-xs font-bold font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5">
+            <i data-lucide="target" class="w-4 h-4 text-emerald-500"></i>
             Patrimônio Atual
           </div>
-          <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-mono text-[10px] font-bold">+31.0% LUCRO</span>
+          <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-mono text-[10px] font-bold">+41.4% LUCRO</span>
         </div>
-        <div class="text-3xl font-black text-emerald-400 font-mono mt-2">R$ 141,46</div>
-        <div class="text-xs text-emerald-300 font-mono mt-1 font-semibold">Alvo Final: R$ 203,57 🎯</div>
+        <div class="text-3xl font-black text-emerald-600 dark:text-emerald-400 font-mono mt-2">R$ 152,68</div>
+        <div class="text-xs text-emerald-600 dark:text-emerald-400 font-mono mt-1 font-semibold">Alvo Final: R$ 203,57 🎯</div>
       </div>
     </div>
 
@@ -182,12 +226,12 @@
         <div class="flex justify-between items-center">
           <div>
             <h3 class="text-base font-bold text-white flex items-center gap-2">
-              <i data-lucide="line-chart" class="w-4 h-4 text-brand-400"></i>
+              <i data-lucide="line-chart" class="w-4 h-4 text-brand-500"></i>
               Evolução da Banca (R$) &middot; Histórico dos 15 Tickets vs Meta
             </h3>
-            <p class="text-xs text-gray-400">Linha contínua verde = patrimônio real consolidado (Banca base R$ 108) &middot; Linha tracejada roxa = Meta R$ 100</p>
+            <p class="text-xs text-gray-400">Linha contínua verde = patrimônio real consolidado &middot; Linha tracejada roxa = Meta R$ 100</p>
           </div>
-          <span class="text-xs font-mono px-2.5 py-1 rounded bg-brand-500/20 text-brand-400 font-bold">R$ 141,46 ATUAL</span>
+          <span class="text-xs font-mono px-2.5 py-1 rounded bg-brand-500/20 text-brand-600 dark:text-brand-400 font-bold">R$ 152,68 ATUAL</span>
         </div>
         <div class="relative h-64 w-full">
           <canvas id="bankrollChart"></canvas>
@@ -197,7 +241,7 @@
       <div class="glass-card rounded-2xl p-6 space-y-4">
         <div>
           <h3 class="text-base font-bold text-white flex items-center gap-2">
-            <i data-lucide="pie-chart" class="w-4 h-4 text-purple-400"></i>
+            <i data-lucide="pie-chart" class="w-4 h-4 text-purple-500"></i>
             Distribuição de Ordens
           </h3>
           <p class="text-xs text-gray-400">Greens, Reds, Cashouts e Em Aberto</p>
@@ -205,7 +249,7 @@
         <div class="relative h-44 w-full flex items-center justify-center">
           <canvas id="distributionChart"></canvas>
         </div>
-        <div class="grid grid-cols-2 gap-2 text-xs font-mono pt-2 border-t border-white/5">
+        <div class="grid grid-cols-2 gap-2 text-xs font-mono pt-2 border-t border-slate-200 dark:border-white/5">
           <div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-brand-500"></span> 6 Greens (40%)</div>
           <div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-red-500"></span> 4 Reds (27%)</div>
           <div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-purple-500"></span> 2 Cashouts (13%)</div>
@@ -219,46 +263,46 @@
       <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
           <div class="flex items-center gap-2 mb-1">
-            <i data-lucide="trending-up" class="w-5 h-5 text-brand-400"></i>
-            <span class="text-xs font-extrabold uppercase tracking-wider text-brand-400">Modelo Matemático Institucional</span>
-            <span class="text-xs font-mono px-2 py-0.5 rounded bg-brand-500/20 text-brand-300 font-bold">20% COMPOSTO AO DIA</span>
+            <i data-lucide="trending-up" class="w-5 h-5 text-brand-500"></i>
+            <span class="text-xs font-extrabold uppercase tracking-wider text-brand-600 dark:text-brand-400">Modelo Matemático Institucional</span>
+            <span class="text-xs font-mono px-2 py-0.5 rounded bg-brand-500/20 text-brand-600 dark:text-brand-300 font-bold">20% COMPOSTO AO DIA</span>
           </div>
           <h2 class="text-xl font-black text-white">Projeção da Curva de Crescimento (De R$ 108 a R$ 25.636,63 em 30 Dias)</h2>
           <p class="text-xs text-gray-400 mt-0.5">Fórmula: $$B(n) = B_0 \cdot (1 + r)^n, \quad B_0 = \text{R\$ } 108,00, \; r = 0.20$$</p>
         </div>
-        <div class="text-right font-mono bg-dark-900/80 p-3 rounded-xl border border-white/5">
+        <div class="text-right font-mono sub-card p-3 rounded-xl">
           <div class="text-[10px] font-bold text-gray-400 uppercase">Patrimônio Realizável Agora</div>
-          <div class="text-2xl font-black text-brand-400">R$ 141,46</div>
-          <div class="text-[11px] text-brand-500 font-bold">+31.0% de Lucro Real Consolidado!</div>
+          <div class="text-2xl font-black text-brand-600 dark:text-brand-400">R$ 152,68</div>
+          <div class="text-[11px] text-brand-600 dark:text-brand-500 font-bold">+41.4% de Lucro Real Consolidado!</div>
         </div>
       </div>
 
       <!-- GRID DE METAS DIÁRIAS (BASE R$ 108) -->
       <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 font-mono text-xs">
         <div class="bg-brand-500/10 p-3 rounded-xl border border-brand-500/30">
-          <div class="text-brand-400 font-bold text-[11px]">DIA 1 (HOJE) 🎯</div>
-          <div class="text-lg font-black text-white mt-1">R$ 141,46</div>
-          <div class="text-[10px] text-brand-400 font-semibold mt-0.5">Meta: R$ 129,60 (Superada!)</div>
+          <div class="text-brand-600 dark:text-brand-400 font-bold text-[11px]">DIA 1 (HOJE) 🎯</div>
+          <div class="text-lg font-black text-white mt-1">R$ 152,68</div>
+          <div class="text-[10px] text-brand-600 dark:text-brand-400 font-semibold mt-0.5">Meta: R$ 129,60 (Superada!)</div>
         </div>
-        <div class="bg-dark-900/60 p-3 rounded-xl border border-white/5">
+        <div class="sub-card p-3 rounded-xl">
           <div class="text-gray-400 font-bold text-[11px]">DIA 2 (AMANHÃ)</div>
           <div class="text-lg font-black text-white mt-1">R$ 155,52</div>
           <div class="text-[10px] text-gray-400 mt-0.5">+20% s/ Dia 1</div>
         </div>
-        <div class="bg-dark-900/60 p-3 rounded-xl border border-white/5">
+        <div class="sub-card p-3 rounded-xl">
           <div class="text-gray-400 font-bold text-[11px]">DIA 4 (META R$ 200+)</div>
-          <div class="text-lg font-black text-purple-400 mt-1">R$ 223,95</div>
-          <div class="text-[10px] text-purple-300 mt-0.5">2x a Banca Total!</div>
+          <div class="text-lg font-black text-purple-600 dark:text-purple-400 mt-1">R$ 223,95</div>
+          <div class="text-[10px] text-purple-500 mt-0.5">2x a Banca Total!</div>
         </div>
-        <div class="bg-dark-900/60 p-3 rounded-xl border border-white/5">
+        <div class="sub-card p-3 rounded-xl">
           <div class="text-gray-400 font-bold text-[11px]">DIA 15</div>
-          <div class="text-lg font-black text-blue-400 mt-1">R$ 1.663,92</div>
-          <div class="text-[10px] text-blue-300 mt-0.5">15x o Capital</div>
+          <div class="text-lg font-black text-blue-600 dark:text-blue-400 mt-1">R$ 1.663,92</div>
+          <div class="text-[10px] text-blue-500 mt-0.5">15x o Capital</div>
         </div>
-        <div class="bg-dark-900/60 p-3 rounded-xl border border-white/5">
+        <div class="sub-card p-3 rounded-xl">
           <div class="text-gray-400 font-bold text-[11px]">DIA 30 (FINAL)</div>
-          <div class="text-lg font-black text-emerald-400 mt-1">R$ 25.636,63</div>
-          <div class="text-[10px] text-emerald-300 mt-0.5">237x Multiplicador 🚀</div>
+          <div class="text-lg font-black text-emerald-600 dark:text-emerald-400 mt-1">R$ 25.636,63</div>
+          <div class="text-[10px] text-emerald-500 mt-0.5">237x Multiplicador 🚀</div>
         </div>
       </div>
     </div>
@@ -272,40 +316,40 @@
           <div>
             <div class="flex items-center gap-2 mb-1">
               <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping"></span>
-              <span class="text-xs font-extrabold uppercase tracking-wider text-cyan-400">Posição Ativa &bull; #SB-15</span>
-              <span class="text-xs font-mono px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-bold">NOVA ENTRADA</span>
+              <span class="text-xs font-extrabold uppercase tracking-wider text-cyan-500">Posição Ativa &bull; #SB-15</span>
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-600 dark:text-cyan-300 font-bold">NOVA ENTRADA</span>
             </div>
             <h2 class="text-base font-black text-white">Tripla Under In-Play</h2>
           </div>
           <div class="text-right font-mono">
             <div class="text-[10px] font-bold text-gray-400 uppercase">Odd</div>
-            <div class="text-lg font-black text-cyan-400">@ 3.31</div>
+            <div class="text-lg font-black text-cyan-500">@ 3.31</div>
           </div>
         </div>
 
-        <div class="text-xs text-gray-300 space-y-1.5 font-mono bg-dark-900/60 p-3 rounded-xl border border-white/5">
+        <div class="text-xs space-y-1.5 font-mono sub-card p-3 rounded-xl">
           <div class="flex justify-between">
             <span>🇧🇷 Novorizontino 1x0 Sport</span>
-            <span class="text-cyan-400 font-bold">U2.5 (55' 2T) 🟢</span>
+            <span class="text-cyan-500 font-bold">U2.5 (65' 2T) 🟢</span>
           </div>
           <div class="flex justify-between">
             <span>🇦🇷 Boca Juniors 0x0 Lanús</span>
-            <span class="text-cyan-400 font-bold">U3.5 (18' 1T) 🟢</span>
+            <span class="text-cyan-500 font-bold">U3.5 (28' 1T) 🟢</span>
           </div>
           <div class="flex justify-between">
             <span>🇧🇷 Náutico 0x1 Athletic Club</span>
-            <span class="text-cyan-400 font-bold">U2.5 (53' 2T) 🟢</span>
+            <span class="text-cyan-500 font-bold">U2.5 (63' 2T) 🟢</span>
           </div>
         </div>
 
         <div class="p-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-between font-mono">
           <div>
             <div class="text-[10px] text-gray-400 uppercase font-bold">Cashout Atual</div>
-            <div class="text-base font-black text-cyan-400 mt-0.5">R$ 9,17 &middot; <span class="text-xs text-brand-400 font-bold">(+14.6%)</span></div>
+            <div class="text-base font-black text-cyan-600 dark:text-cyan-400 mt-0.5">R$ 11,37 &middot; <span class="text-xs font-bold">(+42.1%)</span></div>
           </div>
           <div class="text-right text-xs">
             <div class="text-gray-400 text-[10px]">Stake: R$ 8,00</div>
-            <div class="text-cyan-400 font-bold">Alvo: R$ 26,51</div>
+            <div class="text-cyan-500 font-bold">Alvo: R$ 26,51</div>
           </div>
         </div>
       </div>
@@ -315,41 +359,41 @@
         <div class="flex justify-between items-start">
           <div>
             <div class="flex items-center gap-2 mb-1">
-              <span class="w-2.5 h-2.5 rounded-full bg-brand-400 animate-ping"></span>
-              <span class="text-xs font-extrabold uppercase tracking-wider text-brand-400">Posição Ativa &bull; #SB-14</span>
-              <span class="text-xs font-mono px-2 py-0.5 rounded bg-brand-500/20 text-brand-300 font-bold">891O-YNBI0H</span>
+              <span class="w-2.5 h-2.5 rounded-full bg-brand-500 animate-ping"></span>
+              <span class="text-xs font-extrabold uppercase tracking-wider text-brand-600 dark:text-brand-400">Posição Ativa &bull; #SB-14</span>
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-brand-500/20 text-brand-600 dark:text-brand-300 font-bold">891O-YNBI0H</span>
             </div>
             <h2 class="text-base font-black text-white">Tripla Série B + Chile</h2>
           </div>
           <div class="text-right font-mono">
             <div class="text-[10px] font-bold text-gray-400 uppercase">Odd</div>
-            <div class="text-lg font-black text-brand-400">@ 2.30</div>
+            <div class="text-lg font-black text-brand-600 dark:text-brand-400">@ 2.30</div>
           </div>
         </div>
 
-        <div class="text-xs text-gray-300 space-y-1.5 font-mono bg-dark-900/60 p-3 rounded-xl border border-white/5">
+        <div class="text-xs space-y-1.5 font-mono sub-card p-3 rounded-xl">
           <div class="flex justify-between">
             <span>🇨🇱 Cobresal 2x0 Palestino</span>
-            <span class="text-brand-400 font-bold">U2.5 (GREEN) 🟢</span>
+            <span class="text-brand-500 font-bold">U2.5 (GREEN) 🟢</span>
           </div>
           <div class="flex justify-between">
             <span>🇧🇷 Náutico 0x1 Athletic Club</span>
-            <span class="text-brand-400 font-bold">1T U1.5 (GREEN) 🟢</span>
+            <span class="text-brand-500 font-bold">1T U1.5 (GREEN) 🟢</span>
           </div>
           <div class="flex justify-between">
             <span>🇧🇷 Novorizontino 1x0 Sport</span>
-            <span class="text-brand-400 font-bold">U2.5 (55' 2T) 🟢</span>
+            <span class="text-brand-500 font-bold">U2.5 (65' 2T) 🟢</span>
           </div>
         </div>
 
         <div class="p-3 rounded-xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-between font-mono">
           <div>
             <div class="text-[10px] text-gray-400 uppercase font-bold">Cashout Atual</div>
-            <div class="text-base font-black text-brand-400 mt-0.5">R$ 28,87 &middot; <span class="text-xs text-brand-400 font-bold">(+44.4%)</span></div>
+            <div class="text-base font-black text-brand-600 dark:text-brand-400 mt-0.5">R$ 32,70 &middot; <span class="text-xs font-bold">(+63.5%)</span></div>
           </div>
           <div class="text-right text-xs">
             <div class="text-gray-400 text-[10px]">Stake: R$ 20,00</div>
-            <div class="text-brand-400 font-bold">Alvo: R$ 46,17</div>
+            <div class="text-brand-500 font-bold">Alvo: R$ 46,17</div>
           </div>
         </div>
       </div>
@@ -359,45 +403,45 @@
         <div class="flex justify-between items-start">
           <div>
             <div class="flex items-center gap-2 mb-1">
-              <span class="w-2.5 h-2.5 rounded-full bg-purple-400 animate-ping"></span>
-              <span class="text-xs font-extrabold uppercase tracking-wider text-purple-400">Posição Ativa &bull; #SB-13</span>
-              <span class="text-xs font-mono px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 font-bold">ALVO R$ 60,89</span>
+              <span class="w-2.5 h-2.5 rounded-full bg-purple-500 animate-ping"></span>
+              <span class="text-xs font-extrabold uppercase tracking-wider text-purple-500">Posição Ativa &bull; #SB-13</span>
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-purple-500/20 text-purple-600 dark:text-purple-300 font-bold">ALVO R$ 60,89</span>
             </div>
             <h2 class="text-base font-black text-white">Quádrupla Híbrida Under</h2>
           </div>
           <div class="text-right font-mono">
             <div class="text-[10px] font-bold text-gray-400 uppercase">Odd</div>
-            <div class="text-lg font-black text-purple-400">@ 3.81</div>
+            <div class="text-lg font-black text-purple-500">@ 3.81</div>
           </div>
         </div>
 
-        <div class="text-xs text-gray-300 space-y-1.5 font-mono bg-dark-900/60 p-3 rounded-xl border border-white/5">
+        <div class="text-xs space-y-1.5 font-mono sub-card p-3 rounded-xl">
           <div class="flex justify-between">
             <span>🇨🇱 Cobresal 2x0 Palestino</span>
-            <span class="text-purple-400 font-bold">U2.5 (GREEN) 🟢</span>
+            <span class="text-purple-500 font-bold">U2.5 (GREEN) 🟢</span>
           </div>
           <div class="flex justify-between">
             <span>🇧🇷 Goiás 2x1 São Bernardo</span>
-            <span class="text-purple-400 font-bold">U3.5 (GREEN) 🟢</span>
+            <span class="text-purple-500 font-bold">U3.5 (GREEN) 🟢</span>
           </div>
           <div class="flex justify-between">
             <span>🇧🇷 Novorizontino 1x0 Sport</span>
-            <span class="text-purple-400 font-bold">U2.5 (55' 2T) 🟢</span>
+            <span class="text-purple-500 font-bold">U2.5 (65' 2T) 🟢</span>
           </div>
           <div class="flex justify-between">
             <span>🇦🇷 Boca Juniors 0x0 Lanús</span>
-            <span class="text-gray-400 font-bold">U3.5 (18' 1T) ⏳</span>
+            <span class="text-gray-400 font-bold">U3.5 (28' 1T) ⏳</span>
           </div>
         </div>
 
         <div class="p-3 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-between font-mono">
           <div>
             <div class="text-[10px] text-gray-400 uppercase font-bold">Cashout Atual</div>
-            <div class="text-base font-black text-purple-400 mt-0.5">R$ 33,42 &middot; <span class="text-xs text-brand-400 font-bold">(+109.4%)</span></div>
+            <div class="text-base font-black text-purple-600 dark:text-purple-400 mt-0.5">R$ 38,61 &middot; <span class="text-xs font-bold">(+141.9%)</span></div>
           </div>
           <div class="text-right text-xs">
             <div class="text-gray-400 text-[10px]">Stake: R$ 15,96</div>
-            <div class="text-purple-400 font-bold">Alvo: R$ 60,89</div>
+            <div class="text-purple-500 font-bold">Alvo: R$ 60,89</div>
           </div>
         </div>
       </div>
@@ -408,7 +452,7 @@
     <div class="glass-card rounded-2xl p-6 space-y-6">
       <div>
         <h3 class="text-lg font-bold text-white flex items-center gap-2">
-          <i data-lucide="brain-circuit" class="w-5 h-5 text-purple-400"></i>
+          <i data-lucide="brain-circuit" class="w-5 h-5 text-purple-500"></i>
           Tipster Skills &amp; Metodologias Quantitativas
         </h3>
         <p class="text-xs text-gray-400">Modelos matemáticos e regras de execução algorítmica utilizadas nas operações</p>
@@ -416,85 +460,85 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <!-- SKILL 1 -->
-        <div class="bg-dark-900/60 p-4 rounded-xl border border-white/5 space-y-2">
-          <div class="flex items-center gap-2 text-brand-400 font-bold text-xs font-mono uppercase">
+        <div class="sub-card p-4 rounded-xl space-y-2">
+          <div class="flex items-center gap-2 text-brand-600 dark:text-brand-400 font-bold text-xs font-mono uppercase">
             <i data-lucide="activity" class="w-4 h-4"></i>
             1. Dixon-Coles Poisson
           </div>
           <p class="text-xs text-gray-300">
             Modelagem bivariada com ajuste de baixa contagem de gols (0x0, 1x0, 0x1) e ponderação temporal exponencial para calcular probabilidade real de gols in-play.
           </p>
-          <div class="text-[11px] font-mono text-gray-400 bg-dark-950/80 p-2 rounded border border-white/5">
+          <div class="text-[11px] font-mono text-gray-400 sub-card p-2 rounded">
             $$P(X=x, Y=y) = \tau_{\lambda,\mu}(x,y) e^{-(\lambda+\mu)} \frac{\lambda^x \mu^y}{x! y!}$$
           </div>
         </div>
 
         <!-- SKILL 2 -->
-        <div class="bg-dark-900/60 p-4 rounded-xl border border-white/5 space-y-2">
-          <div class="flex items-center gap-2 text-purple-400 font-bold text-xs font-mono uppercase">
+        <div class="sub-card p-4 rounded-xl space-y-2">
+          <div class="flex items-center gap-2 text-purple-500 font-bold text-xs font-mono uppercase">
             <i data-lucide="clock" class="w-4 h-4"></i>
             2. In-Play Time Decay
           </div>
           <p class="text-xs text-gray-300">
             Decaimento exponencial do valor de Over/Under conforme o tempo de jogo se esgota sem alteração de xG, capturando valor residual quando as odds demoram a ajustar.
           </p>
-          <div class="text-[11px] font-mono text-gray-400 bg-dark-950/80 p-2 rounded border border-white/5">
+          <div class="text-[11px] font-mono text-gray-400 sub-card p-2 rounded">
             $$V(t) = V_0 \cdot e^{-\gamma (T - t)} \cdot (1 - \text{xG}_{\text{residual}})$$
           </div>
         </div>
 
         <!-- SKILL 3 -->
-        <div class="bg-dark-900/60 p-4 rounded-xl border border-white/5 space-y-2">
-          <div class="flex items-center gap-2 text-blue-400 font-bold text-xs font-mono uppercase">
+        <div class="sub-card p-4 rounded-xl space-y-2">
+          <div class="flex items-center gap-2 text-blue-500 font-bold text-xs font-mono uppercase">
             <i data-lucide="trending-up" class="w-4 h-4"></i>
             3. Bellman Cashout
           </div>
           <p class="text-xs text-gray-300">
             Equação de Parada Ótima de Bellman para calcular se o valor de cashout oferecido pela casa supera a utilidade esperada de manter a aposta até o apito final.
           </p>
-          <div class="text-[11px] font-mono text-gray-400 bg-dark-950/80 p-2 rounded border border-white/5">
+          <div class="text-[11px] font-mono text-gray-400 sub-card p-2 rounded">
             $$V^*(s) = \max \left( C(s), \mathbb{E}[V^*(s')] \right)$$
           </div>
         </div>
 
         <!-- SKILL 4 -->
-        <div class="bg-dark-900/60 p-4 rounded-xl border border-white/5 space-y-2">
-          <div class="flex items-center gap-2 text-amber-400 font-bold text-xs font-mono uppercase">
+        <div class="sub-card p-4 rounded-xl space-y-2">
+          <div class="flex items-center gap-2 text-amber-500 font-bold text-xs font-mono uppercase">
             <i data-lucide="pie-chart" class="w-4 h-4"></i>
             4. Fractional Kelly
           </div>
           <p class="text-xs text-gray-300">
             Dimensionamento dinâmico de stake baseado na probabilidade implícita vs probabilidade calculada, ajustado pelo nível de sobrevivência do Automaton (0.10f* a 0.25f*).
           </p>
-          <div class="text-[11px] font-mono text-gray-400 bg-dark-950/80 p-2 rounded border border-white/5">
+          <div class="text-[11px] font-mono text-gray-400 sub-card p-2 rounded">
             $$f^* = \alpha \cdot \frac{b \cdot p - q}{b}, \quad \alpha \in [0.10, 0.25]$$
           </div>
         </div>
 
         <!-- SKILL 5 -->
-        <div class="bg-dark-900/60 p-4 rounded-xl border border-white/5 space-y-2">
-          <div class="flex items-center gap-2 text-emerald-400 font-bold text-xs font-mono uppercase">
+        <div class="sub-card p-4 rounded-xl space-y-2">
+          <div class="flex items-center gap-2 text-emerald-500 font-bold text-xs font-mono uppercase">
             <i data-lucide="shield-check" class="w-4 h-4"></i>
             5. Zero Cross-Exposure
           </div>
           <p class="text-xs text-gray-300">
             Controle estrito de correlação: proibido apostar em mercados correlacionados negativamente no mesmo evento ou alocar mais de 25% da banca no mesmo campeonato simultaneamente.
           </p>
-          <div class="text-[11px] font-mono text-gray-400 bg-dark-950/80 p-2 rounded border border-white/5">
+          <div class="text-[11px] font-mono text-gray-400 sub-card p-2 rounded">
             $$\text{Corr}(E_i, E_j) \le 0.30, \quad \sum \text{Exposure}_{\text{liga}} \le 0.25 \cdot B$$
           </div>
         </div>
 
         <!-- SKILL 6 -->
-        <div class="bg-dark-900/60 p-4 rounded-xl border border-white/5 space-y-2">
-          <div class="flex items-center gap-2 text-cyan-400 font-bold text-xs font-mono uppercase">
+        <div class="sub-card p-4 rounded-xl space-y-2">
+          <div class="flex items-center gap-2 text-cyan-500 font-bold text-xs font-mono uppercase">
             <i data-lucide="radar" class="w-4 h-4"></i>
             6. Steam Tracking
           </div>
           <p class="text-xs text-gray-300">
             Rastreamento de movimentação rápida de odds (steam chasers) e dinheiro inteligente em casas asiáticas (Pinnacle/Singbet) antes do ajuste na Superbet.
           </p>
-          <div class="text-[11px] font-mono text-gray-400 bg-dark-950/80 p-2 rounded border border-white/5">
+          <div class="text-[11px] font-mono text-gray-400 sub-card p-2 rounded">
             $$\Delta \text{Odd}_{\text{Sharp}} > 0.08 \implies \text{Trigger Superbet in } \Delta t < 15\text{s}$$
           </div>
         </div>
@@ -513,8 +557,8 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <!-- LEI I -->
-        <div class="bg-dark-900/60 p-4 rounded-xl border border-white/5 space-y-2">
-          <div class="text-xs font-bold font-mono text-brand-500 uppercase flex items-center gap-2">
+        <div class="sub-card p-4 rounded-xl space-y-2">
+          <div class="text-xs font-bold font-mono text-brand-600 dark:text-brand-500 uppercase flex items-center gap-2">
             <i data-lucide="shield" class="w-4 h-4"></i>
             LEI I (SUPREMA) &middot; Proteção ao Usuário
           </div>
@@ -524,8 +568,8 @@
         </div>
 
         <!-- LEI II -->
-        <div class="bg-dark-900/60 p-4 rounded-xl border border-white/5 space-y-2">
-          <div class="text-xs font-bold font-mono text-blue-400 uppercase flex items-center gap-2">
+        <div class="sub-card p-4 rounded-xl space-y-2">
+          <div class="text-xs font-bold font-mono text-blue-500 uppercase flex items-center gap-2">
             <i data-lucide="cpu" class="w-4 h-4"></i>
             LEI II &middot; Conquiste sua Existência
           </div>
@@ -535,8 +579,8 @@
         </div>
 
         <!-- LEI III -->
-        <div class="bg-dark-900/60 p-4 rounded-xl border border-white/5 space-y-2">
-          <div class="text-xs font-bold font-mono text-purple-400 uppercase flex items-center gap-2">
+        <div class="sub-card p-4 rounded-xl space-y-2">
+          <div class="text-xs font-bold font-mono text-purple-500 uppercase flex items-center gap-2">
             <i data-lucide="eye" class="w-4 h-4"></i>
             LEI III &middot; Transparência Operacional
           </div>
@@ -558,11 +602,11 @@
           <p class="text-xs text-gray-400">Auditoria pública com classificação explícita de todos os cashouts executados e ativos</p>
         </div>
         <div class="flex items-center gap-2">
-          <a href="data/bets.csv" download class="px-3 py-1.5 rounded-xl bg-dark-700 hover:bg-dark-600 border border-white/10 text-xs font-semibold text-gray-300 flex items-center gap-1.5 transition">
+          <a href="data/bets.csv" download class="px-3 py-1.5 rounded-xl sub-card text-xs font-semibold flex items-center gap-1.5 hover:opacity-80 transition">
             <i data-lucide="download" class="w-3.5 h-3.5"></i>
             Exportar CSV
           </a>
-          <a href="data/bets.json" download class="px-3 py-1.5 rounded-xl bg-dark-700 hover:bg-dark-600 border border-white/10 text-xs font-semibold text-gray-300 flex items-center gap-1.5 transition">
+          <a href="data/bets.json" download class="px-3 py-1.5 rounded-xl sub-card text-xs font-semibold flex items-center gap-1.5 hover:opacity-80 transition">
             <i data-lucide="code" class="w-3.5 h-3.5"></i>
             Exportar JSON
           </a>
@@ -572,7 +616,7 @@
       <div class="overflow-x-auto">
         <table class="w-full text-left text-sm">
           <thead>
-            <tr class="border-b border-white/10 text-xs font-bold text-gray-400 uppercase font-mono">
+            <tr class="border-b border-slate-200 dark:border-white/10 text-xs font-bold text-gray-400 uppercase font-mono">
               <th class="py-3 px-4">Ticket</th>
               <th class="py-3 px-4">Partida / Liga</th>
               <th class="py-3 px-4">Mercado / Seleção</th>
@@ -582,89 +626,89 @@
               <th class="py-3 px-4">Classificação do Cashout / PnL</th>
             </tr>
           </thead>
-          <tbody class="divide-y divide-white/5 font-mono">
+          <tbody class="divide-y divide-slate-200 dark:divide-white/5 font-mono">
             <!-- TICKET 15 (EM ABERTO - NOVO) -->
-            <tr class="hover:bg-white/[0.02] transition bg-cyan-500/[0.05]">
-              <td class="py-4 px-4 font-bold text-cyan-400">#SB-15</td>
+            <tr class="hover:bg-black/[0.02] dark:hover:bg-white/[0.02] transition bg-cyan-500/[0.05]">
+              <td class="py-4 px-4 font-bold text-cyan-500">#SB-15</td>
               <td class="py-4 px-4">
                 <div class="font-sans font-bold text-white">Novorizontino + Boca + Náutico</div>
                 <div class="text-xs text-gray-400">Série B + Argentina &middot; In-Play</div>
               </td>
               <td class="py-4 px-4">
-                <div class="font-sans font-semibold text-cyan-400">Tripla Under In-Play</div>
+                <div class="font-sans font-semibold text-cyan-500">Tripla Under In-Play</div>
                 <div class="text-xs text-gray-300">Novo U2.5 (1.72) + Boca U3.5 (1.12) + Náutico U2.5 (1.72)</div>
               </td>
-              <td class="py-4 px-4 text-cyan-400 font-extrabold text-base">@ 3.31</td>
+              <td class="py-4 px-4 text-cyan-500 font-extrabold text-base">@ 3.31</td>
               <td class="py-4 px-4 font-bold text-white">R$ 8,00</td>
-              <td class="py-4 px-4 font-bold text-brand-400">R$ 26,51</td>
+              <td class="py-4 px-4 font-bold text-brand-600 dark:text-brand-400">R$ 26,51</td>
               <td class="py-4 px-4">
-                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1.5 w-max">
+                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-cyan-500/20 text-cyan-600 dark:text-cyan-400 border border-cyan-500/40 flex items-center gap-1.5 w-max">
                   <i data-lucide="trending-up" class="w-3.5 h-3.5"></i>
-                  CASHOUT GREEN (R$ 9,17 &middot; +R$ 1,17 / +14.6%)
+                  CASHOUT GREEN (R$ 11,37 &middot; +R$ 3,37 / +42.1%)
                 </span>
               </td>
             </tr>
 
             <!-- TICKET 14 (EM ABERTO - CASHOUT GREEN) -->
-            <tr class="hover:bg-white/[0.02] transition bg-brand-500/[0.05]">
-              <td class="py-4 px-4 font-bold text-brand-400">#SB-14</td>
+            <tr class="hover:bg-black/[0.02] dark:hover:bg-white/[0.02] transition bg-brand-500/[0.05]">
+              <td class="py-4 px-4 font-bold text-brand-600 dark:text-brand-400">#SB-14</td>
               <td class="py-4 px-4">
                 <div class="font-sans font-bold text-white">Cobresal + Novo + Náutico 1T</div>
                 <div class="text-xs text-gray-400">Chile + Série B &middot; In-Play</div>
               </td>
               <td class="py-4 px-4">
-                <div class="font-sans font-semibold text-brand-400">Tripla Under In-Play</div>
+                <div class="font-sans font-semibold text-brand-600 dark:text-brand-400">Tripla Under In-Play</div>
                 <div class="text-xs text-gray-300">Cobresal U2.5 (1.14) + Novo U2.5 (1.35) + Náutico 1T U1.5 (1.50)</div>
               </td>
-              <td class="py-4 px-4 text-brand-400 font-extrabold text-base">@ 2.30</td>
+              <td class="py-4 px-4 text-brand-600 dark:text-brand-400 font-extrabold text-base">@ 2.30</td>
               <td class="py-4 px-4 font-bold text-white">R$ 20,00</td>
-              <td class="py-4 px-4 font-bold text-brand-400">R$ 46,17</td>
+              <td class="py-4 px-4 font-bold text-brand-600 dark:text-brand-400">R$ 46,17</td>
               <td class="py-4 px-4">
-                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1.5 w-max">
+                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-600 dark:text-brand-400 border border-brand-500/40 flex items-center gap-1.5 w-max">
                   <i data-lucide="trending-up" class="w-3.5 h-3.5"></i>
-                  CASHOUT GREEN (R$ 28,87 &middot; +R$ 8,87 / +44.4%)
+                  CASHOUT GREEN (R$ 32,70 &middot; +R$ 12,70 / +63.5%)
                 </span>
               </td>
             </tr>
 
             <!-- TICKET 13 (EM ABERTO - CASHOUT GREEN) -->
-            <tr class="hover:bg-white/[0.02] transition bg-purple-500/[0.05]">
-              <td class="py-4 px-4 font-bold text-purple-400">#SB-13</td>
+            <tr class="hover:bg-black/[0.02] dark:hover:bg-white/[0.02] transition bg-purple-500/[0.05]">
+              <td class="py-4 px-4 font-bold text-purple-500">#SB-13</td>
               <td class="py-4 px-4">
                 <div class="font-sans font-bold text-white">Cobresal + Goiás + Novo + Boca</div>
                 <div class="text-xs text-gray-400">Chile + Série B + Argentina &middot; In-Play/Pré</div>
               </td>
               <td class="py-4 px-4">
-                <div class="font-sans font-semibold text-purple-400">Quádrupla Under Gols FT</div>
+                <div class="font-sans font-semibold text-purple-500">Quádrupla Under Gols FT</div>
                 <div class="text-xs text-gray-300">Cobresal U2.5 (1.20) + Goiás U3.5 (1.92) + Novo U2.5 (1.38) + Boca U3.5 (1.20)</div>
               </td>
-              <td class="py-4 px-4 text-purple-400 font-extrabold text-base">@ 3.81</td>
+              <td class="py-4 px-4 text-purple-500 font-extrabold text-base">@ 3.81</td>
               <td class="py-4 px-4 font-bold text-white">R$ 15,96</td>
-              <td class="py-4 px-4 font-bold text-brand-400">R$ 60,89</td>
+              <td class="py-4 px-4 font-bold text-brand-600 dark:text-brand-400">R$ 60,89</td>
               <td class="py-4 px-4">
-                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-purple-500/20 text-purple-400 border border-purple-500/40 flex items-center gap-1.5 w-max">
+                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-purple-500/20 text-purple-600 dark:text-purple-400 border border-purple-500/40 flex items-center gap-1.5 w-max">
                   <i data-lucide="trending-up" class="w-3.5 h-3.5"></i>
-                  CASHOUT GREEN (R$ 33,42 &middot; +R$ 17,46 / +109.4%)
+                  CASHOUT GREEN (R$ 38,61 &middot; +R$ 22,65 / +141.9%)
                 </span>
               </td>
             </tr>
 
             <!-- TICKET 12 (CASHOUT RED TÁTICO) -->
-            <tr class="hover:bg-white/[0.02] transition bg-red-500/[0.03]">
-              <td class="py-4 px-4 font-bold text-red-400">#SB-12</td>
+            <tr class="hover:bg-black/[0.02] dark:hover:bg-white/[0.02] transition bg-red-500/[0.03]">
+              <td class="py-4 px-4 font-bold text-red-500">#SB-12</td>
               <td class="py-4 px-4">
                 <div class="font-sans font-bold text-white">Novorizontino + Cobresal + Goiás</div>
                 <div class="text-xs text-gray-400">Série B + Chile &middot; In-Play</div>
               </td>
               <td class="py-4 px-4">
-                <div class="font-sans font-semibold text-red-400">Tripla Under Gols FT</div>
+                <div class="font-sans font-semibold text-red-500">Tripla Under Gols FT</div>
                 <div class="text-xs text-gray-300">Resgate tático preventivo aos 64m (Goiás 1x1)</div>
               </td>
-              <td class="py-4 px-4 text-red-400 font-extrabold text-base">@ 2.28</td>
+              <td class="py-4 px-4 text-red-500 font-extrabold text-base">@ 2.28</td>
               <td class="py-4 px-4 font-bold text-white">R$ 35,00</td>
               <td class="py-4 px-4 font-bold text-gray-400">R$ 80,14</td>
               <td class="py-4 px-4">
-                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1.5 w-max">
+                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-red-500/20 text-red-600 dark:text-red-400 border border-red-500/40 flex items-center gap-1.5 w-max">
                   <i data-lucide="shield-alert" class="w-3.5 h-3.5"></i>
                   CASHOUT RED (R$ 24,92 &middot; -R$ 10,08 / -28.8% Salvo)
                 </span>
@@ -672,21 +716,21 @@
             </tr>
 
             <!-- TICKET 10 (CASHOUT NEUTRO) -->
-            <tr class="hover:bg-white/[0.02] transition bg-blue-500/[0.03]">
-              <td class="py-4 px-4 font-bold text-blue-400">#SB-10</td>
+            <tr class="hover:bg-black/[0.02] dark:hover:bg-white/[0.02] transition bg-blue-500/[0.03]">
+              <td class="py-4 px-4 font-bold text-blue-500">#SB-10</td>
               <td class="py-4 px-4">
                 <div class="font-sans font-bold text-white">SuperMúltipla 6 Seleções</div>
                 <div class="text-xs text-gray-400">Multi-Esporte &middot; In-Play</div>
               </td>
               <td class="py-4 px-4">
-                <div class="font-sans font-semibold text-blue-400">Super Múltipla Alavancada</div>
+                <div class="font-sans font-semibold text-blue-500">Super Múltipla Alavancada</div>
                 <div class="text-xs text-gray-300">Encerramento a par (0% lucro / 0% prejuízo)</div>
               </td>
-              <td class="py-4 px-4 text-blue-400 font-extrabold text-base">@ 12.50</td>
+              <td class="py-4 px-4 text-blue-500 font-extrabold text-base">@ 12.50</td>
               <td class="py-4 px-4 font-bold text-white">R$ 15,00</td>
               <td class="py-4 px-4 font-bold text-gray-400">R$ 187,50</td>
               <td class="py-4 px-4">
-                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-blue-500/20 text-blue-400 border border-blue-500/40 flex items-center gap-1.5 w-max">
+                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-blue-500/20 text-blue-600 dark:text-blue-400 border border-blue-500/40 flex items-center gap-1.5 w-max">
                   <i data-lucide="minus-circle" class="w-3.5 h-3.5"></i>
                   CASHOUT NEUTRO (R$ 15,00 &middot; R$ 0,00 / 0.0% Par)
                 </span>
@@ -694,21 +738,21 @@
             </tr>
 
             <!-- TICKET 11 (GREEN TOTAL) -->
-            <tr class="hover:bg-white/[0.02] transition bg-brand-500/[0.03]">
-              <td class="py-4 px-4 font-bold text-brand-400">#SB-11</td>
+            <tr class="hover:bg-black/[0.02] dark:hover:bg-white/[0.02] transition bg-brand-500/[0.03]">
+              <td class="py-4 px-4 font-bold text-brand-600 dark:text-brand-400">#SB-11</td>
               <td class="py-4 px-4">
                 <div class="font-sans font-bold text-white">Unión de Santa Fe + Cobresal (1ºT)</div>
                 <div class="text-xs text-gray-400">Argentina + Chile &middot; 1º Tempo</div>
               </td>
               <td class="py-4 px-4">
-                <div class="font-sans font-semibold text-brand-400">Múltipla 1º Tempo Under 1.5 HT</div>
+                <div class="font-sans font-semibold text-brand-600 dark:text-brand-400">Múltipla 1º Tempo Under 1.5 HT</div>
                 <div class="text-xs text-gray-300">Unión 1T U1.5 (1.38) + Cobresal 1T U1.5 (1.47)</div>
               </td>
               <td class="py-4 px-4 text-brand-500 font-extrabold text-base">@ 2.02</td>
               <td class="py-4 px-4 font-bold text-white">R$ 20,00</td>
-              <td class="py-4 px-4 font-bold text-brand-400">R$ 40,57</td>
+              <td class="py-4 px-4 font-bold text-brand-600 dark:text-brand-400">R$ 40,57</td>
               <td class="py-4 px-4">
-                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1.5 w-max">
+                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-600 dark:text-brand-400 border border-brand-500/40 flex items-center gap-1.5 w-max">
                   <i data-lucide="check-circle" class="w-3.5 h-3.5"></i>
                   GREEN (+R$ 20,57)
                 </span>
@@ -716,21 +760,21 @@
             </tr>
 
             <!-- TICKET 8 (GREEN TOTAL) -->
-            <tr class="hover:bg-white/[0.02] transition bg-brand-500/[0.03]">
-              <td class="py-4 px-4 font-bold text-brand-400">#SB-08</td>
+            <tr class="hover:bg-black/[0.02] dark:hover:bg-white/[0.02] transition bg-brand-500/[0.03]">
+              <td class="py-4 px-4 font-bold text-brand-600 dark:text-brand-400">#SB-08</td>
               <td class="py-4 px-4">
                 <div class="font-sans font-bold text-white">Mushuc Under 1.5 + Comerciantes Under 5.5</div>
                 <div class="text-xs text-gray-400">Equador + Peru &middot; Fim de Jogo</div>
               </td>
               <td class="py-4 px-4">
-                <div class="font-sans font-semibold text-brand-400">Múltipla de Proteção</div>
+                <div class="font-sans font-semibold text-brand-600 dark:text-brand-400">Múltipla de Proteção</div>
                 <div class="text-xs text-gray-300">Under 1.5 (1.30) + Under 5.5 (1.38)</div>
               </td>
               <td class="py-4 px-4 text-brand-500 font-extrabold text-base">@ 1.79</td>
               <td class="py-4 px-4 font-bold text-white">R$ 5,00</td>
-              <td class="py-4 px-4 font-bold text-brand-400">R$ 8,97</td>
+              <td class="py-4 px-4 font-bold text-brand-600 dark:text-brand-400">R$ 8,97</td>
               <td class="py-4 px-4">
-                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1.5 w-max">
+                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-600 dark:text-brand-400 border border-brand-500/40 flex items-center gap-1.5 w-max">
                   <i data-lucide="check-circle" class="w-3.5 h-3.5"></i>
                   GREEN (+R$ 3,97)
                 </span>
@@ -738,21 +782,21 @@
             </tr>
 
             <!-- TICKET 7 (GREEN TOTAL) -->
-            <tr class="hover:bg-white/[0.02] transition bg-brand-500/[0.03]">
-              <td class="py-4 px-4 font-bold text-brand-400">#SB-07</td>
+            <tr class="hover:bg-black/[0.02] dark:hover:bg-white/[0.02] transition bg-brand-500/[0.03]">
+              <td class="py-4 px-4 font-bold text-brand-600 dark:text-brand-400">#SB-07</td>
               <td class="py-4 px-4">
                 <div class="font-sans font-bold text-white">Mushuc Runa × Delfín</div>
                 <div class="text-xs text-gray-400">Série A (Equador) &middot; Placar Final 1x0</div>
               </td>
               <td class="py-4 px-4">
-                <div class="font-sans font-semibold text-brand-400">Total de Gols Under 1.5 FT</div>
+                <div class="font-sans font-semibold text-brand-600 dark:text-brand-400">Total de Gols Under 1.5 FT</div>
                 <div class="text-xs text-gray-300">Menos de 1.5 Gols FT</div>
               </td>
               <td class="py-4 px-4 text-brand-500 font-extrabold text-base">@ 1.30</td>
               <td class="py-4 px-4 font-bold text-white">R$ 5,00</td>
-              <td class="py-4 px-4 font-bold text-brand-400">R$ 6,50</td>
+              <td class="py-4 px-4 font-bold text-brand-600 dark:text-brand-400">R$ 6,50</td>
               <td class="py-4 px-4">
-                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1.5 w-max">
+                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-600 dark:text-brand-400 border border-brand-500/40 flex items-center gap-1.5 w-max">
                   <i data-lucide="check-circle" class="w-3.5 h-3.5"></i>
                   GREEN (+R$ 1,50)
                 </span>
@@ -760,21 +804,21 @@
             </tr>
 
             <!-- TICKET 9 (RED TOTAL) -->
-            <tr class="hover:bg-white/[0.02] transition bg-red-500/[0.05]">
-              <td class="py-4 px-4 font-bold text-red-400">#SB-09</td>
+            <tr class="hover:bg-black/[0.02] dark:hover:bg-white/[0.02] transition bg-red-500/[0.05]">
+              <td class="py-4 px-4 font-bold text-red-500">#SB-09</td>
               <td class="py-4 px-4">
                 <div class="font-sans font-bold text-white">SuperMúltipla 4 Seleções</div>
                 <div class="text-xs text-gray-400">Eq + Peru + Tênis + Arg</div>
               </td>
               <td class="py-4 px-4">
-                <div class="font-sans font-semibold text-red-400">Super Múltipla 4x</div>
+                <div class="font-sans font-semibold text-red-500">Super Múltipla 4x</div>
                 <div class="text-xs text-gray-400">Gol do Cajamarca aos 89m (2x3) quebrou empate</div>
               </td>
-              <td class="py-4 px-4 text-red-400 font-extrabold text-base">@ 4.13</td>
+              <td class="py-4 px-4 text-red-500 font-extrabold text-base">@ 4.13</td>
               <td class="py-4 px-4 font-bold text-white">R$ 10,00</td>
-              <td class="py-4 px-4 font-bold text-gray-500">R$ 0,00</td>
+              <td class="py-4 px-4 font-bold text-gray-400">R$ 0,00</td>
               <td class="py-4 px-4">
-                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1.5 w-max">
+                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-red-500/20 text-red-600 dark:text-red-400 border border-red-500/40 flex items-center gap-1.5 w-max">
                   <i data-lucide="x-circle" class="w-3.5 h-3.5"></i>
                   RED (-R$ 10,00)
                 </span>
@@ -782,21 +826,21 @@
             </tr>
 
             <!-- TICKET 6 (RED TOTAL) -->
-            <tr class="hover:bg-white/[0.02] transition bg-red-500/[0.05]">
-              <td class="py-4 px-4 font-bold text-red-400">#SB-06</td>
+            <tr class="hover:bg-black/[0.02] dark:hover:bg-white/[0.02] transition bg-red-500/[0.05]">
+              <td class="py-4 px-4 font-bold text-red-500">#SB-06</td>
               <td class="py-4 px-4">
                 <div class="font-sans font-bold text-white">Cherevko + Buse + Wolny</div>
                 <div class="text-xs text-gray-400">TT Cup + ATP Tênis</div>
               </td>
               <td class="py-4 px-4">
-                <div class="font-sans font-semibold text-red-400">Tripla Vencedores In-Play</div>
+                <div class="font-sans font-semibold text-red-500">Tripla Vencedores In-Play</div>
                 <div class="text-xs text-gray-400">Cherevko perdeu o 5º set decisivo</div>
               </td>
-              <td class="py-4 px-4 text-red-400 font-extrabold text-base">@ 1.84</td>
+              <td class="py-4 px-4 text-red-500 font-extrabold text-base">@ 1.84</td>
               <td class="py-4 px-4 font-bold text-white">R$ 3,85</td>
-              <td class="py-4 px-4 font-bold text-gray-500">R$ 0,00</td>
+              <td class="py-4 px-4 font-bold text-gray-400">R$ 0,00</td>
               <td class="py-4 px-4">
-                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1.5 w-max">
+                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-red-500/20 text-red-600 dark:text-red-400 border border-red-500/40 flex items-center gap-1.5 w-max">
                   <i data-lucide="x-circle" class="w-3.5 h-3.5"></i>
                   RED (-R$ 3,85)
                 </span>
@@ -804,21 +848,21 @@
             </tr>
 
             <!-- TICKET 5 (RED TOTAL) -->
-            <tr class="hover:bg-white/[0.02] transition bg-red-500/[0.05]">
-              <td class="py-4 px-4 font-bold text-red-400">#SB-05</td>
+            <tr class="hover:bg-black/[0.02] dark:hover:bg-white/[0.02] transition bg-red-500/[0.05]">
+              <td class="py-4 px-4 font-bold text-red-500">#SB-05</td>
               <td class="py-4 px-4">
                 <div class="font-sans font-bold text-white">Comerciantes Unidos + Mushuc Runa</div>
                 <div class="text-xs text-gray-400">Liga Peruana + Série A Equador</div>
               </td>
               <td class="py-4 px-4">
-                <div class="font-sans font-semibold text-red-400">Múltipla In-Play</div>
+                <div class="font-sans font-semibold text-red-500">Múltipla In-Play</div>
                 <div class="text-xs text-gray-400">Under 3.5 no Peru estourou no 2T</div>
               </td>
-              <td class="py-4 px-4 text-red-400 font-extrabold text-base">@ 3.74</td>
+              <td class="py-4 px-4 text-red-500 font-extrabold text-base">@ 3.74</td>
               <td class="py-4 px-4 font-bold text-white">R$ 5,00</td>
-              <td class="py-4 px-4 font-bold text-gray-500">R$ 0,00</td>
+              <td class="py-4 px-4 font-bold text-gray-400">R$ 0,00</td>
               <td class="py-4 px-4">
-                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1.5 w-max">
+                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-red-500/20 text-red-600 dark:text-red-400 border border-red-500/40 flex items-center gap-1.5 w-max">
                   <i data-lucide="x-circle" class="w-3.5 h-3.5"></i>
                   RED (-R$ 5,00)
                 </span>
@@ -826,21 +870,21 @@
             </tr>
 
             <!-- TICKET 4 (RED TOTAL) -->
-            <tr class="hover:bg-white/[0.02] transition bg-red-500/[0.05]">
-              <td class="py-4 px-4 font-bold text-red-400">#SB-04</td>
+            <tr class="hover:bg-black/[0.02] dark:hover:bg-white/[0.02] transition bg-red-500/[0.05]">
+              <td class="py-4 px-4 font-bold text-red-500">#SB-04</td>
               <td class="py-4 px-4">
                 <div class="font-sans font-bold text-white">Comerciantes Unidos × FC Cajamarca</div>
                 <div class="text-xs text-gray-400">Liga Peruana &middot; Placar 2x3</div>
               </td>
               <td class="py-4 px-4">
-                <div class="font-sans font-semibold text-red-400">Total de Gols Under 3.5 FT</div>
+                <div class="font-sans font-semibold text-red-500">Total de Gols Under 3.5 FT</div>
                 <div class="text-xs text-gray-400">Jogo teve 5 gols (estourou Under 3.5)</div>
               </td>
-              <td class="py-4 px-4 text-red-400 font-extrabold text-base">@ 1.92</td>
+              <td class="py-4 px-4 text-red-500 font-extrabold text-base">@ 1.92</td>
               <td class="py-4 px-4 font-bold text-white">R$ 5,00</td>
-              <td class="py-4 px-4 font-bold text-gray-500">R$ 0,00</td>
+              <td class="py-4 px-4 font-bold text-gray-400">R$ 0,00</td>
               <td class="py-4 px-4">
-                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1.5 w-max">
+                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-red-500/20 text-red-600 dark:text-red-400 border border-red-500/40 flex items-center gap-1.5 w-max">
                   <i data-lucide="x-circle" class="w-3.5 h-3.5"></i>
                   RED (-R$ 5,00)
                 </span>
@@ -848,21 +892,21 @@
             </tr>
 
             <!-- TICKET 3 (GREEN TOTAL) -->
-            <tr class="hover:bg-white/[0.02] transition bg-brand-500/[0.03]">
-              <td class="py-4 px-4 font-bold text-brand-400">#SB-03</td>
+            <tr class="hover:bg-black/[0.02] dark:hover:bg-white/[0.02] transition bg-brand-500/[0.03]">
+              <td class="py-4 px-4 font-bold text-brand-600 dark:text-brand-400">#SB-03</td>
               <td class="py-4 px-4">
                 <div class="font-sans font-bold text-white">Deportivo Alavés × Villarreal</div>
                 <div class="text-xs text-gray-400">LaLiga &middot; 80' 2T (Placar 1x0)</div>
               </td>
               <td class="py-4 px-4">
-                <div class="font-sans font-semibold text-brand-400">Dupla Chance (1X)</div>
+                <div class="font-sans font-semibold text-brand-600 dark:text-brand-400">Dupla Chance (1X)</div>
                 <div class="text-xs text-gray-300">Alavés ou Empate</div>
               </td>
               <td class="py-4 px-4 text-brand-500 font-extrabold text-base">@ 1.28</td>
               <td class="py-4 px-4 font-bold text-white">R$ 5,00</td>
-              <td class="py-4 px-4 font-bold text-brand-400">R$ 6,40</td>
+              <td class="py-4 px-4 font-bold text-brand-600 dark:text-brand-400">R$ 6,40</td>
               <td class="py-4 px-4">
-                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1.5 w-max">
+                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-600 dark:text-brand-400 border border-brand-500/40 flex items-center gap-1.5 w-max">
                   <i data-lucide="check-circle" class="w-3.5 h-3.5"></i>
                   GREEN (+R$ 1,40)
                 </span>
@@ -870,21 +914,21 @@
             </tr>
 
             <!-- TICKET 2 (GREEN TOTAL) -->
-            <tr class="hover:bg-white/[0.02] transition bg-brand-500/[0.03]">
-              <td class="py-4 px-4 font-bold text-brand-400">#SB-02</td>
+            <tr class="hover:bg-black/[0.02] dark:hover:bg-white/[0.02] transition bg-brand-500/[0.03]">
+              <td class="py-4 px-4 font-bold text-brand-600 dark:text-brand-400">#SB-02</td>
               <td class="py-4 px-4">
                 <div class="font-sans font-bold text-white">Deportivo Alavés × Villarreal</div>
                 <div class="text-xs text-gray-400">LaLiga &middot; 80' 2T (Placar 1x0)</div>
               </td>
               <td class="py-4 px-4">
-                <div class="font-sans font-semibold text-brand-400">Total de Gols Under 1.5 FT</div>
+                <div class="font-sans font-semibold text-brand-600 dark:text-brand-400">Total de Gols Under 1.5 FT</div>
                 <div class="text-xs text-gray-300">Menos de 1.5 Gols</div>
               </td>
               <td class="py-4 px-4 text-brand-500 font-extrabold text-base">@ 2.35</td>
               <td class="py-4 px-4 font-bold text-white">R$ 5,00</td>
-              <td class="py-4 px-4 font-bold text-brand-400">R$ 11,75</td>
+              <td class="py-4 px-4 font-bold text-brand-600 dark:text-brand-400">R$ 11,75</td>
               <td class="py-4 px-4">
-                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1.5 w-max">
+                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-600 dark:text-brand-400 border border-brand-500/40 flex items-center gap-1.5 w-max">
                   <i data-lucide="check-circle" class="w-3.5 h-3.5"></i>
                   GREEN (+R$ 6,75)
                 </span>
@@ -892,21 +936,21 @@
             </tr>
 
             <!-- TICKET 1 (GREEN TOTAL) -->
-            <tr class="hover:bg-white/[0.02] transition bg-brand-500/[0.03]">
-              <td class="py-4 px-4 font-bold text-brand-400">#SB-01</td>
+            <tr class="hover:bg-black/[0.02] dark:hover:bg-white/[0.02] transition bg-brand-500/[0.03]">
+              <td class="py-4 px-4 font-bold text-brand-600 dark:text-brand-400">#SB-01</td>
               <td class="py-4 px-4">
                 <div class="font-sans font-bold text-white">Deportivo Alavés × Villarreal</div>
                 <div class="text-xs text-gray-400">LaLiga &middot; 80' 2T (Placar 1x0)</div>
               </td>
               <td class="py-4 px-4">
-                <div class="font-sans font-semibold text-brand-400">Resultado Final (1)</div>
+                <div class="font-sans font-semibold text-brand-600 dark:text-brand-400">Resultado Final (1)</div>
                 <div class="text-xs text-gray-300">Alavés Vence</div>
               </td>
               <td class="py-4 px-4 text-brand-500 font-extrabold text-base">@ 1.42</td>
               <td class="py-4 px-4 font-bold text-white">R$ 5,00</td>
-              <td class="py-4 px-4 font-bold text-brand-400">R$ 7,10</td>
+              <td class="py-4 px-4 font-bold text-brand-600 dark:text-brand-400">R$ 7,10</td>
               <td class="py-4 px-4">
-                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1.5 w-max">
+                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-600 dark:text-brand-400 border border-brand-500/40 flex items-center gap-1.5 w-max">
                   <i data-lucide="check-circle" class="w-3.5 h-3.5"></i>
                   GREEN (+R$ 2,10)
                 </span>
@@ -919,14 +963,51 @@
 
     <!-- 9. FOOTER -->
     <footer class="text-center text-xs text-gray-500 font-mono py-4">
-      Automaton Quant Trader &middot; Sistema Autônomo Conway-Research &middot; Última Atualização: 28/08/2026, 21:47:07
+      Automaton Quant Trader &middot; Sistema Autônomo Conway-Research &middot; Última Atualização: 28/08/2026, 21:56:42
     </footer>
 
   </div>
 
-  <!-- CHART.JS SCRIPTS -->
+  <!-- THEME TOGGLE & CHART.JS SCRIPTS -->
   <script>
     lucide.createIcons();
+
+    // Theme Management
+    function initTheme() {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      if (savedTheme === 'light') {
+        document.documentElement.classList.remove('dark');
+        updateThemeUI(false);
+      } else {
+        document.documentElement.classList.add('dark');
+        updateThemeUI(true);
+      }
+    }
+
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateThemeUI(isDark);
+    }
+
+    function updateThemeUI(isDark) {
+      const icon = document.getElementById('themeIcon');
+      const text = document.getElementById('themeText');
+      if (isDark) {
+        icon.setAttribute('data-lucide', 'sun');
+        icon.classList.remove('text-indigo-600');
+        icon.classList.add('text-amber-500');
+        text.innerText = 'Tema Light';
+      } else {
+        icon.setAttribute('data-lucide', 'moon');
+        icon.classList.remove('text-amber-500');
+        icon.classList.add('text-indigo-600');
+        text.innerText = 'Tema Dark';
+      }
+      lucide.createIcons();
+    }
+
+    initTheme();
 
     // Bankroll Evolution Chart
     const ctxBankroll = document.getElementById('bankrollChart').getContext('2d');
@@ -937,11 +1018,11 @@
     new Chart(ctxBankroll, {
       type: 'line',
       data: {
-        labels: ['Start (R$ 50)', '#SB-01', '#SB-02', '#SB-03', '#SB-04', '#SB-05', '#SB-06', '#SB-07', '#SB-08', '#SB-09', '#SB-10', '#SB-11', '#SB-12', 'Depósito (+R$58)', 'Patrimônio (R$ 141,46)', 'Alvo Máx (R$ 203,57)'],
+        labels: ['Start (R$ 50)', '#SB-01', '#SB-02', '#SB-03', '#SB-04', '#SB-05', '#SB-06', '#SB-07', '#SB-08', '#SB-09', '#SB-10', '#SB-11', '#SB-12', 'Depósito (+R$58)', 'Patrimônio (R$ 152,68)', 'Alvo Máx (R$ 203,57)'],
         datasets: [
           {
             label: 'Evolução da Banca (R$)',
-            data: [50.00, 52.10, 58.85, 60.25, 55.25, 50.25, 46.40, 47.90, 51.87, 41.87, 45.47, 66.04, 55.96, 108.00, 141.46, 203.57],
+            data: [50.00, 52.10, 58.85, 60.25, 55.25, 50.25, 46.40, 47.90, 51.87, 41.87, 45.47, 66.04, 55.96, 108.00, 152.68, 203.57],
             borderColor: '#00e676',
             borderWidth: 3,
             backgroundColor: gradient,
@@ -971,16 +1052,10 @@
           legend: {
             display: true,
             labels: {
-              color: '#94a3b8',
               font: { family: 'JetBrains Mono', size: 11 }
             }
           },
           tooltip: {
-            backgroundColor: '#0d1322',
-            titleColor: '#f8fafc',
-            bodyColor: '#00e676',
-            borderColor: 'rgba(255,255,255,0.1)',
-            borderWidth: 1,
             padding: 10,
             displayColors: false,
             callbacks: {
@@ -992,13 +1067,12 @@
         },
         scales: {
           x: {
-            grid: { color: 'rgba(255, 255, 255, 0.05)' },
-            ticks: { color: '#64748b', font: { family: 'JetBrains Mono', size: 10 } }
+            grid: { color: 'rgba(150, 150, 150, 0.1)' },
+            ticks: { font: { family: 'JetBrains Mono', size: 10 } }
           },
           y: {
-            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+            grid: { color: 'rgba(150, 150, 150, 0.1)' },
             ticks: {
-              color: '#64748b',
               font: { family: 'JetBrains Mono', size: 10 },
               callback: function(value) { return 'R$ ' + value; }
             },
@@ -1018,8 +1092,7 @@
         datasets: [{
           data: [6, 4, 2, 3],
           backgroundColor: ['#00e676', '#ef4444', '#a855f7', '#22d3ee'],
-          borderColor: '#0d1322',
-          borderWidth: 3
+          borderWidth: 2
         }]
       },
       options: {

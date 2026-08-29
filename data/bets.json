@@ -3,7 +3,7 @@
   "versao": "3.9.0-MASTER",
   "nivel_sobrevivencia": "NORMAL (CAPITAL APORTADO R$ 108 & CAIXA R$ 70 BLINDADO)",
   "sessao_ativa": 4,
-  "ultima_atualizacao": "2026-08-29T00:47:07.677Z",
+  "ultima_atualizacao": "2026-08-29T00:56:34.555Z",
   "target_goal": 100,
   "progresso_meta_pct": 141.46,
   "rentabilidade_dia1_pct": 30.98,
@@ -146,5 +146,6 @@
       "cashout_tipo": "GREEN (+R$ 17,46 / +109.4%)",
       "status": "EM ABERTO"
     }
-  ]
+  ],
+  "heartbeat_pulse": 692
 }
