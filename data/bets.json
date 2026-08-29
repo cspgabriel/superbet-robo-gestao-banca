@@ -1,9 +1,9 @@
 {
   "robo_status": "ONLINE (AUTONOMOUS DAEMON ACTIVE)",
-  "versao": "3.10.0-MASTER",
-  "nivel_sobrevivencia": "NORMAL (CASHOUT GREEN #SB-15 LIQUIDADO & SALDO R$ 78,17)",
+  "versao": "3.11.0-MASTER",
+  "nivel_sobrevivencia": "NORMAL (TICKET #SB-16 DISPARADO & SALDO R$ 70,00 BLINDADO)",
   "sessao_ativa": 4,
-  "ultima_atualizacao": "2026-08-29T01:05:50.757Z",
+  "ultima_atualizacao": "2026-08-29T01:15:01.537Z",
   "target_goal": 100,
   "progresso_meta_pct": 160.69,
   "rentabilidade_dia1_pct": 48.79,
@@ -13,13 +13,13 @@
     "banca_inicial_start": 50,
     "deposito_adicional": 58,
     "banca_total_aportada": 108,
-    "saldo_livre_em_conta": 78.17,
-    "saldo_em_jogo": 35.96,
-    "cashouts_soma_atual": 82.52,
-    "patrimonio_liquido_realizavel": 160.69,
-    "lucro_liquido_atual": 52.69,
-    "retorno_potencial_ativo": 107.06,
-    "banca_alvo_projetada": 185.23,
+    "saldo_livre_em_conta": 70,
+    "saldo_em_jogo": 44.13,
+    "cashouts_soma_atual": 69.35,
+    "patrimonio_liquido_realizavel": 139.35,
+    "lucro_liquido_atual": 31.35,
+    "retorno_potencial_ativo": 147.74,
+    "banca_alvo_projetada": 217.74,
     "moeda": "BRL"
   },
   "projecao_composta_20pct": [
@@ -76,20 +76,37 @@
     }
   ],
   "metricas_acumuladas": {
-    "total_entradas_historico": 15,
-    "entradas_ativas_inplay": 2,
+    "total_entradas_historico": 16,
+    "entradas_ativas_inplay": 3,
     "greens_liquidados": 7,
     "reds_auditados": 4,
     "cashouts_estrategicos": {
       "total": 3,
       "cashout_neutro": 1,
       "cashout_red": 1,
-      "cashout_green": 1,
-      "cashout_green_ativo": 2
+      "cashout_green": 1
     },
     "taxa_preservacao_capital_pct": 100
   },
   "entradas_ativas": [
+    {
+      "id": 16,
+      "ticket_id": "SB-20260828-16",
+      "sessao": 4,
+      "data_hora": "2026-08-28 22:13",
+      "casa": "Superbet",
+      "partida": "SuperMúltipla Grade Noturna + Ao Vivo (Última do Dia)",
+      "campeonato": "México + Argentina + Série B",
+      "minuto_entrada": "In-Play + Pré-Jogo",
+      "mercado": "Super Múltipla 5x Under Gols FT",
+      "selecao": "Novo U2.5 (1.45) + Boca U3.5 (1.01) + Náutico U2.5 (1.70) + Necaxa U3.5 (1.28) + Atlante U3.5 (1.47)",
+      "odd": 4.98,
+      "stake": 8.17,
+      "stake_tipo": "Dinheiro Real (Lucro Resgatado #SB-15)",
+      "retorno_potencial": 40.68,
+      "cashout_atual": 6.57,
+      "status": "EM ABERTO"
+    },
     {
       "id": 14,
       "ticket_id": "SB-20260828-14 (891O-YNBI0H)",
@@ -105,8 +122,8 @@
       "stake": 20,
       "stake_tipo": "Dinheiro Real",
       "retorno_potencial": 46.17,
-      "cashout_atual": 37.24,
-      "cashout_tipo": "GREEN (+R$ 17,24 / +86.2%)",
+      "cashout_atual": 28.38,
+      "cashout_tipo": "GREEN (+R$ 8,38 / +41.9%)",
       "status": "EM ABERTO"
     },
     {
@@ -124,8 +141,8 @@
       "stake": 15.96,
       "stake_tipo": "Dinheiro Real",
       "retorno_potencial": 60.89,
-      "cashout_atual": 45.28,
-      "cashout_tipo": "GREEN (+R$ 29,32 / +183.7%)",
+      "cashout_atual": 34.4,
+      "cashout_tipo": "GREEN (+R$ 18,44 / +115.5%)",
       "status": "EM ABERTO"
     }
   ]
