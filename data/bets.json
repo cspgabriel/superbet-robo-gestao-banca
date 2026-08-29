@@ -1,149 +1,89 @@
 {
   "robo_status": "ONLINE (AUTONOMOUS DAEMON ACTIVE)",
-  "versao": "3.11.0-MASTER",
-  "nivel_sobrevivencia": "NORMAL (TICKET #SB-16 DISPARADO & SALDO R$ 70,00 BLINDADO)",
+  "versao": "3.12.0-MASTER",
+  "nivel_sobrevivencia": "CONSERVADOR (CAPITAL BLINDADO EM R$ 70,00)",
   "sessao_ativa": 4,
-  "ultima_atualizacao": "2026-08-29T01:15:01.537Z",
+  "ultima_atualizacao": "2026-08-29T01:23:07.490Z",
   "target_goal": 100,
-  "progresso_meta_pct": 160.69,
-  "rentabilidade_dia1_pct": 48.79,
-  "meta_diaria_20pct_batida": true,
+  "progresso_meta_pct": 70,
   "conexao_cdp": "Ativa (Porta 9222 / 3 Abas Paralelas)",
   "banca": {
     "banca_inicial_start": 50,
     "deposito_adicional": 58,
     "banca_total_aportada": 108,
     "saldo_livre_em_conta": 70,
-    "saldo_em_jogo": 44.13,
-    "cashouts_soma_atual": 69.35,
-    "patrimonio_liquido_realizavel": 139.35,
-    "lucro_liquido_atual": 31.35,
-    "retorno_potencial_ativo": 147.74,
-    "banca_alvo_projetada": 217.74,
+    "saldo_em_jogo": 0,
+    "cashouts_soma_atual": 0,
+    "patrimonio_liquido_realizavel": 70,
+    "lucro_liquido_atual": -38,
+    "retorno_potencial_ativo": 0,
+    "banca_alvo_projetada": 100,
     "moeda": "BRL"
   },
   "projecao_composta_20pct": [
     {
       "dia": 1,
-      "banca_alvo": 129.6,
-      "banca_real": 160.69,
-      "status": "BATIDA (+48.8%) 🎯"
+      "banca_alvo": 84,
+      "status": "EM ANDAMENTO (BASE R$ 70,00)"
     },
     {
       "dia": 2,
-      "banca_alvo": 155.52,
+      "banca_alvo": 100.8,
       "status": "PROJETADO"
     },
     {
       "dia": 3,
-      "banca_alvo": 186.62,
+      "banca_alvo": 120.96,
       "status": "PROJETADO"
     },
     {
       "dia": 4,
-      "banca_alvo": 223.95,
+      "banca_alvo": 145.15,
       "status": "PROJETADO"
     },
     {
       "dia": 5,
-      "banca_alvo": 268.74,
+      "banca_alvo": 174.18,
       "status": "PROJETADO"
     },
     {
       "dia": 10,
-      "banca_alvo": 668.69,
+      "banca_alvo": 433.42,
       "status": "PROJETADO"
     },
     {
       "dia": 15,
-      "banca_alvo": 1663.92,
+      "banca_alvo": 1078.5,
       "status": "PROJETADO"
     },
     {
       "dia": 20,
-      "banca_alvo": 4140.46,
+      "banca_alvo": 2683.74,
       "status": "PROJETADO"
     },
     {
       "dia": 25,
-      "banca_alvo": 10303.2,
+      "banca_alvo": 6678.07,
       "status": "PROJETADO"
     },
     {
       "dia": 30,
-      "banca_alvo": 25636.63,
-      "status": "PROJETADO (R$ 25.6k)"
+      "banca_alvo": 16617.15,
+      "status": "PROJETADO"
     }
   ],
   "metricas_acumuladas": {
     "total_entradas_historico": 16,
-    "entradas_ativas_inplay": 3,
+    "entradas_ativas_inplay": 0,
     "greens_liquidados": 7,
-    "reds_auditados": 4,
+    "reds_auditados": 7,
     "cashouts_estrategicos": {
       "total": 3,
       "cashout_neutro": 1,
       "cashout_red": 1,
       "cashout_green": 1
     },
-    "taxa_preservacao_capital_pct": 100
+    "taxa_preservacao_capital_pct": 64.81
   },
-  "entradas_ativas": [
-    {
-      "id": 16,
-      "ticket_id": "SB-20260828-16",
-      "sessao": 4,
-      "data_hora": "2026-08-28 22:13",
-      "casa": "Superbet",
-      "partida": "SuperMúltipla Grade Noturna + Ao Vivo (Última do Dia)",
-      "campeonato": "México + Argentina + Série B",
-      "minuto_entrada": "In-Play + Pré-Jogo",
-      "mercado": "Super Múltipla 5x Under Gols FT",
-      "selecao": "Novo U2.5 (1.45) + Boca U3.5 (1.01) + Náutico U2.5 (1.70) + Necaxa U3.5 (1.28) + Atlante U3.5 (1.47)",
-      "odd": 4.98,
-      "stake": 8.17,
-      "stake_tipo": "Dinheiro Real (Lucro Resgatado #SB-15)",
-      "retorno_potencial": 40.68,
-      "cashout_atual": 6.57,
-      "status": "EM ABERTO"
-    },
-    {
-      "id": 14,
-      "ticket_id": "SB-20260828-14 (891O-YNBI0H)",
-      "sessao": 4,
-      "data_hora": "2026-08-28 21:03",
-      "casa": "Superbet",
-      "partida": "Tripla Série B + Chile",
-      "campeonato": "Série B + Primeira Divisão Chile",
-      "minuto_entrada": "In-Play (Intervalo)",
-      "mercado": "Tripla Under In-Play",
-      "selecao": "Cobresal U2.5 (1.14) + Novo U2.5 (1.35) + Náutico 1T U1.5 (1.50)",
-      "odd": 2.3,
-      "stake": 20,
-      "stake_tipo": "Dinheiro Real",
-      "retorno_potencial": 46.17,
-      "cashout_atual": 28.38,
-      "cashout_tipo": "GREEN (+R$ 8,38 / +41.9%)",
-      "status": "EM ABERTO"
-    },
-    {
-      "id": 13,
-      "ticket_id": "SB-20260828-13",
-      "sessao": 4,
-      "data_hora": "2026-08-28 21:01",
-      "casa": "Superbet",
-      "partida": "Quadrupla Híbrida (Chile + Série B + Argentina)",
-      "campeonato": "Multi-Liga (Chile, Série B, Argentina)",
-      "minuto_entrada": "In-Play + Pré-Jogo (21:30)",
-      "mercado": "Múltipla 4x Under Gols FT",
-      "selecao": "Cobresal U2.5 (1.20) + Goiás U3.5 (1.92) + Novo U2.5 (1.38) + Boca U3.5 (1.20)",
-      "odd": 3.81,
-      "stake": 15.96,
-      "stake_tipo": "Dinheiro Real",
-      "retorno_potencial": 60.89,
-      "cashout_atual": 34.4,
-      "cashout_tipo": "GREEN (+R$ 18,44 / +115.5%)",
-      "status": "EM ABERTO"
-    }
-  ]
+  "entradas_ativas": []
 }
