@@ -2,18 +2,57 @@
   "sessao_id": 5,
   "data_sessao": "2026-08-29",
   "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
-  "diretriz_operacional": "BILLY WALTERS VALUE ENGINE - GREEN NO LENS + BETIS EMPATA 2X2 EM BUSCA DA VIRADA",
+  "diretriz_operacional": "BILLY WALTERS VALUE ENGINE - GOAL ATIVO R$ 500 DEPOSITO R$ 61 + ESCALACAO EM 4 FASES",
   "banca_start_sessao": 50.00,
-  "saldo_livre_em_conta": 8.58,
-  "saldo_em_jogo": 10.00,
-  "patrimonio_atual": 18.58,
-  "retorno_potencial_total_aberto": 24.00,
+  "deposito_adicional_brl": 61.00,
+  "saldo_livre_em_conta": 61.00,
+  "saldo_em_jogo": 18.58,
+  "patrimonio_atual": 79.58,
+  "retorno_potencial_total_aberto": 98.41,
   "lucro_liquido_sessao_realizado": 4.68,
+  "meta_goal_final_brl": 500.00,
   "taxa_acerto_simples_pct": 80.0,
   "entradas_ativas": [
     {
+      "id": 17,
+      "ticket_id": "890W-QI3CGG",
+      "data_hora": "2026-08-29 12:58",
+      "casa": "Superbet",
+      "formato": "Múltipla",
+      "qtd_selecoes": 2,
+      "timing": "In-Play (70' 2T • Encerra às 13h15)",
+      "categoria_mercado": "Multipla_Hibrida_InPlay",
+      "tempo_resolucao_alvo": "13h15 (15 Minutos)",
+      "odd_total": 1.56,
+      "stake_brl": 8.58,
+      "retorno_potencial": 13.41,
+      "cashout_atual": 9.42,
+      "status": "EM ABERTO",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "Arouca x Marítimo",
+          "campeonato": "Liga Portugal",
+          "mercado": "Resultado Final",
+          "selecao": "Arouca Vence a Partida",
+          "odd_individual": 1.25,
+          "status_perna": "Em andamento (2x1 aos 78' 2T)"
+        },
+        {
+          "perna": 2,
+          "partida": "Excelsior x Sparta Rotterdam",
+          "campeonato": "Eredivisie (Holanda)",
+          "mercado": "Total de Gols",
+          "selecao": "Menos de 3.5 Gols na Partida",
+          "odd_individual": 1.25,
+          "status_perna": "Em andamento (1x1 aos 81' 2T)"
+        }
+      ],
+      "justificativa_quant": "Dupla In-Play de Resolucao Ultra-Rapida nos 70' 2T com encerramento matematico as 13h15 para liberar capital liquido antes da grade das 13h30. Odd 1.56 com +EV."
+    },
+    {
       "id": 14,
-      "ticket_id": "890B-BETIS-1X2-14",
+      "ticket_id": "890G-QDX9CD",
       "data_hora": "2026-08-29 12:08",
       "casa": "Superbet",
       "formato": "Simples",
@@ -24,7 +63,7 @@
       "odd_total": 2.40,
       "stake_brl": 10.00,
       "retorno_potencial": 24.00,
-      "cashout_atual": 9.56,
+      "cashout_atual": 9.64,
       "status": "EM ABERTO",
       "selecoes_detalhadas": [
         {
@@ -34,7 +73,7 @@
           "mercado": "Resultado Final",
           "selecao": "Real Betis Vence a Partida",
           "odd_individual": 2.40,
-          "status_perna": "Em andamento (2x2 no intervalo com Betis reagindo com 2 gols no 1T)"
+          "status_perna": "Em andamento (2x2 no 2T com Betis buscando o 3º gol)"
         }
       ],
       "justificativa_quant": "Simples Padrao G1 Billy Walters em Mercado 1X2. Betis empatou em 2x2 antes do intervalo e domina a posse e finalizacoes. Odd 2.40 com +EV."
