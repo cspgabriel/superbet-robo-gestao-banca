@@ -3,11 +3,12 @@
   "data_sessao": "2026-08-29",
   "versao_motor": "4.0.0-PRO-QUANT (V2 OperationGuard)",
   "banca_start_sessao": 50.00,
-  "saldo_livre_em_conta": 47.50,
+  "saldo_livre_em_conta": 48.93,
   "saldo_em_jogo": 2.50,
-  "patrimonio_atual": 50.00,
-  "lucro_liquido_sessao": 0.00,
-  "roi_sessao_pct": 0.00,
+  "patrimonio_atual": 51.43,
+  "lucro_liquido_sessao": 1.43,
+  "roi_sessao_pct": 2.86,
+  "taxa_acerto_pct": 100.0,
   "teto_stake_unitaria": 2.50,
   "teto_exposicao_simultanea": 5.00,
   "stop_gain_sessao": 15.00,
@@ -22,6 +23,26 @@
   },
   "entradas_ativas": [
     {
+      "id": 2,
+      "ticket_id": "8909-QNZ0CT",
+      "data_hora": "2026-08-29 10:06",
+      "casa": "Superbet",
+      "partida": "Elversberg x Bayer Leverkusen",
+      "campeonato": "Bundesliga (Alemanha)",
+      "minuto_entrada": "Pré-Jogo (Início 10:30)",
+      "tipo": "Pré-Jogo",
+      "mercado": "Resultado Final (1X2)",
+      "selecao": "Bayer Leverkusen Vence (2)",
+      "odd": 1.58,
+      "stake": 2.50,
+      "retorno_potencial": 3.95,
+      "cashout_atual": 2.50,
+      "status": "EM ABERTO",
+      "justificativa_quant": "Leverkusen campeão e amplamente favorito contra Elversberg; modelo Dixon-Coles projeta probabilidade de vitória de 68% com valor de linha institucional (+EV 7.4% a 10%). Cluster Lock respeitado."
+    }
+  ],
+  "entradas_liquidadas": [
+    {
       "id": 1,
       "ticket_id": "890W-QI3C2K",
       "data_hora": "2026-08-29 09:41",
@@ -35,15 +56,10 @@
       "odd": 1.57,
       "stake": 2.50,
       "retorno_potencial": 3.93,
-      "cashout_atual": 2.35,
-      "status": "EM ABERTO",
-      "placar_momento": "0-1",
-      "xg_momento": {
-        "liverpool": 0.25,
-        "nottingham": 1.29
-      },
-      "justificativa_quant": "Liverpool com 65% de posse no Anfield buscando empate; modelo Dixon-Coles Time Decay precifica probabilidade real em ~72% (+EV 13.0%). Cluster Lock respeitado."
+      "resultado_brl": 3.93,
+      "lucro_liquido_brl": 1.43,
+      "status": "GREEN",
+      "placar_final": "Gol do Liverpool marcado por Isak aos 60' (1x1)"
     }
-  ],
-  "entradas_liquidadas": []
+  ]
 }

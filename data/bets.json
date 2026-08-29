@@ -1,20 +1,20 @@
 {
-  "robo_status": "OPERANDO AO VIVO (SESSÃO 5 - TICKET ATIVO)",
+  "robo_status": "OPERANDO AO VIVO (SESSÃO 5 - TICKET 1 GREEN | TICKET 2 ATIVO)",
   "versao": "4.0.0-PRO-QUANT",
-  "nivel_sobrevivencia": "NORMAL (R$ 50,00 BASE START)",
+  "nivel_sobrevivencia": "NORMAL (R$ 51,43 PATRIMÔNIO ATUAL)",
   "sessao_ativa": 5,
-  "ultima_atualizacao": "2026-08-29T09:41:00.000Z",
+  "ultima_atualizacao": "2026-08-29T10:06:00.000Z",
   "target_goal": 65.00,
-  "progresso_meta_pct": 76.92,
+  "progresso_meta_pct": 79.12,
   "conexao_cdp": "Conectado e Operando",
   "banca": {
     "banca_start_sessao_5": 50.00,
-    "saldo_livre_em_conta": 47.50,
+    "saldo_livre_em_conta": 48.93,
     "saldo_em_jogo": 2.50,
-    "cashouts_soma_atual": 2.35,
-    "patrimonio_liquido_realizavel": 49.85,
-    "lucro_liquido_sessao": 0.00,
-    "taxa_preservacao_capital_pct": 100.0,
+    "cashouts_soma_atual": 2.50,
+    "patrimonio_liquido_realizavel": 51.43,
+    "lucro_liquido_sessao": 1.43,
+    "taxa_acerto_sessao_pct": 100.0,
     "moeda": "BRL",
     "stake_unitaria_recomendada_min": 2.50,
     "stake_unitaria_recomendada_max": 3.50,
@@ -30,6 +30,25 @@
   },
   "entradas_ativas": [
     {
+      "id": 2,
+      "ticket_id": "8909-QNZ0CT",
+      "data_hora": "2026-08-29 10:06",
+      "casa": "Superbet",
+      "partida": "Elversberg x Bayer Leverkusen",
+      "campeonato": "Bundesliga (Alemanha)",
+      "minuto_entrada": "Pré-Jogo (Início 10:30)",
+      "tipo": "Pré-Jogo",
+      "mercado": "Resultado Final (1X2)",
+      "selecao": "Bayer Leverkusen Vence (2)",
+      "odd": 1.58,
+      "stake": 2.50,
+      "retorno_potencial": 3.95,
+      "cashout_atual": 2.50,
+      "status": "EM ABERTO"
+    }
+  ],
+  "entradas_liquidadas": [
+    {
       "id": 1,
       "ticket_id": "890W-QI3C2K",
       "data_hora": "2026-08-29 09:41",
@@ -43,9 +62,10 @@
       "odd": 1.57,
       "stake": 2.50,
       "retorno_potencial": 3.93,
-      "cashout_atual": 2.35,
-      "status": "EM ABERTO",
-      "placar_momento": "0-1"
+      "resultado_brl": 3.93,
+      "lucro_liquido_brl": 1.43,
+      "status": "GREEN",
+      "placar_final": "Gol do Liverpool marcado por Isak aos 60' (1x1)"
     }
   ]
 }
