@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Automaton Quant Trader — Superbet Master Audit Dashboard (39 Operações)</title>
+  <title>Automaton Quant Trader — Superbet Master Dashboard & Central de Prompts (39 Operações)</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Chart.js CDN -->
@@ -96,6 +96,12 @@
     .glow-blue { box-shadow: 0 0 20px rgba(59, 130, 246, 0.25); }
     .glow-amber { box-shadow: 0 0 20px rgba(245, 158, 11, 0.25); }
 
+    .nav-tab.active {
+      background: rgba(0, 230, 118, 0.15);
+      border-color: #00e676;
+      color: #00e676;
+    }
+
     .filter-btn.active {
       background: rgba(0, 230, 118, 0.2);
       border-color: #00e676;
@@ -115,13 +121,13 @@
         </div>
         <div>
           <div class="flex flex-wrap items-center gap-2">
-            <h1 class="text-xl font-black text-white tracking-tight">Automaton Quant Trader &middot; Superbet Master Audit</h1>
+            <h1 class="text-xl font-black text-white tracking-tight">Automaton Quant Trader &middot; Superbet Master Hub</h1>
             <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-brand-500/20 text-brand-500 border border-brand-500/40 flex items-center gap-1.5 font-mono">
               <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span>
-              SESSÃO V5.0 &middot; 41 OPERAÇÕES AUDITADAS
+              SESSÃO V5.0 &middot; BANCA R$ 45,89 &middot; META R$ 500
             </span>
           </div>
-          <p class="text-xs text-gray-400 font-medium">Histórico Total: Dia 1 (16 Tickets) &plus; Dia 2 (25 Tickets) &middot; 100% Transparência e Estatísticas de Acerto/Erro</p>
+          <p class="text-xs text-gray-400 font-medium">Hub Unificado: Histórico de 39 Entradas &plus; Central de Prompts &plus; Framework dos 11 Pilares &plus; Leis do Protocolo</p>
         </div>
       </div>
 
@@ -131,13 +137,13 @@
           <span id="themeText">Tema Light</span>
         </button>
 
-        <div class="px-3 py-1.5 rounded-xl sub-card text-xs text-gray-300 flex items-center gap-2 font-mono">
+        <div class="px-3 py-1.5 rounded-xl sub-card text-xs text-brand-400 flex items-center gap-2 font-mono font-bold">
           <i data-lucide="wallet" class="w-3.5 h-3.5 text-brand-500"></i>
-          <span>Em Campo: R$ 23,58</span>
+          <span>Saldo Livre: R$ 17,36</span>
         </div>
         <div class="px-3 py-1.5 rounded-xl bg-purple-500/10 border border-purple-500/30 text-xs font-bold text-purple-400 flex items-center gap-1.5 font-mono glow-purple">
-          <i data-lucide="target" class="w-3.5 h-3.5"></i>
-          Retorno Potencial: R$ 77,10 🚀
+          <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+          Patrimônio: R$ 45,89
         </div>
         <button onclick="window.location.reload()" class="px-3.5 py-1.5 rounded-xl bg-brand-500 text-dark-900 font-bold text-xs flex items-center gap-1.5 hover:bg-brand-600 transition shadow-lg shadow-brand-500/20">
           <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
@@ -146,901 +152,886 @@
       </div>
     </header>
 
-    <!-- 2. PLACAR TOTAL DE ACERTOS, ERROS E CASHOUTS (CARDS GLOBAIS) -->
-    <div class="grid grid-cols-2 md:grid-cols-6 gap-3 font-mono">
-      <!-- CARD TOTAL OPERAÇÕES -->
-      <div class="glass-card rounded-2xl p-4 border-l-4 border-l-blue-500">
-        <div class="text-[11px] font-bold text-blue-400 uppercase flex items-center gap-1">
-          <i data-lucide="layers" class="w-3.5 h-3.5"></i> Total Geral
-        </div>
-        <div class="text-2xl font-black text-white mt-1">39 ORDENS</div>
-        <div class="text-[10px] text-gray-400 mt-0.5">16 D1 &plus; 25 D2</div>
-      </div>
-
-      <!-- CARD GREENS (ACERTOS) -->
-      <div class="glass-card rounded-2xl p-4 border-l-4 border-l-brand-500 glow-green">
-        <div class="text-[11px] font-bold text-brand-400 uppercase flex items-center gap-1">
-          <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> Greens (Certas)
-        </div>
-        <div class="text-2xl font-black text-brand-400 mt-1">12 GREENS</div>
-        <div class="text-[10px] text-brand-400 mt-0.5">30.8% Taxa Global</div>
-      </div>
-
-      <!-- CARD REDS (ERRADAS) -->
-      <div class="glass-card rounded-2xl p-4 border-l-4 border-l-red-500">
-        <div class="text-[11px] font-bold text-red-400 uppercase flex items-center gap-1">
-          <i data-lucide="x-circle" class="w-3.5 h-3.5"></i> Reds (Erradas)
-        </div>
-        <div class="text-2xl font-black text-red-400 mt-1">17 REDS</div>
-        <div class="text-[10px] text-red-400 mt-0.5">43.6% Taxa Erro</div>
-      </div>
-
-      <!-- CARD CASHOUTS TÁTICOS -->
-      <div class="glass-card rounded-2xl p-4 border-l-4 border-l-purple-500 glow-purple">
-        <div class="text-[11px] font-bold text-purple-400 uppercase flex items-center gap-1">
-          <i data-lucide="shield" class="w-3.5 h-3.5"></i> Cashouts
-        </div>
-        <div class="text-2xl font-black text-purple-400 mt-1">7 RESGATES</div>
-        <div class="text-[10px] text-purple-400 mt-0.5">R$ 78,92 Salvos</div>
-      </div>
-
-      <!-- CARD AO VIVO / ABERTAS -->
-      <div class="glass-card rounded-2xl p-4 border-l-4 border-l-amber-500 glow-amber">
-        <div class="text-[11px] font-bold text-amber-400 uppercase flex items-center gap-1">
-          <i data-lucide="activity" class="w-3.5 h-3.5"></i> Ao Vivo
-        </div>
-        <div class="text-2xl font-black text-amber-400 mt-1">3 ATIVAS</div>
-        <div class="text-[10px] text-amber-400 mt-0.5">R$ 77,10 Potencial</div>
-      </div>
-
-      <!-- CARD WIN RATE SIMPLES G1 -->
-      <div class="glass-card rounded-2xl p-4 border-l-4 border-l-emerald-500">
-        <div class="text-[11px] font-bold text-emerald-400 uppercase flex items-center gap-1">
-          <i data-lucide="award" class="w-3.5 h-3.5"></i> Win Rate Simples
-        </div>
-        <div class="text-2xl font-black text-emerald-400 mt-1">71.4%</div>
-        <div class="text-[10px] text-emerald-400 mt-0.5">Padrão G1 Elite</div>
-      </div>
+    <!-- 2. NAVEGAÇÃO PRINCIPAL POR SEÇÕES (TABS) -->
+    <div class="flex items-center gap-2 overflow-x-auto pb-1">
+      <button onclick="switchMainSection('auditoria')" id="tab-nav-auditoria" class="nav-tab active px-4 py-2 rounded-xl glass-card text-xs font-bold font-mono uppercase flex items-center gap-2 border border-brand-500 transition">
+        <i data-lucide="table" class="w-4 h-4"></i>
+        1. Livro de Ordens & Histórico (39 Entradas)
+      </button>
+      <button onclick="switchMainSection('prompts')" id="tab-nav-prompts" class="nav-tab px-4 py-2 rounded-xl glass-card text-xs font-bold font-mono uppercase flex items-center gap-2 border border-transparent text-gray-400 hover:text-white transition">
+        <i data-lucide="terminal" class="w-4 h-4 text-purple-400"></i>
+        2. Central de Prompts & IA Engine
+      </button>
+      <button onclick="switchMainSection('pilares')" id="tab-nav-pilares" class="nav-tab px-4 py-2 rounded-xl glass-card text-xs font-bold font-mono uppercase flex items-center gap-2 border border-transparent text-gray-400 hover:text-white transition">
+        <i data-lucide="columns" class="w-4 h-4 text-blue-400"></i>
+        3. Framework dos 11 Pilares
+      </button>
+      <button onclick="switchMainSection('leis')" id="tab-nav-leis" class="nav-tab px-4 py-2 rounded-xl glass-card text-xs font-bold font-mono uppercase flex items-center gap-2 border border-transparent text-gray-400 hover:text-white transition">
+        <i data-lucide="shield" class="w-4 h-4 text-amber-400"></i>
+        4. 10 Leis do Protocolo & Billy Walters
+      </button>
     </div>
 
-    <!-- 3. GRÁFICO DE CURVA DE EVOLUÇÃO E DISTRIBUIÇÃO -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      <div class="glass-card rounded-2xl p-6 lg:col-span-2 space-y-4">
-        <div class="flex justify-between items-center">
-          <div>
-            <h3 class="text-base font-bold text-white flex items-center gap-2">
-              <i data-lucide="line-chart" class="w-4 h-4 text-brand-500"></i>
-              Trajetória Completa de Capital &middot; Dia 1 &plus; Dia 2 (39 Entradas)
-            </h3>
-            <p class="text-xs text-gray-400">Curva de evolução do saldo líquido &middot; Meta /goal R$ 500,00</p>
-          </div>
-          <span class="text-xs font-mono px-2.5 py-1 rounded bg-brand-500/20 text-brand-400 font-bold">41 OPERAÇÕES</span>
+    <!-- SEÇÃO 1: AUDITORIA DAS 39 ENTRADAS & GRÁFICOS -->
+    <div id="section-auditoria" class="space-y-8">
+      <!-- PLACAR DE ESTATÍSTICAS -->
+      <div class="grid grid-cols-2 md:grid-cols-6 gap-3 font-mono">
+        <div class="glass-card rounded-2xl p-4 border-l-4 border-l-blue-500">
+          <div class="text-[11px] font-bold text-blue-400 uppercase flex items-center gap-1"><i data-lucide="layers" class="w-3.5 h-3.5"></i> Total Geral</div>
+          <div class="text-2xl font-black text-white mt-1">39 ORDENS</div>
+          <div class="text-[10px] text-gray-400 mt-0.5">16 D1 &plus; 23 D2</div>
         </div>
-        <div class="relative h-64 w-full">
-          <canvas id="mainChart"></canvas>
+        <div class="glass-card rounded-2xl p-4 border-l-4 border-l-brand-500 glow-green">
+          <div class="text-[11px] font-bold text-brand-400 uppercase flex items-center gap-1"><i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> Greens (Certas)</div>
+          <div class="text-2xl font-black text-brand-400 mt-1">13 GREENS</div>
+          <div class="text-[10px] text-brand-400 mt-0.5">33.3% Win Rate</div>
+        </div>
+        <div class="glass-card rounded-2xl p-4 border-l-4 border-l-red-500">
+          <div class="text-[11px] font-bold text-red-400 uppercase flex items-center gap-1"><i data-lucide="x-circle" class="w-3.5 h-3.5"></i> Reds (Erradas)</div>
+          <div class="text-2xl font-black text-red-400 mt-1">17 REDS</div>
+          <div class="text-[10px] text-red-400 mt-0.5">43.6% Taxa Erro</div>
+        </div>
+        <div class="glass-card rounded-2xl p-4 border-l-4 border-l-purple-500 glow-purple">
+          <div class="text-[11px] font-bold text-purple-400 uppercase flex items-center gap-1"><i data-lucide="shield" class="w-3.5 h-3.5"></i> Cashouts</div>
+          <div class="text-2xl font-black text-purple-400 mt-1">7 RESGATES</div>
+          <div class="text-[10px] text-purple-400 mt-0.5">R$ 78,92 Salvos</div>
+        </div>
+        <div class="glass-card rounded-2xl p-4 border-l-4 border-l-amber-500 glow-amber">
+          <div class="text-[11px] font-bold text-amber-400 uppercase flex items-center gap-1"><i data-lucide="activity" class="w-3.5 h-3.5"></i> Ao Vivo</div>
+          <div class="text-2xl font-black text-amber-400 mt-1">2 ATIVAS</div>
+          <div class="text-[10px] text-amber-400 mt-0.5">Galo 2x0 + Múltipla</div>
+        </div>
+        <div class="glass-card rounded-2xl p-4 border-l-4 border-l-emerald-500">
+          <div class="text-[11px] font-bold text-emerald-400 uppercase flex items-center gap-1"><i data-lucide="award" class="w-3.5 h-3.5"></i> Win Simples G1</div>
+          <div class="text-2xl font-black text-emerald-400 mt-1">75.0%</div>
+          <div class="text-[10px] text-emerald-400 mt-0.5">6 de 8 Batidas</div>
         </div>
       </div>
 
+      <!-- TABELA MASTER COM FILTROS -->
       <div class="glass-card rounded-2xl p-6 space-y-4">
-        <div>
-          <h3 class="text-base font-bold text-white flex items-center gap-2">
-            <i data-lucide="pie-chart" class="w-4 h-4 text-purple-500"></i>
-            Proporção de Resultados
-          </h3>
-          <p class="text-xs text-gray-400">Total Auditado de 41 Bilhetes</p>
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+          <div>
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+              <i data-lucide="list-checks" class="w-5 h-5 text-brand-500"></i>
+              Livro de Ordens Master &middot; Lista Completa dos 39 Bilhetes
+            </h3>
+            <p class="text-xs text-gray-400">Clique nos botões de filtro para analisar por período, acertos ou status</p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-1.5 text-xs font-mono">
+            <button onclick="filterTable('all')" id="flt-all" class="filter-btn active px-3 py-1.5 rounded-lg sub-card font-bold border border-transparent transition">Todos (39)</button>
+            <button onclick="filterTable('dia2')" id="flt-dia2" class="filter-btn px-3 py-1.5 rounded-lg sub-card text-emerald-400 font-bold border border-transparent transition">Dia 2 (23)</button>
+            <button onclick="filterTable('dia1')" id="flt-dia1" class="filter-btn px-3 py-1.5 rounded-lg sub-card text-blue-400 font-bold border border-transparent transition">Dia 1 (16)</button>
+            <button onclick="filterTable('green')" id="flt-green" class="filter-btn px-3 py-1.5 rounded-lg sub-card text-brand-400 font-bold border border-transparent transition">Greens (13)</button>
+            <button onclick="filterTable('red')" id="flt-red" class="filter-btn px-3 py-1.5 rounded-lg sub-card text-red-400 font-bold border border-transparent transition">Reds (17)</button>
+            <button onclick="filterTable('cashout')" id="flt-cashout" class="filter-btn px-3 py-1.5 rounded-lg sub-card text-purple-400 font-bold border border-transparent transition">Cashouts (7)</button>
+            <button onclick="filterTable('aovivo')" id="flt-aovivo" class="filter-btn px-3 py-1.5 rounded-lg sub-card text-amber-400 font-bold border border-transparent transition">Ao Vivo (2)</button>
+          </div>
         </div>
-        <div class="relative h-44 w-full flex items-center justify-center">
-          <canvas id="pieChart"></canvas>
-        </div>
-        <div class="grid grid-cols-2 gap-2 text-xs font-mono pt-2 border-t border-slate-200 dark:border-white/5">
-          <div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-brand-500"></span> 12 Greens (31%)</div>
-          <div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-red-500"></span> 17 Reds (44%)</div>
-          <div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-purple-500"></span> 7 Cashouts (18%)</div>
-          <div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span> 3 Ao Vivo (8%)</div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm">
+            <thead>
+              <tr class="border-b border-slate-200 dark:border-white/10 text-xs font-bold text-gray-400 uppercase font-mono">
+                <th class="py-3 px-3"># Ticket</th>
+                <th class="py-3 px-3">Sessão / Data</th>
+                <th class="py-3 px-3">Partida / Liga</th>
+                <th class="py-3 px-3">Mercado / Seleção</th>
+                <th class="py-3 px-3">Odd</th>
+                <th class="py-3 px-3">Stake</th>
+                <th class="py-3 px-3">Retorno</th>
+                <th class="py-3 px-3">Lucro Líquido</th>
+                <th class="py-3 px-3">Status</th>
+                <th class="py-3 px-3">Observações / Motivo</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 dark:divide-white/5 font-mono text-xs" id="tableBody">
+              
+                <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia1">
+                  <td class="py-3 px-3 font-bold text-white">D1-01 <span class="text-[10px] text-gray-500 block">SB-20260828-01</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 18:05</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Alavés x Villarreal</div><div class="text-[10px] text-gray-400 font-mono">LaLiga</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Alavés Vence</div><div class="text-[10px] text-gray-500">Resultado Final</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 1.42</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 5.00</td>
+                  <td class="py-3 px-3 text-white">R$ 7.10</td>
+                  <td class="py-3 px-3 text-brand-400 font-bold">+R$ 2.10</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="check-circle" class="w-3 h-3"></i>
+                      GREEN
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Placar final 1x0. Simples in-play aos 80m.</td>
+                </tr>
+                <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia1">
+                  <td class="py-3 px-3 font-bold text-white">D1-02 <span class="text-[10px] text-gray-500 block">SB-20260828-02</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 18:05</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Alavés x Villarreal</div><div class="text-[10px] text-gray-400 font-mono">LaLiga</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Under 1.5 FT</div><div class="text-[10px] text-gray-500">Total de Gols</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 2.35</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 5.00</td>
+                  <td class="py-3 px-3 text-white">R$ 11.75</td>
+                  <td class="py-3 px-3 text-brand-400 font-bold">+R$ 6.75</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="check-circle" class="w-3 h-3"></i>
+                      GREEN
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Placar final 1x0. Under 1.5 cravado.</td>
+                </tr>
+                <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia1">
+                  <td class="py-3 px-3 font-bold text-white">D1-03 <span class="text-[10px] text-gray-500 block">SB-20260828-03</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 18:05</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Alavés x Villarreal</div><div class="text-[10px] text-gray-400 font-mono">LaLiga</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Alavés ou Empate (1X)</div><div class="text-[10px] text-gray-500">Dupla Chance</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 1.28</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 5.00</td>
+                  <td class="py-3 px-3 text-white">R$ 6.40</td>
+                  <td class="py-3 px-3 text-brand-400 font-bold">+R$ 1.40</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="check-circle" class="w-3 h-3"></i>
+                      GREEN
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Placar final 1x0.</td>
+                </tr>
+                <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia1">
+                  <td class="py-3 px-3 font-bold text-white">D1-04 <span class="text-[10px] text-gray-500 block">SB-20260828-04</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 18:31</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Comerciantes x Cajamarca</div><div class="text-[10px] text-gray-400 font-mono">Liga Peruana</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Under 3.5 FT</div><div class="text-[10px] text-gray-500">Total de Gols</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 1.92</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 5.00</td>
+                  <td class="py-3 px-3 text-white">R$ 0.00</td>
+                  <td class="py-3 px-3 text-red-400 font-bold">-R$ 5.00</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="x-circle" class="w-3 h-3"></i>
+                      RED
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Placar final 2x3 (5 gols estouraram under).</td>
+                </tr>
+                <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia1">
+                  <td class="py-3 px-3 font-bold text-white">D1-05 <span class="text-[10px] text-gray-500 block">SB-20260828-05</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 18:31</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Comerciantes + Mushuc</div><div class="text-[10px] text-gray-400 font-mono">Peru + Equador</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Under 3.5 + Casa</div><div class="text-[10px] text-gray-500">Múltipla In-Play</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 3.74</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 5.00</td>
+                  <td class="py-3 px-3 text-white">R$ 0.00</td>
+                  <td class="py-3 px-3 text-red-400 font-bold">-R$ 5.00</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="x-circle" class="w-3 h-3"></i>
+                      RED
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Peru estourou gols no 2T.</td>
+                </tr>
+                <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia1">
+                  <td class="py-3 px-3 font-bold text-white">D1-06 <span class="text-[10px] text-gray-500 block">SB-20260828-06</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 18:41</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Cherevko + Buse + Wolny</div><div class="text-[10px] text-gray-400 font-mono">TT + ATP Tênis</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Vencedores In-Play</div><div class="text-[10px] text-gray-500">Tripla Vencedores</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 1.84</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 3.85</td>
+                  <td class="py-3 px-3 text-white">R$ 0.00</td>
+                  <td class="py-3 px-3 text-red-400 font-bold">-R$ 3.85</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="x-circle" class="w-3 h-3"></i>
+                      RED
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Cherevko perdeu o 5º set decisivo.</td>
+                </tr>
+                <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia1">
+                  <td class="py-3 px-3 font-bold text-white">D1-07 <span class="text-[10px] text-gray-500 block">SB-20260828-07</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 18:52</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Mushuc Runa x Delfín</div><div class="text-[10px] text-gray-400 font-mono">Série A Equador</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Menos de 1.5 FT</div><div class="text-[10px] text-gray-500">Total de Gols</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 1.30</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 5.00</td>
+                  <td class="py-3 px-3 text-white">R$ 6.50</td>
+                  <td class="py-3 px-3 text-brand-400 font-bold">+R$ 1.50</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="check-circle" class="w-3 h-3"></i>
+                      GREEN
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Placar final 1x0 cravado.</td>
+                </tr>
+                <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia1">
+                  <td class="py-3 px-3 font-bold text-white">D1-08 <span class="text-[10px] text-gray-500 block">SB-20260828-08</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 18:52</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Mushuc U1.5 + Comerciantes U5.5</div><div class="text-[10px] text-gray-400 font-mono">Equador + Peru</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Under 1.5 + Under 5.5</div><div class="text-[10px] text-gray-500">Múltipla Proteção</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 1.79</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 5.00</td>
+                  <td class="py-3 px-3 text-white">R$ 8.97</td>
+                  <td class="py-3 px-3 text-brand-400 font-bold">+R$ 3.97</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="check-circle" class="w-3 h-3"></i>
+                      GREEN
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Proteção funcionou (1x0 e 2x3).</td>
+                </tr>
+                <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia1">
+                  <td class="py-3 px-3 font-bold text-white">D1-09 <span class="text-[10px] text-gray-500 block">SB-20260828-09</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 19:14</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">SuperMúltipla 4 Seleções</div><div class="text-[10px] text-gray-400 font-mono">Eq + Peru + Ten + Arg</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Eq 1x0 + Peru 2x2 + Buse + Arg U2.5</div><div class="text-[10px] text-gray-500">Super Múltipla 4x</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 4.13</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 10.00</td>
+                  <td class="py-3 px-3 text-white">R$ 0.00</td>
+                  <td class="py-3 px-3 text-red-400 font-bold">-R$ 10.00</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="x-circle" class="w-3 h-3"></i>
+                      RED
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Gol do Cajamarca aos 89m (2x3).</td>
+                </tr>
+                <tr class="bg-purple-500/[0.03] hover:bg-purple-500/[0.08] transition" data-status="cashout" data-sessao="dia1">
+                  <td class="py-3 px-3 font-bold text-white">D1-10 <span class="text-[10px] text-gray-500 block">SB-20260828-10</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 19:25</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">SuperMúltipla 6 Seleções</div><div class="text-[10px] text-gray-400 font-mono">Multi-Esporte</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Alavancagem In-Play</div><div class="text-[10px] text-gray-500">Super Múltipla 6x</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 12.50</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 15.00</td>
+                  <td class="py-3 px-3 text-white">R$ 15.00</td>
+                  <td class="py-3 px-3 text-brand-400 font-bold">+R$ 0.00</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-500/20 text-purple-400 border border-purple-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="shield" class="w-3 h-3"></i>
+                      CASHOUT
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Encerramento a par (0% lucro / 0% prejuízo).</td>
+                </tr>
+                <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia1">
+                  <td class="py-3 px-3 font-bold text-white">D1-11 <span class="text-[10px] text-gray-500 block">SB-20260828-11</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 20:10</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Unión de Santa Fe + Cobresal</div><div class="text-[10px] text-gray-400 font-mono">Arg + Chile</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Unión 1T U1.5 + Cobresal 1T U1.5</div><div class="text-[10px] text-gray-500">Múltipla 1º Tempo</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 2.02</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 20.00</td>
+                  <td class="py-3 px-3 text-white">R$ 40.57</td>
+                  <td class="py-3 px-3 text-brand-400 font-bold">+R$ 20.57</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="check-circle" class="w-3 h-3"></i>
+                      GREEN
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Ambos os jogos terminaram 1x0 no 1T.</td>
+                </tr>
+                <tr class="bg-purple-500/[0.03] hover:bg-purple-500/[0.08] transition" data-status="cashout" data-sessao="dia1">
+                  <td class="py-3 px-3 font-bold text-white">D1-12 <span class="text-[10px] text-gray-500 block">SB-20260828-12</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 20:26</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Novorizontino + Cobresal + Goiás</div><div class="text-[10px] text-gray-400 font-mono">Série B + Chile</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Novo U3.5 + Cobresal U3.5 + Goiás U2.5</div><div class="text-[10px] text-gray-500">Tripla Under Gols FT</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 2.28</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 35.00</td>
+                  <td class="py-3 px-3 text-white">R$ 24.92</td>
+                  <td class="py-3 px-3 text-red-400 font-bold">-R$ 10.08</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-500/20 text-purple-400 border border-purple-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="shield" class="w-3 h-3"></i>
+                      CASHOUT
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Resgate tático preventivo salvou R$ 24,92 no 1x1.</td>
+                </tr>
+                <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia1">
+                  <td class="py-3 px-3 font-bold text-white">D1-13 <span class="text-[10px] text-gray-500 block">SB-20260828-13</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 21:01</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Cobresal + Goiás + Novo + Boca</div><div class="text-[10px] text-gray-400 font-mono">Chile + Brasil + Arg</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Cobresal U2.5 + Goiás U3.5 + Novo U2.5 + Boca U3.5</div><div class="text-[10px] text-gray-500">Quádrupla Under FT</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 3.81</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 15.96</td>
+                  <td class="py-3 px-3 text-white">R$ 0.00</td>
+                  <td class="py-3 px-3 text-red-400 font-bold">-R$ 15.96</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="x-circle" class="w-3 h-3"></i>
+                      RED
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Gol do Sport aos 90+1m estourou Under 2.5.</td>
+                </tr>
+                <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia1">
+                  <td class="py-3 px-3 font-bold text-white">D1-14 <span class="text-[10px] text-gray-500 block">SB-20260828-14</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 21:03</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Cobresal + Novo + Náutico 1T</div><div class="text-[10px] text-gray-400 font-mono">Chile + Série B</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Cobresal U2.5 + Novo U2.5 + Náutico 1T U1.5</div><div class="text-[10px] text-gray-500">Tripla Under In-Play</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 2.30</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 20.00</td>
+                  <td class="py-3 px-3 text-white">R$ 0.00</td>
+                  <td class="py-3 px-3 text-red-400 font-bold">-R$ 20.00</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="x-circle" class="w-3 h-3"></i>
+                      RED
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Gol do Sport aos 90+1m estourou Under 2.5.</td>
+                </tr>
+                <tr class="bg-purple-500/[0.03] hover:bg-purple-500/[0.08] transition" data-status="cashout" data-sessao="dia1">
+                  <td class="py-3 px-3 font-bold text-white">D1-15 <span class="text-[10px] text-gray-500 block">SB-20260828-15</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 21:34</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Novorizontino + Boca + Náutico</div><div class="text-[10px] text-gray-400 font-mono">Série B + Argentina</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Novo U2.5 + Boca U3.5 + Náutico U2.5</div><div class="text-[10px] text-gray-500">Tripla Under In-Play</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 3.31</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 8.00</td>
+                  <td class="py-3 px-3 text-white">R$ 8.17</td>
+                  <td class="py-3 px-3 text-brand-400 font-bold">+R$ 0.17</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-500/20 text-purple-400 border border-purple-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="shield" class="w-3 h-3"></i>
+                      CASHOUT
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Resgate tático no 1x1 garantindo lucro de R$ 8,17.</td>
+                </tr>
+                <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia1">
+                  <td class="py-3 px-3 font-bold text-white">D1-16 <span class="text-[10px] text-gray-500 block">SB-20260828-16</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 22:13</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">SuperMúltipla Grade Noturna</div><div class="text-[10px] text-gray-400 font-mono">México + Arg + Brasil</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Novo U2.5 + Boca U3.5 + Náutico U2.5 + Necaxa + Atlante</div><div class="text-[10px] text-gray-500">Super Múltipla 5x</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 4.98</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 8.17</td>
+                  <td class="py-3 px-3 text-white">R$ 0.00</td>
+                  <td class="py-3 px-3 text-red-400 font-bold">-R$ 8.17</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="x-circle" class="w-3 h-3"></i>
+                      RED
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Gol do Sport aos 90+1m liquidou bilhete.</td>
+                </tr>
+                <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia2">
+                  <td class="py-3 px-3 font-bold text-white">D2-01 <span class="text-[10px] text-gray-500 block">890W-QI3C2K</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 09:41</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Liverpool x Nottingham Forest</div><div class="text-[10px] text-gray-400 font-mono">Premier League</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Liverpool</div><div class="text-[10px] text-gray-500">2º Gol</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 1.57</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 2.50</td>
+                  <td class="py-3 px-3 text-white">R$ 3.93</td>
+                  <td class="py-3 px-3 text-brand-400 font-bold">+R$ 1.43</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="check-circle" class="w-3 h-3"></i>
+                      GREEN
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Gol marcado por Isak aos 60m (1x1).</td>
+                </tr>
+                <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia2">
+                  <td class="py-3 px-3 font-bold text-white">D2-02 <span class="text-[10px] text-gray-500 block">8909-QNZ0CT</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 10:06</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Elversberg x Leverkusen</div><div class="text-[10px] text-gray-400 font-mono">Bundesliga</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Leverkusen Vence</div><div class="text-[10px] text-gray-500">Resultado Final</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 1.58</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 2.50</td>
+                  <td class="py-3 px-3 text-white">R$ 0.00</td>
+                  <td class="py-3 px-3 text-red-400 font-bold">-R$ 2.50</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="x-circle" class="w-3 h-3"></i>
+                      RED
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Leverkusen perdeu por 3x0 fora.</td>
+                </tr>
+                <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia2">
+                  <td class="py-3 px-3 font-bold text-white">D2-04 <span class="text-[10px] text-gray-500 block">891M-YDZKBJ</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 10:16</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Elversberg x Leverkusen</div><div class="text-[10px] text-gray-400 font-mono">Bundesliga</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Leverkusen Vence</div><div class="text-[10px] text-gray-500">Resultado Final</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 1.58</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 7.50</td>
+                  <td class="py-3 px-3 text-white">R$ 0.00</td>
+                  <td class="py-3 px-3 text-red-400 font-bold">-R$ 7.50</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="x-circle" class="w-3 h-3"></i>
+                      RED
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Leverkusen perdeu por 3x0 fora.</td>
+                </tr>
+                <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia2">
+                  <td class="py-3 px-3 font-bold text-white">D2-05 <span class="text-[10px] text-gray-500 block">890K-QNO8QO</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 10:34</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">RB Leipzig x Gladbach</div><div class="text-[10px] text-gray-400 font-mono">Bundesliga</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Leipzig Vence 1T</div><div class="text-[10px] text-gray-500">1T Resultado (1X2)</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 2.07</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 10.00</td>
+                  <td class="py-3 px-3 text-white">R$ 20.70</td>
+                  <td class="py-3 px-3 text-brand-400 font-bold">+R$ 10.70</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="check-circle" class="w-3 h-3"></i>
+                      GREEN
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Leipzig venceu o 1T por 1x0 (gol 26m).</td>
+                </tr>
+                <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia2">
+                  <td class="py-3 px-3 font-bold text-white">D2-06 <span class="text-[10px] text-gray-500 block">890E-INPLAY-06</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 10:46</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Union Berlin x Frankfurt + Elv x Lev</div><div class="text-[10px] text-gray-400 font-mono">Bundesliga</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Frankfurt Vence + 3G Leverkusen</div><div class="text-[10px] text-gray-500">Dupla In-Play</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 2.30</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 4.35</td>
+                  <td class="py-3 px-3 text-white">R$ 0.00</td>
+                  <td class="py-3 px-3 text-red-400 font-bold">-R$ 4.35</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="x-circle" class="w-3 h-3"></i>
+                      RED
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Leverkusen não marcou 3º gol.</td>
+                </tr>
+                <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia2">
+                  <td class="py-3 px-3 font-bold text-white">D2-07 <span class="text-[10px] text-gray-500 block">890X-HT-07</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 10:48</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Elversberg x Lev + Leipzig x Gladbach</div><div class="text-[10px] text-gray-400 font-mono">Bundesliga</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Over 2.5 HT Elv + Over 0.5 HT Leipzig</div><div class="text-[10px] text-gray-500">Dupla HT</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 2.17</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 2.00</td>
+                  <td class="py-3 px-3 text-white">R$ 0.00</td>
+                  <td class="py-3 px-3 text-red-400 font-bold">-R$ 2.00</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="x-circle" class="w-3 h-3"></i>
+                      RED
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Leipzig bateu green, Leverkusen parou em 2x0 HT.</td>
+                </tr>
+                <tr class="bg-purple-500/[0.03] hover:bg-purple-500/[0.08] transition" data-status="cashout" data-sessao="dia2">
+                  <td class="py-3 px-3 font-bold text-white">D2-08 <span class="text-[10px] text-gray-500 block">890P-BOU-08</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 11:21</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Bournemouth x Everton</div><div class="text-[10px] text-gray-400 font-mono">Premier League</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Mais de 1.5 Gols</div><div class="text-[10px] text-gray-500">Total de Gols</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 1.38</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 10.00</td>
+                  <td class="py-3 px-3 text-white">R$ 10.00</td>
+                  <td class="py-3 px-3 text-brand-400 font-bold">+R$ 0.00</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-500/20 text-purple-400 border border-purple-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="shield" class="w-3 h-3"></i>
+                      CASHOUT
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Cancelado a par para aplicar Lei do Piso >= 1.65.</td>
+                </tr>
+                <tr class="bg-purple-500/[0.03] hover:bg-purple-500/[0.08] transition" data-status="cashout" data-sessao="dia2">
+                  <td class="py-3 px-3 font-bold text-white">D2-09 <span class="text-[10px] text-gray-500 block">890G-QDX9PU</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 11:25</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Bournemouth x Everton</div><div class="text-[10px] text-gray-400 font-mono">Premier League</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Mais de 0.5 Gols 1T</div><div class="text-[10px] text-gray-500">1T Total de Gols</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 1.87</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 10.00</td>
+                  <td class="py-3 px-3 text-white">R$ 5.93</td>
+                  <td class="py-3 px-3 text-red-400 font-bold">-R$ 4.07</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-500/20 text-purple-400 border border-purple-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="shield" class="w-3 h-3"></i>
+                      CASHOUT
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Encerrado antecipadamente por R$ 5,93. Gol saiu aos 41m.</td>
+                </tr>
+                <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia2">
+                  <td class="py-3 px-3 font-bold text-white">D2-10 <span class="text-[10px] text-gray-500 block">890K-QNOCBG</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 11:47</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">RB Leipzig x Gladbach</div><div class="text-[10px] text-gray-400 font-mono">Bundesliga</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">RB Leipzig</div><div class="text-[10px] text-gray-500">3º Gol</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 1.90</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 10.00</td>
+                  <td class="py-3 px-3 text-white">R$ 19.00</td>
+                  <td class="py-3 px-3 text-brand-400 font-bold">+R$ 9.00</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="check-circle" class="w-3 h-3"></i>
+                      GREEN
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Leipzig marcou o 3º gol aos 66m (3x0).</td>
+                </tr>
+                <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia2">
+                  <td class="py-3 px-3 font-bold text-white">D2-12 <span class="text-[10px] text-gray-500 block">890M-MAI-1G-12</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 11:56</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Mainz x Paderborn</div><div class="text-[10px] text-gray-400 font-mono">Bundesliga</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Mainz</div><div class="text-[10px] text-gray-500">1º Gol</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 2.15</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 10.00</td>
+                  <td class="py-3 px-3 text-white">R$ 0.00</td>
+                  <td class="py-3 px-3 text-red-400 font-bold">-R$ 10.00</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="x-circle" class="w-3 h-3"></i>
+                      RED
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Partida terminou em 0x0.</td>
+                </tr>
+                <tr class="bg-purple-500/[0.03] hover:bg-purple-500/[0.08] transition" data-status="cashout" data-sessao="dia2">
+                  <td class="py-3 px-3 font-bold text-white">D2-13 <span class="text-[10px] text-gray-500 block">890W-BOU-2G-13</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 12:04</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Bournemouth x Everton</div><div class="text-[10px] text-gray-400 font-mono">Premier League</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Bournemouth</div><div class="text-[10px] text-gray-500">2º Gol</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 2.40</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 10.00</td>
+                  <td class="py-3 px-3 text-white">R$ 5.68</td>
+                  <td class="py-3 px-3 text-red-400 font-bold">-R$ 4.32</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-500/20 text-purple-400 border border-purple-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="shield" class="w-3 h-3"></i>
+                      CASHOUT
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Encerrado estrategicamente aos 77m por R$ 5,68.</td>
+                </tr>
+                <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia2">
+                  <td class="py-3 px-3 font-bold text-white">D2-14 <span class="text-[10px] text-gray-500 block">890G-QDX9CD</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 12:08</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Levante x Real Betis</div><div class="text-[10px] text-gray-400 font-mono">La Liga</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Real Betis Vence</div><div class="text-[10px] text-gray-500">Resultado Final</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 2.40</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 10.00</td>
+                  <td class="py-3 px-3 text-white">R$ 0.00</td>
+                  <td class="py-3 px-3 text-red-400 font-bold">-R$ 10.00</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="x-circle" class="w-3 h-3"></i>
+                      RED
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Levante venceu por 5x2.</td>
+                </tr>
+                <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia2">
+                  <td class="py-3 px-3 font-bold text-white">D2-15 <span class="text-[10px] text-gray-500 block">8910-YDVLLH</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 12:34</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Bournemouth x Everton + Stras x Lens</div><div class="text-[10px] text-gray-400 font-mono">PL + Ligue 1</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Bournemouth Vence + Stras Over 1.5</div><div class="text-[10px] text-gray-500">Dupla In-Play</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 1.66</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 10.00</td>
+                  <td class="py-3 px-3 text-white">R$ 0.00</td>
+                  <td class="py-3 px-3 text-red-400 font-bold">-R$ 10.00</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="x-circle" class="w-3 h-3"></i>
+                      RED
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Everton empatou aos 90+2m (1x1).</td>
+                </tr>
+                <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia2">
+                  <td class="py-3 px-3 font-bold text-white">D2-16 <span class="text-[10px] text-gray-500 block">8902-QNMBXO</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 12:36</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Strasbourg x Lens</div><div class="text-[10px] text-gray-400 font-mono">Ligue 1</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Lens</div><div class="text-[10px] text-gray-500">1º Gol</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 1.85</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 4.64</td>
+                  <td class="py-3 px-3 text-white">R$ 8.58</td>
+                  <td class="py-3 px-3 text-brand-400 font-bold">+R$ 3.94</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="check-circle" class="w-3 h-3"></i>
+                      GREEN
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Lens marcou o 1º gol aos 38m (0x1).</td>
+                </tr>
+                <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia2">
+                  <td class="py-3 px-3 font-bold text-white">D2-17 <span class="text-[10px] text-gray-500 block">890W-QI3CGG</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 12:58</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Arouca x Marítimo + Excelsior x Sparta</div><div class="text-[10px] text-gray-400 font-mono">Portugal + Holanda</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Arouca Vence 1.25 + Excelsior U3.5 1.25</div><div class="text-[10px] text-gray-500">Dupla In-Play 15m</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 1.56</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 8.58</td>
+                  <td class="py-3 px-3 text-white">R$ 13.41</td>
+                  <td class="py-3 px-3 text-brand-400 font-bold">+R$ 4.83</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="check-circle" class="w-3 h-3"></i>
+                      GREEN
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Arouca venceu 2x1 e Excelsior 2x1 (Under 3.5 Green).</td>
+                </tr>
+                <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia2">
+                  <td class="py-3 px-3 font-bold text-white">D2-18 <span class="text-[10px] text-gray-500 block">890M-COMBO-1330</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 13:10</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Dortmund + Tottenham + Fiorentina</div><div class="text-[10px] text-gray-400 font-mono">Bundes + PL + Serie A</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Dortmund Vence + Spurs O1.5 + Fio Vence</div><div class="text-[10px] text-gray-500">Múltipla 3x</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 2.72</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 15.00</td>
+                  <td class="py-3 px-3 text-white">R$ 0.00</td>
+                  <td class="py-3 px-3 text-red-400 font-bold">-R$ 15.00</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="x-circle" class="w-3 h-3"></i>
+                      RED
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Dortmund e Spurs bateram, Fiorentina perdeu 0x3.</td>
+                </tr>
+                <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia2">
+                  <td class="py-3 px-3 font-bold text-white">D2-19 <span class="text-[10px] text-gray-500 block">890T-TOT-O25-19</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 13:11</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Tottenham x Newcastle</div><div class="text-[10px] text-gray-400 font-mono">Premier League</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Mais de 2.5 Gols</div><div class="text-[10px] text-gray-500">Total de Gols</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 1.63</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 15.00</td>
+                  <td class="py-3 px-3 text-white">R$ 0.00</td>
+                  <td class="py-3 px-3 text-red-400 font-bold">-R$ 15.00</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="x-circle" class="w-3 h-3"></i>
+                      RED
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Tottenham 0x2 Newcastle (2 gols no jogo).</td>
+                </tr>
+                <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia2">
+                  <td class="py-3 px-3 font-bold text-white">D2-20 <span class="text-[10px] text-gray-500 block">890D-BVB-WIN-20</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 13:11</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Borussia Dortmund x Hamburgo</div><div class="text-[10px] text-gray-400 font-mono">Bundesliga</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Dortmund Vence</div><div class="text-[10px] text-gray-500">Resultado Final</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 1.33</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 15.00</td>
+                  <td class="py-3 px-3 text-white">R$ 19.95</td>
+                  <td class="py-3 px-3 text-brand-400 font-bold">+R$ 4.95</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="check-circle" class="w-3 h-3"></i>
+                      GREEN
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Dortmund venceu por 2x0. Simples Institucional G1.</td>
+                </tr>
+                <tr class="bg-purple-500/[0.03] hover:bg-purple-500/[0.08] transition" data-status="cashout" data-sessao="dia2">
+                  <td class="py-3 px-3 font-bold text-white">D2-21 <span class="text-[10px] text-gray-500 block">891Y-YJV8WE</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 15:44</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Juventus x Parma</div><div class="text-[10px] text-gray-400 font-mono">Serie A</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Juventus Vence</div><div class="text-[10px] text-gray-500">Resultado Final</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 1.20</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 20.00</td>
+                  <td class="py-3 px-3 text-white">R$ 19.22</td>
+                  <td class="py-3 px-3 text-red-400 font-bold">-R$ 0.78</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-500/20 text-purple-400 border border-purple-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="shield" class="w-3 h-3"></i>
+                      CASHOUT
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Cashout de paridade para montar Dupla de maior retorno.</td>
+                </tr>
+                <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia2">
+                  <td class="py-3 px-3 font-bold text-white">D2-22 <span class="text-[10px] text-gray-500 block">891R-YITKVS</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 15:50</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Juventus x Parma + Lyon x Le Havre</div><div class="text-[10px] text-gray-400 font-mono">Serie A + Ligue 1</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Juventus Vence 1.22 + Lyon Vence 1.42</div><div class="text-[10px] text-gray-500">Dupla In-Play</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 1.73</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 25.00</td>
+                  <td class="py-3 px-3 text-white">R$ 0.00</td>
+                  <td class="py-3 px-3 text-red-400 font-bold">-R$ 25.00</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="x-circle" class="w-3 h-3"></i>
+                      RED
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Juve venceu 2x0. Lyon cedeu empate aos 88m (1x1).</td>
+                </tr>
+                <tr class="bg-amber-500/[0.05] hover:bg-amber-500/[0.1] transition" data-status="aovivo" data-sessao="dia2">
+                  <td class="py-3 px-3 font-bold text-white">D2-23 <span class="text-[10px] text-gray-500 block">891C-YH95FE</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 18:17</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Atlético-MG x Vitória BA</div><div class="text-[10px] text-gray-400 font-mono">Brasileirão Série A</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Atlético-MG Vence</div><div class="text-[10px] text-gray-500">Resultado Final</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 1.95</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 15.00</td>
+                  <td class="py-3 px-3 text-white">R$ 29.25</td>
+                  <td class="py-3 px-3 text-amber-400">R$ 14.25 (Pot.)</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="activity" class="w-3 h-3"></i>
+                      AO VIVO
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Galo vence por 2x0 aos 66m. Cashout atual R$ 27,95.</td>
+                </tr>
+                <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia2">
+                  <td class="py-3 px-3 font-bold text-white">D2-24 <span class="text-[10px] text-gray-500 block">8902-QNMBSB</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 19:27</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Atlético-MG x Vitória BA</div><div class="text-[10px] text-gray-400 font-mono">Brasileirão Série A</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Atlético-MG Marca 2º Gol</div><div class="text-[10px] text-gray-500">2º Gol</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 2.17</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 8.00</td>
+                  <td class="py-3 px-3 text-white">R$ 17.36</td>
+                  <td class="py-3 px-3 text-brand-400 font-bold">+R$ 9.36</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="check-circle" class="w-3 h-3"></i>
+                      GREEN
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Galo fez 2x0 aos 64m. Retorno de R$ 17,36 CREDITADO NO CAIXA LIVRE!</td>
+                </tr>
+                <tr class="bg-amber-500/[0.05] hover:bg-amber-500/[0.1] transition" data-status="aovivo" data-sessao="dia2">
+                  <td class="py-3 px-3 font-bold text-white">D2-25 <span class="text-[10px] text-gray-500 block">891C-YH95XG</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 19:45</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">5 Jogos (Série B + Colômbia + Arg + Eq + Chile)</div><div class="text-[10px] text-gray-400 font-mono">Multiligas Quant</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Under Botafogo + 4G América Cali + 3G Huracán + 3G LDU + 2G Unión</div><div class="text-[10px] text-gray-500">Mega Múltipla 5x</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 47.03</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 0.58</td>
+                  <td class="py-3 px-3 text-white">R$ 30.49</td>
+                  <td class="py-3 px-3 text-amber-400">R$ 29.91 (Pot.)</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="activity" class="w-3 h-3"></i>
+                      AO VIVO
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Perna 2 América Cali 2x2 já BATEU GREEN! 1/5 ganha!</td>
+                </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
 
-    <!-- 4. TABELA MESTRE COM FILTROS DE TODOS OS JOGOS (AUDITORIA TOTAL) -->
-    <div class="glass-card rounded-2xl p-6 space-y-4">
-      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+    <!-- SEÇÃO 2: CENTRAL DE PROMPTS & IA ENGINE -->
+    <div id="section-prompts" class="space-y-6 hidden">
+      <div class="glass-card rounded-2xl p-6 border-l-4 border-l-purple-500 space-y-4">
+        <div class="flex items-center gap-2 text-purple-400 font-bold text-sm font-mono uppercase">
+          <i data-lucide="terminal" class="w-5 h-5"></i>
+          Prompt Master do Analista de Futebol & Motor Multi-Jogos
+        </div>
+        <p class="text-xs text-gray-300">
+          Este é o prompt operacional oficial injetado no motor de inferência para pesquisa em profundidade e prognósticos quantitativos sem compressão de contexto:
+        </p>
+
+        <div class="relative sub-card p-4 rounded-xl font-mono text-xs text-gray-300 space-y-2 overflow-x-auto border border-purple-500/20">
+          <div class="text-purple-400 font-bold">// PROMPT OPERACIONAL V5.0 — COPIAR E EXECUTAR:</div>
+          <pre class="whitespace-pre-wrap leading-relaxed text-[11px] text-gray-300">
+Você é um analista profissional de apostas de futebol de elite. Usando a pesquisa mais profunda e as fontes de dados mais amplas disponíveis, forneça a previsão de apostas de futebol mais abrangente e altamente precisa para as partidas da rodada.
+
+REGRAS CRÍTICAS DE EXECUÇÃO:
+1. Para CADA partida da lista:
+   - Conclua TODOS os 10 itens de dados e análises em profundidade.
+   - Forneça exatamente as 3 principais previsões com porcentagem de confiança.
+   - Conclua integralmente aquela partida ANTES de passar para a próxima.
+2. NUNCA resuma ou encurte partidas posteriores. Sem atalhos, sem concessões.
+3. Se a lista contiver múltiplos jogos, analise CADA UM sequencialmente com o mesmo rigor.
+
+ITENS MANDATÓRIOS POR PARTIDA:
+1. Forma Recente da Equipe (Últimos 5-10 jogos, métricas casa/fora, xG criado/concedido)
+2. Confrontos Diretos (H2H últimos encontros, tendências de gols e mando)
+3. Desempenho de Jogadores-Chave (Gols, finalizações no alvo, assistências, suspensões/lesões)
+4. Análise Tática (Bloco alto/baixo, contra-ataque, bolas paradas)
+5. Contexto & Motivação (Disputa de título, vaga continental, luta contra rebaixamento)
+6. Fatores Ambientais (Clima, estado do gramado, atmosfera)
+7. Calendário & Fadiga (Dias de descanso &lt; 72h, viagens)
+8. Tendências de Arbitragem (Média de faltas/cartões, pênaltis)
+9. Movimentação de Mercado & Value Betting (+EV &ge; 7%, Smart Money / Sharps vs Public)
+10. Estatísticas Avançadas (xG, xGA, PPDA, posse no terço final)
+
+ESTRUTURA DAS 3 PREVISÕES:
+- 🟢 Previsão #1 (Maior Confiança • 80%+): Mercado de baixo risco (Dupla Chance, Over Seguro, DNB)
+- 🟡 Previsão #2 (Médio Risco / Alto Valor • 65%+): Mercado ótimo (+EV, 1X2, Ambas Marcam, Over 2.5)
+- 🔴 Previsão #3 (Alto Risco / Alta Assimetria • 45%+): Mercado sniper (Artilheiro, Handicap -1.5)
+          </pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEÇÃO 3: FRAMEWORK DOS 11 PILARES -->
+    <div id="section-pilares" class="space-y-6 hidden">
+      <div class="glass-card rounded-2xl p-6 border-l-4 border-l-blue-500 space-y-6">
         <div>
           <h3 class="text-lg font-bold text-white flex items-center gap-2">
-            <i data-lucide="list-checks" class="w-5 h-5 text-brand-500"></i>
-            Livro de Ordens Master &middot; Lista de Todos os 39 Jogos e Entradas
+            <i data-lucide="columns" class="w-5 h-5 text-blue-500"></i>
+            Os 11 Pilares da Coleta de Dados e Inteligência Preditiva
           </h3>
-          <p class="text-xs text-gray-400">Use os botões de filtro abaixo para alternar entre Dia 1, Dia 2, Greens, Reds, Cashouts ou Ao Vivo</p>
+          <p class="text-xs text-gray-400">Framework obrigatório executado antes de cada entrada quantitativa</p>
         </div>
 
-        <!-- FILTROS DE TABELA -->
-        <div class="flex flex-wrap items-center gap-1.5 text-xs font-mono">
-          <button onclick="filterTable('all')" id="flt-all" class="filter-btn active px-3 py-1.5 rounded-lg sub-card font-bold border border-transparent transition">
-            Todos (39)
-          </button>
-          <button onclick="filterTable('dia2')" id="flt-dia2" class="filter-btn px-3 py-1.5 rounded-lg sub-card text-emerald-400 font-bold border border-transparent transition">
-            Dia 2 (23)
-          </button>
-          <button onclick="filterTable('dia1')" id="flt-dia1" class="filter-btn px-3 py-1.5 rounded-lg sub-card text-blue-400 font-bold border border-transparent transition">
-            Dia 1 (16)
-          </button>
-          <button onclick="filterTable('green')" id="flt-green" class="filter-btn px-3 py-1.5 rounded-lg sub-card text-brand-400 font-bold border border-transparent transition">
-            Greens (12)
-          </button>
-          <button onclick="filterTable('red')" id="flt-red" class="filter-btn px-3 py-1.5 rounded-lg sub-card text-red-400 font-bold border border-transparent transition">
-            Reds (17)
-          </button>
-          <button onclick="filterTable('cashout')" id="flt-cashout" class="filter-btn px-3 py-1.5 rounded-lg sub-card text-purple-400 font-bold border border-transparent transition">
-            Cashouts (7)
-          </button>
-          <button onclick="filterTable('aovivo')" id="flt-aovivo" class="filter-btn px-3 py-1.5 rounded-lg sub-card text-amber-400 font-bold border border-transparent transition">
-            Ao Vivo (3)
-          </button>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          <div class="sub-card p-4 rounded-xl space-y-1"><strong class="text-brand-400 block font-sans">1. Forma da Equipe</strong><p class="text-gray-300">5-10 jogos recentes, separando performance mandante vs visitante e conversão de xG.</p></div>
+          <div class="sub-card p-4 rounded-xl space-y-1"><strong class="text-brand-400 block font-sans">2. Confrontos Diretos (H2H)</strong><p class="text-gray-300">Tendências das últimas 3 temporadas, média de gols e dominância psicológica.</p></div>
+          <div class="sub-card p-4 rounded-xl space-y-1"><strong class="text-brand-400 block font-sans">3. Métricas Individuais</strong><p class="text-gray-300">Últimos 20 jogos: chutes no gol, assistências esperadas (xA) e passes-chave.</p></div>
+          <div class="sub-card p-4 rounded-xl space-y-1"><strong class="text-brand-400 block font-sans">4. Escalações & Desfalques</strong><p class="text-gray-300">Starting XI oficial 1h antes, impacto de ausências por lesão e profundidade do banco.</p></div>
+          <div class="sub-card p-4 rounded-xl space-y-1"><strong class="text-brand-400 block font-sans">5. Análise Tática</strong><p class="text-gray-300">Gegenpressing vs Bloco Baixo, vulnerabilidade em transição e bolas paradas.</p></div>
+          <div class="sub-card p-4 rounded-xl space-y-1"><strong class="text-brand-400 block font-sans">6. Contexto & Motivação</strong><p class="text-gray-300">Disputa de taça, zona de rebaixamento e assimetria de urgência entre os times.</p></div>
+          <div class="sub-card p-4 rounded-xl space-y-1"><strong class="text-brand-400 block font-sans">7. Fatores Ambientais</strong><p class="text-gray-300">Chuva, vento, temperatura e tipo de grama (natural vs sintética).</p></div>
+          <div class="sub-card p-4 rounded-xl space-y-1"><strong class="text-brand-400 block font-sans">8. Tendências de Arbitragem</strong><p class="text-gray-300">Média de cartões, faltas marcadas por jogo e rigor do árbitro escalado.</p></div>
+          <div class="sub-card p-4 rounded-xl space-y-1"><strong class="text-brand-400 block font-sans">9. Cronograma & Fadiga</strong><p class="text-gray-300">Intervalo de descanso (&lt; 72h = risco extremo), viagens longas e rodízio.</p></div>
+          <div class="sub-card p-4 rounded-xl space-y-1"><strong class="text-brand-400 block font-sans">10. Movimentação & +EV</strong><p class="text-gray-300">Odds implícitas vs probabilidade calculada, detectando valor (+EV &ge; 7%).</p></div>
+          <div class="sub-card p-4 rounded-xl space-y-1 md:col-span-2"><strong class="text-brand-400 block font-sans">11. Estatísticas Avançadas (xG / PPDA)</strong><p class="text-gray-300">Expected Goals, Passes permitidos por ação defensiva e perigo criado no terço final.</p></div>
         </div>
-      </div>
-
-      <!-- TABELA COMPLETA -->
-      <div class="overflow-x-auto">
-        <table class="w-full text-left text-sm" id="masterTable">
-          <thead>
-            <tr class="border-b border-slate-200 dark:border-white/10 text-xs font-bold text-gray-400 uppercase font-mono">
-              <th class="py-3 px-3"># Ticket</th>
-              <th class="py-3 px-3">Sessão / Data</th>
-              <th class="py-3 px-3">Partida / Liga</th>
-              <th class="py-3 px-3">Mercado / Seleção</th>
-              <th class="py-3 px-3">Odd</th>
-              <th class="py-3 px-3">Stake</th>
-              <th class="py-3 px-3">Retorno</th>
-              <th class="py-3 px-3">Lucro Líquido</th>
-              <th class="py-3 px-3">Status</th>
-              <th class="py-3 px-3">Observações / Motivo</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-200 dark:divide-white/5 font-mono text-xs" id="tableBody">
-            
-              <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia1">
-                <td class="py-3 px-3 font-bold text-white">D1-01 <span class="text-[10px] text-gray-500 block">SB-20260828-01</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 18:05</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Alavés x Villarreal</div><div class="text-[10px] text-gray-400 font-mono">LaLiga</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Alavés Vence</div><div class="text-[10px] text-gray-500">Resultado Final</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 1.42</td>
-                <td class="py-3 px-3 text-gray-300">R$ 5.00</td>
-                <td class="py-3 px-3 text-white">R$ 7.10</td>
-                <td class="py-3 px-3 text-brand-400 font-bold">+R$ 2.10</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="check-circle" class="w-3 h-3"></i>
-                    GREEN
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Placar final 1x0. Simples in-play aos 80m.</td>
-              </tr>
-              
-              <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia1">
-                <td class="py-3 px-3 font-bold text-white">D1-02 <span class="text-[10px] text-gray-500 block">SB-20260828-02</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 18:05</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Alavés x Villarreal</div><div class="text-[10px] text-gray-400 font-mono">LaLiga</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Under 1.5 FT</div><div class="text-[10px] text-gray-500">Total de Gols</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 2.35</td>
-                <td class="py-3 px-3 text-gray-300">R$ 5.00</td>
-                <td class="py-3 px-3 text-white">R$ 11.75</td>
-                <td class="py-3 px-3 text-brand-400 font-bold">+R$ 6.75</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="check-circle" class="w-3 h-3"></i>
-                    GREEN
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Placar final 1x0. Under 1.5 cravado.</td>
-              </tr>
-              
-              <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia1">
-                <td class="py-3 px-3 font-bold text-white">D1-03 <span class="text-[10px] text-gray-500 block">SB-20260828-03</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 18:05</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Alavés x Villarreal</div><div class="text-[10px] text-gray-400 font-mono">LaLiga</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Alavés ou Empate (1X)</div><div class="text-[10px] text-gray-500">Dupla Chance</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 1.28</td>
-                <td class="py-3 px-3 text-gray-300">R$ 5.00</td>
-                <td class="py-3 px-3 text-white">R$ 6.40</td>
-                <td class="py-3 px-3 text-brand-400 font-bold">+R$ 1.40</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="check-circle" class="w-3 h-3"></i>
-                    GREEN
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Placar final 1x0.</td>
-              </tr>
-              
-              <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia1">
-                <td class="py-3 px-3 font-bold text-white">D1-04 <span class="text-[10px] text-gray-500 block">SB-20260828-04</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 18:31</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Comerciantes x Cajamarca</div><div class="text-[10px] text-gray-400 font-mono">Liga Peruana</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Under 3.5 FT</div><div class="text-[10px] text-gray-500">Total de Gols</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 1.92</td>
-                <td class="py-3 px-3 text-gray-300">R$ 5.00</td>
-                <td class="py-3 px-3 text-white">R$ 0.00</td>
-                <td class="py-3 px-3 text-red-400 font-bold">-R$ 5.00</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="x-circle" class="w-3 h-3"></i>
-                    RED
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Placar final 2x3 (5 gols estouraram under).</td>
-              </tr>
-              
-              <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia1">
-                <td class="py-3 px-3 font-bold text-white">D1-05 <span class="text-[10px] text-gray-500 block">SB-20260828-05</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 18:31</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Comerciantes + Mushuc</div><div class="text-[10px] text-gray-400 font-mono">Peru + Equador</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Under 3.5 + Casa</div><div class="text-[10px] text-gray-500">Múltipla In-Play</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 3.74</td>
-                <td class="py-3 px-3 text-gray-300">R$ 5.00</td>
-                <td class="py-3 px-3 text-white">R$ 0.00</td>
-                <td class="py-3 px-3 text-red-400 font-bold">-R$ 5.00</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="x-circle" class="w-3 h-3"></i>
-                    RED
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Peru estourou gols no 2T.</td>
-              </tr>
-              
-              <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia1">
-                <td class="py-3 px-3 font-bold text-white">D1-06 <span class="text-[10px] text-gray-500 block">SB-20260828-06</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 18:41</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Cherevko + Buse + Wolny</div><div class="text-[10px] text-gray-400 font-mono">TT + ATP Tênis</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Vencedores In-Play</div><div class="text-[10px] text-gray-500">Tripla Vencedores</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 1.84</td>
-                <td class="py-3 px-3 text-gray-300">R$ 3.85</td>
-                <td class="py-3 px-3 text-white">R$ 0.00</td>
-                <td class="py-3 px-3 text-red-400 font-bold">-R$ 3.85</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="x-circle" class="w-3 h-3"></i>
-                    RED
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Cherevko perdeu o 5º set decisivo.</td>
-              </tr>
-              
-              <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia1">
-                <td class="py-3 px-3 font-bold text-white">D1-07 <span class="text-[10px] text-gray-500 block">SB-20260828-07</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 18:52</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Mushuc Runa x Delfín</div><div class="text-[10px] text-gray-400 font-mono">Série A Equador</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Menos de 1.5 FT</div><div class="text-[10px] text-gray-500">Total de Gols</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 1.30</td>
-                <td class="py-3 px-3 text-gray-300">R$ 5.00</td>
-                <td class="py-3 px-3 text-white">R$ 6.50</td>
-                <td class="py-3 px-3 text-brand-400 font-bold">+R$ 1.50</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="check-circle" class="w-3 h-3"></i>
-                    GREEN
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Placar final 1x0 cravado.</td>
-              </tr>
-              
-              <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia1">
-                <td class="py-3 px-3 font-bold text-white">D1-08 <span class="text-[10px] text-gray-500 block">SB-20260828-08</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 18:52</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Mushuc U1.5 + Comerciantes U5.5</div><div class="text-[10px] text-gray-400 font-mono">Equador + Peru</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Under 1.5 + Under 5.5</div><div class="text-[10px] text-gray-500">Múltipla Proteção</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 1.79</td>
-                <td class="py-3 px-3 text-gray-300">R$ 5.00</td>
-                <td class="py-3 px-3 text-white">R$ 8.97</td>
-                <td class="py-3 px-3 text-brand-400 font-bold">+R$ 3.97</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="check-circle" class="w-3 h-3"></i>
-                    GREEN
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Proteção funcionou (1x0 e 2x3).</td>
-              </tr>
-              
-              <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia1">
-                <td class="py-3 px-3 font-bold text-white">D1-09 <span class="text-[10px] text-gray-500 block">SB-20260828-09</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 19:14</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">SuperMúltipla 4 Seleções</div><div class="text-[10px] text-gray-400 font-mono">Eq + Peru + Ten + Arg</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Eq 1x0 + Peru 2x2 + Buse + Arg U2.5</div><div class="text-[10px] text-gray-500">Super Múltipla 4x</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 4.13</td>
-                <td class="py-3 px-3 text-gray-300">R$ 10.00</td>
-                <td class="py-3 px-3 text-white">R$ 0.00</td>
-                <td class="py-3 px-3 text-red-400 font-bold">-R$ 10.00</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="x-circle" class="w-3 h-3"></i>
-                    RED
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Gol do Cajamarca aos 89m (2x3).</td>
-              </tr>
-              
-              <tr class="bg-purple-500/[0.03] hover:bg-purple-500/[0.08] transition" data-status="cashout" data-sessao="dia1">
-                <td class="py-3 px-3 font-bold text-white">D1-10 <span class="text-[10px] text-gray-500 block">SB-20260828-10</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 19:25</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">SuperMúltipla 6 Seleções</div><div class="text-[10px] text-gray-400 font-mono">Multi-Esporte</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Alavancagem In-Play</div><div class="text-[10px] text-gray-500">Super Múltipla 6x</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 12.50</td>
-                <td class="py-3 px-3 text-gray-300">R$ 15.00</td>
-                <td class="py-3 px-3 text-white">R$ 15.00</td>
-                <td class="py-3 px-3 text-brand-400 font-bold">+R$ 0.00</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-500/20 text-purple-400 border border-purple-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="shield" class="w-3 h-3"></i>
-                    CASHOUT
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Encerramento a par (0% lucro / 0% prejuízo).</td>
-              </tr>
-              
-              <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia1">
-                <td class="py-3 px-3 font-bold text-white">D1-11 <span class="text-[10px] text-gray-500 block">SB-20260828-11</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 20:10</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Unión de Santa Fe + Cobresal</div><div class="text-[10px] text-gray-400 font-mono">Arg + Chile</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Unión 1T U1.5 + Cobresal 1T U1.5</div><div class="text-[10px] text-gray-500">Múltipla 1º Tempo</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 2.02</td>
-                <td class="py-3 px-3 text-gray-300">R$ 20.00</td>
-                <td class="py-3 px-3 text-white">R$ 40.57</td>
-                <td class="py-3 px-3 text-brand-400 font-bold">+R$ 20.57</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="check-circle" class="w-3 h-3"></i>
-                    GREEN
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Ambos os jogos terminaram 1x0 no 1T.</td>
-              </tr>
-              
-              <tr class="bg-purple-500/[0.03] hover:bg-purple-500/[0.08] transition" data-status="cashout" data-sessao="dia1">
-                <td class="py-3 px-3 font-bold text-white">D1-12 <span class="text-[10px] text-gray-500 block">SB-20260828-12</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 20:26</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Novorizontino + Cobresal + Goiás</div><div class="text-[10px] text-gray-400 font-mono">Série B + Chile</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Novo U3.5 + Cobresal U3.5 + Goiás U2.5</div><div class="text-[10px] text-gray-500">Tripla Under Gols FT</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 2.28</td>
-                <td class="py-3 px-3 text-gray-300">R$ 35.00</td>
-                <td class="py-3 px-3 text-white">R$ 24.92</td>
-                <td class="py-3 px-3 text-red-400 font-bold">-R$ 10.08</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-500/20 text-purple-400 border border-purple-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="shield" class="w-3 h-3"></i>
-                    CASHOUT
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Resgate tático preventivo salvou R$ 24,92 no 1x1.</td>
-              </tr>
-              
-              <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia1">
-                <td class="py-3 px-3 font-bold text-white">D1-13 <span class="text-[10px] text-gray-500 block">SB-20260828-13</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 21:01</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Cobresal + Goiás + Novo + Boca</div><div class="text-[10px] text-gray-400 font-mono">Chile + Brasil + Arg</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Cobresal U2.5 + Goiás U3.5 + Novo U2.5 + Boca U3.5</div><div class="text-[10px] text-gray-500">Quádrupla Under FT</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 3.81</td>
-                <td class="py-3 px-3 text-gray-300">R$ 15.96</td>
-                <td class="py-3 px-3 text-white">R$ 0.00</td>
-                <td class="py-3 px-3 text-red-400 font-bold">-R$ 15.96</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="x-circle" class="w-3 h-3"></i>
-                    RED
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Gol do Sport aos 90+1m estourou Under 2.5.</td>
-              </tr>
-              
-              <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia1">
-                <td class="py-3 px-3 font-bold text-white">D1-14 <span class="text-[10px] text-gray-500 block">SB-20260828-14</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 21:03</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Cobresal + Novo + Náutico 1T</div><div class="text-[10px] text-gray-400 font-mono">Chile + Série B</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Cobresal U2.5 + Novo U2.5 + Náutico 1T U1.5</div><div class="text-[10px] text-gray-500">Tripla Under In-Play</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 2.30</td>
-                <td class="py-3 px-3 text-gray-300">R$ 20.00</td>
-                <td class="py-3 px-3 text-white">R$ 0.00</td>
-                <td class="py-3 px-3 text-red-400 font-bold">-R$ 20.00</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="x-circle" class="w-3 h-3"></i>
-                    RED
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Gol do Sport aos 90+1m estourou Under 2.5.</td>
-              </tr>
-              
-              <tr class="bg-purple-500/[0.03] hover:bg-purple-500/[0.08] transition" data-status="cashout" data-sessao="dia1">
-                <td class="py-3 px-3 font-bold text-white">D1-15 <span class="text-[10px] text-gray-500 block">SB-20260828-15</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 21:34</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Novorizontino + Boca + Náutico</div><div class="text-[10px] text-gray-400 font-mono">Série B + Argentina</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Novo U2.5 + Boca U3.5 + Náutico U2.5</div><div class="text-[10px] text-gray-500">Tripla Under In-Play</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 3.31</td>
-                <td class="py-3 px-3 text-gray-300">R$ 8.00</td>
-                <td class="py-3 px-3 text-white">R$ 8.17</td>
-                <td class="py-3 px-3 text-brand-400 font-bold">+R$ 0.17</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-500/20 text-purple-400 border border-purple-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="shield" class="w-3 h-3"></i>
-                    CASHOUT
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Resgate tático no 1x1 garantindo lucro de R$ 8,17.</td>
-              </tr>
-              
-              <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia1">
-                <td class="py-3 px-3 font-bold text-white">D1-16 <span class="text-[10px] text-gray-500 block">SB-20260828-16</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 1</strong><div class="text-[10px] text-gray-500">2026-08-28 22:13</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">SuperMúltipla Grade Noturna</div><div class="text-[10px] text-gray-400 font-mono">México + Arg + Brasil</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Novo U2.5 + Boca U3.5 + Náutico U2.5 + Necaxa + Atlante</div><div class="text-[10px] text-gray-500">Super Múltipla 5x</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 4.98</td>
-                <td class="py-3 px-3 text-gray-300">R$ 8.17</td>
-                <td class="py-3 px-3 text-white">R$ 0.00</td>
-                <td class="py-3 px-3 text-red-400 font-bold">-R$ 8.17</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="x-circle" class="w-3 h-3"></i>
-                    RED
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Gol do Sport aos 90+1m liquidou bilhete.</td>
-              </tr>
-              
-              <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia2">
-                <td class="py-3 px-3 font-bold text-white">D2-01 <span class="text-[10px] text-gray-500 block">890W-QI3C2K</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 09:41</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Liverpool x Nottingham Forest</div><div class="text-[10px] text-gray-400 font-mono">Premier League</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Liverpool</div><div class="text-[10px] text-gray-500">2º Gol</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 1.57</td>
-                <td class="py-3 px-3 text-gray-300">R$ 2.50</td>
-                <td class="py-3 px-3 text-white">R$ 3.93</td>
-                <td class="py-3 px-3 text-brand-400 font-bold">+R$ 1.43</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="check-circle" class="w-3 h-3"></i>
-                    GREEN
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Gol marcado por Isak aos 60m (1x1).</td>
-              </tr>
-              
-              <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia2">
-                <td class="py-3 px-3 font-bold text-white">D2-02 <span class="text-[10px] text-gray-500 block">8909-QNZ0CT</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 10:06</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Elversberg x Leverkusen</div><div class="text-[10px] text-gray-400 font-mono">Bundesliga</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Leverkusen Vence</div><div class="text-[10px] text-gray-500">Resultado Final</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 1.58</td>
-                <td class="py-3 px-3 text-gray-300">R$ 2.50</td>
-                <td class="py-3 px-3 text-white">R$ 0.00</td>
-                <td class="py-3 px-3 text-red-400 font-bold">-R$ 2.50</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="x-circle" class="w-3 h-3"></i>
-                    RED
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Leverkusen perdeu por 3x0 fora.</td>
-              </tr>
-              
-              <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia2">
-                <td class="py-3 px-3 font-bold text-white">D2-04 <span class="text-[10px] text-gray-500 block">891M-YDZKBJ</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 10:16</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Elversberg x Leverkusen</div><div class="text-[10px] text-gray-400 font-mono">Bundesliga</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Leverkusen Vence</div><div class="text-[10px] text-gray-500">Resultado Final</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 1.58</td>
-                <td class="py-3 px-3 text-gray-300">R$ 7.50</td>
-                <td class="py-3 px-3 text-white">R$ 0.00</td>
-                <td class="py-3 px-3 text-red-400 font-bold">-R$ 7.50</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="x-circle" class="w-3 h-3"></i>
-                    RED
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Leverkusen perdeu por 3x0 fora.</td>
-              </tr>
-              
-              <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia2">
-                <td class="py-3 px-3 font-bold text-white">D2-05 <span class="text-[10px] text-gray-500 block">890K-QNO8QO</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 10:34</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">RB Leipzig x Gladbach</div><div class="text-[10px] text-gray-400 font-mono">Bundesliga</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Leipzig Vence 1T</div><div class="text-[10px] text-gray-500">1T Resultado (1X2)</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 2.07</td>
-                <td class="py-3 px-3 text-gray-300">R$ 10.00</td>
-                <td class="py-3 px-3 text-white">R$ 20.70</td>
-                <td class="py-3 px-3 text-brand-400 font-bold">+R$ 10.70</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="check-circle" class="w-3 h-3"></i>
-                    GREEN
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Leipzig venceu o 1T por 1x0 (gol 26m).</td>
-              </tr>
-              
-              <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia2">
-                <td class="py-3 px-3 font-bold text-white">D2-06 <span class="text-[10px] text-gray-500 block">890E-INPLAY-06</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 10:46</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Union Berlin x Frankfurt + Elv x Lev</div><div class="text-[10px] text-gray-400 font-mono">Bundesliga</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Frankfurt Vence + 3G Leverkusen</div><div class="text-[10px] text-gray-500">Dupla In-Play</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 2.30</td>
-                <td class="py-3 px-3 text-gray-300">R$ 4.35</td>
-                <td class="py-3 px-3 text-white">R$ 0.00</td>
-                <td class="py-3 px-3 text-red-400 font-bold">-R$ 4.35</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="x-circle" class="w-3 h-3"></i>
-                    RED
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Leverkusen não marcou 3º gol.</td>
-              </tr>
-              
-              <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia2">
-                <td class="py-3 px-3 font-bold text-white">D2-07 <span class="text-[10px] text-gray-500 block">890X-HT-07</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 10:48</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Elversberg x Lev + Leipzig x Gladbach</div><div class="text-[10px] text-gray-400 font-mono">Bundesliga</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Over 2.5 HT Elv + Over 0.5 HT Leipzig</div><div class="text-[10px] text-gray-500">Dupla HT</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 2.17</td>
-                <td class="py-3 px-3 text-gray-300">R$ 2.00</td>
-                <td class="py-3 px-3 text-white">R$ 0.00</td>
-                <td class="py-3 px-3 text-red-400 font-bold">-R$ 2.00</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="x-circle" class="w-3 h-3"></i>
-                    RED
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Leipzig bateu green, Leverkusen parou em 2x0 HT.</td>
-              </tr>
-              
-              <tr class="bg-purple-500/[0.03] hover:bg-purple-500/[0.08] transition" data-status="cashout" data-sessao="dia2">
-                <td class="py-3 px-3 font-bold text-white">D2-08 <span class="text-[10px] text-gray-500 block">890P-BOU-08</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 11:21</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Bournemouth x Everton</div><div class="text-[10px] text-gray-400 font-mono">Premier League</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Mais de 1.5 Gols</div><div class="text-[10px] text-gray-500">Total de Gols</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 1.38</td>
-                <td class="py-3 px-3 text-gray-300">R$ 10.00</td>
-                <td class="py-3 px-3 text-white">R$ 10.00</td>
-                <td class="py-3 px-3 text-brand-400 font-bold">+R$ 0.00</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-500/20 text-purple-400 border border-purple-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="shield" class="w-3 h-3"></i>
-                    CASHOUT
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Cancelado a par para aplicar Lei do Piso >= 1.65.</td>
-              </tr>
-              
-              <tr class="bg-purple-500/[0.03] hover:bg-purple-500/[0.08] transition" data-status="cashout" data-sessao="dia2">
-                <td class="py-3 px-3 font-bold text-white">D2-09 <span class="text-[10px] text-gray-500 block">890G-QDX9PU</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 11:25</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Bournemouth x Everton</div><div class="text-[10px] text-gray-400 font-mono">Premier League</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Mais de 0.5 Gols 1T</div><div class="text-[10px] text-gray-500">1T Total de Gols</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 1.87</td>
-                <td class="py-3 px-3 text-gray-300">R$ 10.00</td>
-                <td class="py-3 px-3 text-white">R$ 5.93</td>
-                <td class="py-3 px-3 text-red-400 font-bold">-R$ 4.07</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-500/20 text-purple-400 border border-purple-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="shield" class="w-3 h-3"></i>
-                    CASHOUT
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Encerrado antecipadamente por R$ 5,93. Gol saiu aos 41m.</td>
-              </tr>
-              
-              <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia2">
-                <td class="py-3 px-3 font-bold text-white">D2-10 <span class="text-[10px] text-gray-500 block">890K-QNOCBG</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 11:47</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">RB Leipzig x Gladbach</div><div class="text-[10px] text-gray-400 font-mono">Bundesliga</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">RB Leipzig</div><div class="text-[10px] text-gray-500">3º Gol</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 1.90</td>
-                <td class="py-3 px-3 text-gray-300">R$ 10.00</td>
-                <td class="py-3 px-3 text-white">R$ 19.00</td>
-                <td class="py-3 px-3 text-brand-400 font-bold">+R$ 9.00</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="check-circle" class="w-3 h-3"></i>
-                    GREEN
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Leipzig marcou o 3º gol aos 66m (3x0).</td>
-              </tr>
-              
-              <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia2">
-                <td class="py-3 px-3 font-bold text-white">D2-12 <span class="text-[10px] text-gray-500 block">890M-MAI-1G-12</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 11:56</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Mainz x Paderborn</div><div class="text-[10px] text-gray-400 font-mono">Bundesliga</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Mainz</div><div class="text-[10px] text-gray-500">1º Gol</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 2.15</td>
-                <td class="py-3 px-3 text-gray-300">R$ 10.00</td>
-                <td class="py-3 px-3 text-white">R$ 0.00</td>
-                <td class="py-3 px-3 text-red-400 font-bold">-R$ 10.00</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="x-circle" class="w-3 h-3"></i>
-                    RED
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Partida terminou em 0x0.</td>
-              </tr>
-              
-              <tr class="bg-purple-500/[0.03] hover:bg-purple-500/[0.08] transition" data-status="cashout" data-sessao="dia2">
-                <td class="py-3 px-3 font-bold text-white">D2-13 <span class="text-[10px] text-gray-500 block">890W-BOU-2G-13</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 12:04</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Bournemouth x Everton</div><div class="text-[10px] text-gray-400 font-mono">Premier League</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Bournemouth</div><div class="text-[10px] text-gray-500">2º Gol</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 2.40</td>
-                <td class="py-3 px-3 text-gray-300">R$ 10.00</td>
-                <td class="py-3 px-3 text-white">R$ 5.68</td>
-                <td class="py-3 px-3 text-red-400 font-bold">-R$ 4.32</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-500/20 text-purple-400 border border-purple-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="shield" class="w-3 h-3"></i>
-                    CASHOUT
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Encerrado estrategicamente aos 77m por R$ 5,68.</td>
-              </tr>
-              
-              <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia2">
-                <td class="py-3 px-3 font-bold text-white">D2-14 <span class="text-[10px] text-gray-500 block">890G-QDX9CD</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 12:08</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Levante x Real Betis</div><div class="text-[10px] text-gray-400 font-mono">La Liga</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Real Betis Vence</div><div class="text-[10px] text-gray-500">Resultado Final</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 2.40</td>
-                <td class="py-3 px-3 text-gray-300">R$ 10.00</td>
-                <td class="py-3 px-3 text-white">R$ 0.00</td>
-                <td class="py-3 px-3 text-red-400 font-bold">-R$ 10.00</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="x-circle" class="w-3 h-3"></i>
-                    RED
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Levante venceu por 5x2.</td>
-              </tr>
-              
-              <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia2">
-                <td class="py-3 px-3 font-bold text-white">D2-15 <span class="text-[10px] text-gray-500 block">8910-YDVLLH</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 12:34</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Bournemouth x Everton + Stras x Lens</div><div class="text-[10px] text-gray-400 font-mono">PL + Ligue 1</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Bournemouth Vence + Stras Over 1.5</div><div class="text-[10px] text-gray-500">Dupla In-Play</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 1.66</td>
-                <td class="py-3 px-3 text-gray-300">R$ 10.00</td>
-                <td class="py-3 px-3 text-white">R$ 0.00</td>
-                <td class="py-3 px-3 text-red-400 font-bold">-R$ 10.00</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="x-circle" class="w-3 h-3"></i>
-                    RED
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Everton empatou aos 90+2m (1x1).</td>
-              </tr>
-              
-              <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia2">
-                <td class="py-3 px-3 font-bold text-white">D2-16 <span class="text-[10px] text-gray-500 block">8902-QNMBXO</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 12:36</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Strasbourg x Lens</div><div class="text-[10px] text-gray-400 font-mono">Ligue 1</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Lens</div><div class="text-[10px] text-gray-500">1º Gol</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 1.85</td>
-                <td class="py-3 px-3 text-gray-300">R$ 4.64</td>
-                <td class="py-3 px-3 text-white">R$ 8.58</td>
-                <td class="py-3 px-3 text-brand-400 font-bold">+R$ 3.94</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="check-circle" class="w-3 h-3"></i>
-                    GREEN
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Lens marcou o 1º gol aos 38m (0x1).</td>
-              </tr>
-              
-              <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia2">
-                <td class="py-3 px-3 font-bold text-white">D2-17 <span class="text-[10px] text-gray-500 block">890W-QI3CGG</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 12:58</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Arouca x Marítimo + Excelsior x Sparta</div><div class="text-[10px] text-gray-400 font-mono">Portugal + Holanda</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Arouca Vence 1.25 + Excelsior U3.5 1.25</div><div class="text-[10px] text-gray-500">Dupla In-Play 15m</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 1.56</td>
-                <td class="py-3 px-3 text-gray-300">R$ 8.58</td>
-                <td class="py-3 px-3 text-white">R$ 13.41</td>
-                <td class="py-3 px-3 text-brand-400 font-bold">+R$ 4.83</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="check-circle" class="w-3 h-3"></i>
-                    GREEN
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Arouca venceu 2x1 e Excelsior 2x1 (Under 3.5 Green).</td>
-              </tr>
-              
-              <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia2">
-                <td class="py-3 px-3 font-bold text-white">D2-18 <span class="text-[10px] text-gray-500 block">890M-COMBO-1330</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 13:10</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Dortmund + Tottenham + Fiorentina</div><div class="text-[10px] text-gray-400 font-mono">Bundes + PL + Serie A</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Dortmund Vence + Spurs O1.5 + Fio Vence</div><div class="text-[10px] text-gray-500">Múltipla 3x</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 2.72</td>
-                <td class="py-3 px-3 text-gray-300">R$ 15.00</td>
-                <td class="py-3 px-3 text-white">R$ 0.00</td>
-                <td class="py-3 px-3 text-red-400 font-bold">-R$ 15.00</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="x-circle" class="w-3 h-3"></i>
-                    RED
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Dortmund e Spurs bateram, Fiorentina perdeu 0x3.</td>
-              </tr>
-              
-              <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia2">
-                <td class="py-3 px-3 font-bold text-white">D2-19 <span class="text-[10px] text-gray-500 block">890T-TOT-O25-19</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 13:11</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Tottenham x Newcastle</div><div class="text-[10px] text-gray-400 font-mono">Premier League</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Mais de 2.5 Gols</div><div class="text-[10px] text-gray-500">Total de Gols</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 1.63</td>
-                <td class="py-3 px-3 text-gray-300">R$ 15.00</td>
-                <td class="py-3 px-3 text-white">R$ 0.00</td>
-                <td class="py-3 px-3 text-red-400 font-bold">-R$ 15.00</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="x-circle" class="w-3 h-3"></i>
-                    RED
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Tottenham 0x2 Newcastle (2 gols no jogo).</td>
-              </tr>
-              
-              <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia2">
-                <td class="py-3 px-3 font-bold text-white">D2-20 <span class="text-[10px] text-gray-500 block">890D-BVB-WIN-20</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 13:11</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Borussia Dortmund x Hamburgo</div><div class="text-[10px] text-gray-400 font-mono">Bundesliga</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Dortmund Vence</div><div class="text-[10px] text-gray-500">Resultado Final</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 1.33</td>
-                <td class="py-3 px-3 text-gray-300">R$ 15.00</td>
-                <td class="py-3 px-3 text-white">R$ 19.95</td>
-                <td class="py-3 px-3 text-brand-400 font-bold">+R$ 4.95</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="check-circle" class="w-3 h-3"></i>
-                    GREEN
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Dortmund venceu por 2x0. Simples Institucional G1.</td>
-              </tr>
-              
-              <tr class="bg-purple-500/[0.03] hover:bg-purple-500/[0.08] transition" data-status="cashout" data-sessao="dia2">
-                <td class="py-3 px-3 font-bold text-white">D2-21 <span class="text-[10px] text-gray-500 block">891Y-YJV8WE</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 15:44</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Juventus x Parma</div><div class="text-[10px] text-gray-400 font-mono">Serie A</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Juventus Vence</div><div class="text-[10px] text-gray-500">Resultado Final</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 1.20</td>
-                <td class="py-3 px-3 text-gray-300">R$ 20.00</td>
-                <td class="py-3 px-3 text-white">R$ 19.22</td>
-                <td class="py-3 px-3 text-red-400 font-bold">-R$ 0.78</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-500/20 text-purple-400 border border-purple-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="shield" class="w-3 h-3"></i>
-                    CASHOUT
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Cashout de paridade para montar Dupla de maior retorno.</td>
-              </tr>
-              
-              <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia2">
-                <td class="py-3 px-3 font-bold text-white">D2-22 <span class="text-[10px] text-gray-500 block">891R-YITKVS</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 15:50</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Juventus x Parma + Lyon x Le Havre</div><div class="text-[10px] text-gray-400 font-mono">Serie A + Ligue 1</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Juventus Vence 1.22 + Lyon Vence 1.42</div><div class="text-[10px] text-gray-500">Dupla In-Play</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 1.73</td>
-                <td class="py-3 px-3 text-gray-300">R$ 25.00</td>
-                <td class="py-3 px-3 text-white">R$ 0.00</td>
-                <td class="py-3 px-3 text-red-400 font-bold">-R$ 25.00</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="x-circle" class="w-3 h-3"></i>
-                    RED
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Juve venceu 2x0. Lyon cedeu empate aos 88m (1x1).</td>
-              </tr>
-              
-              <tr class="bg-amber-500/[0.05] hover:bg-amber-500/[0.1] transition" data-status="aovivo" data-sessao="dia2">
-                <td class="py-3 px-3 font-bold text-white">D2-23 <span class="text-[10px] text-gray-500 block">891C-YH95FE</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 18:17</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Atlético-MG x Vitória BA</div><div class="text-[10px] text-gray-400 font-mono">Brasileirão Série A</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Atlético-MG Vence</div><div class="text-[10px] text-gray-500">Resultado Final</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 1.95</td>
-                <td class="py-3 px-3 text-gray-300">R$ 15.00</td>
-                <td class="py-3 px-3 text-white">R$ 29.25</td>
-                <td class="py-3 px-3 text-amber-400">R$ 14.25 (Pot.)</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="activity" class="w-3 h-3"></i>
-                    AO VIVO
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Galo vence por 1x0 aos 65m. Cashout atual R$ 22,08.</td>
-              </tr>
-              
-              <tr class="bg-amber-500/[0.05] hover:bg-amber-500/[0.1] transition" data-status="aovivo" data-sessao="dia2">
-                <td class="py-3 px-3 font-bold text-white">D2-24 <span class="text-[10px] text-gray-500 block">8902-QNMBSB</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 19:27</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Atlético-MG x Vitória BA</div><div class="text-[10px] text-gray-400 font-mono">Brasileirão Série A</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Atlético-MG Marca 2º Gol</div><div class="text-[10px] text-gray-500">2º Gol</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 2.17</td>
-                <td class="py-3 px-3 text-gray-300">R$ 8.00</td>
-                <td class="py-3 px-3 text-white">R$ 17.36</td>
-                <td class="py-3 px-3 text-amber-400">R$ 9.36 (Pot.)</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="activity" class="w-3 h-3"></i>
-                    AO VIVO
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Galo atacando no 2T. Cashout atual R$ 5,77.</td>
-              </tr>
-              
-              <tr class="bg-amber-500/[0.05] hover:bg-amber-500/[0.1] transition" data-status="aovivo" data-sessao="dia2">
-                <td class="py-3 px-3 font-bold text-white">D2-25 <span class="text-[10px] text-gray-500 block">891C-YH95XG</span></td>
-                <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 19:45</div></td>
-                <td class="py-3 px-3 font-sans"><div class="font-bold text-white">5 Jogos (Série B + Colômbia + Arg + Eq + Chile)</div><div class="text-[10px] text-gray-400 font-mono">Multiligas Quant</div></td>
-                <td class="py-3 px-3"><div class="font-bold text-gray-300">Under Botafogo + 4G América Cali + 3G Huracán + 3G LDU + 2G Unión</div><div class="text-[10px] text-gray-500">Mega Múltipla 5x</div></td>
-                <td class="py-3 px-3 font-bold text-white">@ 47.03</td>
-                <td class="py-3 px-3 text-gray-300">R$ 0.58</td>
-                <td class="py-3 px-3 text-white">R$ 30.49</td>
-                <td class="py-3 px-3 text-amber-400">R$ 29.91 (Pot.)</td>
-                <td class="py-3 px-3">
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/40 flex items-center gap-1 w-max">
-                    <i data-lucide="activity" class="w-3 h-3"></i>
-                    AO VIVO
-                  </span>
-                </td>
-                <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Perna 2 América Cali 2x2 já BATEU GREEN! 1/5 ganha!</td>
-              </tr>
-              
-          </tbody>
-        </table>
       </div>
     </div>
 
-    <!-- 5. COMPÊNDIO DE LIÇÕES APRENDIDAS -->
-    <div class="glass-card rounded-2xl p-6 border-l-4 border-l-amber-500 space-y-4">
-      <div class="flex items-center gap-2 text-amber-500 font-bold text-sm font-mono uppercase">
-        <i data-lucide="book-open" class="w-5 h-5"></i>
-        Compêndio de Lições Aprendidas & Metodologia In-Play Quant
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-xs">
-        <div class="sub-card p-4 rounded-xl space-y-1.5 border-l-2 border-l-brand-500">
-          <div class="font-bold text-brand-400 font-sans">1. Primazia da Simples (G1)</div>
-          <p class="text-gray-300">
-            Apostas simples com bola rolando têm <strong>71.4% de assertividade</strong> (Leipzig 1T/3ºG, Lens, Dortmund, Isak). 80% do volume deve ser em Simples.
-          </p>
+    <!-- SEÇÃO 4: 10 LEIS DO PROTOCOLO & BILLY WALTERS -->
+    <div id="section-leis" class="space-y-6 hidden">
+      <div class="glass-card rounded-2xl p-6 border-l-4 border-l-amber-500 space-y-6">
+        <div>
+          <h3 class="text-lg font-bold text-white flex items-center gap-2">
+            <i data-lucide="scale" class="w-5 h-5 text-amber-500"></i>
+            As 10 Leis Invioláveis do Protocolo de Sobrevivência & Billy Walters Engine
+          </h3>
+          <p class="text-xs text-gray-400">Leis matemáticas fundamentais de execução, contenção de risco e caça de assimetria</p>
         </div>
-        <div class="sub-card p-4 rounded-xl space-y-1.5 border-l-2 border-l-red-500">
-          <div class="font-bold text-red-400 font-sans">2. Margem Zero no Under</div>
-          <p class="text-gray-300">
-            Aos 70'+ com 1 gol de margem, o <strong>Cashout Preventivo é Obrigatório</strong>. O gol do Sport aos 90+1' comprovou que esperar apito final em margem zero tem EV negativo.
-          </p>
-        </div>
-        <div class="sub-card p-4 rounded-xl space-y-1.5 border-l-2 border-l-blue-500">
-          <div class="font-bold text-blue-400 font-sans">3. Especialização por Liga</div>
-          <p class="text-gray-300">
-            <strong>Série B é território Under 0x0</strong> (média 1.8 gols). Evitar Over em times retrancados. Favoritos sul-americanos em desvantagem têm forte reação no 2T.
-          </p>
-        </div>
-        <div class="sub-card p-4 rounded-xl space-y-1.5 border-l-2 border-l-purple-500">
-          <div class="font-bold text-purple-400 font-sans">4. Gestão de Saldo Residual</div>
-          <p class="text-gray-300">
-            Saldos residuais (&lt; R$ 1,00) são canalizados em <strong>SuperMúltiplas de 5 pernas com bônus de 12%+</strong>, gerando assimetria de retorno de R$ 30,00+.
-          </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="sub-card p-4 rounded-xl space-y-1.5 border-l-2 border-l-brand-500">
+            <div class="font-bold text-brand-400 font-sans">Lei 1: Ao Vivo com Bola Rolando</div>
+            <p class="text-gray-300">Proibido apostar no intervalo (HT) ou pré-jogo sem leitura de intensidade in-play.</p>
+          </div>
+          <div class="sub-card p-4 rounded-xl space-y-1.5 border-l-2 border-l-blue-500">
+            <div class="font-bold text-blue-400 font-sans">Lei 2: Piso de Odd &ge; 1.65</div>
+            <p class="text-gray-300">Em apostas simples, a odd mínima é de 1.65 (faixa ideal: 1.75 a 2.30). Proibido odds esmagadas.</p>
+          </div>
+          <div class="sub-card p-4 rounded-xl space-y-1.5 border-l-2 border-l-emerald-500">
+            <div class="font-bold text-emerald-400 font-sans">Lei 3: Primazia da Simples (80/20)</div>
+            <p class="text-gray-300">80% do volume operacional deve ser em apostas simples de alto valor (Padrão G1).</p>
+          </div>
+          <div class="sub-card p-4 rounded-xl space-y-1.5 border-l-2 border-l-purple-500">
+            <div class="font-bold text-purple-400 font-sans">Lei 4: Cluster Lock Absoluto</div>
+            <p class="text-gray-300">Máximo de 1 único bilhete ativo por partida esportiva para evitar contágio cruzado.</p>
+          </div>
+          <div class="sub-card p-4 rounded-xl space-y-1.5 border-l-2 border-l-red-500">
+            <div class="font-bold text-red-400 font-sans">Lei 6: Cashout Preventivo Margem Zero</div>
+            <p class="text-gray-300">Em Under Gols aos 70'+, se a margem for de 1 gol, o cashout é MANDATÓRIO sem exceções.</p>
+          </div>
+          <div class="sub-card p-4 rounded-xl space-y-1.5 border-l-2 border-l-amber-500">
+            <div class="font-bold text-amber-400 font-sans">Protocolo Billy Walters: +EV & Kelly</div>
+            <p class="text-gray-300">$$\text{EV} = (P_{\text{real}} \times \text{Odd}) - 1 \ge +7\% \implies \text{Entrada Validada}$$</p>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- FOOTER -->
     <footer class="text-center text-xs text-gray-500 font-mono py-4 border-t border-slate-200 dark:border-white/5">
-      Automaton Quant Trader &middot; Sistema Autônomo Conway-Research &middot; Sincronizado via Git &middot; 29/08/2026, 19:50 BRT
+      Automaton Quant Trader &middot; Sistema Autônomo Conway-Research &middot; Sincronizado via Git &middot; 29/08/2026, 19:53 BRT
     </footer>
 
   </div>
@@ -1048,6 +1039,25 @@
   <!-- SCRIPTS -->
   <script>
     lucide.createIcons();
+
+    // Main Navigation Tabs
+    function switchMainSection(secId) {
+      document.querySelectorAll('[id^="section-"]').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.nav-tab').forEach(el => {
+        el.classList.remove('active', 'border-brand-500', 'text-brand-500');
+        el.classList.add('border-transparent', 'text-gray-400');
+      });
+
+      const activeSec = document.getElementById('section-' + secId);
+      const activeBtn = document.getElementById('tab-nav-' + secId);
+
+      if (activeSec) activeSec.classList.remove('hidden');
+      if (activeBtn) {
+        activeBtn.classList.add('active', 'border-brand-500', 'text-brand-500');
+        activeBtn.classList.remove('border-transparent', 'text-gray-400');
+      }
+      lucide.createIcons();
+    }
 
     // Table Filtering
     function filterTable(filter) {
@@ -1066,21 +1076,13 @@
         const status = row.getAttribute('data-status');
         const sessao = row.getAttribute('data-sessao');
 
-        if (filter === 'all') {
-          row.style.display = '';
-        } else if (filter === 'dia1') {
-          row.style.display = (sessao === 'dia1') ? '' : 'none';
-        } else if (filter === 'dia2') {
-          row.style.display = (sessao === 'dia2') ? '' : 'none';
-        } else if (filter === 'green') {
-          row.style.display = (status === 'green') ? '' : 'none';
-        } else if (filter === 'red') {
-          row.style.display = (status === 'red') ? '' : 'none';
-        } else if (filter === 'cashout') {
-          row.style.display = (status === 'cashout') ? '' : 'none';
-        } else if (filter === 'aovivo') {
-          row.style.display = (status === 'aovivo') ? '' : 'none';
-        }
+        if (filter === 'all') row.style.display = '';
+        else if (filter === 'dia1') row.style.display = (sessao === 'dia1') ? '' : 'none';
+        else if (filter === 'dia2') row.style.display = (sessao === 'dia2') ? '' : 'none';
+        else if (filter === 'green') row.style.display = (status === 'green') ? '' : 'none';
+        else if (filter === 'red') row.style.display = (status === 'red') ? '' : 'none';
+        else if (filter === 'cashout') row.style.display = (status === 'cashout') ? '' : 'none';
+        else if (filter === 'aovivo') row.style.display = (status === 'aovivo') ? '' : 'none';
       });
       lucide.createIcons();
     }
@@ -1121,89 +1123,6 @@
     }
 
     initTheme();
-
-    // Chart.js Setup
-    const ctxMain = document.getElementById('mainChart').getContext('2d');
-    const grad = ctxMain.createLinearGradient(0, 0, 0, 250);
-    grad.addColorStop(0, 'rgba(0, 230, 118, 0.35)');
-    grad.addColorStop(1, 'rgba(0, 230, 118, 0.0)');
-
-    new Chart(ctxMain, {
-      type: 'line',
-      data: {
-        labels: [
-          'D1 Início', 'D1 #01', 'D1 #04', 'D1 #08', 'D1 #11', 'D1 #15', 'D1 Fechamento (R$70)',
-          'D2 Início (R$50)', 'D2 #01', 'D2 #05', 'D2 #10', 'D2 #16', 'D2 #17', 'D2 #20',
-          'D2 +R$61 Aporte', 'D2 #23 (Galo)', 'D2 #24 (Galo 2G)', 'D2 #25 (Múltipla)', 'Retorno Potencial (R$77.10)'
-        ],
-        datasets: [
-          {
-            label: 'Patrimônio / Caixa (R$)',
-            data: [50.0, 52.1, 55.2, 51.9, 66.0, 70.0, 70.0, 50.0, 51.4, 60.7, 69.7, 73.6, 78.5, 98.4, 111.0, 23.58, 23.58, 23.58, 77.10],
-            borderColor: '#00e676',
-            borderWidth: 3,
-            backgroundColor: grad,
-            fill: true,
-            tension: 0.3,
-            pointBackgroundColor: '#00e676',
-            pointBorderColor: '#04060a',
-            pointBorderWidth: 2,
-            pointRadius: [3, 3, 3, 3, 4, 4, 6, 4, 3, 4, 4, 3, 3, 4, 6, 4, 4, 4, 7],
-            pointHoverRadius: 8
-          },
-          {
-            label: 'Meta /goal R$ 500,00',
-            data: [500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500],
-            borderColor: '#f59e0b',
-            borderWidth: 2,
-            borderDash: [6, 6],
-            fill: false,
-            pointRadius: 0
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: { display: true, labels: { font: { family: 'JetBrains Mono', size: 11 } } },
-          tooltip: {
-            padding: 10,
-            callbacks: {
-              label: function(context) { return ' Valor: R$ ' + context.parsed.y.toFixed(2); }
-            }
-          }
-        },
-        scales: {
-          x: { grid: { color: 'rgba(150, 150, 150, 0.1)' }, ticks: { font: { family: 'JetBrains Mono', size: 9 }, maxRotation: 45 } },
-          y: {
-            grid: { color: 'rgba(150, 150, 150, 0.1)' },
-            ticks: { font: { family: 'JetBrains Mono', size: 10 }, callback: function(value) { return 'R$ ' + value; } },
-            min: 0,
-            max: 550
-          }
-        }
-      }
-    });
-
-    const ctxPie = document.getElementById('pieChart').getContext('2d');
-    new Chart(ctxPie, {
-      type: 'doughnut',
-      data: {
-        labels: ['Greens (12)', 'Reds (17)', 'Cashouts (7)', 'Ao Vivo (3)'],
-        datasets: [{
-          data: [12, 17, 7, 3],
-          backgroundColor: ['#00e676', '#ef4444', '#a855f7', '#f59e0b'],
-          borderWidth: 2
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        cutout: '68%',
-        plugins: { legend: { display: false } }
-      }
-    });
   </script>
 </body>
 </html>
