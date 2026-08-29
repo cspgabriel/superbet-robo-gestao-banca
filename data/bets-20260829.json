@@ -1,46 +1,15 @@
 {
   "sessao_id": 5,
   "data_sessao": "2026-08-29",
-  "versao_motor": "4.2.0-QUANT-SINGLES-ONLY",
-  "diretriz_operacional": "EXCLUSIVAMENTE APOSTAS SIMPLES (PADRAO G1 IN-PLAY / PRE-JOGO TIER 1)",
+  "versao_motor": "4.3.0-QUANT-HIGH-ASYMMETRY",
+  "diretriz_operacional": "SIMPLES EXCLUSIVAS COM ODD MINIMA >= 1.65 (PADRAO G1 DE ALTA ASSIMETRIA)",
   "banca_start_sessao": 50.00,
-  "saldo_livre_em_conta": 35.78,
-  "saldo_em_jogo": 24.35,
+  "saldo_livre_em_conta": 45.35,
+  "saldo_em_jogo": 14.35,
   "patrimonio_atual": 60.13,
-  "retorno_potencial_total_aberto": 39.64,
   "lucro_liquido_sessao_realizado": 10.13,
-  "lucro_potencial_sessao_projetado": 13.93,
-  "banca_projetada_green_total": 74.06,
   "taxa_acerto_simples_pct": 100.0,
   "entradas_ativas": [
-    {
-      "id": 8,
-      "ticket_id": "890P-BOU-08",
-      "data_hora": "2026-08-29 11:21",
-      "casa": "Superbet",
-      "formato": "Simples",
-      "qtd_selecoes": 1,
-      "timing": "In-Play (22' 1T)",
-      "categoria_mercado": "Total_Gols_OverUnder_FT",
-      "tempo_resolucao_alvo": "Full-Time (90')",
-      "odd_total": 1.38,
-      "stake_brl": 10.00,
-      "retorno_potencial": 13.80,
-      "cashout_atual": 10.00,
-      "status": "EM ABERTO",
-      "selecoes_detalhadas": [
-        {
-          "perna": 1,
-          "partida": "Bournemouth x Everton",
-          "campeonato": "Premier League (Inglaterra)",
-          "mercado": "Total de Gols",
-          "selecao": "Mais de 1.5 Gols na Partida",
-          "odd_individual": 1.38,
-          "status_perna": "Em andamento (0x0 aos 22')"
-        }
-      ],
-      "justificativa_quant": "Simples Padrao G1 em Tier 1 Premier League com escalacoes confirmadas (Evanilson/Kluivert vs Barry/Ndiaye). +EV modelado em +12%."
-    },
     {
       "id": 6,
       "ticket_id": "890E-INPLAY-06",
@@ -54,7 +23,7 @@
       "odd_total": 2.30,
       "stake_brl": 4.35,
       "retorno_potencial": 10.04,
-      "cashout_atual": 4.18,
+      "cashout_atual": 4.16,
       "status": "EM ABERTO"
     },
     {
@@ -92,6 +61,22 @@
   ],
   "entradas_liquidadas": [
     {
+      "id": 8,
+      "ticket_id": "890P-BOU-08",
+      "data_hora": "2026-08-29 11:21",
+      "casa": "Superbet",
+      "formato": "Simples",
+      "qtd_selecoes": 1,
+      "timing": "In-Play (22' 1T)",
+      "categoria_mercado": "Total_Gols_OverUnder_FT",
+      "odd_total": 1.38,
+      "stake_brl": 10.00,
+      "resultado_brl": 10.00,
+      "lucro_liquido_brl": 0.00,
+      "status": "CANCELADO_CASHOUT_PARIDADE",
+      "observacoes": "Cancelado imediatamente pelo operador para respeitar a Lei do Piso de Odd >= 1.65 (risco/retorno inadequado para simples). R$ 10.00 devolvido integralmente."
+    },
+    {
       "id": 5,
       "ticket_id": "890K-QNO8QO",
       "data_hora": "2026-08-29 10:34",
@@ -107,7 +92,7 @@
       "resultado_brl": 20.70,
       "lucro_liquido_brl": 10.70,
       "status": "GREEN",
-      "observacoes": "Leipzig venceu o 1T por 1x0. Padrao G1 perfeito de simples in-play."
+      "observacoes": "Leipzig venceu o 1T por 1x0. Padrao G1 perfeito de simples in-play com odd 2.07."
     },
     {
       "id": 7,
