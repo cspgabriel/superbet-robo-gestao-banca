@@ -2,15 +2,43 @@
   "sessao_id": 5,
   "data_sessao": "2026-08-29",
   "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
-  "diretriz_operacional": "BILLY WALTERS VALUE ENGINE - 100% SIMPLES IN-PLAY GREEN MACHINE",
+  "diretriz_operacional": "BILLY WALTERS VALUE ENGINE - DUPLA ASSIMETRIA DESCORRELACIONADA COM BOLA ROLANDO",
   "banca_start_sessao": 50.00,
-  "saldo_livre_em_conta": 28.96,
-  "saldo_em_jogo": 10.00,
+  "saldo_livre_em_conta": 18.96,
+  "saldo_em_jogo": 20.00,
   "patrimonio_atual": 38.96,
-  "retorno_potencial_total_aberto": 21.50,
+  "retorno_potencial_total_aberto": 45.50,
   "lucro_liquido_sessao_realizado": 15.06,
   "taxa_acerto_simples_pct": 100.0,
   "entradas_ativas": [
+    {
+      "id": 13,
+      "ticket_id": "890W-BOU-2G-13",
+      "data_hora": "2026-08-29 12:04",
+      "casa": "Superbet",
+      "formato": "Simples",
+      "qtd_selecoes": 1,
+      "timing": "In-Play (49' 2T • Bola Rolando)",
+      "categoria_mercado": "Proximo_Gol",
+      "tempo_resolucao_alvo": "In-Play (90')",
+      "odd_total": 2.40,
+      "stake_brl": 10.00,
+      "retorno_potencial": 24.00,
+      "cashout_atual": 10.00,
+      "status": "EM ABERTO",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "Bournemouth x Everton",
+          "campeonato": "Premier League (Inglaterra)",
+          "mercado": "2º Gol",
+          "selecao": "Bournemouth Marca o 2º Gol",
+          "odd_individual": 2.40,
+          "status_perna": "Em andamento (1x0 aos 49' com bola rolando)"
+        }
+      ],
+      "justificativa_quant": "Simples Padrao G1 Billy Walters. Everton adiantando a marcação no 2T cedendo campo para o contra-ataque veloz de Tavernier e Evanilson. Odd 2.40 com +EV de +22%."
+    },
     {
       "id": 12,
       "ticket_id": "890M-MAI-1G-12",
@@ -34,10 +62,10 @@
           "mercado": "1º Gol",
           "selecao": "Mainz Marca o 1º Gol",
           "odd_individual": 2.15,
-          "status_perna": "Em andamento (0x0 aos 68' com bola rolando)"
+          "status_perna": "Em andamento (0x0 aos 75' com bola rolando)"
         }
       ],
-      "justificativa_quant": "Simples Padrao G1 Billy Walters com Bola Rolando. Mainz amassando na MEWA Arena (63% posse, 14 finalizacoes vs 3). Odd 2.15 com +EV de +18.5%."
+      "justificativa_quant": "Simples Padrao G1 Billy Walters. Mainz amassando na MEWA Arena (63% posse, 17 finalizacoes vs 3). Odd 2.15 com +EV de +18.5%."
     }
   ],
   "entradas_liquidadas": [
