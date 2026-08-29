@@ -1,33 +1,33 @@
 {
   "robo_status": "ONLINE (AUTONOMOUS DAEMON ACTIVE)",
-  "versao": "3.9.0-MASTER",
-  "nivel_sobrevivencia": "NORMAL (CAPITAL APORTADO R$ 108 & CAIXA R$ 70 BLINDADO)",
+  "versao": "3.10.0-MASTER",
+  "nivel_sobrevivencia": "NORMAL (CASHOUT GREEN #SB-15 LIQUIDADO & SALDO R$ 78,17)",
   "sessao_ativa": 4,
-  "ultima_atualizacao": "2026-08-29T00:56:34.555Z",
+  "ultima_atualizacao": "2026-08-29T01:05:50.757Z",
   "target_goal": 100,
-  "progresso_meta_pct": 141.46,
-  "rentabilidade_dia1_pct": 30.98,
+  "progresso_meta_pct": 160.69,
+  "rentabilidade_dia1_pct": 48.79,
   "meta_diaria_20pct_batida": true,
   "conexao_cdp": "Ativa (Porta 9222 / 3 Abas Paralelas)",
   "banca": {
     "banca_inicial_start": 50,
     "deposito_adicional": 58,
     "banca_total_aportada": 108,
-    "saldo_livre_em_conta": 70,
-    "saldo_em_jogo": 43.96,
-    "cashouts_soma_atual": 71.46,
-    "patrimonio_liquido_realizavel": 141.46,
-    "lucro_liquido_atual": 33.46,
-    "retorno_potencial_ativo": 133.57,
-    "banca_alvo_projetada": 203.57,
+    "saldo_livre_em_conta": 78.17,
+    "saldo_em_jogo": 35.96,
+    "cashouts_soma_atual": 82.52,
+    "patrimonio_liquido_realizavel": 160.69,
+    "lucro_liquido_atual": 52.69,
+    "retorno_potencial_ativo": 107.06,
+    "banca_alvo_projetada": 185.23,
     "moeda": "BRL"
   },
   "projecao_composta_20pct": [
     {
       "dia": 1,
       "banca_alvo": 129.6,
-      "banca_real": 141.46,
-      "status": "BATIDA (+31.0%) 🎯"
+      "banca_real": 160.69,
+      "status": "BATIDA (+48.8%) 🎯"
     },
     {
       "dia": 2,
@@ -42,7 +42,7 @@
     {
       "dia": 4,
       "banca_alvo": 223.95,
-      "status": "PROJETADO (META DOS R$ 200+)"
+      "status": "PROJETADO"
     },
     {
       "dia": 5,
@@ -77,37 +77,19 @@
   ],
   "metricas_acumuladas": {
     "total_entradas_historico": 15,
-    "entradas_ativas_inplay": 3,
-    "greens_liquidados": 6,
+    "entradas_ativas_inplay": 2,
+    "greens_liquidados": 7,
     "reds_auditados": 4,
     "cashouts_estrategicos": {
-      "total": 2,
+      "total": 3,
       "cashout_neutro": 1,
       "cashout_red": 1,
-      "cashout_green_ativo": 3
+      "cashout_green": 1,
+      "cashout_green_ativo": 2
     },
     "taxa_preservacao_capital_pct": 100
   },
   "entradas_ativas": [
-    {
-      "id": 15,
-      "ticket_id": "SB-20260828-15",
-      "sessao": 4,
-      "data_hora": "2026-08-28 21:34",
-      "casa": "Superbet",
-      "partida": "Novorizontino + Boca + Náutico",
-      "campeonato": "Série B + Primeira Divisão Argentina",
-      "minuto_entrada": "In-Play (Intervalo / 6' 1T)",
-      "mercado": "Tripla Under In-Play",
-      "selecao": "Novo U2.5 (1.72) + Boca U3.5 (1.12) + Náutico U2.5 (1.72)",
-      "odd": 3.31,
-      "stake": 8,
-      "stake_tipo": "Dinheiro Real",
-      "retorno_potencial": 26.51,
-      "cashout_atual": 9.17,
-      "cashout_tipo": "GREEN (+R$ 1,17 / +14.6%)",
-      "status": "EM ABERTO"
-    },
     {
       "id": 14,
       "ticket_id": "SB-20260828-14 (891O-YNBI0H)",
@@ -123,8 +105,8 @@
       "stake": 20,
       "stake_tipo": "Dinheiro Real",
       "retorno_potencial": 46.17,
-      "cashout_atual": 28.87,
-      "cashout_tipo": "GREEN (+R$ 8,87 / +44.4%)",
+      "cashout_atual": 37.24,
+      "cashout_tipo": "GREEN (+R$ 17,24 / +86.2%)",
       "status": "EM ABERTO"
     },
     {
@@ -142,10 +124,9 @@
       "stake": 15.96,
       "stake_tipo": "Dinheiro Real",
       "retorno_potencial": 60.89,
-      "cashout_atual": 33.42,
-      "cashout_tipo": "GREEN (+R$ 17,46 / +109.4%)",
+      "cashout_atual": 45.28,
+      "cashout_tipo": "GREEN (+R$ 29,32 / +183.7%)",
       "status": "EM ABERTO"
     }
-  ],
-  "heartbeat_pulse": 692
+  ]
 }
