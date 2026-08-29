@@ -1,83 +1,35 @@
 {
   "robo_status": "ONLINE (AUTONOMOUS DAEMON ACTIVE)",
-  "versao": "3.5.0-AUTOMATON",
+  "versao": "3.6.0-AUTOMATON",
   "nivel_sobrevivencia": "NORMAL (PROJEÇÃO 20% AO DIA ATIVA)",
   "sessao_ativa": 4,
-  "ultima_atualizacao": "2026-08-29T00:22:14.186Z",
+  "ultima_atualizacao": "2026-08-29T00:29:08.259Z",
   "target_goal": 100,
   "progresso_meta_pct": 127.06,
-  "rentabilidade_dia1_pct": 27.44,
+  "rentabilidade_dia1_pct": 35.6,
   "meta_diaria_20pct_batida": true,
   "conexao_cdp": "Ativa (Porta 9222 / 3 Abas Paralelas)",
   "banca": {
     "banca_inicial": 50,
     "saldo_livre_em_conta": 20,
     "saldo_em_jogo": 35.96,
-    "cashouts_soma_atual": 43.72,
-    "patrimonio_liquido_realizavel": 63.72,
+    "cashouts_soma_atual": 47.8,
+    "patrimonio_liquido_realizavel": 67.8,
     "retorno_potencial_ativo": 107.06,
     "banca_alvo_projetada": 127.06,
     "moeda": "BRL"
   },
-  "projecao_composta_20pct": [
-    {
-      "dia": 1,
-      "banca_alvo": 60,
-      "banca_real": 63.72,
-      "status": "BATIDA (+27.4%) 🎯"
-    },
-    {
-      "dia": 2,
-      "banca_alvo": 72,
-      "status": "PROJETADO"
-    },
-    {
-      "dia": 3,
-      "banca_alvo": 86.4,
-      "status": "PROJETADO"
-    },
-    {
-      "dia": 4,
-      "banca_alvo": 103.68,
-      "status": "PROJETADO (META DOS R$ 100)"
-    },
-    {
-      "dia": 5,
-      "banca_alvo": 124.41,
-      "status": "PROJETADO"
-    },
-    {
-      "dia": 10,
-      "banca_alvo": 309.58,
-      "status": "PROJETADO"
-    },
-    {
-      "dia": 15,
-      "banca_alvo": 770.33,
-      "status": "PROJETADO"
-    },
-    {
-      "dia": 20,
-      "banca_alvo": 1916.88,
-      "status": "PROJETADO"
-    },
-    {
-      "dia": 25,
-      "banca_alvo": 4770,
-      "status": "PROJETADO"
-    },
-    {
-      "dia": 30,
-      "banca_alvo": 11868.81,
-      "status": "PROJETADO (R$ 11.8k)"
-    }
-  ],
   "metricas_acumuladas": {
     "total_entradas_historico": 14,
     "entradas_ativas_inplay": 2,
     "greens_liquidados": 6,
     "reds_auditados": 4,
-    "cashouts_estrategicos": 2,
+    "cashouts_estrategicos": {
+      "total": 2,
+      "cashout_neutro": 1,
+      "cashout_red": 1,
+      "cashout_green_ativo": 2
+    },
     "taxa_preservacao_capital_pct": 100
   },
   "entradas_ativas": [
@@ -96,8 +48,9 @@
       "stake": 20,
       "stake_tipo": "Dinheiro Real",
       "retorno_potencial": 46.17,
-      "cashout_atual": 23.4,
-      "status": "EM ABERTO (NO LUCRO +R$ 3,40)"
+      "cashout_atual": 23.66,
+      "cashout_tipo": "GREEN (+R$ 3,66 / +18.3%)",
+      "status": "EM ABERTO"
     },
     {
       "id": 13,
@@ -114,8 +67,9 @@
       "stake": 15.96,
       "stake_tipo": "Dinheiro Real",
       "retorno_potencial": 60.89,
-      "cashout_atual": 20.32,
-      "status": "EM ABERTO (NO LUCRO +R$ 4,36)"
+      "cashout_atual": 24.14,
+      "cashout_tipo": "GREEN (+R$ 8,18 / +51.3%)",
+      "status": "EM ABERTO"
     }
   ]
 }
