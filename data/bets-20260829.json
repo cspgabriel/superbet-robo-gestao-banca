@@ -1,96 +1,62 @@
 {
   "sessao_id": 5,
   "data_sessao": "2026-08-29",
-  "versao_motor": "4.3.0-QUANT-HIGH-ASYMMETRY",
-  "diretriz_operacional": "SIMPLES EXCLUSIVAS COM ODD MINIMA >= 1.65 E CURTA DURACAO (PADRAO G1 HT)",
+  "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
+  "diretriz_operacional": "BILLY WALTERS VALUE ENGINE - 3 STAKES DE R$ 10.00 DESCORRELACIONADAS",
   "banca_start_sessao": 50.00,
-  "saldo_livre_em_conta": 35.35,
+  "saldo_livre_em_conta": 20.39,
   "saldo_em_jogo": 24.35,
-  "patrimonio_atual": 60.13,
-  "retorno_potencial_total_aberto": 44.54,
-  "lucro_liquido_sessao_realizado": 10.13,
-  "lucro_potencial_sessao_projetado": 18.83,
-  "banca_projetada_green_total": 78.96,
+  "patrimonio_atual": 44.74,
+  "retorno_potencial_total_aberto": 39.04,
+  "lucro_liquido_sessao_realizado": 6.06,
   "taxa_acerto_simples_pct": 100.0,
   "entradas_ativas": [
     {
+      "id": 10,
+      "ticket_id": "890V-LEI-3G-10",
+      "data_hora": "2026-08-29 11:47",
+      "casa": "Superbet",
+      "formato": "Simples",
+      "qtd_selecoes": 1,
+      "timing": "In-Play (60' 2T)",
+      "categoria_mercado": "Proximo_Gol",
+      "tempo_resolucao_alvo": "In-Play (90')",
+      "odd_total": 1.90,
+      "stake_brl": 10.00,
+      "retorno_potencial": 19.00,
+      "cashout_atual": 10.00,
+      "status": "EM ABERTO",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "RB Leipzig x Borussia Mönchengladbach",
+          "campeonato": "Bundesliga (Alemanha)",
+          "mercado": "3º Gol",
+          "selecao": "RB Leipzig Marca o 3º Gol",
+          "odd_individual": 1.90,
+          "status_perna": "Em andamento (2x0 aos 60')"
+        }
+      ],
+      "justificativa_quant": "Simples Padrao G1. Leipzig soberano na posse (65%) e 14 finalizacoes. Gladbach desmontado. Odd 1.90 com +EV de +14%."
+    }
+  ],
+  "entradas_liquidadas": [
+    {
       "id": 9,
-      "ticket_id": "890T-BOU-HT-09",
-      "data_hora": "2026-08-29 11:26",
+      "ticket_id": "890G-QDX9PU",
+      "data_hora": "2026-08-29 11:25",
       "casa": "Superbet",
       "formato": "Simples",
       "qtd_selecoes": 1,
       "timing": "In-Play (26' 1T)",
       "categoria_mercado": "Total_Gols_OverUnder_HT",
-      "tempo_resolucao_alvo": "Half-Time (45'+)",
       "odd_total": 1.87,
       "stake_brl": 10.00,
-      "retorno_potencial": 18.70,
-      "cashout_atual": 10.00,
-      "status": "EM ABERTO (ENCERRA NO HT)",
-      "selecoes_detalhadas": [
-        {
-          "perna": 1,
-          "partida": "Bournemouth x Everton",
-          "campeonato": "Premier League (Inglaterra)",
-          "mercado": "1º Tempo - Total de Gols",
-          "selecao": "Mais de 0.5 Gols no 1º Tempo",
-          "odd_individual": 1.87,
-          "status_perna": "Em andamento (0x0 aos 26')"
-        }
-      ],
-      "justificativa_quant": "Simples de Curta Duracao (encerra no HT). Odd de alto valor @ 1.87 (Piso >= 1.65). Evanilson/Kluivert vs Barry/Ndiaye gerando volume no terco final."
+      "resultado_brl": 5.93,
+      "lucro_liquido_brl": -4.07,
+      "status": "CASHOUT_PARCIAL_OPERADOR",
+      "observacoes": "Encerrado antecipadamente pelo operador por R$ 5.93. O gol ocorreu aos 41m (leitura quantitativa confirmada com exatidao)."
     },
-    {
-      "id": 6,
-      "ticket_id": "890E-INPLAY-06",
-      "data_hora": "2026-08-29 10:46",
-      "casa": "Superbet",
-      "formato": "Múltipla",
-      "qtd_selecoes": 2,
-      "timing": "In-Play (16' 1T)",
-      "categoria_mercado": "Multipla_Hibrida_InPlay",
-      "tempo_resolucao_alvo": "Full-Time (90')",
-      "odd_total": 2.30,
-      "stake_brl": 4.35,
-      "retorno_potencial": 10.04,
-      "cashout_atual": 4.16,
-      "status": "EM ABERTO"
-    },
-    {
-      "id": 4,
-      "ticket_id": "891M-YDZKBJ",
-      "data_hora": "2026-08-29 10:16",
-      "casa": "Superbet",
-      "formato": "Simples",
-      "qtd_selecoes": 1,
-      "timing": "Pré-Jogo",
-      "categoria_mercado": "Resultado_Final_1X2",
-      "tempo_resolucao_alvo": "Full-Time (90')",
-      "odd_total": 1.58,
-      "stake_brl": 7.50,
-      "retorno_potencial": 11.85,
-      "cashout_atual": 1.22,
-      "status": "EM ABERTO"
-    },
-    {
-      "id": 2,
-      "ticket_id": "8909-QNZ0CT",
-      "data_hora": "2026-08-29 10:06",
-      "casa": "Superbet",
-      "formato": "Simples",
-      "qtd_selecoes": 1,
-      "timing": "Pré-Jogo",
-      "categoria_mercado": "Resultado_Final_1X2",
-      "tempo_resolucao_alvo": "Full-Time (90')",
-      "odd_total": 1.58,
-      "stake_brl": 2.50,
-      "retorno_potencial": 3.95,
-      "cashout_atual": 0.41,
-      "status": "EM ABERTO"
-    }
-  ],
-  "entradas_liquidadas": [
     {
       "id": 8,
       "ticket_id": "890P-BOU-08",
