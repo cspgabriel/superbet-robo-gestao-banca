@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Automaton Quant Trader — Superbet Master Dashboard & Central de Prompts (39 Operações)</title>
+  <title>Automaton Quant Trader — Superbet Master Dashboard & Central de Prompts (40 Operações)</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Chart.js CDN -->
@@ -156,7 +156,7 @@
     <div class="flex items-center gap-2 overflow-x-auto pb-1">
       <button onclick="switchMainSection('auditoria')" id="tab-nav-auditoria" class="nav-tab active px-4 py-2 rounded-xl glass-card text-xs font-bold font-mono uppercase flex items-center gap-2 border border-brand-500 transition">
         <i data-lucide="table" class="w-4 h-4"></i>
-        1. Livro de Ordens & Histórico (39 Entradas)
+        1. Livro de Ordens & Histórico (40 Entradas)
       </button>
       <button onclick="switchMainSection('prompts')" id="tab-nav-prompts" class="nav-tab px-4 py-2 rounded-xl glass-card text-xs font-bold font-mono uppercase flex items-center gap-2 border border-transparent text-gray-400 hover:text-white transition">
         <i data-lucide="terminal" class="w-4 h-4 text-purple-400"></i>
@@ -178,18 +178,18 @@
       <div class="grid grid-cols-2 md:grid-cols-6 gap-3 font-mono">
         <div class="glass-card rounded-2xl p-4 border-l-4 border-l-blue-500">
           <div class="text-[11px] font-bold text-blue-400 uppercase flex items-center gap-1"><i data-lucide="layers" class="w-3.5 h-3.5"></i> Total Geral</div>
-          <div class="text-2xl font-black text-white mt-1">39 ORDENS</div>
+          <div class="text-2xl font-black text-white mt-1">40 ORDENS</div>
           <div class="text-[10px] text-gray-400 mt-0.5">16 D1 &plus; 23 D2</div>
         </div>
         <div class="glass-card rounded-2xl p-4 border-l-4 border-l-brand-500 glow-green">
           <div class="text-[11px] font-bold text-brand-400 uppercase flex items-center gap-1"><i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> Greens (Certas)</div>
-          <div class="text-2xl font-black text-brand-400 mt-1">13 GREENS</div>
-          <div class="text-[10px] text-brand-400 mt-0.5">33.3% Win Rate</div>
+          <div class="text-2xl font-black text-brand-400 mt-1">14 GREENS</div>
+          <div class="text-[10px] text-brand-400 mt-0.5">35.0% Win Rate</div>
         </div>
         <div class="glass-card rounded-2xl p-4 border-l-4 border-l-red-500">
           <div class="text-[11px] font-bold text-red-400 uppercase flex items-center gap-1"><i data-lucide="x-circle" class="w-3.5 h-3.5"></i> Reds (Erradas)</div>
-          <div class="text-2xl font-black text-red-400 mt-1">17 REDS</div>
-          <div class="text-[10px] text-red-400 mt-0.5">43.6% Taxa Erro</div>
+          <div class="text-2xl font-black text-red-400 mt-1">18 REDS</div>
+          <div class="text-[10px] text-red-400 mt-0.5">45.0% Taxa Erro</div>
         </div>
         <div class="glass-card rounded-2xl p-4 border-l-4 border-l-purple-500 glow-purple">
           <div class="text-[11px] font-bold text-purple-400 uppercase flex items-center gap-1"><i data-lucide="shield" class="w-3.5 h-3.5"></i> Cashouts</div>
@@ -198,7 +198,7 @@
         </div>
         <div class="glass-card rounded-2xl p-4 border-l-4 border-l-amber-500 glow-amber">
           <div class="text-[11px] font-bold text-amber-400 uppercase flex items-center gap-1"><i data-lucide="activity" class="w-3.5 h-3.5"></i> Ao Vivo</div>
-          <div class="text-2xl font-black text-amber-400 mt-1">2 ATIVAS</div>
+          <div class="text-2xl font-black text-amber-400 mt-1">1 ATIVAS</div>
           <div class="text-[10px] text-amber-400 mt-0.5">Galo 2x0 + Múltipla</div>
         </div>
         <div class="glass-card rounded-2xl p-4 border-l-4 border-l-emerald-500">
@@ -214,19 +214,19 @@
           <div>
             <h3 class="text-lg font-bold text-white flex items-center gap-2">
               <i data-lucide="list-checks" class="w-5 h-5 text-brand-500"></i>
-              Livro de Ordens Master &middot; Lista Completa dos 39 Bilhetes
+              Livro de Ordens Master &middot; Lista Completa dos 40 Bilhetes
             </h3>
             <p class="text-xs text-gray-400">Clique nos botões de filtro para analisar por período, acertos ou status</p>
           </div>
 
           <div class="flex flex-wrap items-center gap-1.5 text-xs font-mono">
-            <button onclick="filterTable('all')" id="flt-all" class="filter-btn active px-3 py-1.5 rounded-lg sub-card font-bold border border-transparent transition">Todos (39)</button>
-            <button onclick="filterTable('dia2')" id="flt-dia2" class="filter-btn px-3 py-1.5 rounded-lg sub-card text-emerald-400 font-bold border border-transparent transition">Dia 2 (23)</button>
+            <button onclick="filterTable('all')" id="flt-all" class="filter-btn active px-3 py-1.5 rounded-lg sub-card font-bold border border-transparent transition">Todos (40)</button>
+            <button onclick="filterTable('dia2')" id="flt-dia2" class="filter-btn px-3 py-1.5 rounded-lg sub-card text-emerald-400 font-bold border border-transparent transition">Dia 2 (24)</button>
             <button onclick="filterTable('dia1')" id="flt-dia1" class="filter-btn px-3 py-1.5 rounded-lg sub-card text-blue-400 font-bold border border-transparent transition">Dia 1 (16)</button>
-            <button onclick="filterTable('green')" id="flt-green" class="filter-btn px-3 py-1.5 rounded-lg sub-card text-brand-400 font-bold border border-transparent transition">Greens (13)</button>
-            <button onclick="filterTable('red')" id="flt-red" class="filter-btn px-3 py-1.5 rounded-lg sub-card text-red-400 font-bold border border-transparent transition">Reds (17)</button>
+            <button onclick="filterTable('green')" id="flt-green" class="filter-btn px-3 py-1.5 rounded-lg sub-card text-brand-400 font-bold border border-transparent transition">Greens (14)</button>
+            <button onclick="filterTable('red')" id="flt-red" class="filter-btn px-3 py-1.5 rounded-lg sub-card text-red-400 font-bold border border-transparent transition">Reds (18)</button>
             <button onclick="filterTable('cashout')" id="flt-cashout" class="filter-btn px-3 py-1.5 rounded-lg sub-card text-purple-400 font-bold border border-transparent transition">Cashouts (7)</button>
-            <button onclick="filterTable('aovivo')" id="flt-aovivo" class="filter-btn px-3 py-1.5 rounded-lg sub-card text-amber-400 font-bold border border-transparent transition">Ao Vivo (2)</button>
+            <button onclick="filterTable('aovivo')" id="flt-aovivo" class="filter-btn px-3 py-1.5 rounded-lg sub-card text-amber-400 font-bold border border-transparent transition">Ao Vivo (1)</button>
           </div>
         </div>
 
@@ -860,7 +860,7 @@
                   </td>
                   <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Juve venceu 2x0. Lyon cedeu empate aos 88m (1x1).</td>
                 </tr>
-                <tr class="bg-amber-500/[0.05] hover:bg-amber-500/[0.1] transition" data-status="aovivo" data-sessao="dia2">
+                <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia2">
                   <td class="py-3 px-3 font-bold text-white">D2-23 <span class="text-[10px] text-gray-500 block">891C-YH95FE</span></td>
                   <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 18:17</div></td>
                   <td class="py-3 px-3 font-sans"><div class="font-bold text-white">Atlético-MG x Vitória BA</div><div class="text-[10px] text-gray-400 font-mono">Brasileirão Série A</div></td>
@@ -868,14 +868,14 @@
                   <td class="py-3 px-3 font-bold text-white">@ 1.95</td>
                   <td class="py-3 px-3 text-gray-300">R$ 15.00</td>
                   <td class="py-3 px-3 text-white">R$ 29.25</td>
-                  <td class="py-3 px-3 text-amber-400">R$ 14.25 (Pot.)</td>
+                  <td class="py-3 px-3 text-brand-400 font-bold">+R$ 14.25</td>
                   <td class="py-3 px-3">
-                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/40 flex items-center gap-1 w-max">
-                      <i data-lucide="activity" class="w-3 h-3"></i>
-                      AO VIVO
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="check-circle" class="w-3 h-3"></i>
+                      GREEN
                     </span>
                   </td>
-                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Galo vence por 2x0 aos 66m. Cashout atual R$ 27,95.</td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Galo venceu por 2x0. Liquidado antecipadamente via SuperPlacar (+R$ 14.25 lucro)!</td>
                 </tr>
                 <tr class="bg-brand-500/[0.03] hover:bg-brand-500/[0.08] transition" data-status="green" data-sessao="dia2">
                   <td class="py-3 px-3 font-bold text-white">D2-24 <span class="text-[10px] text-gray-500 block">8902-QNMBSB</span></td>
@@ -892,24 +892,41 @@
                       GREEN
                     </span>
                   </td>
-                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Galo fez 2x0 aos 64m. Retorno de R$ 17,36 CREDITADO NO CAIXA LIVRE!</td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Galo fez 2x0 aos 64m. Retorno integral de R$ 17,36 CREDITADO NO SALDO LIVRE!</td>
                 </tr>
-                <tr class="bg-amber-500/[0.05] hover:bg-amber-500/[0.1] transition" data-status="aovivo" data-sessao="dia2">
+                <tr class="bg-red-500/[0.03] hover:bg-red-500/[0.08] transition" data-status="red" data-sessao="dia2">
                   <td class="py-3 px-3 font-bold text-white">D2-25 <span class="text-[10px] text-gray-500 block">891C-YH95XG</span></td>
                   <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 19:45</div></td>
-                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">5 Jogos (Série B + Colômbia + Arg + Eq + Chile)</div><div class="text-[10px] text-gray-400 font-mono">Multiligas Quant</div></td>
-                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Under Botafogo + 4G América Cali + 3G Huracán + 3G LDU + 2G Unión</div><div class="text-[10px] text-gray-500">Mega Múltipla 5x</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">5 Jogos Multiligas Quant</div><div class="text-[10px] text-gray-400 font-mono">Série B + Colômbia + Arg</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">Under Botafogo + 4G América + 3G Huracán + 3G LDU + 2G Unión</div><div class="text-[10px] text-gray-500">Mega Múltipla 5x</div></td>
                   <td class="py-3 px-3 font-bold text-white">@ 47.03</td>
                   <td class="py-3 px-3 text-gray-300">R$ 0.58</td>
-                  <td class="py-3 px-3 text-white">R$ 30.49</td>
-                  <td class="py-3 px-3 text-amber-400">R$ 29.91 (Pot.)</td>
+                  <td class="py-3 px-3 text-white">R$ 0.00</td>
+                  <td class="py-3 px-3 text-red-400 font-bold">-R$ 0.58</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1 w-max">
+                      <i data-lucide="x-circle" class="w-3 h-3"></i>
+                      RED
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">América Cali bateu 2x2 green, mas Botafogo sofreu gol aos 62m.</td>
+                </tr>
+                <tr class="bg-amber-500/[0.05] hover:bg-amber-500/[0.1] transition" data-status="aovivo" data-sessao="dia2">
+                  <td class="py-3 px-3 font-bold text-white">D2-26 <span class="text-[10px] text-gray-500 block">891O-YNBJIT</span></td>
+                  <td class="py-3 px-3 text-gray-400"><strong class="text-white">Dia 2</strong><div class="text-[10px] text-gray-500">2026-08-29 19:57</div></td>
+                  <td class="py-3 px-3 font-sans"><div class="font-bold text-white">São Paulo x RB Bragantino</div><div class="text-[10px] text-gray-400 font-mono">Brasileirão Série A</div></td>
+                  <td class="py-3 px-3"><div class="font-bold text-gray-300">São Paulo Vence</div><div class="text-[10px] text-gray-500">Resultado Final</div></td>
+                  <td class="py-3 px-3 font-bold text-white">@ 2.50</td>
+                  <td class="py-3 px-3 text-gray-300">R$ 15.00</td>
+                  <td class="py-3 px-3 text-white">R$ 37.50</td>
+                  <td class="py-3 px-3 text-amber-400">R$ 22.50 (Pot.)</td>
                   <td class="py-3 px-3">
                     <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/40 flex items-center gap-1 w-max">
                       <i data-lucide="activity" class="w-3 h-3"></i>
                       AO VIVO
                     </span>
                   </td>
-                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Perna 2 América Cali 2x2 já BATEU GREEN! 1/5 ganha!</td>
+                  <td class="py-3 px-3 text-gray-400 text-[11px] font-sans max-w-xs">Tiro Institucional Padrão G1 no MorumBIS buscando G4. Odd 2.50 com SuperPlacar (+EV +18.4%). Retorno potencial R$ 37.50.</td>
                 </tr>
             </tbody>
           </table>
