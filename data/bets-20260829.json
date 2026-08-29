@@ -2,15 +2,52 @@
   "sessao_id": 5,
   "data_sessao": "2026-08-29",
   "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
-  "diretriz_operacional": "BILLY WALTERS MULTI-MARKET VALUE ENGINE - GESTAO E MONITORAMENTO DE CARTEIRA IN-PLAY",
+  "diretriz_operacional": "BILLY WALTERS MULTI-MARKET VALUE ENGINE - DUPLA IN-PLAY ALAVANCAGEM SEGURA + DIVERSIFICACAO",
   "banca_start_sessao": 50.00,
-  "saldo_livre_em_conta": 8.96,
+  "saldo_livre_em_conta": 4.64,
   "saldo_em_jogo": 20.00,
-  "patrimonio_atual": 28.96,
-  "retorno_potencial_total_aberto": 48.00,
-  "lucro_liquido_sessao_realizado": 5.06,
+  "patrimonio_atual": 24.64,
+  "retorno_potencial_total_aberto": 40.63,
+  "lucro_liquido_sessao_realizado": 0.74,
   "taxa_acerto_simples_pct": 75.0,
   "entradas_ativas": [
+    {
+      "id": 15,
+      "ticket_id": "890D-DUPLA-INPLAY-15",
+      "data_hora": "2026-08-29 12:34",
+      "casa": "Superbet",
+      "formato": "Múltipla",
+      "qtd_selecoes": 2,
+      "timing": "In-Play (80' 2T / 22' 1T • Bola Rolando)",
+      "categoria_mercado": "Multipla_Hibrida_InPlay",
+      "tempo_resolucao_alvo": "Full-Time (90')",
+      "odd_total": 1.66,
+      "stake_brl": 10.00,
+      "retorno_potencial": 16.63,
+      "cashout_atual": 10.00,
+      "status": "EM ABERTO",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "Bournemouth x Everton",
+          "campeonato": "Premier League (Inglaterra)",
+          "mercado": "Resultado Final",
+          "selecao": "Bournemouth Vence a Partida",
+          "odd_individual": 1.28,
+          "status_perna": "Em andamento (1x0 aos 80' com controle absoluto)"
+        },
+        {
+          "perna": 2,
+          "partida": "Strasbourg x Lens",
+          "campeonato": "Ligue 1 (França)",
+          "mercado": "Total de Gols",
+          "selecao": "Mais de 1.5 Gols na Partida",
+          "odd_individual": 1.30,
+          "status_perna": "Em andamento (0x0 aos 22' 1T)"
+        }
+      ],
+      "justificativa_quant": "Dupla In-Play de Alavancagem com altissima probabilidade. Bournemouth administra 1x0 na reta final sem ameacas do Everton e Strasbourg x Lens com perfil de gols na Ligue 1. Odd combinada 1.66 com +EV."
+    },
     {
       "id": 14,
       "ticket_id": "890B-BETIS-1X2-14",
@@ -24,7 +61,7 @@
       "odd_total": 2.40,
       "stake_brl": 10.00,
       "retorno_potencial": 24.00,
-      "cashout_atual": 8.56,
+      "cashout_atual": 4.58,
       "status": "EM ABERTO",
       "selecoes_detalhadas": [
         {
@@ -34,11 +71,13 @@
           "mercado": "Resultado Final",
           "selecao": "Real Betis Vence a Partida",
           "odd_individual": 2.40,
-          "status_perna": "Em andamento (0x0 aos 22' 1T com bola rolando)"
+          "status_perna": "Em andamento (1x0 aos 34' 1T com mais de 56 min de jogo)"
         }
       ],
       "justificativa_quant": "Simples Padrao G1 Billy Walters em Mercado 1X2. Real Betis com 100% de vitórias (2J, 2V) e zero gols sofridos vs Levante zerado no ataque (17º lugar). H2H: Betis invicto ha 5 jogos. Odd 2.40 com +EV de +24%."
-    },
+    }
+  ],
+  "entradas_liquidadas": [
     {
       "id": 13,
       "ticket_id": "890W-BOU-2G-13",
@@ -46,29 +85,16 @@
       "casa": "Superbet",
       "formato": "Simples",
       "qtd_selecoes": 1,
-      "timing": "In-Play (49' 2T • Bola Rolando)",
+      "timing": "In-Play (49' 2T)",
       "categoria_mercado": "Proximo_Gol",
       "tempo_resolucao_alvo": "In-Play (90')",
       "odd_total": 2.40,
       "stake_brl": 10.00,
-      "retorno_potencial": 24.00,
-      "cashout_atual": 6.74,
-      "status": "EM ABERTO",
-      "selecoes_detalhadas": [
-        {
-          "perna": 1,
-          "partida": "Bournemouth x Everton",
-          "campeonato": "Premier League (Inglaterra)",
-          "mercado": "2º Gol",
-          "selecao": "Bournemouth Marca o 2º Gol",
-          "odd_individual": 2.40,
-          "status_perna": "Em andamento (1x0 aos 67' 2T com bola rolando)"
-        }
-      ],
-      "justificativa_quant": "Simples Padrao G1 Billy Walters. Everton adiantando a marcação no 2T cedendo campo para o contra-ataque veloz de Tavernier e Evanilson. Odd 2.40 com +EV de +22%."
-    }
-  ],
-  "entradas_liquidadas": [
+      "resultado_brl": 5.68,
+      "lucro_liquido_brl": -4.32,
+      "status": "CASHOUT_PARCIAL_ESTRATEGICO",
+      "observacoes": "Encerrado estrategicamente aos 77' por R$ 5.68 para resgatar capital e realocar em Dupla In-Play de Alavancagem."
+    },
     {
       "id": 12,
       "ticket_id": "890M-MAI-1G-12",
