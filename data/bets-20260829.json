@@ -2,14 +2,45 @@
   "sessao_id": 5,
   "data_sessao": "2026-08-29",
   "versao_motor": "4.3.0-QUANT-HIGH-ASYMMETRY",
-  "diretriz_operacional": "SIMPLES EXCLUSIVAS COM ODD MINIMA >= 1.65 (PADRAO G1 DE ALTA ASSIMETRIA)",
+  "diretriz_operacional": "SIMPLES EXCLUSIVAS COM ODD MINIMA >= 1.65 E CURTA DURACAO (PADRAO G1 HT)",
   "banca_start_sessao": 50.00,
-  "saldo_livre_em_conta": 45.35,
-  "saldo_em_jogo": 14.35,
+  "saldo_livre_em_conta": 35.35,
+  "saldo_em_jogo": 24.35,
   "patrimonio_atual": 60.13,
+  "retorno_potencial_total_aberto": 44.54,
   "lucro_liquido_sessao_realizado": 10.13,
+  "lucro_potencial_sessao_projetado": 18.83,
+  "banca_projetada_green_total": 78.96,
   "taxa_acerto_simples_pct": 100.0,
   "entradas_ativas": [
+    {
+      "id": 9,
+      "ticket_id": "890T-BOU-HT-09",
+      "data_hora": "2026-08-29 11:26",
+      "casa": "Superbet",
+      "formato": "Simples",
+      "qtd_selecoes": 1,
+      "timing": "In-Play (26' 1T)",
+      "categoria_mercado": "Total_Gols_OverUnder_HT",
+      "tempo_resolucao_alvo": "Half-Time (45'+)",
+      "odd_total": 1.87,
+      "stake_brl": 10.00,
+      "retorno_potencial": 18.70,
+      "cashout_atual": 10.00,
+      "status": "EM ABERTO (ENCERRA NO HT)",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "Bournemouth x Everton",
+          "campeonato": "Premier League (Inglaterra)",
+          "mercado": "1º Tempo - Total de Gols",
+          "selecao": "Mais de 0.5 Gols no 1º Tempo",
+          "odd_individual": 1.87,
+          "status_perna": "Em andamento (0x0 aos 26')"
+        }
+      ],
+      "justificativa_quant": "Simples de Curta Duracao (encerra no HT). Odd de alto valor @ 1.87 (Piso >= 1.65). Evanilson/Kluivert vs Barry/Ndiaye gerando volume no terco final."
+    },
     {
       "id": 6,
       "ticket_id": "890E-INPLAY-06",
@@ -74,7 +105,7 @@
       "resultado_brl": 10.00,
       "lucro_liquido_brl": 0.00,
       "status": "CANCELADO_CASHOUT_PARIDADE",
-      "observacoes": "Cancelado imediatamente pelo operador para respeitar a Lei do Piso de Odd >= 1.65 (risco/retorno inadequado para simples). R$ 10.00 devolvido integralmente."
+      "observacoes": "Cancelado para aplicar a Lei do Piso de Odd >= 1.65."
     },
     {
       "id": 5,
@@ -109,8 +140,7 @@
       "retorno_potencial": 4.35,
       "resultado_brl": 0.00,
       "lucro_liquido_brl": -2.00,
-      "status": "RED",
-      "observacoes": "Perna Leipzig Over 0.5 bateu, mas perna Leverkusen travou em 2x0. Multipla encerrada."
+      "status": "RED"
     },
     {
       "id": 1,
@@ -127,8 +157,7 @@
       "retorno_potencial": 3.93,
       "resultado_brl": 3.93,
       "lucro_liquido_brl": 1.43,
-      "status": "GREEN",
-      "observacoes": "Liverpool 2º Gol marcado por Isak aos 60m (1x1). Padrao G1 perfeito de simples."
+      "status": "GREEN"
     }
   ]
 }
