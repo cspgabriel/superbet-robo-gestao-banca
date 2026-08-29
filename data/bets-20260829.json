@@ -1,17 +1,35 @@
 {
   "sessao_id": 5,
   "data_sessao": "2026-08-29",
-  "versao_motor": "4.0.0-PRO-QUANT (V2 OperationGuard - MODO ALAVANCAGEM IN-PLAY)",
+  "versao_motor": "4.0.0-PRO-QUANT (V2 OperationGuard - MODO HT EXCLUSIVO)",
   "banca_start_sessao": 50.00,
-  "saldo_livre_em_conta": 17.08,
-  "saldo_em_jogo": 34.35,
+  "saldo_livre_em_conta": 15.08,
+  "saldo_em_jogo": 36.35,
   "patrimonio_atual": 51.43,
-  "retorno_potencial_total_aberto": 68.62,
+  "retorno_potencial_total_aberto": 72.97,
   "lucro_liquido_sessao_realizado": 1.43,
-  "lucro_potencial_sessao_projetado": 35.70,
-  "banca_projetada_green_total": 85.70,
+  "lucro_potencial_sessao_projetado": 38.05,
+  "banca_projetada_green_total": 88.05,
   "taxa_acerto_pct": 100.0,
   "entradas_ativas": [
+    {
+      "id": 7,
+      "ticket_id": "890X-HT-07",
+      "data_hora": "2026-08-29 10:48",
+      "casa": "Superbet",
+      "partida": "Elversberg x Leverkusen + RB Leipzig x Gladbach",
+      "campeonato": "Bundesliga (Alemanha)",
+      "minuto_entrada": "19 (1T) AO VIVO",
+      "tipo": "Dupla HT (Encerra no Intervalo)",
+      "mercado": "1T Mais de 2.5 (Elv/Lev) + 1T Mais de 0.5 (Leipzig/Glad)",
+      "selecao": "Elv/Lev Over 2.5 HT @ 1.45 + Leipzig Over 0.5 HT @ 1.50",
+      "odd": 2.17,
+      "stake": 2.00,
+      "retorno_potencial": 4.35,
+      "cashout_atual": 1.66,
+      "status": "EM ABERTO (ENCERRA NO HT)",
+      "justificativa_quant": "Entrada de R$ 2.00 no HT solicitada pelo operador. Elversberg 2x0 precisa de 1 gol no 1T + Leipzig pressionando precisa de 1 gol no 1T."
+    },
     {
       "id": 6,
       "ticket_id": "890E-INPLAY-06",
@@ -20,15 +38,14 @@
       "partida": "Union Berlin x Frankfurt + Elversberg x Leverkusen",
       "campeonato": "Bundesliga (Alemanha)",
       "minuto_entrada": "16 (1T) AO VIVO",
-      "tipo": "Dupla In-Play (Alavancagem R$ 1,43 -> R$ 10,00)",
+      "tipo": "Dupla In-Play (Alavancagem)",
       "mercado": "Frankfurt Vence (1.57) + 3º Gol Leverkusen (1.47)",
       "selecao": "Frankfurt @ 1.57 + Leverkusen 3º Gol @ 1.47",
       "odd": 2.30,
       "stake": 4.35,
       "retorno_potencial": 10.04,
-      "cashout_atual": 3.94,
-      "status": "EM ABERTO (AO VIVO)",
-      "justificativa_quant": "Missao solicitada pelo operador: transformar R$ 1,43 em R$ 10,00 no ao vivo. Frankfurt virou com dominancia (2x1) + Leverkusen bombardeando por gol de desconto."
+      "cashout_atual": 3.98,
+      "status": "EM ABERTO (AO VIVO)"
     },
     {
       "id": 5,
@@ -44,7 +61,7 @@
       "odd": 2.07,
       "stake": 10.00,
       "retorno_potencial": 20.70,
-      "cashout_atual": 7.15,
+      "cashout_atual": 7.13,
       "status": "EM ABERTO (AO VIVO)"
     },
     {
@@ -61,7 +78,6 @@
       "odd": 1.58,
       "stake": 7.50,
       "retorno_potencial": 11.85,
-      "cashout_atual": 2.02,
       "status": "EM ABERTO (AO VIVO)"
     },
     {
@@ -78,7 +94,6 @@
       "odd": 2.20,
       "stake": 10.00,
       "retorno_potencial": 22.08,
-      "cashout_atual": 8.65,
       "status": "EM ABERTO (Pré-Jogo 13:30)"
     },
     {
