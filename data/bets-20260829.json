@@ -1,0 +1,49 @@
+{
+  "sessao_id": 5,
+  "data_sessao": "2026-08-29",
+  "versao_motor": "4.0.0-PRO-QUANT (V2 OperationGuard)",
+  "banca_start_sessao": 50.00,
+  "saldo_livre_em_conta": 47.50,
+  "saldo_em_jogo": 2.50,
+  "patrimonio_atual": 50.00,
+  "lucro_liquido_sessao": 0.00,
+  "roi_sessao_pct": 0.00,
+  "teto_stake_unitaria": 2.50,
+  "teto_exposicao_simultanea": 5.00,
+  "stop_gain_sessao": 15.00,
+  "stop_loss_sessao": 7.50,
+  "regras_ativas": {
+    "cluster_lock": true,
+    "zero_margin_under_rule": true,
+    "max_stake_percent": 0.05,
+    "max_concurrent_exposure": 0.10,
+    "minimum_edge_percent": 0.10,
+    "whitelist_only": true
+  },
+  "entradas_ativas": [
+    {
+      "id": 1,
+      "ticket_id": "890W-QI3C2K",
+      "data_hora": "2026-08-29 09:41",
+      "casa": "Superbet",
+      "partida": "Liverpool x Nottingham Forest",
+      "campeonato": "Premier League (Inglaterra)",
+      "minuto_entrada": "50 (2ºT)",
+      "tipo": "In-Play (Ao Vivo)",
+      "mercado": "2º Gol",
+      "selecao": "Liverpool",
+      "odd": 1.57,
+      "stake": 2.50,
+      "retorno_potencial": 3.93,
+      "cashout_atual": 2.35,
+      "status": "EM ABERTO",
+      "placar_momento": "0-1",
+      "xg_momento": {
+        "liverpool": 0.25,
+        "nottingham": 1.29
+      },
+      "justificativa_quant": "Liverpool com 65% de posse no Anfield buscando empate; modelo Dixon-Coles Time Decay precifica probabilidade real em ~72% (+EV 13.0%). Cluster Lock respeitado."
+    }
+  ],
+  "entradas_liquidadas": []
+}

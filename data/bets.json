@@ -1,64 +1,51 @@
 {
-  "robo_status": "PRONTO PARA NOVA SESSÃO (METODOLOGIA V4.0 ATIVA)",
+  "robo_status": "OPERANDO AO VIVO (SESSÃO 5 - TICKET ATIVO)",
   "versao": "4.0.0-PRO-QUANT",
-  "nivel_sobrevivencia": "NORMAL (R$ 70,00 PRESERVADO)",
+  "nivel_sobrevivencia": "NORMAL (R$ 50,00 BASE START)",
   "sessao_ativa": 5,
-  "ultima_atualizacao": "2026-08-29T08:55:00.000Z",
-  "target_goal": 100,
-  "progresso_meta_pct": 70,
-  "conexao_cdp": "Pronto para Conexão",
+  "ultima_atualizacao": "2026-08-29T09:41:00.000Z",
+  "target_goal": 65.00,
+  "progresso_meta_pct": 76.92,
+  "conexao_cdp": "Conectado e Operando",
   "banca": {
-    "banca_inicial_start": 50,
-    "deposito_adicional": 58,
-    "banca_total_aportada": 108,
-    "saldo_livre_em_conta": 70,
-    "saldo_em_jogo": 0,
-    "cashouts_soma_atual": 0,
-    "patrimonio_liquido_realizavel": 70,
-    "lucro_liquido_atual": -38,
-    "taxa_preservacao_capital_pct": 64.81,
+    "banca_start_sessao_5": 50.00,
+    "saldo_livre_em_conta": 47.50,
+    "saldo_em_jogo": 2.50,
+    "cashouts_soma_atual": 2.35,
+    "patrimonio_liquido_realizavel": 49.85,
+    "lucro_liquido_sessao": 0.00,
+    "taxa_preservacao_capital_pct": 100.0,
     "moeda": "BRL",
-    "stake_unitaria_recomendada_min": 3.50,
-    "stake_unitaria_recomendada_max": 5.00,
-    "teto_risco_simultaneo_sessao": 10.50
+    "stake_unitaria_recomendada_min": 2.50,
+    "stake_unitaria_recomendada_max": 3.50,
+    "teto_risco_simultaneo_sessao": 5.00
   },
   "regras_v4_ativas": {
     "zero_margin_rule": true,
     "cluster_lock": true,
-    "fractional_kelly_limit": "0.25f* (Max 7% por entrada)",
+    "fractional_kelly_limit": "0.25f* (Max 5% por entrada: R$ 2,50)",
     "whitelist_leagues": ["Premier League", "La Liga", "Serie A", "Bundesliga", "Ligue 1", "Brasileirão Série A", "Brasileirão Série B", "Champions League"],
-    "stop_gain_sessao_brl": 18.00,
-    "stop_loss_sessao_brl": 10.50
+    "stop_gain_sessao_brl": 15.00,
+    "stop_loss_sessao_brl": 7.50
   },
-  "metricas_acumuladas": {
-    "total_entradas_historico": 16,
-    "entradas_ativas_inplay": 0,
-    "greens_liquidados": 7,
-    "reds_auditados": 7,
-    "cashouts_estrategicos": {
-      "total": 3,
-      "cashout_neutro": 1,
-      "cashout_red": 1,
-      "cashout_green": 1
-    },
-    "ganho_bruto_greens_brl": 46.46,
-    "perda_bruta_reds_brl": 68.03,
-    "volume_total_movimentado_brl": 189.98
-  },
-  "post_mortem_analise": {
-    "ponto_critico": "Novorizontino 2x0 Sport (78' 2T)",
-    "erros_identificados": [
-      "Cross-Exposure em 4 bilhetes simultâneos (violação da independência estocástica).",
-      "Inércia de Cashout em Margem Zero (Under 2.5 aos 78' 2T com 2x0 no placar).",
-      "Overbetting com stakes de R$ 35 e R$ 20 (violação de Fractional Kelly).",
-      "Dispersão em ligas periféricas no início (Peru / Tênis de Mesa)."
-    ],
-    "licoes_implementadas_v4": [
-      "Regra mandatória de Margem Zero (Cashout se margem <= 1 gol após os 70').",
-      "Cluster Lock: Proibição estrita de repetir o mesmo jogo em múltiplos bilhetes.",
-      "Stakes estritas de 5% a 7% (R$ 3,50 a R$ 5,00) com teto de sessão em 15%.",
-      "Whitelist exclusiva de ligas Tier 1 e Tier 2."
-    ]
-  },
-  "entradas_ativas": []
+  "entradas_ativas": [
+    {
+      "id": 1,
+      "ticket_id": "890W-QI3C2K",
+      "data_hora": "2026-08-29 09:41",
+      "casa": "Superbet",
+      "partida": "Liverpool x Nottingham Forest",
+      "campeonato": "Premier League (Inglaterra)",
+      "minuto_entrada": "50 (2ºT)",
+      "tipo": "In-Play (Ao Vivo)",
+      "mercado": "2º Gol",
+      "selecao": "Liverpool",
+      "odd": 1.57,
+      "stake": 2.50,
+      "retorno_potencial": 3.93,
+      "cashout_atual": 2.35,
+      "status": "EM ABERTO",
+      "placar_momento": "0-1"
+    }
+  ]
 }
