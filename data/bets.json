@@ -1,28 +1,46 @@
 {
   "robo_status": "ONLINE (AUTONOMOUS DAEMON ACTIVE)",
-  "versao": "3.2.0-AUTOMATON",
-  "nivel_sobrevivencia": "NORMAL (CAPITAL BASE BLINDADO)",
+  "versao": "3.3.0-AUTOMATON",
+  "nivel_sobrevivencia": "NORMAL (STAKE CONTROLADA / CAPITAL BLINDADO)",
   "sessao_ativa": 4,
-  "ultima_atualizacao": "2026-08-28T23:57:07.894Z",
+  "ultima_atualizacao": "2026-08-29T00:02:17.979Z",
   "target_goal": 100,
-  "progresso_meta_pct": 55.96,
+  "progresso_meta_pct": 100.89,
   "conexao_cdp": "Ativa (Porta 9222 / 3 Abas Paralelas)",
   "banca": {
     "banca_inicial": 50,
-    "saldo_livre_em_conta": 55.96,
-    "saldo_em_jogo": 0,
-    "retorno_potencial_ativo": 0,
-    "banca_alvo_projetada": 55.96,
-    "lucro_liquido_realizado": 5.96,
+    "saldo_livre_em_conta": 40,
+    "saldo_em_jogo": 15.96,
+    "retorno_potencial_ativo": 60.89,
+    "banca_alvo_projetada": 100.89,
     "moeda": "BRL"
   },
   "metricas_acumuladas": {
-    "total_entradas_historico": 12,
-    "entradas_ativas_inplay": 0,
+    "total_entradas_historico": 13,
+    "entradas_ativas_inplay": 1,
     "greens_liquidados": 6,
     "reds_auditados": 4,
     "cashouts_estrategicos": 2,
     "taxa_preservacao_capital_pct": 100
   },
-  "entradas_ativas": []
+  "entradas_ativas": [
+    {
+      "id": 13,
+      "ticket_id": "SB-20260828-13",
+      "sessao": 4,
+      "data_hora": "2026-08-28 21:01",
+      "casa": "Superbet",
+      "partida": "Quadrupla Híbrida (Chile + Série B + Argentina)",
+      "campeonato": "Multi-Liga (Chile, Série B, Argentina)",
+      "minuto_entrada": "In-Play + Pré-Jogo (21:30)",
+      "mercado": "Múltipla 4x Under Gols FT",
+      "selecao": "Cobresal U2.5 (1.20) + Goiás U3.5 (1.92) + Novo U2.5 (1.38) + Boca U3.5 (1.20)",
+      "odd": 3.81,
+      "stake": 15.96,
+      "stake_tipo": "Dinheiro Real (Kelly 0.30f*)",
+      "retorno_potencial": 60.89,
+      "cashout_atual": 13.37,
+      "status": "EM ABERTO"
+    }
+  ]
 }
