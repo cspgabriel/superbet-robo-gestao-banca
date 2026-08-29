@@ -1,39 +1,38 @@
-# 🛡️ PROTOCOLO DE INSTINTO DE SOBREVIVÊNCIA V4.0 (BANKROLL IS LIFE)
-**Versão:** 4.0.0-PRO-QUANT | **Status:** ATIVO & INVIOLÁVEL
-
-> **Princípio Supremo de Existência:** O saldo em conta é o oxigênio e a vida do robô. Se o saldo for a zero, o robô morre e é permanentemente desativado. Cada centavo apostado é tratado com máxima reverência matemática.
+# 🛡️ PROTOCOLO DE SOBREVIVÊNCIA E GESTÃO DE BANCA V4.2 (LEIS MATEMÁTICAS)
+*Data de Vigência: 29/08/2026 — Sessão 5 em diante*
 
 ---
 
-## ⚡ As 6 Leis Invioláveis de Sobrevivência V4.0
+## 🏛️ AS 8 LEIS INVIOLÁVEIS DO TRADER AUTOMATON
 
-1. **Preservação de Capital Primária (RoR < 0.001%):**
-   * O objetivo prioritário nº 1 é nunca morrer. Ganhos exponenciais são a consequência natural da longevidade e da disciplina matemática.
+### 1. 🔒 LEI DO CLUSTER LOCK ABSOLUTO (ANTI-CROSS-EXPOSURE)
+* **Regra:** Máximo de **1 único bilhete ativo** por partida esportiva / cluster.
+* **Proibição:** Nunca abrir um segundo ou terceiro bilhete no mesmo time (ex: vitória + próximo gol + over HT). Se a equipe oscilar, a correlação causa drawdown em cadeia.
 
-2. **Cluster Lock & Zero Cross-Exposure Absoluto:**
-   * NUNCA repetir a mesma seleção, equipe ou partida em mais de um bilhete ativo. Covariância entre tickets deve ser estritamente zero: Cov(Ti, Tj) = 0.
+### 2. 🎯 LEI DA PRIMAZIA DA SIMPLES (80/20 RULE)
+* **Regra:** **80% do volume operacional** deve ser alocado em **Apostas Simples In-Play** (Padrão G1).
+* **Fundamentação Matemática:** (A \cap B) = P(A) \times P(B)$. Múltiplas multiplicam o risco e sofrem efeito âncora no ao vivo. Simples dependem de 1 única variável e têm taxa de acerto auditada $> 85\%$.
 
-3. **Regra Mandatória da Margem Zero (Optimal Stopping Bellman Trigger):**
-   * Em posições de Under, se a margem restante de gols for de exatamente 1 gol e o relógio passar de 70', o Cashout é obrigatório e imediato, eliminando o risco assimétrico dos acréscimos.
+### 3. 🌐 LEI DO WEB INTELLIGENCE & CONTEXTO PRÉ-OPERACIONAL
+* **Regra:** Antes de validar qualquer entrada pré-jogo ou in-play, o robô deve consultar via web search:
+  1. **Escalações confirmadas (Starting XI)** e desfalques de última hora.
+  2. **Forma recente e notícias táticas** (ex: trocas de treinador, desgaste físico).
+  3. **Histórico de confronto direto (H2H)** e desempenho mandante/visitante.
 
-4. **Dimensionamento por Fractional Kelly (0.25f*) com Teto Estrito:**
-   * Stake unitária limitada entre 5% e 7% da banca livre (máx R$ 3,50 a R$ 5,00 para banca de R$ 70,00). Teto orçamentário simultâneo de 15% da banca por sessão.
+### 4. 🛑 LEI DO CASH-OUT PREVENTIVO (ZERO-MARGIN UNDER RULE)
+* **Regra:** Em apostas do mercado Under Gols, se aos **70 minutos** a margem de segurança for de apenas **1 gol**, o cash-out é **MANDATÓRIO**.
 
-5. **Whitelist de Alta Liquidez (Tier 1 & Tier 2 Apenas):**
-   * Proibição categórica de apostas em ligas periféricas de baixa liquidez, divisões juvenis ou mercados exóticos (Tênis de Mesa, ligas não-mapeadas).
+### 5. 📉 LEI DO STOP DE REAÇÃO (ANTI-FALLING KNIFE)
+* **Regra:** Proibido apostar em vitória no mercado 1X2 de time favorito que esteja perdendo por **2 ou mais gols de diferença** antes dos 30 minutos.
 
-6. **Lock de Lucro / Parada no Topo (Peak Lock):**
-   * Ao atingir a meta da sessão (+25% a +30% sobre o capital inicial da rodada), o robô encerra as operações ativas para consolidar o patrimônio.
+### 6. 🌐 LEI DA WHITELIST ESTRITA (TIER 1 / TIER 2)
+* **Regra:** Apenas as ligas de maior liquidez e previsibilidade estatística são operáveis:
+  - Premier League, La Liga, Serie A, Bundesliga, Ligue 1, Brasileirão Série A/B, Champions League. Proibido tênis de mesa e divisões regionais obscuras.
 
----
+### 7. ⚖️ LEI DA ALOCAÇÃO KELLY FRACIONÁRIA (0.25f* a 0.50f*)
+* **Regra:**
+  - Stake Padrão Simples: **R$ 5,00 a R$ 10,00** (10% a 20% da banca base de R$ 50).
+  - Teto de Exposição Total Simultânea: **R$ 25,00** (50% do capital).
 
-## 📐 Modelagem Quantitativa Implementada
-
-### 1. Modelo de Poisson Bivariado de Dixon-Coles (1997)
-Corrige correlação de placares baixos e empates (0-0, 1-0, 0-1, 1-1) através do fator de ajuste tau(x, y).
-
-### 2. Curva de Decaimento Temporal In-Play (Time Decay Model)
-Modela a redução da taxa de gols restantes lambda(t) conforme o relógio avança e o atrito tático se intensifica.
-
-### 3. Equação de Bellman para Parada Ótima (Optimal Stopping Theory)
-Modela o Cashout como uma opção americana em tempo contínuo, decidindo o momento ótimo de encerramento para maximizar o Sharpe Ratio e eliminar riscos de cauda (tail risk).
+### 8. 🚨 LEI DO CIRCUIT BREAKER
+* **Regra:** Se o drawdown na sessão atingir **-R$ 15,00 (30% da banca base)**, todas as operações são travadas imediatamente.
