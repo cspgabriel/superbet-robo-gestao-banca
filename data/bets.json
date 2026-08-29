@@ -1,29 +1,47 @@
 {
   "robo_status": "ONLINE (AUTONOMOUS DAEMON ACTIVE)",
-  "versao": "3.3.0-AUTOMATON",
-  "nivel_sobrevivencia": "NORMAL (STAKE CONTROLADA / CAPITAL BLINDADO)",
+  "versao": "3.4.0-AUTOMATON",
+  "nivel_sobrevivencia": "NORMAL (DISPARO DUPLO SQUAD)",
   "sessao_ativa": 4,
-  "ultima_atualizacao": "2026-08-29T00:02:17.979Z",
+  "ultima_atualizacao": "2026-08-29T00:04:41.260Z",
   "target_goal": 100,
-  "progresso_meta_pct": 100.89,
+  "progresso_meta_pct": 127.06,
   "conexao_cdp": "Ativa (Porta 9222 / 3 Abas Paralelas)",
   "banca": {
     "banca_inicial": 50,
-    "saldo_livre_em_conta": 40,
-    "saldo_em_jogo": 15.96,
-    "retorno_potencial_ativo": 60.89,
-    "banca_alvo_projetada": 100.89,
+    "saldo_livre_em_conta": 20,
+    "saldo_em_jogo": 35.96,
+    "retorno_potencial_ativo": 107.06,
+    "banca_alvo_projetada": 127.06,
     "moeda": "BRL"
   },
   "metricas_acumuladas": {
-    "total_entradas_historico": 13,
-    "entradas_ativas_inplay": 1,
+    "total_entradas_historico": 14,
+    "entradas_ativas_inplay": 2,
     "greens_liquidados": 6,
     "reds_auditados": 4,
     "cashouts_estrategicos": 2,
     "taxa_preservacao_capital_pct": 100
   },
   "entradas_ativas": [
+    {
+      "id": 14,
+      "ticket_id": "SB-20260828-14 (891O-YNBI0H)",
+      "sessao": 4,
+      "data_hora": "2026-08-28 21:03",
+      "casa": "Superbet",
+      "partida": "Tripla Série B + Chile",
+      "campeonato": "Série B + Primeira Divisão Chile",
+      "minuto_entrada": "In-Play (34' 1T / 76' 2T)",
+      "mercado": "Tripla Under In-Play",
+      "selecao": "Cobresal U2.5 (1.14) + Novo U2.5 (1.35) + Náutico 1T U1.5 (1.50)",
+      "odd": 2.3,
+      "stake": 20,
+      "stake_tipo": "Dinheiro Real",
+      "retorno_potencial": 46.17,
+      "cashout_atual": 16.87,
+      "status": "EM ABERTO"
+    },
     {
       "id": 13,
       "ticket_id": "SB-20260828-13",
@@ -37,9 +55,9 @@
       "selecao": "Cobresal U2.5 (1.20) + Goiás U3.5 (1.92) + Novo U2.5 (1.38) + Boca U3.5 (1.20)",
       "odd": 3.81,
       "stake": 15.96,
-      "stake_tipo": "Dinheiro Real (Kelly 0.30f*)",
+      "stake_tipo": "Dinheiro Real",
       "retorno_potencial": 60.89,
-      "cashout_atual": 13.37,
+      "cashout_atual": 14.56,
       "status": "EM ABERTO"
     }
   ]
