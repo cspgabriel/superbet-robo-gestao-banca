@@ -1,7 +1,7 @@
 {
   "sessao_id": 5,
   "data_sessao": "2026-08-29",
-  "versao_motor": "4.0.0-PRO-QUANT (V2 OperationGuard - MODO HT EXCLUSIVO)",
+  "versao_motor": "4.1.0-QUANT-PATTERN-MINER",
   "banca_start_sessao": 50.00,
   "saldo_livre_em_conta": 15.08,
   "saldo_em_jogo": 36.35,
@@ -11,106 +11,209 @@
   "lucro_potencial_sessao_projetado": 38.05,
   "banca_projetada_green_total": 88.05,
   "taxa_acerto_pct": 100.0,
+  "estatisticas_padroes": {
+    "total_entradas": 7,
+    "simples_count": 4,
+    "multiplas_count": 3,
+    "in_play_count": 4,
+    "pre_jogo_count": 3,
+    "por_categoria_mercado": {
+      "Proximo_Gol": 1,
+      "Resultado_Final_1X2": 3,
+      "Resultado_1T_HT_1X2": 1,
+      "Total_Gols_OverUnder_HT": 1,
+      "Multipla_Hibrida_InPlay": 1
+    }
+  },
   "entradas_ativas": [
     {
       "id": 7,
       "ticket_id": "890X-HT-07",
       "data_hora": "2026-08-29 10:48",
       "casa": "Superbet",
-      "partida": "Elversberg x Leverkusen + RB Leipzig x Gladbach",
-      "campeonato": "Bundesliga (Alemanha)",
-      "minuto_entrada": "19 (1T) AO VIVO",
-      "tipo": "Dupla HT (Encerra no Intervalo)",
-      "mercado": "1T Mais de 2.5 (Elv/Lev) + 1T Mais de 0.5 (Leipzig/Glad)",
-      "selecao": "Elv/Lev Over 2.5 HT @ 1.45 + Leipzig Over 0.5 HT @ 1.50",
-      "odd": 2.17,
-      "stake": 2.00,
+      "formato": "Múltipla",
+      "qtd_selecoes": 2,
+      "timing": "In-Play (19' 1T)",
+      "categoria_mercado": "Total_Gols_OverUnder_HT",
+      "tempo_resolucao_alvo": "Half-Time (45'+)",
+      "odd_total": 2.17,
+      "stake_brl": 2.00,
       "retorno_potencial": 4.35,
-      "cashout_atual": 1.66,
-      "status": "EM ABERTO (ENCERRA NO HT)",
-      "justificativa_quant": "Entrada de R$ 2.00 no HT solicitada pelo operador. Elversberg 2x0 precisa de 1 gol no 1T + Leipzig pressionando precisa de 1 gol no 1T."
+      "cashout_atual": 2.21,
+      "status": "EM ABERTO",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "Elversberg x Bayer Leverkusen",
+          "campeonato": "Bundesliga (Alemanha)",
+          "mercado": "1º Tempo - Total de Gols",
+          "selecao": "Mais de 2.5 Gols no 1T",
+          "odd_individual": 1.45,
+          "status_perna": "Aguardando 1 gol (jogo 2x0 aos 28')"
+        },
+        {
+          "perna": 2,
+          "partida": "RB Leipzig x Borussia Monchengladbach",
+          "campeonato": "Bundesliga (Alemanha)",
+          "mercado": "1º Tempo - Total de Gols",
+          "selecao": "Mais de 0.5 Gols no 1T",
+          "odd_individual": 1.50,
+          "status_perna": "GREEN CUMPRIDO (Gol Leipzig aos 26')"
+        }
+      ]
     },
     {
       "id": 6,
       "ticket_id": "890E-INPLAY-06",
       "data_hora": "2026-08-29 10:46",
       "casa": "Superbet",
-      "partida": "Union Berlin x Frankfurt + Elversberg x Leverkusen",
-      "campeonato": "Bundesliga (Alemanha)",
-      "minuto_entrada": "16 (1T) AO VIVO",
-      "tipo": "Dupla In-Play (Alavancagem)",
-      "mercado": "Frankfurt Vence (1.57) + 3º Gol Leverkusen (1.47)",
-      "selecao": "Frankfurt @ 1.57 + Leverkusen 3º Gol @ 1.47",
-      "odd": 2.30,
-      "stake": 4.35,
+      "formato": "Múltipla",
+      "qtd_selecoes": 2,
+      "timing": "In-Play (16' 1T)",
+      "categoria_mercado": "Multipla_Hibrida_InPlay",
+      "tempo_resolucao_alvo": "Full-Time (90')",
+      "odd_total": 2.30,
+      "stake_brl": 4.35,
       "retorno_potencial": 10.04,
-      "cashout_atual": 3.98,
-      "status": "EM ABERTO (AO VIVO)"
+      "cashout_atual": 4.04,
+      "status": "EM ABERTO",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "Union Berlin x Eintracht Frankfurt",
+          "campeonato": "Bundesliga (Alemanha)",
+          "mercado": "Resultado Final (1X2)",
+          "selecao": "Eintracht Frankfurt Vence (2)",
+          "odd_individual": 1.57,
+          "status_perna": "Em andamento (1x1)"
+        },
+        {
+          "perna": 2,
+          "partida": "Elversberg x Bayer Leverkusen",
+          "campeonato": "Bundesliga (Alemanha)",
+          "mercado": "3º Gol da Partida",
+          "selecao": "Bayer Leverkusen",
+          "odd_individual": 1.47,
+          "status_perna": "Em andamento (2x0 Elversberg)"
+        }
+      ]
     },
     {
       "id": 5,
       "ticket_id": "890K-QNO8QO",
       "data_hora": "2026-08-29 10:34",
       "casa": "Superbet",
-      "partida": "RB Leipzig x Borussia Monchengladbach",
-      "campeonato": "Bundesliga (Alemanha)",
-      "minuto_entrada": "4 (1T) AO VIVO",
-      "tipo": "In-Play (Ao Vivo) HT",
-      "mercado": "1T Resultado (1X2)",
-      "selecao": "RB Leipzig Vence o 1T",
-      "odd": 2.07,
-      "stake": 10.00,
+      "formato": "Simples",
+      "qtd_selecoes": 1,
+      "timing": "In-Play (4' 1T)",
+      "categoria_mercado": "Resultado_1T_HT_1X2",
+      "tempo_resolucao_alvo": "Half-Time (45'+)",
+      "odd_total": 2.07,
+      "stake_brl": 10.00,
       "retorno_potencial": 20.70,
-      "cashout_atual": 7.13,
-      "status": "EM ABERTO (AO VIVO)"
+      "cashout_atual": 16.63,
+      "status": "EM ABERTO (VENCENDO 1X0)",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "RB Leipzig x Borussia Monchengladbach",
+          "campeonato": "Bundesliga (Alemanha)",
+          "mercado": "1º Tempo - Resultado (1X2)",
+          "selecao": "RB Leipzig Vence o 1º Tempo",
+          "odd_individual": 2.07,
+          "status_perna": "Vencendo 1x0 (Gol aos 26')"
+        }
+      ]
     },
     {
       "id": 4,
       "ticket_id": "891M-YDZKBJ",
       "data_hora": "2026-08-29 10:16",
       "casa": "Superbet",
-      "partida": "Elversberg x Bayer Leverkusen",
-      "campeonato": "Bundesliga (Alemanha)",
-      "minuto_entrada": "Pré-Jogo",
-      "tipo": "Simples Pré-Jogo (Aporte Adicional)",
-      "mercado": "Resultado Final (1X2)",
-      "selecao": "Bayer Leverkusen Vence (2)",
-      "odd": 1.58,
-      "stake": 7.50,
+      "formato": "Simples",
+      "qtd_selecoes": 1,
+      "timing": "Pré-Jogo",
+      "categoria_mercado": "Resultado_Final_1X2",
+      "tempo_resolucao_alvo": "Full-Time (90')",
+      "odd_total": 1.58,
+      "stake_brl": 7.50,
       "retorno_potencial": 11.85,
-      "status": "EM ABERTO (AO VIVO)"
+      "cashout_atual": 2.02,
+      "status": "EM ABERTO",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "Elversberg x Bayer Leverkusen",
+          "campeonato": "Bundesliga (Alemanha)",
+          "mercado": "Resultado Final (1X2)",
+          "selecao": "Bayer Leverkusen Vence (2)",
+          "odd_individual": 1.58,
+          "status_perna": "Em andamento (2x0 Elversberg)"
+        }
+      ]
     },
     {
       "id": 3,
       "ticket_id": "891N-YJR1LT",
       "data_hora": "2026-08-29 10:14",
       "casa": "Superbet",
-      "partida": "Dortmund x Hamburgo + Tottenham x Newcastle",
-      "campeonato": "Bundesliga + Premier League",
-      "minuto_entrada": "Pré-Jogo (Início 13:30)",
-      "tipo": "Dupla de Elite (Múltipla 2x)",
-      "mercado": "Dortmund Vence (1) + Tottenham/Newcastle Over 2.5 Gols",
-      "selecao": "Dortmund @ 1.38 + Over 2.5 @ 1.60",
-      "odd": 2.20,
-      "stake": 10.00,
+      "formato": "Múltipla",
+      "qtd_selecoes": 2,
+      "timing": "Pré-Jogo (Início 13:30)",
+      "categoria_mercado": "Combo_1X2_OverGols",
+      "tempo_resolucao_alvo": "Full-Time (90')",
+      "odd_total": 2.20,
+      "stake_brl": 10.00,
       "retorno_potencial": 22.08,
-      "status": "EM ABERTO (Pré-Jogo 13:30)"
+      "cashout_atual": 8.65,
+      "status": "EM ABERTO (Pré-Jogo 13:30)",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "Borussia Dortmund x Hamburgo",
+          "campeonato": "Bundesliga (Alemanha)",
+          "mercado": "Resultado Final (1X2)",
+          "selecao": "Borussia Dortmund Vence (1)",
+          "odd_individual": 1.38,
+          "status_perna": "Pré-Jogo (13h30)"
+        },
+        {
+          "perna": 2,
+          "partida": "Tottenham x Newcastle",
+          "campeonato": "Premier League (Inglaterra)",
+          "mercado": "Total de Gols",
+          "selecao": "Mais de 2.5 Gols",
+          "odd_individual": 1.60,
+          "status_perna": "Pré-Jogo (13h30)"
+        }
+      ]
     },
     {
       "id": 2,
       "ticket_id": "8909-QNZ0CT",
       "data_hora": "2026-08-29 10:06",
       "casa": "Superbet",
-      "partida": "Elversberg x Bayer Leverkusen",
-      "campeonato": "Bundesliga (Alemanha)",
-      "minuto_entrada": "Pré-Jogo",
-      "tipo": "Simples Pré-Jogo (Entrada Inicial)",
-      "mercado": "Resultado Final (1X2)",
-      "selecao": "Bayer Leverkusen Vence (2)",
-      "odd": 1.58,
-      "stake": 2.50,
+      "formato": "Simples",
+      "qtd_selecoes": 1,
+      "timing": "Pré-Jogo",
+      "categoria_mercado": "Resultado_Final_1X2",
+      "tempo_resolucao_alvo": "Full-Time (90')",
+      "odd_total": 1.58,
+      "stake_brl": 2.50,
       "retorno_potencial": 3.95,
-      "status": "EM ABERTO (AO VIVO)"
+      "cashout_atual": 1.58,
+      "status": "EM ABERTO",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "Elversberg x Bayer Leverkusen",
+          "campeonato": "Bundesliga (Alemanha)",
+          "mercado": "Resultado Final (1X2)",
+          "selecao": "Bayer Leverkusen Vence (2)",
+          "odd_individual": 1.58,
+          "status_perna": "Em andamento"
+        }
+      ]
     }
   ],
   "entradas_liquidadas": [
@@ -119,18 +222,28 @@
       "ticket_id": "890W-QI3C2K",
       "data_hora": "2026-08-29 09:41",
       "casa": "Superbet",
-      "partida": "Liverpool x Nottingham Forest",
-      "campeonato": "Premier League (Inglaterra)",
-      "minuto_entrada": "50 (2ºT)",
-      "tipo": "In-Play (Ao Vivo)",
-      "mercado": "2º Gol",
-      "selecao": "Liverpool",
-      "odd": 1.57,
-      "stake": 2.50,
+      "formato": "Simples",
+      "qtd_selecoes": 1,
+      "timing": "In-Play (50' 2T)",
+      "categoria_mercado": "Proximo_Gol",
+      "tempo_resolucao_alvo": "In-Play (60')",
+      "odd_total": 1.57,
+      "stake_brl": 2.50,
       "retorno_potencial": 3.93,
       "resultado_brl": 3.93,
       "lucro_liquido_brl": 1.43,
-      "status": "GREEN"
+      "status": "GREEN",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "Liverpool x Nottingham Forest",
+          "campeonato": "Premier League (Inglaterra)",
+          "mercado": "2º Gol da Partida",
+          "selecao": "Liverpool",
+          "odd_individual": 1.57,
+          "status_perna": "GREEN (Gol marcado por Isak aos 60')"
+        }
+      ]
     }
   ]
 }
