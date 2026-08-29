@@ -2,80 +2,15 @@
   "sessao_id": 5,
   "data_sessao": "2026-08-29",
   "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
-  "diretriz_operacional": "BILLY WALTERS VALUE ENGINE - ALAVANCAGEM TOTAL E RECICLAGEM DINAMICA DE BANCA",
+  "diretriz_operacional": "BILLY WALTERS VALUE ENGINE - GREEN NO LENS + BETIS EMPATA 2X2 EM BUSCA DA VIRADA",
   "banca_start_sessao": 50.00,
-  "saldo_livre_em_conta": 0.00,
-  "saldo_em_jogo": 24.64,
-  "patrimonio_atual": 24.64,
-  "retorno_potencial_total_aberto": 49.21,
-  "lucro_liquido_sessao_realizado": 0.74,
-  "taxa_acerto_simples_pct": 75.0,
+  "saldo_livre_em_conta": 8.58,
+  "saldo_em_jogo": 10.00,
+  "patrimonio_atual": 18.58,
+  "retorno_potencial_total_aberto": 24.00,
+  "lucro_liquido_sessao_realizado": 4.68,
+  "taxa_acerto_simples_pct": 80.0,
   "entradas_ativas": [
-    {
-      "id": 16,
-      "ticket_id": "890L-LENS-1G-16",
-      "data_hora": "2026-08-29 12:36",
-      "casa": "Superbet",
-      "formato": "Simples",
-      "qtd_selecoes": 1,
-      "timing": "In-Play (23' 1T • Bola Rolando)",
-      "categoria_mercado": "Proximo_Gol",
-      "tempo_resolucao_alvo": "In-Play (90')",
-      "odd_total": 1.85,
-      "stake_brl": 4.64,
-      "retorno_potencial": 8.58,
-      "cashout_atual": 4.64,
-      "status": "EM ABERTO",
-      "selecoes_detalhadas": [
-        {
-          "perna": 1,
-          "partida": "Strasbourg x Lens",
-          "campeonato": "Ligue 1 (França)",
-          "mercado": "1º Gol",
-          "selecao": "Lens Marca o 1º Gol",
-          "odd_individual": 1.85,
-          "status_perna": "Em andamento (0x0 aos 23' 1T com bola rolando)"
-        }
-      ],
-      "justificativa_quant": "Simples Padrao G1. Alocacao total do saldo residual de R$ 4.64 no 1º Gol do Lens, equipe que pressiona fora de casa na Ligue 1. Odd 1.85 com +EV."
-    },
-    {
-      "id": 15,
-      "ticket_id": "890D-DUPLA-INPLAY-15",
-      "data_hora": "2026-08-29 12:34",
-      "casa": "Superbet",
-      "formato": "Múltipla",
-      "qtd_selecoes": 2,
-      "timing": "In-Play (80' 2T / 22' 1T • Bola Rolando)",
-      "categoria_mercado": "Multipla_Hibrida_InPlay",
-      "tempo_resolucao_alvo": "Full-Time (90')",
-      "odd_total": 1.66,
-      "stake_brl": 10.00,
-      "retorno_potencial": 16.63,
-      "cashout_atual": 10.00,
-      "status": "EM ABERTO",
-      "selecoes_detalhadas": [
-        {
-          "perna": 1,
-          "partida": "Bournemouth x Everton",
-          "campeonato": "Premier League (Inglaterra)",
-          "mercado": "Resultado Final",
-          "selecao": "Bournemouth Vence a Partida",
-          "odd_individual": 1.28,
-          "status_perna": "Em andamento (1x0 aos 82' com controle absoluto)"
-        },
-        {
-          "perna": 2,
-          "partida": "Strasbourg x Lens",
-          "campeonato": "Ligue 1 (França)",
-          "mercado": "Total de Gols",
-          "selecao": "Mais de 1.5 Gols na Partida",
-          "odd_individual": 1.30,
-          "status_perna": "Em andamento (0x0 aos 23' 1T)"
-        }
-      ],
-      "justificativa_quant": "Dupla In-Play de Alavancagem com altissima probabilidade. Bournemouth administra 1x0 na reta final sem ameacas do Everton e Strasbourg x Lens com perfil de gols na Ligue 1. Odd combinada 1.66 com +EV."
-    },
     {
       "id": 14,
       "ticket_id": "890B-BETIS-1X2-14",
@@ -89,7 +24,7 @@
       "odd_total": 2.40,
       "stake_brl": 10.00,
       "retorno_potencial": 24.00,
-      "cashout_atual": 4.58,
+      "cashout_atual": 9.56,
       "status": "EM ABERTO",
       "selecoes_detalhadas": [
         {
@@ -99,13 +34,48 @@
           "mercado": "Resultado Final",
           "selecao": "Real Betis Vence a Partida",
           "odd_individual": 2.40,
-          "status_perna": "Em andamento (1x0 aos 36' 1T com mais de 54 min de jogo)"
+          "status_perna": "Em andamento (2x2 no intervalo com Betis reagindo com 2 gols no 1T)"
         }
       ],
-      "justificativa_quant": "Simples Padrao G1 Billy Walters em Mercado 1X2. Real Betis com 100% de vitórias (2J, 2V) e zero gols sofridos vs Levante zerado no ataque (17º lugar). H2H: Betis invicto ha 5 jogos. Odd 2.40 com +EV de +24%."
+      "justificativa_quant": "Simples Padrao G1 Billy Walters em Mercado 1X2. Betis empatou em 2x2 antes do intervalo e domina a posse e finalizacoes. Odd 2.40 com +EV."
     }
   ],
   "entradas_liquidadas": [
+    {
+      "id": 16,
+      "ticket_id": "8902-QNMBXO",
+      "data_hora": "2026-08-29 12:36",
+      "casa": "Superbet",
+      "formato": "Simples",
+      "qtd_selecoes": 1,
+      "timing": "In-Play (23' 1T)",
+      "categoria_mercado": "Proximo_Gol",
+      "tempo_resolucao_alvo": "In-Play (38')",
+      "odd_total": 1.85,
+      "stake_brl": 4.64,
+      "retorno_potencial": 8.58,
+      "resultado_brl": 8.58,
+      "lucro_liquido_brl": 3.94,
+      "status": "GREEN",
+      "observacoes": "Lens marcou o 1º gol aos 38m (0x1). Simples Padrao G1 com 100% de aproveitamento do saldo residual. Retorno R$ 8.58 creditado."
+    },
+    {
+      "id": 15,
+      "ticket_id": "8910-YDVLLH",
+      "data_hora": "2026-08-29 12:34",
+      "casa": "Superbet",
+      "formato": "Múltipla",
+      "qtd_selecoes": 2,
+      "timing": "In-Play (80' 2T / 22' 1T)",
+      "categoria_mercado": "Multipla_Hibrida_InPlay",
+      "tempo_resolucao_alvo": "Full-Time (90')",
+      "odd_total": 1.66,
+      "stake_brl": 10.00,
+      "resultado_brl": 0.00,
+      "lucro_liquido_brl": -10.00,
+      "status": "RED",
+      "observacoes": "Everton empatou aos 90+2' em Bournemouth (1x1)."
+    },
     {
       "id": 13,
       "ticket_id": "890W-BOU-2G-13",
@@ -121,7 +91,7 @@
       "resultado_brl": 5.68,
       "lucro_liquido_brl": -4.32,
       "status": "CASHOUT_PARCIAL_ESTRATEGICO",
-      "observacoes": "Encerrado estrategicamente aos 77' por R$ 5.68 para resgatar capital e realocar em Dupla In-Play de Alavancagem."
+      "observacoes": "Encerrado estrategicamente aos 77' por R$ 5.68 para resgatar capital."
     },
     {
       "id": 12,
@@ -138,7 +108,7 @@
       "resultado_brl": 0.00,
       "lucro_liquido_brl": -10.00,
       "status": "RED",
-      "observacoes": "Partida encerrou em 0x0. Mainz pressionou com 18 finalizacoes mas nao furou a retranca."
+      "observacoes": "Partida encerrou em 0x0."
     },
     {
       "id": 10,
