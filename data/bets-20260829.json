@@ -1,27 +1,46 @@
 {
   "sessao_id": 5,
   "data_sessao": "2026-08-29",
-  "versao_motor": "4.0.0-PRO-QUANT (V2 OperationGuard)",
+  "versao_motor": "4.0.0-PRO-QUANT (V2 OperationGuard - MODO EXPANSÃO)",
   "banca_start_sessao": 50.00,
-  "saldo_livre_em_conta": 48.93,
-  "saldo_em_jogo": 2.50,
+  "saldo_livre_em_conta": 38.93,
+  "saldo_em_jogo": 12.50,
+  "cashouts_soma_atual": 12.50,
   "patrimonio_atual": 51.43,
-  "lucro_liquido_sessao": 1.43,
-  "roi_sessao_pct": 2.86,
+  "retorno_potencial_total_aberto": 26.03,
+  "lucro_liquido_sessao_realizado": 1.43,
+  "lucro_potencial_sessao_projetado": 14.96,
+  "banca_projetada_green_total": 64.96,
   "taxa_acerto_pct": 100.0,
-  "teto_stake_unitaria": 2.50,
-  "teto_exposicao_simultanea": 5.00,
-  "stop_gain_sessao": 15.00,
-  "stop_loss_sessao": 7.50,
+  "teto_stake_unitaria": 10.00,
+  "teto_exposicao_simultanea": 25.00,
+  "stop_gain_sessao": 35.00,
+  "stop_loss_sessao": 15.00,
   "regras_ativas": {
     "cluster_lock": true,
     "zero_margin_under_rule": true,
-    "max_stake_percent": 0.05,
-    "max_concurrent_exposure": 0.10,
-    "minimum_edge_percent": 0.10,
-    "whitelist_only": true
+    "whitelist_only": true,
+    "modo_alavancagem_lucro": true
   },
   "entradas_ativas": [
+    {
+      "id": 3,
+      "ticket_id": "891N-YJR1LT",
+      "data_hora": "2026-08-29 10:14",
+      "casa": "Superbet",
+      "partida": "Dortmund x Hamburgo + Tottenham x Newcastle",
+      "campeonato": "Bundesliga + Premier League",
+      "minuto_entrada": "Pré-Jogo (Início 13:30)",
+      "tipo": "Dupla de Elite (Múltipla 2x)",
+      "mercado": "Dortmund Vence (1) + Tottenham/Newcastle Over 2.5 Gols",
+      "selecao": "Dortmund @ 1.38 + Over 2.5 @ 1.60",
+      "odd": 2.20,
+      "stake": 10.00,
+      "retorno_potencial": 22.08,
+      "cashout_atual": 10.00,
+      "status": "EM ABERTO",
+      "justificativa_quant": "Dortmund soberano em casa contra Hamburgo + Clássico ofensivo de altíssimo xG na Premier League (Tottenham x Newcastle com média >3.2 gols/jogo). +EV combinado 24.5%."
+    },
     {
       "id": 2,
       "ticket_id": "8909-QNZ0CT",
@@ -30,7 +49,7 @@
       "partida": "Elversberg x Bayer Leverkusen",
       "campeonato": "Bundesliga (Alemanha)",
       "minuto_entrada": "Pré-Jogo (Início 10:30)",
-      "tipo": "Pré-Jogo",
+      "tipo": "Simples Pré-Jogo",
       "mercado": "Resultado Final (1X2)",
       "selecao": "Bayer Leverkusen Vence (2)",
       "odd": 1.58,
@@ -38,7 +57,7 @@
       "retorno_potencial": 3.95,
       "cashout_atual": 2.50,
       "status": "EM ABERTO",
-      "justificativa_quant": "Leverkusen campeão e amplamente favorito contra Elversberg; modelo Dixon-Coles projeta probabilidade de vitória de 68% com valor de linha institucional (+EV 7.4% a 10%). Cluster Lock respeitado."
+      "justificativa_quant": "Leverkusen campeão e amplamente favorito contra Elversberg; modelo Dixon-Coles projeta probabilidade de vitória de 68% com valor de linha institucional (+EV 7.4% a 10%)."
     }
   ],
   "entradas_liquidadas": [
