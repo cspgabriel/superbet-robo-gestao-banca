@@ -4,13 +4,42 @@
   "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
   "diretriz_operacional": "BILLY WALTERS VALUE ENGINE - 100% SIMPLES IN-PLAY GREEN MACHINE",
   "banca_start_sessao": 50.00,
-  "saldo_livre_em_conta": 38.96,
-  "saldo_em_jogo": 0.00,
+  "saldo_livre_em_conta": 28.96,
+  "saldo_em_jogo": 10.00,
   "patrimonio_atual": 38.96,
-  "retorno_potencial_total_aberto": 0.00,
+  "retorno_potencial_total_aberto": 21.50,
   "lucro_liquido_sessao_realizado": 15.06,
   "taxa_acerto_simples_pct": 100.0,
-  "entradas_ativas": [],
+  "entradas_ativas": [
+    {
+      "id": 12,
+      "ticket_id": "890M-MAI-1G-12",
+      "data_hora": "2026-08-29 11:56",
+      "casa": "Superbet",
+      "formato": "Simples",
+      "qtd_selecoes": 1,
+      "timing": "In-Play (68' 2T • Bola Rolando)",
+      "categoria_mercado": "Proximo_Gol",
+      "tempo_resolucao_alvo": "In-Play (90')",
+      "odd_total": 2.15,
+      "stake_brl": 10.00,
+      "retorno_potencial": 21.50,
+      "cashout_atual": 10.00,
+      "status": "EM ABERTO",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "Mainz x Paderborn",
+          "campeonato": "Bundesliga (Alemanha)",
+          "mercado": "1º Gol",
+          "selecao": "Mainz Marca o 1º Gol",
+          "odd_individual": 2.15,
+          "status_perna": "Em andamento (0x0 aos 68' com bola rolando)"
+        }
+      ],
+      "justificativa_quant": "Simples Padrao G1 Billy Walters com Bola Rolando. Mainz amassando na MEWA Arena (63% posse, 14 finalizacoes vs 3). Odd 2.15 com +EV de +18.5%."
+    }
+  ],
   "entradas_liquidadas": [
     {
       "id": 10,
