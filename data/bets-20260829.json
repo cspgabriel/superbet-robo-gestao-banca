@@ -2,13 +2,13 @@
   "sessao_id": 5,
   "data_sessao": "2026-08-29",
   "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
-  "diretriz_operacional": "FASE 5 ATIVA - TICKET #23 E #24 GREEN (+R$ 23.61 LUCRO NO GALO) - TICKET #26 (SÃO PAULO VENCE @ 2.50) ATIVO - SALDO LIVRE R$ 31.61 - PATRIMONIO R$ 46.61",
+  "diretriz_operacional": "FASE 5 ATIVA - 2 TICKETS DE ELITE ATIVOS (TICKET #26 SÃO PAULO @ 2.50 E TICKET #27 HURACÁN 3G @ 2.05) - RETORNO POTENCIAL R$ 58.00 - SALDO LIVRE R$ 21.61",
   "banca_start_sessao": 50.00,
   "deposito_adicional_brl": 61.00,
-  "saldo_livre_em_conta": 31.61,
-  "saldo_em_jogo": 15.00,
+  "saldo_livre_em_conta": 21.61,
+  "saldo_em_jogo": 25.00,
   "patrimonio_atual": 46.61,
-  "retorno_potencial_total_aberto": 37.50,
+  "retorno_potencial_total_aberto": 58.00,
   "lucro_liquido_sessao_realizado": 12.29,
   "meta_goal_final_brl": 500.00,
   "taxa_acerto_simples_pct": 77.8,
@@ -26,7 +26,7 @@
       "odd_total": 2.50,
       "stake_brl": 15.00,
       "retorno_potencial": 37.50,
-      "cashout_atual": 15.00,
+      "cashout_atual": 14.46,
       "status": "EM ABERTO",
       "selecoes_detalhadas": [
         {
@@ -36,10 +36,38 @@
           "mercado": "Resultado Final",
           "selecao": "São Paulo Vence",
           "odd_individual": 2.50,
-          "status_perna": "Pre-Jogo (Início 20h00)"
+          "status_perna": "In-Play (Início 20h00 MorumBIS)"
         }
       ],
       "justificativa_quant": "Tiro Institucional Padrão G1 da Fase 5. São Paulo fortíssimo no MorumBIS buscando o G4 vs Bragantino instável fora de casa. Odd 2.50 possui +EV de +18.4% com recurso SuperPlacar (pagamento antecipado com 2 gols de vantagem)."
+    },
+    {
+      "id": 27,
+      "ticket_id": "8902-QNMRR2",
+      "data_hora": "2026-08-29 20:00",
+      "casa": "Superbet",
+      "formato": "Simples",
+      "qtd_selecoes": 1,
+      "timing": "In-Play (45' HT)",
+      "categoria_mercado": "Proximo_Gol",
+      "tempo_resolucao_alvo": "In-Play (20h50)",
+      "odd_total": 2.05,
+      "stake_brl": 10.00,
+      "retorno_potencial": 20.50,
+      "cashout_atual": 9.26,
+      "status": "EM ABERTO",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "Huracán x Estudiantes Rio Cuarto",
+          "campeonato": "Primeira Divisão (Argentina)",
+          "mercado": "3º Gol",
+          "selecao": "Huracán",
+          "odd_individual": 2.05,
+          "status_perna": "In-Play (1x1 2T)"
+        }
+      ],
+      "justificativa_quant": "Huracán em casa no Parque Patricios pressionando no 2T contra time vindo da Série B. Odd 2.05 no próximo gol com alto +EV."
     }
   ],
   "entradas_liquidadas": [
