@@ -2,17 +2,18 @@
   "sessao_id": 5,
   "data_sessao": "2026-08-29",
   "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
-  "diretriz_operacional": "BILLY WALTERS VALUE ENGINE - GREEN CONFIRMADO NO TICKET #17 (R$ 13.41 CREDITADO) - SALDO R$ 29.41 LIVRE",
+  "diretriz_operacional": "BILLY WALTERS VALUE ENGINE - GREEN CONFIRMADO NO TICKET #20 (DORTMUND VENCEU 2X0 - RETORNO R$ 19.95) - SALDO LIVRE R$ 49.36",
   "banca_start_sessao": 50.00,
   "deposito_adicional_brl": 61.00,
-  "saldo_livre_em_conta": 29.41,
-  "saldo_em_jogo": 55.00,
-  "patrimonio_atual": 84.41,
-  "retorno_potencial_total_aberto": 109.34,
-  "lucro_liquido_sessao_realizado": 9.51,
+  "saldo_livre_em_conta": 49.36,
+  "saldo_em_jogo": 0.00,
+  "patrimonio_atual": 49.36,
+  "retorno_potencial_total_aberto": 0.00,
+  "lucro_liquido_sessao_realizado": 14.46,
   "meta_goal_final_brl": 500.00,
-  "taxa_acerto_simples_pct": 83.3,
-  "entradas_ativas": [
+  "taxa_acerto_simples_pct": 71.4,
+  "entradas_ativas": [],
+  "entradas_liquidadas": [
     {
       "id": 20,
       "ticket_id": "890D-BVB-WIN-20",
@@ -26,20 +27,10 @@
       "odd_total": 1.33,
       "stake_brl": 15.00,
       "retorno_potencial": 19.95,
-      "cashout_atual": 15.00,
-      "status": "EM ABERTO",
-      "selecoes_detalhadas": [
-        {
-          "perna": 1,
-          "partida": "Borussia Dortmund x Hamburgo",
-          "campeonato": "Bundesliga (Alemanha)",
-          "mercado": "Resultado Final",
-          "selecao": "Borussia Dortmund Vence a Partida",
-          "odd_individual": 1.33,
-          "status_perna": "Inicia às 13h30"
-        }
-      ],
-      "justificativa_quant": "Simples Institucional Padrao G1. Dortmund no Signal Iduna Park com forca maxima vs Hamburgo fragil fora de casa. Odd 1.33 com probabilidade real de 82.5%."
+      "resultado_brl": 19.95,
+      "lucro_liquido_brl": 4.95,
+      "status": "GREEN",
+      "observacoes": "Borussia Dortmund venceu o Hamburgo por 2x0. Simples Institucional Padrao G1 confirmada com retorno de R$ 19.95 creditado integralmente no saldo livre!"
     },
     {
       "id": 19,
@@ -53,21 +44,10 @@
       "tempo_resolucao_alvo": "Full-Time (15h25)",
       "odd_total": 1.63,
       "stake_brl": 15.00,
-      "retorno_potencial": 24.45,
-      "cashout_atual": 15.00,
-      "status": "EM ABERTO",
-      "selecoes_detalhadas": [
-        {
-          "perna": 1,
-          "partida": "Tottenham x Newcastle",
-          "campeonato": "Premier League (Inglaterra)",
-          "mercado": "Total de Gols",
-          "selecao": "Mais de 2.5 Gols na Partida",
-          "odd_individual": 1.63,
-          "status_perna": "Inicia às 13h30"
-        }
-      ],
-      "justificativa_quant": "Simples Institucional +EV. Spurs de De Zerbi com linha alta e Newcastle vertical geram media de 3.4 gols por jogo no confronto direto. Odd 1.63 com +EV de +14%."
+      "resultado_brl": 0.00,
+      "lucro_liquido_brl": -15.00,
+      "status": "RED",
+      "observacoes": "Tottenham 0 x 2 Newcastle. Partida encerrou com 2 gols (Under 2.5)."
     },
     {
       "id": 18,
@@ -81,39 +61,10 @@
       "tempo_resolucao_alvo": "Full-Time (15h25)",
       "odd_total": 2.72,
       "stake_brl": 15.00,
-      "retorno_potencial": 40.94,
-      "cashout_atual": 12.70,
-      "status": "EM ABERTO",
-      "selecoes_detalhadas": [
-        {
-          "perna": 1,
-          "partida": "Borussia Dortmund x Hamburgo",
-          "campeonato": "Bundesliga (Alemanha)",
-          "mercado": "Resultado Final",
-          "selecao": "Borussia Dortmund Vence",
-          "odd_individual": 1.33,
-          "status_perna": "Inicia às 13h30"
-        },
-        {
-          "perna": 2,
-          "partida": "Tottenham x Newcastle",
-          "campeonato": "Premier League (Inglaterra)",
-          "mercado": "Total de Gols",
-          "selecao": "Mais de 1.5 Gols na Partida",
-          "odd_individual": 1.20,
-          "status_perna": "Inicia às 13h30"
-        },
-        {
-          "perna": 3,
-          "partida": "Fiorentina x Frosinone",
-          "campeonato": "Serie A (Itália)",
-          "mercado": "Resultado Final",
-          "selecao": "Fiorentina Vence a Partida",
-          "odd_individual": 1.71,
-          "status_perna": "Inicia às 13h30"
-        }
-      ],
-      "justificativa_quant": "Multipla Blindada 3-Pernas da Fase 2. Dortmund forte em casa, Tottenham jogo aberto de gols e Fiorentina buscando reabilitacao no Artemio Franchi. Odd combinada 2.72 com alto +EV."
+      "resultado_brl": 0.00,
+      "lucro_liquido_brl": -15.00,
+      "status": "RED",
+      "observacoes": "Dortmund venceu (Green), Tottenham bateu Over 1.5 (Green), Fiorentina perdeu 0x3 (Red)."
     },
     {
       "id": 14,
@@ -122,29 +73,16 @@
       "casa": "Superbet",
       "formato": "Simples",
       "qtd_selecoes": 1,
-      "timing": "In-Play (8' 1T • Bola Rolando)",
+      "timing": "In-Play (8' 1T)",
       "categoria_mercado": "Resultado_Final_1X2",
       "tempo_resolucao_alvo": "Full-Time (90')",
       "odd_total": 2.40,
       "stake_brl": 10.00,
-      "retorno_potencial": 24.00,
-      "cashout_atual": 0.00,
-      "status": "EM ABERTO",
-      "selecoes_detalhadas": [
-        {
-          "perna": 1,
-          "partida": "Levante x Real Betis",
-          "campeonato": "La Liga (Espanha)",
-          "mercado": "Resultado Final",
-          "selecao": "Real Betis Vence a Partida",
-          "odd_individual": 2.40,
-          "status_perna": "Em andamento (3x2 no 2T)"
-        }
-      ],
-      "justificativa_quant": "Simples Padrao G1 Billy Walters em Mercado 1X2. Betis empatou em 2x2 antes do intervalo e domina a posse e finalizacoes. Odd 2.40 com +EV."
-    }
-  ],
-  "entradas_liquidadas": [
+      "resultado_brl": 0.00,
+      "lucro_liquido_brl": -10.00,
+      "status": "RED",
+      "observacoes": "Levante 5 x 2 Betis."
+    },
     {
       "id": 17,
       "ticket_id": "890W-QI3CGG",
