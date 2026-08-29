@@ -4,13 +4,41 @@
   "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
   "diretriz_operacional": "BILLY WALTERS VALUE ENGINE - 3 STAKES DE R$ 10.00 DESCORRELACIONADAS",
   "banca_start_sessao": 50.00,
-  "saldo_livre_em_conta": 20.39,
-  "saldo_em_jogo": 24.35,
+  "saldo_livre_em_conta": 10.39,
+  "saldo_em_jogo": 34.35,
   "patrimonio_atual": 44.74,
-  "retorno_potencial_total_aberto": 39.04,
+  "retorno_potencial_total_aberto": 58.24,
   "lucro_liquido_sessao_realizado": 6.06,
   "taxa_acerto_simples_pct": 100.0,
   "entradas_ativas": [
+    {
+      "id": 11,
+      "ticket_id": "890W-BOU-O25-11",
+      "data_hora": "2026-08-29 11:49",
+      "casa": "Superbet",
+      "formato": "Simples",
+      "qtd_selecoes": 1,
+      "timing": "In-Play (Intervalo)",
+      "categoria_mercado": "Total_Gols_OverUnder_FT",
+      "tempo_resolucao_alvo": "Full-Time (90')",
+      "odd_total": 1.92,
+      "stake_brl": 10.00,
+      "retorno_potencial": 19.20,
+      "cashout_atual": 10.00,
+      "status": "EM ABERTO",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "Bournemouth x Everton",
+          "campeonato": "Premier League (Inglaterra)",
+          "mercado": "Total de Gols",
+          "selecao": "Mais de 2.5 Gols na Partida",
+          "odd_individual": 1.92,
+          "status_perna": "Em andamento (1x0 no intervalo)"
+        }
+      ],
+      "justificativa_quant": "Simples Padrao G1 Billy Walters. Everton obrigado a adiantar as linhas no 2T abrindo contra-ataques do Bournemouth e bolas paradas. Odd 1.92 com +EV de +13.5%."
+    },
     {
       "id": 10,
       "ticket_id": "890V-LEI-3G-10",
