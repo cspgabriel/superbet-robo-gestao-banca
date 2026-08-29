@@ -2,13 +2,13 @@
   "sessao_id": 5,
   "data_sessao": "2026-08-29",
   "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
-  "diretriz_operacional": "FASE 4 ATIVA - TICKET #23 (ATLETICO-MG VENCE @ 1.95) ABERTO - CAIXA R$ 8.58 LIVRE - PATRIMONIO R$ 23.58",
+  "diretriz_operacional": "FASE 4 ATIVA - 3 TICKETS ATIVOS (TICKET #23, #24 NO GALO E #25 MEGA MULTIPLA QUÂNTICA) - RETORNO POTENCIAL R$ 77.10",
   "banca_start_sessao": 50.00,
   "deposito_adicional_brl": 61.00,
-  "saldo_livre_em_conta": 8.58,
-  "saldo_em_jogo": 15.00,
+  "saldo_livre_em_conta": 0.00,
+  "saldo_em_jogo": 23.58,
   "patrimonio_atual": 23.58,
-  "retorno_potencial_total_aberto": 29.25,
+  "retorno_potencial_total_aberto": 77.10,
   "lucro_liquido_sessao_realizado": -11.32,
   "meta_goal_final_brl": 500.00,
   "taxa_acerto_simples_pct": 71.4,
@@ -26,7 +26,7 @@
       "odd_total": 1.95,
       "stake_brl": 15.00,
       "retorno_potencial": 29.25,
-      "cashout_atual": 15.00,
+      "cashout_atual": 22.05,
       "status": "EM ABERTO",
       "selecoes_detalhadas": [
         {
@@ -36,10 +36,102 @@
           "mercado": "Resultado Final",
           "selecao": "Atlético-MG Vence",
           "odd_individual": 1.95,
-          "status_perna": "Pre-Jogo (Início 18h30)"
+          "status_perna": "In-Play (Galo 1x0 Vitória 58')"
         }
       ],
-      "justificativa_quant": "Tiro de Elite da Fase 4. Galo muito forte na Arena MRV com probabilidade real estimada em 58% vs odd implícita de 51% (@ 1.95), gerando alto +EV institucional. Gestão de risco preservando R$ 8.58 no caixa."
+      "justificativa_quant": "Tiro de Elite da Fase 4. Galo muito forte na Arena MRV com probabilidade real estimada em 58% vs odd implícita de 51% (@ 1.95), gerando alto +EV institucional."
+    },
+    {
+      "id": 24,
+      "ticket_id": "8902-QNMBSB",
+      "data_hora": "2026-08-29 19:27",
+      "casa": "Superbet",
+      "formato": "Simples",
+      "qtd_selecoes": 1,
+      "timing": "In-Play (Intervalo 45')",
+      "categoria_mercado": "Proximo_Gol",
+      "tempo_resolucao_alvo": "Full-Time (20h25)",
+      "odd_total": 2.17,
+      "stake_brl": 8.00,
+      "retorno_potencial": 17.36,
+      "cashout_atual": 6.32,
+      "status": "EM ABERTO",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "Atlético-MG x Vitória BA",
+          "campeonato": "Brasileirão Série A",
+          "mercado": "2º Gol",
+          "selecao": "Atlético-MG",
+          "odd_individual": 2.17,
+          "status_perna": "In-Play (Galo 1x0 Vitória 58')"
+        }
+      ],
+      "justificativa_quant": "Galo pressionando no 2T na Arena MRV contra o Vitória com linhas descompactadas."
+    },
+    {
+      "id": 25,
+      "ticket_id": "891C-YH95XG",
+      "data_hora": "2026-08-29 19:45",
+      "casa": "Superbet",
+      "formato": "Múltipla",
+      "qtd_selecoes": 5,
+      "timing": "In-Play",
+      "categoria_mercado": "Multipla_Hibrida_Quant",
+      "tempo_resolucao_alvo": "In-Play (20h15 - 20h45)",
+      "odd_total": 47.03,
+      "stake_brl": 0.58,
+      "retorno_potencial": 30.49,
+      "cashout_atual": 0.36,
+      "status": "EM ABERTO",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "Botafogo SP x Cuiabá",
+          "campeonato": "Brasileirão Série B",
+          "mercado": "1º Gol",
+          "selecao": "Nenhuma equipe",
+          "odd_individual": 2.15,
+          "status_perna": "In-Play (0x0 54')"
+        },
+        {
+          "perna": 2,
+          "partida": "Jaguares de Cordoba x América de Cali",
+          "campeonato": "Primera A (Colômbia)",
+          "mercado": "4º Gol",
+          "selecao": "América de Cali",
+          "odd_individual": 1.65,
+          "status_perna": "In-Play (2x1 55')"
+        },
+        {
+          "perna": 3,
+          "partida": "Huracán x Estudiantes Rio Cuarto",
+          "campeonato": "Primeira Divisão (Argentina)",
+          "mercado": "3º Gol",
+          "selecao": "Huracán",
+          "odd_individual": 2.00,
+          "status_perna": "In-Play (1x1 45' HT)"
+        },
+        {
+          "perna": 4,
+          "partida": "Guayaquil City x LDU Quito",
+          "campeonato": "Série A (Equador)",
+          "mercado": "3º Gol",
+          "selecao": "LDU Quito",
+          "odd_individual": 2.55,
+          "status_perna": "In-Play (1x1 77')"
+        },
+        {
+          "perna": 5,
+          "partida": "Unión Española x Rangers Talca",
+          "campeonato": "Primeira B (Chile)",
+          "mercado": "2º Gol",
+          "selecao": "Unión Española",
+          "odd_individual": 2.60,
+          "status_perna": "In-Play (0x1 58')"
+        }
+      ],
+      "justificativa_quant": "Mega Múltipla Quântica construída com R$ 0.58 aproveitando bônus de 12% SuperMúltipla. Mercados diversificados baseados nos perfis de cada liga (Série B Under, favoritos atacando em desvantagem, 3º gol mandante/potência)."
     }
   ],
   "entradas_liquidadas": [
