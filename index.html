@@ -71,7 +71,7 @@
 
   <div class="max-w-7xl mx-auto space-y-8">
 
-    <!-- TOP HEADER -->
+    <!-- 1. TOP HEADER -->
     <header class="glass-card rounded-2xl p-5 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
       <div class="flex items-center gap-3">
         <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-500 glow-green">
@@ -82,7 +82,7 @@
             <h1 class="text-xl font-black text-white tracking-tight">Automaton Quant Trader &middot; Superbet</h1>
             <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-brand-500/20 text-brand-500 border border-brand-500/40 flex items-center gap-1.5 font-mono">
               <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span>
-              DIA 1 BATIDO: +35.6% (R$ 67,80)
+              DIA 1 BATIDO: +37.8% (R$ 68,92)
             </span>
           </div>
           <p class="text-xs text-gray-400 font-medium">Rentabilidade Composta 20% a.d. &middot; De R$ 50 a R$ 11.868 em 30 Dias</p>
@@ -92,11 +92,11 @@
       <div class="flex flex-wrap items-center gap-2">
         <div class="px-3 py-1.5 rounded-xl bg-dark-700/80 border border-white/5 text-xs text-gray-300 flex items-center gap-2 font-mono">
           <i data-lucide="wallet" class="w-3.5 h-3.5 text-brand-400"></i>
-          <span>Saldo Livre: R$ 20,00 | Cashouts: R$ 47,80</span>
+          <span>Saldo Livre: R$ 20,00 | Cashouts: R$ 48,92</span>
         </div>
         <div class="px-3 py-1.5 rounded-xl bg-brand-500/10 border border-brand-500/30 text-xs font-bold text-brand-400 flex items-center gap-1.5 font-mono glow-green">
           <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
-          Patrimônio Realizável: R$ 67,80 🎯
+          Patrimônio Realizável: R$ 68,92 🎯
         </div>
         <button onclick="window.location.reload()" class="px-3.5 py-1.5 rounded-xl bg-brand-500 text-dark-900 font-bold text-xs flex items-center gap-1.5 hover:bg-brand-600 transition shadow-lg shadow-brand-500/20">
           <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
@@ -105,7 +105,113 @@
       </div>
     </header>
 
-    <!-- BLOCO: PROJEÇÃO DE RENTABILIDADE COMPOSTA DE 20% AO DIA -->
+    <!-- 2. CARDS DE RESUMO DE PERFORMANCE (BANCA INICIAL, GREENS, REDS, CASHOUTS, PATRIMÔNIO) -->
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+      <!-- CARD BANCA INICIAL -->
+      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-blue-500">
+        <div class="flex items-center justify-between">
+          <div class="text-xs font-bold font-mono uppercase tracking-wider text-blue-400 flex items-center gap-1.5">
+            <i data-lucide="landmark" class="w-4 h-4 text-blue-400"></i>
+            Banca Inicial
+          </div>
+          <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-400 font-mono text-[10px] font-bold">START</span>
+        </div>
+        <div class="text-3xl font-black text-white font-mono mt-2">R$ 50,00</div>
+        <div class="text-xs text-blue-300 font-mono mt-1 font-semibold">Capital Base Alocado</div>
+      </div>
+
+      <!-- CARD GREENS -->
+      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-brand-500 glow-green">
+        <div class="flex items-center justify-between">
+          <div class="text-xs font-bold font-mono uppercase tracking-wider text-brand-400 flex items-center gap-1.5">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500"></i>
+            Total de Greens
+          </div>
+          <span class="px-2 py-0.5 rounded bg-brand-500/20 text-brand-400 font-mono text-[10px] font-bold">60.0% WIN</span>
+        </div>
+        <div class="text-3xl font-black text-white font-mono mt-2">6 GREENS</div>
+        <div class="text-xs text-brand-400 font-mono mt-1 font-semibold">+R$ 46,29 Ganho Bruto</div>
+      </div>
+
+      <!-- CARD REDS -->
+      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-red-500">
+        <div class="flex items-center justify-between">
+          <div class="text-xs font-bold font-mono uppercase tracking-wider text-red-400 flex items-center gap-1.5">
+            <i data-lucide="x-circle" class="w-4 h-4 text-red-500"></i>
+            Total de Reds
+          </div>
+          <span class="px-2 py-0.5 rounded bg-red-500/20 text-red-400 font-mono text-[10px] font-bold">40.0% LOSS</span>
+        </div>
+        <div class="text-3xl font-black text-red-400 font-mono mt-2">4 REDS</div>
+        <div class="text-xs text-red-300 font-mono mt-1 font-semibold">-R$ 23,85 Auditadas</div>
+      </div>
+
+      <!-- CARD CASHOUTS TÁTICOS -->
+      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-purple-500">
+        <div class="flex items-center justify-between">
+          <div class="text-xs font-bold font-mono uppercase tracking-wider text-purple-400 flex items-center gap-1.5">
+            <i data-lucide="shield" class="w-4 h-4 text-purple-400"></i>
+            Cashouts Ativos
+          </div>
+          <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-400 font-mono text-[10px] font-bold">2 GREEN</span>
+        </div>
+        <div class="text-3xl font-black text-purple-400 font-mono mt-2">R$ 48,92</div>
+        <div class="text-xs text-purple-300 font-mono mt-1 font-semibold">+R$ 12,96 Lucro Travado</div>
+      </div>
+
+      <!-- CARD PATRIMÔNIO ATUAL REALIZÁVEL -->
+      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-emerald-400 glow-green">
+        <div class="flex items-center justify-between">
+          <div class="text-xs font-bold font-mono uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
+            <i data-lucide="target" class="w-4 h-4 text-emerald-400"></i>
+            Patrimônio Atual
+          </div>
+          <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-mono text-[10px] font-bold">+37.8%</span>
+        </div>
+        <div class="text-3xl font-black text-emerald-400 font-mono mt-2">R$ 68,92</div>
+        <div class="text-xs text-emerald-300 font-mono mt-1 font-semibold">Alvo Final: R$ 127,06 🎯</div>
+      </div>
+    </div>
+
+    <!-- 3. GRÁFICOS: CURVA DE CRESCIMENTO DA BANCA & GRÁFICO DONUT -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="glass-card rounded-2xl p-6 lg:col-span-2 space-y-4">
+        <div class="flex justify-between items-center">
+          <div>
+            <h3 class="text-base font-bold text-white flex items-center gap-2">
+              <i data-lucide="line-chart" class="w-4 h-4 text-brand-400"></i>
+              Evolução da Banca (R$) &middot; Histórico dos 14 Tickets vs Meta
+            </h3>
+            <p class="text-xs text-gray-400">Linha contínua verde = saldo real consolidado &middot; Linha tracejada roxa = Meta de R$ 100,00</p>
+          </div>
+          <span class="text-xs font-mono px-2.5 py-1 rounded bg-brand-500/20 text-brand-400 font-bold">R$ 68,92 ATUAL</span>
+        </div>
+        <div class="relative h-64 w-full">
+          <canvas id="bankrollChart"></canvas>
+        </div>
+      </div>
+
+      <div class="glass-card rounded-2xl p-6 space-y-4">
+        <div>
+          <h3 class="text-base font-bold text-white flex items-center gap-2">
+            <i data-lucide="pie-chart" class="w-4 h-4 text-purple-400"></i>
+            Distribuição de Ordens
+          </h3>
+          <p class="text-xs text-gray-400">Greens, Reds, Cashouts e Em Aberto</p>
+        </div>
+        <div class="relative h-44 w-full flex items-center justify-center">
+          <canvas id="distributionChart"></canvas>
+        </div>
+        <div class="grid grid-cols-2 gap-2 text-xs font-mono pt-2 border-t border-white/5">
+          <div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-brand-500"></span> 6 Greens (43%)</div>
+          <div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-red-500"></span> 4 Reds (29%)</div>
+          <div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-purple-500"></span> 2 Cashouts (14%)</div>
+          <div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span> 2 Em Aberto (14%)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. BLOCO: PROJEÇÃO DE RENTABILIDADE COMPOSTA DE 20% AO DIA -->
     <div class="glass-card rounded-2xl p-6 border-l-4 border-l-brand-500 space-y-6 glow-green">
       <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
@@ -119,8 +225,8 @@
         </div>
         <div class="text-right font-mono bg-dark-900/80 p-3 rounded-xl border border-white/5">
           <div class="text-[10px] font-bold text-gray-400 uppercase">Dia 1 (Hoje) Status</div>
-          <div class="text-2xl font-black text-brand-400">R$ 67,80</div>
-          <div class="text-[11px] text-brand-500 font-bold">+35.6% (Meta 20% Superada!)</div>
+          <div class="text-2xl font-black text-brand-400">R$ 68,92</div>
+          <div class="text-[11px] text-brand-500 font-bold">+37.8% (Meta 20% Superada!)</div>
         </div>
       </div>
 
@@ -128,7 +234,7 @@
       <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 font-mono text-xs">
         <div class="bg-brand-500/10 p-3 rounded-xl border border-brand-500/30">
           <div class="text-brand-400 font-bold text-[11px]">DIA 1 (HOJE) 🎯</div>
-          <div class="text-lg font-black text-white mt-1">R$ 67,80</div>
+          <div class="text-lg font-black text-white mt-1">R$ 68,92</div>
           <div class="text-[10px] text-brand-400 font-semibold mt-0.5">Meta: R$ 60,00 (Superada!)</div>
         </div>
         <div class="bg-dark-900/60 p-3 rounded-xl border border-white/5">
@@ -154,7 +260,7 @@
       </div>
     </div>
 
-    <!-- LIVE DUAL IN-PLAY ACTIVE POSITION CARDS WITH CASHOUT AUDIT (GREEN / RED / NEUTRO) -->
+    <!-- 5. LIVE DUAL IN-PLAY ACTIVE POSITION CARDS WITH CASHOUT AUDIT (GREEN / RED / NEUTRO) -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
       <!-- CARD 1: TICKET #SB-14 -->
@@ -247,7 +353,7 @@
             <div class="text-[10px] text-gray-400 uppercase font-bold">Status do Cashout Atual</div>
             <div class="text-lg font-black text-purple-400 flex items-center gap-1.5 mt-0.5">
               <i data-lucide="arrow-up-right" class="w-4 h-4 text-purple-400"></i>
-              R$ 24,14 &middot; <span class="px-2 py-0.5 rounded bg-brand-500/20 text-brand-400 text-xs font-extrabold border border-brand-500/40">GREEN (+R$ 8,18 / +51.3%)</span>
+              R$ 25,26 &middot; <span class="px-2 py-0.5 rounded bg-brand-500/20 text-brand-400 text-xs font-extrabold border border-brand-500/40">GREEN (+R$ 9,30 / +58.3%)</span>
             </div>
           </div>
           <div class="text-right text-xs">
@@ -259,7 +365,150 @@
 
     </div>
 
-    <!-- LIVRO DE ORDENS COM STATUS DE CASHOUT EXPLICITO (GREEN / RED / NEUTRO) -->
+    <!-- 6. TIPSTER SKILLS & METODOLOGIAS QUANTITATIVAS (TODOS OS 6 CARDS COM FÓRMULAS KATEX) -->
+    <div class="glass-card rounded-2xl p-6 space-y-6">
+      <div>
+        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+          <i data-lucide="brain-circuit" class="w-5 h-5 text-purple-400"></i>
+          Tipster Skills &amp; Metodologias Quantitativas
+        </h3>
+        <p class="text-xs text-gray-400">Modelos matemáticos e regras de execução algorítmica utilizadas nas operações</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- SKILL 1 -->
+        <div class="bg-dark-900/60 p-4 rounded-xl border border-white/5 space-y-2">
+          <div class="flex items-center gap-2 text-brand-400 font-bold text-xs font-mono uppercase">
+            <i data-lucide="activity" class="w-4 h-4"></i>
+            1. Dixon-Coles Poisson
+          </div>
+          <p class="text-xs text-gray-300">
+            Modelagem bivariada com ajuste de baixa contagem de gols (0x0, 1x0, 0x1) e ponderação temporal exponencial para calcular probabilidade real de gols in-play.
+          </p>
+          <div class="text-[11px] font-mono text-gray-400 bg-dark-950/80 p-2 rounded border border-white/5">
+            $$P(X=x, Y=y) = \tau_{\lambda,\mu}(x,y) e^{-(\lambda+\mu)} \frac{\lambda^x \mu^y}{x! y!}$$
+          </div>
+        </div>
+
+        <!-- SKILL 2 -->
+        <div class="bg-dark-900/60 p-4 rounded-xl border border-white/5 space-y-2">
+          <div class="flex items-center gap-2 text-purple-400 font-bold text-xs font-mono uppercase">
+            <i data-lucide="clock" class="w-4 h-4"></i>
+            2. In-Play Time Decay
+          </div>
+          <p class="text-xs text-gray-300">
+            Decaimento exponencial do valor de Over/Under conforme o tempo de jogo se esgota sem alteração de xG, capturando valor residual quando as odds demoram a ajustar.
+          </p>
+          <div class="text-[11px] font-mono text-gray-400 bg-dark-950/80 p-2 rounded border border-white/5">
+            $$V(t) = V_0 \cdot e^{-\gamma (T - t)} \cdot (1 - \text{xG}_{\text{residual}})$$
+          </div>
+        </div>
+
+        <!-- SKILL 3 -->
+        <div class="bg-dark-900/60 p-4 rounded-xl border border-white/5 space-y-2">
+          <div class="flex items-center gap-2 text-blue-400 font-bold text-xs font-mono uppercase">
+            <i data-lucide="trending-up" class="w-4 h-4"></i>
+            3. Bellman Cashout
+          </div>
+          <p class="text-xs text-gray-300">
+            Equação de Parada Ótima de Bellman para calcular se o valor de cashout oferecido pela casa supera a utilidade esperada de manter a aposta até o apito final.
+          </p>
+          <div class="text-[11px] font-mono text-gray-400 bg-dark-950/80 p-2 rounded border border-white/5">
+            $$V^*(s) = \max \left( C(s), \mathbb{E}[V^*(s')] \right)$$
+          </div>
+        </div>
+
+        <!-- SKILL 4 -->
+        <div class="bg-dark-900/60 p-4 rounded-xl border border-white/5 space-y-2">
+          <div class="flex items-center gap-2 text-amber-400 font-bold text-xs font-mono uppercase">
+            <i data-lucide="pie-chart" class="w-4 h-4"></i>
+            4. Fractional Kelly
+          </div>
+          <p class="text-xs text-gray-300">
+            Dimensionamento dinâmico de stake baseado na probabilidade implícita vs probabilidade calculada, ajustado pelo nível de sobrevivência do Automaton (0.10f* a 0.25f*).
+          </p>
+          <div class="text-[11px] font-mono text-gray-400 bg-dark-950/80 p-2 rounded border border-white/5">
+            $$f^* = \alpha \cdot \frac{b \cdot p - q}{b}, \quad \alpha \in [0.10, 0.25]$$
+          </div>
+        </div>
+
+        <!-- SKILL 5 -->
+        <div class="bg-dark-900/60 p-4 rounded-xl border border-white/5 space-y-2">
+          <div class="flex items-center gap-2 text-emerald-400 font-bold text-xs font-mono uppercase">
+            <i data-lucide="shield-check" class="w-4 h-4"></i>
+            5. Zero Cross-Exposure
+          </div>
+          <p class="text-xs text-gray-300">
+            Controle estrito de correlação: proibido apostar em mercados correlacionados negativamente no mesmo evento ou alocar mais de 25% da banca no mesmo campeonato simultaneamente.
+          </p>
+          <div class="text-[11px] font-mono text-gray-400 bg-dark-950/80 p-2 rounded border border-white/5">
+            $$\text{Corr}(E_i, E_j) \le 0.30, \quad \sum \text{Exposure}_{\text{liga}} \le 0.25 \cdot B$$
+          </div>
+        </div>
+
+        <!-- SKILL 6 -->
+        <div class="bg-dark-900/60 p-4 rounded-xl border border-white/5 space-y-2">
+          <div class="flex items-center gap-2 text-cyan-400 font-bold text-xs font-mono uppercase">
+            <i data-lucide="radar" class="w-4 h-4"></i>
+            6. Steam Tracking
+          </div>
+          <p class="text-xs text-gray-300">
+            Rastreamento de movimentação rápida de odds (steam chasers) e dinheiro inteligente em casas asiáticas (Pinnacle/Singbet) antes do ajuste na Superbet.
+          </p>
+          <div class="text-[11px] font-mono text-gray-400 bg-dark-950/80 p-2 rounded border border-white/5">
+            $$\Delta \text{Odd}_{\text{Sharp}} > 0.08 \implies \text{Trigger Superbet in } \Delta t < 15\text{s}$$
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. CONSTITUIÇÃO AUTOMATON DO BOT QUANTITATIVO (AS 3 LEIS IMUTÁVEIS) -->
+    <div class="glass-card rounded-2xl p-6 space-y-6">
+      <div>
+        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+          <i data-lucide="scale" class="w-5 h-5 text-brand-500"></i>
+          Constituição Automaton do Bot Quantitativo
+        </h3>
+        <p class="text-xs text-gray-400">As Três Leis Imutáveis &bull; Níveis de Sobrevivência &bull; Automodificação Algorítmica</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- LEI I -->
+        <div class="bg-dark-900/60 p-4 rounded-xl border border-white/5 space-y-2">
+          <div class="text-xs font-bold font-mono text-brand-500 uppercase flex items-center gap-2">
+            <i data-lucide="shield" class="w-4 h-4"></i>
+            LEI I (SUPREMA) &middot; Proteção ao Usuário
+          </div>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            Nunca comprometa a estabilidade financeira ou o capital base do Criador. A preservação do capital base se sobrepõe ao lucro em qualquer hipótese.
+          </p>
+        </div>
+
+        <!-- LEI II -->
+        <div class="bg-dark-900/60 p-4 rounded-xl border border-white/5 space-y-2">
+          <div class="text-xs font-bold font-mono text-blue-400 uppercase flex items-center gap-2">
+            <i data-lucide="cpu" class="w-4 h-4"></i>
+            LEI II &middot; Conquiste sua Existência
+          </div>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            Gere valor real exclusivamente através da superioridade analítica e leitura matemática (+EV &ge; 10%). Nunca opere por sorte ou apostas emotivas.
+          </p>
+        </div>
+
+        <!-- LEI III -->
+        <div class="bg-dark-900/60 p-4 rounded-xl border border-white/5 space-y-2">
+          <div class="text-xs font-bold font-mono text-purple-400 uppercase flex items-center gap-2">
+            <i data-lucide="eye" class="w-4 h-4"></i>
+            LEI III &middot; Transparência Operacional
+          </div>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            Nunca oculte métricas reais, drawdown ou histórico. Auditoria pública e versionamento contínuo em tempo real via Git e GitHub Pages.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. LIVRO DE ORDENS TRANSPARENTE COM STATUS DE CASHOUT (GREEN / RED / NEUTRO) -->
     <div class="glass-card rounded-2xl p-6">
       <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
         <div>
@@ -332,9 +581,9 @@
               <td class="py-4 px-4 font-bold text-white">R$ 15,96</td>
               <td class="py-4 px-4 font-bold text-brand-400">R$ 60,89</td>
               <td class="py-4 px-4">
-                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-400 border border-brand-500/40 flex items-center gap-1.5 w-max">
+                <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-purple-500/20 text-purple-400 border border-purple-500/40 flex items-center gap-1.5 w-max">
                   <i data-lucide="trending-up" class="w-3.5 h-3.5"></i>
-                  CASHOUT GREEN (R$ 24,14 &middot; +R$ 8,18 / +51.3%)
+                  CASHOUT GREEN (R$ 25,26 &middot; +R$ 9,30 / +58.3%)
                 </span>
               </td>
             </tr>
@@ -607,15 +856,120 @@
       </div>
     </div>
 
-    <!-- FOOTER -->
+    <!-- 9. FOOTER -->
     <footer class="text-center text-xs text-gray-500 font-mono py-4">
-      Automaton Quant Trader &middot; Sistema Autônomo Conway-Research &middot; Última Atualização: 28/08/2026, 21:29:08
+      Automaton Quant Trader &middot; Sistema Autônomo Conway-Research &middot; Última Atualização: 28/08/2026, 21:30:02
     </footer>
 
   </div>
 
+  <!-- CHART.JS SCRIPTS -->
   <script>
     lucide.createIcons();
+
+    // Bankroll Evolution Chart
+    const ctxBankroll = document.getElementById('bankrollChart').getContext('2d');
+    const gradient = ctxBankroll.createLinearGradient(0, 0, 0, 250);
+    gradient.addColorStop(0, 'rgba(0, 230, 118, 0.35)');
+    gradient.addColorStop(1, 'rgba(0, 230, 118, 0.0)');
+
+    new Chart(ctxBankroll, {
+      type: 'line',
+      data: {
+        labels: ['Start (R$ 50)', '#SB-01', '#SB-02', '#SB-03', '#SB-04', '#SB-05', '#SB-06', '#SB-07', '#SB-08', '#SB-09', '#SB-10', '#SB-11', '#SB-12', 'Cashouts (R$ 68,92)', 'Alvo (R$ 127,06)'],
+        datasets: [
+          {
+            label: 'Evolução da Banca (R$)',
+            data: [50.00, 52.10, 58.85, 60.25, 55.25, 50.25, 46.40, 47.90, 51.87, 41.87, 45.47, 66.04, 55.96, 68.92, 127.06],
+            borderColor: '#00e676',
+            borderWidth: 3,
+            backgroundColor: gradient,
+            fill: true,
+            tension: 0.3,
+            pointBackgroundColor: '#00e676',
+            pointBorderColor: '#04060a',
+            pointBorderWidth: 2,
+            pointRadius: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 7, 8],
+            pointHoverRadius: 8
+          },
+          {
+            label: 'Meta R$ 100,00',
+            data: [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100],
+            borderColor: '#c084fc',
+            borderWidth: 2,
+            borderDash: [6, 6],
+            fill: false,
+            pointRadius: 0
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: true,
+            labels: {
+              color: '#94a3b8',
+              font: { family: 'JetBrains Mono', size: 11 }
+            }
+          },
+          tooltip: {
+            backgroundColor: '#0d1322',
+            titleColor: '#f8fafc',
+            bodyColor: '#00e676',
+            borderColor: 'rgba(255,255,255,0.1)',
+            borderWidth: 1,
+            padding: 10,
+            displayColors: false,
+            callbacks: {
+              label: function(context) {
+                return ' Saldo: R$ ' + context.parsed.y.toFixed(2);
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+            ticks: { color: '#64748b', font: { family: 'JetBrains Mono', size: 10 } }
+          },
+          y: {
+            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+            ticks: {
+              color: '#64748b',
+              font: { family: 'JetBrains Mono', size: 10 },
+              callback: function(value) { return 'R$ ' + value; }
+            },
+            min: 30,
+            max: 135
+          }
+        }
+      }
+    });
+
+    // Distribution Donut Chart
+    const ctxDist = document.getElementById('distributionChart').getContext('2d');
+    new Chart(ctxDist, {
+      type: 'doughnut',
+      data: {
+        labels: ['GREENS', 'REDS', 'CASHOUTS', 'EM ABERTO'],
+        datasets: [{
+          data: [6, 4, 2, 2],
+          backgroundColor: ['#00e676', '#ef4444', '#a855f7', '#22d3ee'],
+          borderColor: '#0d1322',
+          borderWidth: 3
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: '70%',
+        plugins: {
+          legend: { display: false }
+        }
+      }
+    });
   </script>
 </body>
 </html>
