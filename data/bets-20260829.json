@@ -2,15 +2,43 @@
   "sessao_id": 5,
   "data_sessao": "2026-08-29",
   "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
-  "diretriz_operacional": "BILLY WALTERS VALUE ENGINE - DUPLA ASSIMETRIA DESCORRELACIONADA COM BOLA ROLANDO",
+  "diretriz_operacional": "BILLY WALTERS MULTI-MARKET VALUE ENGINE - 100% SIMPLES COM DIVERSIFICACAO DE MERCADOS",
   "banca_start_sessao": 50.00,
-  "saldo_livre_em_conta": 18.96,
-  "saldo_em_jogo": 20.00,
+  "saldo_livre_em_conta": 8.96,
+  "saldo_em_jogo": 30.00,
   "patrimonio_atual": 38.96,
-  "retorno_potencial_total_aberto": 45.50,
+  "retorno_potencial_total_aberto": 69.50,
   "lucro_liquido_sessao_realizado": 15.06,
   "taxa_acerto_simples_pct": 100.0,
   "entradas_ativas": [
+    {
+      "id": 14,
+      "ticket_id": "890B-BETIS-1X2-14",
+      "data_hora": "2026-08-29 12:08",
+      "casa": "Superbet",
+      "formato": "Simples",
+      "qtd_selecoes": 1,
+      "timing": "In-Play (8' 1T • Bola Rolando)",
+      "categoria_mercado": "Resultado_Final_1X2",
+      "tempo_resolucao_alvo": "Full-Time (90')",
+      "odd_total": 2.40,
+      "stake_brl": 10.00,
+      "retorno_potencial": 24.00,
+      "cashout_atual": 10.00,
+      "status": "EM ABERTO",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "Levante x Real Betis",
+          "campeonato": "La Liga (Espanha)",
+          "mercado": "Resultado Final",
+          "selecao": "Real Betis Vence a Partida",
+          "odd_individual": 2.40,
+          "status_perna": "Em andamento (0x0 aos 8' com bola rolando)"
+        }
+      ],
+      "justificativa_quant": "Simples Padrao G1 Billy Walters em Mercado 1X2. Real Betis com 100% de vitórias (2J, 2V) e zero gols sofridos vs Levante zerado no ataque (17º lugar). H2H: Betis invicto ha 5 jogos. Odd 2.40 com +EV de +24%."
+    },
     {
       "id": 13,
       "ticket_id": "890W-BOU-2G-13",
@@ -34,7 +62,7 @@
           "mercado": "2º Gol",
           "selecao": "Bournemouth Marca o 2º Gol",
           "odd_individual": 2.40,
-          "status_perna": "Em andamento (1x0 aos 49' com bola rolando)"
+          "status_perna": "Em andamento (1x0 aos 52' com bola rolando)"
         }
       ],
       "justificativa_quant": "Simples Padrao G1 Billy Walters. Everton adiantando a marcação no 2T cedendo campo para o contra-ataque veloz de Tavernier e Evanilson. Odd 2.40 com +EV de +22%."
@@ -62,7 +90,7 @@
           "mercado": "1º Gol",
           "selecao": "Mainz Marca o 1º Gol",
           "odd_individual": 2.15,
-          "status_perna": "Em andamento (0x0 aos 75' com bola rolando)"
+          "status_perna": "Em andamento (0x0 aos 79' com bola rolando)"
         }
       ],
       "justificativa_quant": "Simples Padrao G1 Billy Walters. Mainz amassando na MEWA Arena (63% posse, 17 finalizacoes vs 3). Odd 2.15 com +EV de +18.5%."
