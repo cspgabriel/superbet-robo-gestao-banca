@@ -2,16 +2,16 @@
   "sessao_id": 5,
   "data_sessao": "2026-08-29",
   "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
-  "diretriz_operacional": "BILLY WALTERS VALUE ENGINE - GOAL R$ 500 ATIVO - FASE 2 DESDOBRADA COM 5 BILHETES ATIVOS (R$ 122.75 EM RETORNO)",
+  "diretriz_operacional": "BILLY WALTERS VALUE ENGINE - GREEN CONFIRMADO NO TICKET #17 (R$ 13.41 CREDITADO) - SALDO R$ 29.41 LIVRE",
   "banca_start_sessao": 50.00,
   "deposito_adicional_brl": 61.00,
-  "saldo_livre_em_conta": 16.00,
-  "saldo_em_jogo": 63.58,
-  "patrimonio_atual": 79.58,
-  "retorno_potencial_total_aberto": 122.75,
-  "lucro_liquido_sessao_realizado": 4.68,
+  "saldo_livre_em_conta": 29.41,
+  "saldo_em_jogo": 55.00,
+  "patrimonio_atual": 84.41,
+  "retorno_potencial_total_aberto": 109.34,
+  "lucro_liquido_sessao_realizado": 9.51,
   "meta_goal_final_brl": 500.00,
-  "taxa_acerto_simples_pct": 80.0,
+  "taxa_acerto_simples_pct": 83.3,
   "entradas_ativas": [
     {
       "id": 20,
@@ -82,7 +82,7 @@
       "odd_total": 2.72,
       "stake_brl": 15.00,
       "retorno_potencial": 40.94,
-      "cashout_atual": 15.00,
+      "cashout_atual": 12.70,
       "status": "EM ABERTO",
       "selecoes_detalhadas": [
         {
@@ -116,43 +116,6 @@
       "justificativa_quant": "Multipla Blindada 3-Pernas da Fase 2. Dortmund forte em casa, Tottenham jogo aberto de gols e Fiorentina buscando reabilitacao no Artemio Franchi. Odd combinada 2.72 com alto +EV."
     },
     {
-      "id": 17,
-      "ticket_id": "890W-QI3CGG",
-      "data_hora": "2026-08-29 12:58",
-      "casa": "Superbet",
-      "formato": "Múltipla",
-      "qtd_selecoes": 2,
-      "timing": "In-Play (70' 2T • Encerra às 13h15)",
-      "categoria_mercado": "Multipla_Hibrida_InPlay",
-      "tempo_resolucao_alvo": "13h15 (15 Minutos)",
-      "odd_total": 1.56,
-      "stake_brl": 8.58,
-      "retorno_potencial": 13.41,
-      "cashout_atual": 9.42,
-      "status": "EM ABERTO",
-      "selecoes_detalhadas": [
-        {
-          "perna": 1,
-          "partida": "Arouca x Marítimo",
-          "campeonato": "Liga Portugal",
-          "mercado": "Resultado Final",
-          "selecao": "Arouca Vence a Partida",
-          "odd_individual": 1.25,
-          "status_perna": "Em andamento (2x1 aos 80' 2T)"
-        },
-        {
-          "perna": 2,
-          "partida": "Excelsior x Sparta Rotterdam",
-          "campeonato": "Eredivisie (Holanda)",
-          "mercado": "Total de Gols",
-          "selecao": "Menos de 3.5 Gols na Partida",
-          "odd_individual": 1.25,
-          "status_perna": "Em andamento (1x1 aos 83' 2T)"
-        }
-      ],
-      "justificativa_quant": "Dupla In-Play de Resolucao Ultra-Rapida nos 70' 2T com encerramento matematico as 13h15 para liberar capital liquido antes da grade das 13h30. Odd 1.56 com +EV."
-    },
-    {
       "id": 14,
       "ticket_id": "890G-QDX9CD",
       "data_hora": "2026-08-29 12:08",
@@ -165,7 +128,7 @@
       "odd_total": 2.40,
       "stake_brl": 10.00,
       "retorno_potencial": 24.00,
-      "cashout_atual": 9.64,
+      "cashout_atual": 0.00,
       "status": "EM ABERTO",
       "selecoes_detalhadas": [
         {
@@ -175,13 +138,31 @@
           "mercado": "Resultado Final",
           "selecao": "Real Betis Vence a Partida",
           "odd_individual": 2.40,
-          "status_perna": "Em andamento (2x2 no 2T com Betis buscando o 3º gol)"
+          "status_perna": "Em andamento (3x2 no 2T)"
         }
       ],
       "justificativa_quant": "Simples Padrao G1 Billy Walters em Mercado 1X2. Betis empatou em 2x2 antes do intervalo e domina a posse e finalizacoes. Odd 2.40 com +EV."
     }
   ],
   "entradas_liquidadas": [
+    {
+      "id": 17,
+      "ticket_id": "890W-QI3CGG",
+      "data_hora": "2026-08-29 12:58",
+      "casa": "Superbet",
+      "formato": "Múltipla",
+      "qtd_selecoes": 2,
+      "timing": "In-Play (70' 2T)",
+      "categoria_mercado": "Multipla_Hibrida_InPlay",
+      "tempo_resolucao_alvo": "13h15 (15 Minutos)",
+      "odd_total": 1.56,
+      "stake_brl": 8.58,
+      "retorno_potencial": 13.41,
+      "resultado_brl": 13.41,
+      "lucro_liquido_brl": 4.83,
+      "status": "GREEN",
+      "observacoes": "Arouca venceu por 2x1 e Excelsior terminou em 2x1 (Under 3.5 Green). Retorno R$ 13.41 creditado integralmente no caixa livre!"
+    },
     {
       "id": 16,
       "ticket_id": "8902-QNMBXO",
