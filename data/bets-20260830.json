@@ -1,0 +1,45 @@
+{
+  "sessao_id": 6,
+  "data_sessao": "2026-08-30",
+  "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
+  "diretriz_operacional": "FASE 6 - DOMINGO SUPERBET - BANCA R$ 59.11 INICIAL - TICKET #28 ATIVO NO MAN UNITED 1T @ 1.83 (R$ 15.00 -> R$ 27.45) - SALDO LIVRE R$ 44.11 - META R$ 500",
+  "banca_start_sessao": 59.11,
+  "saldo_livre_em_conta": 44.11,
+  "saldo_em_jogo": 15,
+  "patrimonio_atual": 59.11,
+  "retorno_potencial_total_aberto": 27.45,
+  "lucro_liquido_acumulado_geral": 9.11,
+  "meta_goal_final_brl": 500,
+  "taxa_acerto_simples_pct": 77.8,
+  "entradas_ativas": [
+    {
+      "id": 28,
+      "ticket_id": "891F-YW256E",
+      "data_hora": "2026-08-30 12:37",
+      "casa": "Superbet",
+      "formato": "Simples",
+      "qtd_selecoes": 1,
+      "timing": "In-Play (8m 1T)",
+      "categoria_mercado": "Resultado_1T_HT_1X2",
+      "tempo_resolucao_alvo": "Half-Time (13h15)",
+      "odd_total": 1.83,
+      "stake_brl": 15,
+      "retorno_potencial": 27.45,
+      "cashout_atual": 14.45,
+      "status": "EM ABERTO",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "Manchester United x Ipswich",
+          "campeonato": "Premier League",
+          "mercado": "1º Tempo - Resultado (1X2)",
+          "selecao": "Manchester United Vence 1T",
+          "odd_individual": 1.83,
+          "status_perna": "In-Play (8m 1T 0x0 Old Trafford)"
+        }
+      ],
+      "justificativa_quant": "Primeira entrada institucional de Domingo (Padrão G1). Man United com força máxima em Old Trafford buscando o G4 da Premier League contra o Ipswich. Odd 1.83 com alto +EV."
+    }
+  ],
+  "entradas_liquidadas": []
+}
