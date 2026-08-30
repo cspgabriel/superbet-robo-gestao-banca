@@ -2,12 +2,12 @@
   "sessao_id": 6,
   "data_sessao": "2026-08-30",
   "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
-  "diretriz_operacional": "FASE 6 ATIVA - 2 TICKETS EM ANDAMENTO (TICKET #28 MAN UTD 1T @ 1.83 E TICKET #30 TRIPLA DE PROTEÇÃO @ 1.82) - RETORNO POTENCIAL R$ 82.15 - SALDO EM JOGO R$ 45.00",
+  "diretriz_operacional": "FASE 6 ATIVA - TICKET #28 ATIVO NO MANCHESTER UNITED 1T @ 1.83 (R$ 15.00 -> R$ 27.45) - RETORNO POTENCIAL R$ 27.45",
   "banca_start_sessao": 59.11,
   "saldo_livre_em_conta": 0,
-  "saldo_em_jogo": 45,
-  "patrimonio_atual": 45,
-  "retorno_potencial_total_aberto": 82.15,
+  "saldo_em_jogo": 15,
+  "patrimonio_atual": 15,
+  "retorno_potencial_total_aberto": 27.45,
   "lucro_liquido_acumulado_geral": 9.11,
   "meta_goal_final_brl": 500,
   "taxa_acerto_simples_pct": 77.8,
@@ -25,7 +25,7 @@
       "odd_total": 1.83,
       "stake_brl": 15,
       "retorno_potencial": 27.45,
-      "cashout_atual": 12.52,
+      "cashout_atual": 12.08,
       "status": "EM ABERTO",
       "selecoes_detalhadas": [
         {
@@ -35,11 +35,13 @@
           "mercado": "1º Tempo - Resultado (1X2)",
           "selecao": "Manchester United Vence 1T",
           "odd_individual": 1.83,
-          "status_perna": "In-Play (17m 1T 0x0 Old Trafford)"
+          "status_perna": "In-Play (21m 1T 0x0 Old Trafford)"
         }
       ],
       "justificativa_quant": "Primeira entrada institucional de Domingo (Padrão G1). Man United com força máxima em Old Trafford buscando o G4 da Premier League contra o Ipswich. Odd 1.83 com alto +EV."
-    },
+    }
+  ],
+  "entradas_liquidadas": [
     {
       "id": 30,
       "ticket_id": "890C-QDCD61",
@@ -47,47 +49,16 @@
       "casa": "Superbet",
       "formato": "Múltipla",
       "qtd_selecoes": 3,
-      "timing": "In-Play (83' 2T / 44' 1T / 17' 1T)",
+      "timing": "In-Play",
       "categoria_mercado": "Multipla_Hibrida_InPlay",
-      "tempo_resolucao_alvo": "In-Play (13h00 - 13h15)",
+      "tempo_resolucao_alvo": "In-Play",
       "odd_total": 1.82,
       "stake_brl": 30,
-      "retorno_potencial": 54.7,
-      "cashout_atual": 27.03,
-      "status": "EM ABERTO",
-      "selecoes_detalhadas": [
-        {
-          "perna": 1,
-          "partida": "Athletico-PR x Fluminense",
-          "campeonato": "Brasileirão Série A",
-          "mercado": "6º Gol",
-          "selecao": "Nenhuma equipe",
-          "odd_individual": 1.42,
-          "status_perna": "In-Play (83' 2T 2x3)"
-        },
-        {
-          "perna": 2,
-          "partida": "Real Madrid x Málaga",
-          "campeonato": "LaLiga",
-          "mercado": "1º Tempo - Total de Gols",
-          "selecao": "Menos de 4.5 Gols 1T",
-          "odd_individual": 1.08,
-          "status_perna": "GREEN (1T encerrou 3x0)"
-        },
-        {
-          "perna": 3,
-          "partida": "Manchester United x Ipswich",
-          "campeonato": "Premier League",
-          "mercado": "1º Tempo - Total de Gols",
-          "selecao": "Menos de 2.5 Gols 1T",
-          "odd_individual": 1.07,
-          "status_perna": "In-Play (17' 1T 0x0)"
-        }
-      ],
-      "justificativa_quant": "Tripla In-Play de alta probabilidade. Perna 2 (Real 1T 3x0) confirmada green. Perna 1 (CAP x Flu aos 83m Under) e Perna 3 (Man Utd U2.5 1T)."
-    }
-  ],
-  "entradas_liquidadas": [
+      "resultado_brl": 0,
+      "lucro_liquido_brl": -30,
+      "status": "RED",
+      "observacoes": "Athletico-PR marcou 6º gol aos 87m (3x3)."
+    },
     {
       "id": 29,
       "ticket_id": "890C-QDCD60",
