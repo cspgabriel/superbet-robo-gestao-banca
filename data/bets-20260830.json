@@ -2,12 +2,12 @@
   "sessao_id": 7,
   "data_sessao": "2026-08-30",
   "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
-  "diretriz_operacional": "FASE 7 ATIVA - 6 TICKETS ATIVOS (#36 DUPLA MULTI-MERCADO @ 2.74 + #40 NAPOLI VENCE @ 2.22 + #41 NAPOLI 1X @ 2.15 + #44 TRIPLA SNIPER @ 2.72 + #45 TRIPLA SNIPER @ 2.67 + #46 TRIPLA SNIPER @ 1.91) - SALDO LIVRE R$ 20.00 - RETORNO POTENCIAL TOTAL R$ 62.06 - META R$ 500",
+  "diretriz_operacional": "FASE 7 ATIVA - 7 TICKETS ATIVOS (#36 DUPLA MULTI-MERCADO @ 2.74 + #40 NAPOLI VENCE @ 2.22 + #41 NAPOLI 1X @ 2.15 + #44 TRIPLA SNIPER @ 2.72 + #45 TRIPLA SNIPER @ 2.67 + #46 TRIPLA SNIPER @ 1.91 + #47 TRIPLA ALAVANCAGEM @ 4.14) - SALDO LIVRE R$ 17.50 - RETORNO POTENCIAL TOTAL R$ 72.83 - META R$ 500",
   "banca_start_sessao": 50,
-  "saldo_livre_em_conta": 20,
-  "saldo_em_jogo": 26.14,
+  "saldo_livre_em_conta": 17.5,
+  "saldo_em_jogo": 28.64,
   "patrimonio_atual": 46.14,
-  "retorno_potencial_total_aberto": 62.06,
+  "retorno_potencial_total_aberto": 72.83,
   "lucro_liquido_acumulado_geral": -3.86,
   "meta_goal_final_brl": 500,
   "taxa_acerto_simples_pct": 83.3,
@@ -35,7 +35,7 @@
           "mercado": "Dicas de Aposta (Faltas e Intensidade)",
           "selecao": "Paz (+0.5 faltas) + Douvikas (+0.5 faltas) + Yan Couto (+0.5 faltas)",
           "odd_individual": 1.5,
-          "status_perna": "2T 57' (1x2 Maradona)"
+          "status_perna": "2T 58' (1x2 Maradona)"
         },
         {
           "perna": 2,
@@ -44,7 +44,7 @@
           "mercado": "Resultado Final",
           "selecao": "SU Sintrense Vence FT (2)",
           "odd_individual": 1.83,
-          "status_perna": "2T 88' (1x1)"
+          "status_perna": "2T 89' (1x1)"
         }
       ],
       "justificativa_quant": "Dupla Multi-Mercado In-Play com stake de R$ 5.00 e odd 2.74."
@@ -72,10 +72,10 @@
           "mercado": "Resultado Final",
           "selecao": "Napoli Vence FT (1)",
           "odd_individual": 2.22,
-          "status_perna": "2T 57' (1x2 Maradona - 33 minutos para buscar a virada)"
+          "status_perna": "2T 58' (1x2 Maradona - 32 minutos para buscar a virada)"
         }
       ],
-      "justificativa_quant": "Napoli jogando em casa contra o Como recém-promovido. 33 minutos para buscar a virada com elenco estelar. Odd 2.22."
+      "justificativa_quant": "Napoli jogando em casa contra o Como recém-promovido. 32 minutos para buscar a virada com elenco estelar. Odd 2.22."
     },
     {
       "id": 41,
@@ -100,10 +100,10 @@
           "mercado": "Dupla Chance",
           "selecao": "1 ou Empate (Napoli ou Empate)",
           "odd_individual": 2.15,
-          "status_perna": "2T 57' (1x2 Maradona - basta empatar para GREEN)"
+          "status_perna": "2T 58' (1x2 Maradona - basta empatar para GREEN)"
         }
       ],
-      "justificativa_quant": "Napoli precisa de apenas 1 gol nos 33 minutos restantes do 2T para empatar e cravar o Green na Dupla Chance @ 2.15 com stake de R$ 3.75."
+      "justificativa_quant": "Napoli precisa de apenas 1 gol nos 32 minutos restantes do 2T para empatar e cravar o Green na Dupla Chance @ 2.15 com stake de R$ 3.75."
     },
     {
       "id": 44,
@@ -128,7 +128,7 @@
           "mercado": "Total de Gols",
           "selecao": "Menos de 2.5 Gols FT",
           "odd_individual": 1.62,
-          "status_perna": "2T 84' (0x1 Al-Shabab)"
+          "status_perna": "2T 86' (0x1 Al-Shabab)"
         },
         {
           "perna": 2,
@@ -146,7 +146,7 @@
           "mercado": "Total de Gols",
           "selecao": "Menos de 3.5 Gols FT",
           "odd_individual": 1.16,
-          "status_perna": "1T 18' (2x0)"
+          "status_perna": "1T 20' (2x0)"
         }
       ],
       "justificativa_quant": "Tripla Sniper In-Play com stake de R$ 2.00 para alavancar com odd 2.72. Retorno potencial R$ 5.45."
@@ -183,7 +183,7 @@
           "mercado": "Total de Gols",
           "selecao": "Menos de 2.5 Gols FT",
           "odd_individual": 1.62,
-          "status_perna": "2T 84' (0x1 Al-Shabab)"
+          "status_perna": "2T 86' (0x1 Al-Shabab)"
         },
         {
           "perna": 3,
@@ -192,7 +192,7 @@
           "mercado": "Total de Gols",
           "selecao": "Menos de 3.5 Gols FT",
           "odd_individual": 1.14,
-          "status_perna": "1T 18' (2x0)"
+          "status_perna": "1T 20' (2x0)"
         }
       ],
       "justificativa_quant": "Tripla Sniper de Alavancagem com stake de R$ 5.00 e odd 2.67. Retorno potencial R$ 13.39."
@@ -210,7 +210,7 @@
       "odd_total": 1.91,
       "stake_brl": 5.39,
       "retorno_potencial": 10.33,
-      "cashout_atual": 2.55,
+      "cashout_atual": 2.67,
       "status": "EM ABERTO",
       "selecoes_detalhadas": [
         {
@@ -220,7 +220,7 @@
           "mercado": "1º Tempo - Total de Gols",
           "selecao": "Menos de 2.5 Gols HT",
           "odd_individual": 1.12,
-          "status_perna": "1T 18' (2x0 • faltam 27 min de HT)"
+          "status_perna": "1T 20' (2x0 • faltam 25 min de HT)"
         },
         {
           "perna": 2,
@@ -238,10 +238,56 @@
           "mercado": "Total de Gols",
           "selecao": "Menos de 2.5 Gols FT",
           "odd_individual": 1.18,
-          "status_perna": "2T 84' (0x1 Al-Shabab)"
+          "status_perna": "2T 86' (0x1 Al-Shabab)"
         }
       ],
       "justificativa_quant": "Tripla Sniper In-Play com stake de R$ 5.39 e odd 1.91. Retorno potencial R$ 10.33."
+    },
+    {
+      "id": 47,
+      "ticket_id": "891V-SNIPER-47",
+      "data_hora": "2026-08-30 14:51",
+      "casa": "Superbet",
+      "formato": "Múltipla",
+      "qtd_selecoes": 3,
+      "timing": "100% In-Play (Alavancagem HT/FT)",
+      "categoria_mercado": "Alavancagem_Gols_Cartoes_Combo",
+      "tempo_resolucao_alvo": "Full-Time (15h15 / 16h20)",
+      "odd_total": 4.14,
+      "stake_brl": 2.5,
+      "retorno_potencial": 10.77,
+      "cashout_atual": 1.95,
+      "status": "EM ABERTO",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "Casa Pia x Moreirense",
+          "campeonato": "Primeira Liga (Portugal)",
+          "mercado": "Total de Cartões",
+          "selecao": "Menos de 5.5 Cartões FT",
+          "odd_individual": 1.45,
+          "status_perna": "Intervalo (0x1 • 0 cartões)"
+        },
+        {
+          "perna": 2,
+          "partida": "Deportivo La Coruña x Valencia",
+          "campeonato": "La Liga (Espanha)",
+          "mercado": "1º Tempo - Total de Gols",
+          "selecao": "Mais de 2.5 Gols HT",
+          "odd_individual": 1.87,
+          "status_perna": "1T 20' (2x0 • precisa de +1 gol no 1T)"
+        },
+        {
+          "perna": 3,
+          "partida": "Al Hazem x Al Shabab",
+          "campeonato": "Saudi Pro League",
+          "mercado": "Total de Gols",
+          "selecao": "Menos de 2.5 Gols FT",
+          "odd_individual": 1.18,
+          "status_perna": "2T 86' (0x1 Al-Shabab)"
+        }
+      ],
+      "justificativa_quant": "Tripla Alavancagem com stake de R$ 2.50 e odd 4.14 (com 5% SuperMúltipla). Retorno potencial R$ 10.77."
     }
   ],
   "entradas_liquidadas": [
