@@ -2,199 +2,61 @@
   "sessao_id": 7,
   "data_sessao": "2026-08-30",
   "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
-  "diretriz_operacional": "FASE 8 ATIVA - 4 TICKETS DA TARDE (#51 DUPLA MASTER @ 2.09 COM R$ 100 STAKE + #52 DUPLA SIMPLES @ 1.91 + #50 TRIPLA @ 4.23 + #49 MULTIPLA 6 SELECOES @ 72.95) - RETORNO POTENCIAL TOTAL R$ 491.48 - META R$ 500",
+  "diretriz_operacional": "FASE 9 ATIVA - LIQUIDAÇÃO DUPLO GREEN FLAMENGO + INTER (#51 PAGA R$ 209.25 + #52 PAGA R$ 67.06) - SALDO LIVRE R$ 276.31 - TICKET #50 ABERTO COM CASHOUT R$ 41.41 - PATRIMÔNIO R$ 300.01 - META R$ 500",
   "banca_start_sessao": 50,
-  "saldo_livre_em_conta": 0,
-  "saldo_em_jogo": 160.18,
-  "patrimonio_atual": 160.18,
-  "retorno_potencial_total_aberto": 491.48,
-  "lucro_liquido_acumulado_geral": -3.86,
+  "saldo_livre_em_conta": 276.31,
+  "saldo_em_jogo": 23.7,
+  "patrimonio_atual": 300.01,
+  "retorno_potencial_total_aberto": 100.34,
+  "lucro_liquido_acumulado_geral": 226.31,
   "meta_goal_final_brl": 500,
   "taxa_acerto_simples_pct": 83.3,
   "entradas_ativas": [
     {
-      "id": 49,
-      "ticket_id": "893A-BZZJ4M",
-      "data_hora": "2026-08-30 17:04",
-      "casa": "Superbet",
-      "formato": "Múltipla 6 Seleções",
-      "qtd_selecoes": 6,
-      "timing": "In-Play & Pré-Jogo",
-      "categoria_mercado": "Multi_Ligas_Múltipla",
-      "tempo_resolucao_alvo": "Noite (20h30)",
-      "odd_total": 72.95,
-      "stake_brl": 1.5,
-      "retorno_potencial": 114.83,
-      "cashout_atual": 0.19,
-      "status": "EM ABERTO",
-      "selecoes_detalhadas": [
-        {
-          "perna": 1,
-          "partida": "Flamengo x Botafogo",
-          "campeonato": "Brasileirão Série A",
-          "mercado": "Criar Aposta @ 5.75",
-          "selecao": "Flamengo Vence + Pedro Marca + Botafogo U0.5 + Escanteios O8.5 + Cartões O2.5",
-          "odd_individual": 5.75,
-          "status_perna": "2T 76' (1x0 Flamengo)"
-        },
-        {
-          "perna": 2,
-          "partida": "Corinthians x Santos",
-          "campeonato": "Brasileirão Série A",
-          "mercado": "Resultado Final",
-          "selecao": "Empate X @ 3.20",
-          "odd_individual": 3.2,
-          "status_perna": "2T 73' (0x1 Santos)"
-        },
-        {
-          "perna": 3,
-          "partida": "Mirassol x Palmeiras",
-          "campeonato": "Brasileirão Série A",
-          "mercado": "Criar Aposta",
-          "selecao": "Palmeiras Vence e Mirassol Menos de 1.5 Gols @ 2.40",
-          "odd_individual": 2.4,
-          "status_perna": "18h30"
-        },
-        {
-          "perna": 4,
-          "partida": "Cagliari x Inter de Milão",
-          "campeonato": "Serie A (Itália)",
-          "mercado": "Criar Aposta",
-          "selecao": "Inter Vence e Cagliari Menos de 0.5 Gols @ 1.22",
-          "odd_individual": 1.22,
-          "status_perna": "GREEN BATIDO (0x1 Inter)"
-        },
-        {
-          "perna": 5,
-          "partida": "Monaco x Marseille",
-          "campeonato": "Ligue 1 (França)",
-          "mercado": "Criar Aposta",
-          "selecao": "Monaco Vence e Marseille Menos de 1.5 Gols @ 1.11",
-          "odd_individual": 1.11,
-          "status_perna": "GREEN BATIDO (2x0 Monaco)"
-        },
-        {
-          "perna": 6,
-          "partida": "Samsunspor x Fenerbahce",
-          "campeonato": "Super Lig (Turquia)",
-          "mercado": "Total de Gols Equipe",
-          "selecao": "Samsunspor Menos de 0.5 Gols @ 1.22",
-          "odd_individual": 1.22,
-          "status_perna": "GREEN BATIDO (0x2 Fenerbahce)"
-        }
-      ],
-      "motivo_quant": "Múltipla de 6 seleções com super odds de 72.95 e 5% de SuperMúltipla. Retorno potencial R$ 114.83."
-    },
-    {
       "id": 50,
-      "ticket_id": "893B-TRIPLA-50",
-      "data_hora": "2026-08-30 17:15",
+      "ticket_id": "8939-SYNLG4",
+      "data_hora": "2026-08-30 17:02",
       "casa": "Superbet",
       "formato": "Tripla Combinada",
-      "qtd_selecoes": 2,
+      "qtd_selecoes": 3,
       "timing": "In-Play & Pré-Jogo",
       "categoria_mercado": "Brasileirao_SerieA_Combinada",
       "tempo_resolucao_alvo": "Noite (20h30)",
       "odd_total": 4.23,
       "stake_brl": 23.7,
       "retorno_potencial": 100.34,
-      "cashout_atual": 30.16,
+      "cashout_atual": 41.41,
       "status": "EM ABERTO",
       "selecoes_detalhadas": [
         {
           "perna": 1,
+          "partida": "Cagliari x Inter de Milão",
+          "campeonato": "Serie A (Itália)",
+          "mercado": "Criar Aposta @ 1.28",
+          "selecao": "Inter Vence e Cagliari Menos de 0.5 Gols",
+          "odd_individual": 1.28,
+          "status_perna": "GREEN BATIDO (0x1 Inter)"
+        },
+        {
+          "perna": 2,
+          "partida": "Flamengo x Botafogo",
+          "campeonato": "Brasileirão Série A",
+          "mercado": "Total de Gols Equipe",
+          "selecao": "Botafogo Menos de 0.5 Gols @ 1.47",
+          "odd_individual": 1.47,
+          "status_perna": "GREEN BATIDO (3x0 Flamengo)"
+        },
+        {
+          "perna": 3,
           "partida": "Mirassol x Palmeiras",
           "campeonato": "Brasileirão Série A",
           "mercado": "Resultado Final",
           "selecao": "Palmeiras Vence @ 2.25",
           "odd_individual": 2.25,
-          "status_perna": "18h30"
-        },
-        {
-          "perna": 2,
-          "partida": "Cagliari x Inter de Milão",
-          "campeonato": "Serie A (Itália)",
-          "mercado": "Criar Aposta",
-          "selecao": "Inter Vence e Cagliari Menos de 0.5 Gols @ 1.28",
-          "odd_individual": 1.28,
-          "status_perna": "GREEN BATIDO (0x1 Inter)"
+          "status_perna": "Hoje 18h30"
         }
       ],
-      "motivo_quant": "Tripla combinada com Inter vencendo sem sofrer gols (cravado!) e Palmeiras para a noite. Retorno potencial R$ 100.34."
-    },
-    {
-      "id": 51,
-      "ticket_id": "893C-MASTER-51",
-      "data_hora": "2026-08-30 17:20",
-      "casa": "Superbet",
-      "formato": "Dupla Master",
-      "qtd_selecoes": 2,
-      "timing": "100% In-Play",
-      "categoria_mercado": "Dupla_Master_Alta_Confianca",
-      "tempo_resolucao_alvo": "Fim de Jogo (18h00)",
-      "odd_total": 2.09,
-      "stake_brl": 100,
-      "retorno_potencial": 209.25,
-      "cashout_atual": 145,
-      "status": "EM ABERTO",
-      "selecoes_detalhadas": [
-        {
-          "perna": 1,
-          "partida": "Flamengo x Botafogo",
-          "campeonato": "Brasileirão Série A",
-          "mercado": "Criar Aposta @ 1.55",
-          "selecao": "Flamengo Vence FT",
-          "odd_individual": 1.55,
-          "status_perna": "2T 76' (1x0 Flamengo)"
-        },
-        {
-          "perna": 2,
-          "partida": "Cagliari x Inter de Milão",
-          "campeonato": "Serie A (Itália)",
-          "mercado": "Criar Aposta @ 1.35",
-          "selecao": "Inter de Milão Vence FT",
-          "odd_individual": 1.35,
-          "status_perna": "GREEN BATIDO (0x1 Inter)"
-        }
-      ],
-      "motivo_quant": "Dupla Master de Alta Confiança com stake de R$ 100.00 combinando vitória do Flamengo (1x0 aos 76') e Inter (0x1 aos 90+4'). Retorno potencial R$ 209.25."
-    },
-    {
-      "id": 52,
-      "ticket_id": "893D-SIMPLES-52",
-      "data_hora": "2026-08-30 17:25",
-      "casa": "Superbet",
-      "formato": "Dupla Simples",
-      "qtd_selecoes": 2,
-      "timing": "100% In-Play",
-      "categoria_mercado": "Dupla_Simples_Reforco",
-      "tempo_resolucao_alvo": "Fim de Jogo (18h00)",
-      "odd_total": 1.91,
-      "stake_brl": 34.98,
-      "retorno_potencial": 67.06,
-      "cashout_atual": 52,
-      "status": "EM ABERTO",
-      "selecoes_detalhadas": [
-        {
-          "perna": 1,
-          "partida": "Flamengo x Botafogo",
-          "campeonato": "Brasileirão Série A",
-          "mercado": "Resultado Final",
-          "selecao": "Flamengo Vence FT @ 1.35",
-          "odd_individual": 1.35,
-          "status_perna": "2T 76' (1x0 Flamengo)"
-        },
-        {
-          "perna": 2,
-          "partida": "Cagliari x Inter de Milão",
-          "campeonato": "Serie A (Itália)",
-          "mercado": "Resultado Final",
-          "selecao": "Inter de Milão Vence FT @ 1.42",
-          "odd_individual": 1.42,
-          "status_perna": "GREEN BATIDO (0x1 Inter)"
-        }
-      ],
-      "motivo_quant": "Dupla complementar com stake de R$ 34.98 e odd 1.91 combinando Flamengo e Inter. Retorno potencial R$ 67.06."
+      "motivo_quant": "Tripla combinada de alta precisão com 2 de 3 pernas no GREEN! Cashout atual R$ 41.41 (+74.7% de lucro). Palmeiras para a noite com retorno potencial R$ 100.34."
     }
   ],
   "entradas_liquidadas": [
@@ -315,6 +177,34 @@
       "lucro_liquido_brl": 0,
       "status": "CANCELADO_CASHOUT_PARIDADE",
       "observacoes": "Cancelado pelo operador a R$ 20.00 para migrar para a Dupla de Escanteios Profissional."
+    }
+  ],
+  "historico_entradas_liquidadas_sessao_7": [
+    {
+      "id": 51,
+      "ticket_id": "893C-MASTER-51",
+      "data_hora": "2026-08-30 17:20",
+      "casa": "Superbet",
+      "formato": "Dupla Master",
+      "odd_total": 2.09,
+      "stake_brl": 100,
+      "retorno_obtido": 209.25,
+      "pnl_brl": 109.25,
+      "status": "GREEN TOTAL",
+      "motivo_encerramento": "Flamengo 3x0 Botafogo + Cagliari 0x1 Inter de Milão cravados com perfeição!"
+    },
+    {
+      "id": 52,
+      "ticket_id": "893D-SIMPLES-52",
+      "data_hora": "2026-08-30 17:25",
+      "casa": "Superbet",
+      "formato": "Dupla Simples",
+      "odd_total": 1.91,
+      "stake_brl": 34.98,
+      "retorno_obtido": 67.06,
+      "pnl_brl": 32.08,
+      "status": "GREEN TOTAL",
+      "motivo_encerramento": "Flamengo 3x0 Botafogo + Cagliari 0x1 Inter de Milão cravados com perfeição!"
     }
   ]
 }
