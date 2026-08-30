@@ -2,16 +2,91 @@
   "sessao_id": 7,
   "data_sessao": "2026-08-30",
   "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
-  "diretriz_operacional": "FASE 14 ATIVA - SALDO LIVRE R$ 250.00 100% BLINDADO - BANIMENTO TOTAL DE SÉRIE B - FOCO EM DUPLAS MASTERS SÉRIE A (75% WIN RATE) - META R$ 500",
+  "diretriz_operacional": "FASE 15 ATIVA - SAQUE VIA PIX EFETUADO NO BOLSO - 2 TICKETS SNIPER DE OURO NO 1T (#58 @ 3.51 COM R$ 30 STAKE + #59 @ 7.68 COM R$ 20 STAKE) - RETORNO POTENCIAL ABERTO R$ 258.90",
   "banca_start_sessao": 50,
-  "saldo_livre_em_conta": 250,
-  "saldo_em_jogo": 0,
-  "patrimonio_atual": 250,
-  "retorno_potencial_total_aberto": 0,
+  "saldo_livre_em_conta": 0,
+  "saldo_em_jogo": 50,
+  "patrimonio_atual": 50,
+  "retorno_potencial_total_aberto": 258.9,
   "lucro_liquido_acumulado_geral": 267.72,
   "meta_goal_final_brl": 500,
   "taxa_acerto_simples_pct": 83.3,
-  "entradas_ativas": [],
+  "entradas_ativas": [
+    {
+      "id": 58,
+      "ticket_id": "8914-DUPLA-58",
+      "data_hora": "2026-08-30 18:56",
+      "casa": "Superbet",
+      "formato": "Dupla Sniper 1T",
+      "qtd_selecoes": 2,
+      "timing": "100% In-Play",
+      "categoria_mercado": "Brasileirao_SerieA_1T",
+      "tempo_resolucao_alvo": "Intervalo (19h15)",
+      "odd_total": 3.51,
+      "stake_brl": 30,
+      "retorno_potencial": 105.3,
+      "cashout_atual": 29.38,
+      "status": "EM ABERTO",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "Mirassol vs Palmeiras",
+          "campeonato": "Brasileirão Série A",
+          "mercado": "1º Tempo - Total de Gols",
+          "selecao": "Menos de 0.5 Gols @ 1.80",
+          "odd_individual": 1.8,
+          "status_perna": "1T 28' (0x0)"
+        },
+        {
+          "perna": 2,
+          "partida": "Grêmio vs Chapecoense",
+          "campeonato": "Brasileirão Série A",
+          "mercado": "1º Tempo - Total de Gols",
+          "selecao": "Menos de 2.5 Gols @ 1.95",
+          "odd_individual": 1.95,
+          "status_perna": "1T 26' (1x1)"
+        }
+      ],
+      "motivo_quant": "Dupla de Ouro focada no 1T com Grêmio segurando o 1x1 (U2.5) e Palmeiras 0x0. Retorno potencial R$ 105.30 com cashout já em R$ 29.38."
+    },
+    {
+      "id": 59,
+      "ticket_id": "8915-SNIPER-59",
+      "data_hora": "2026-08-30 18:56",
+      "casa": "Superbet",
+      "formato": "Dupla Criar Aposta Master",
+      "qtd_selecoes": 2,
+      "timing": "100% In-Play",
+      "categoria_mercado": "Brasileirao_SerieA_Master",
+      "tempo_resolucao_alvo": "Fim de Jogo (20h30)",
+      "odd_total": 7.68,
+      "stake_brl": 20,
+      "retorno_potencial": 153.6,
+      "cashout_atual": 16.58,
+      "status": "EM ABERTO",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "Grêmio vs Chapecoense",
+          "campeonato": "Brasileirão Série A",
+          "mercado": "1º Tempo - Total de Gols",
+          "selecao": "Menos de 2.5 Gols @ 1.92",
+          "odd_individual": 1.92,
+          "status_perna": "1T 26' (1x1)"
+        },
+        {
+          "perna": 2,
+          "partida": "Mirassol vs Palmeiras",
+          "campeonato": "Brasileirão Série A",
+          "mercado": "Criar Aposta @ 4.00",
+          "selecao": "1T Menos de 0.5 Gols + Palmeiras Vence FT",
+          "odd_individual": 4,
+          "status_perna": "1T 28' (0x0)"
+        }
+      ],
+      "motivo_quant": "Dupla de Alavancagem Master combinando Grêmio 1T U2.5 com Palmeiras 0x0 1T e vitória FT. Retorno potencial R$ 153.60."
+    }
+  ],
   "entradas_liquidadas": [
     {
       "id": 43,
