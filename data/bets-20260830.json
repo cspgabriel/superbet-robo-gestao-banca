@@ -2,125 +2,107 @@
   "sessao_id": 7,
   "data_sessao": "2026-08-30",
   "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
-  "diretriz_operacional": "FASE 12 ATIVA - R$ 300.00 BLINDADOS EM CAIXA - 2 TICKETS ATIVOS (#55 QUÍNTUPLA ESTRUTURADA @ 4.13 COM R$ 10 STAKE + #54 TRIPLA SNIPER @ 6.46 COM CASHOUT R$ 14.07) - RETORNO POTENCIAL ABERTO R$ 93.43 - META R$ 500",
+  "diretriz_operacional": "FASE 13 ATIVA - 3 TICKETS ATIVOS NA RODADA NOTURNA (#56 MULTIPLA MASTER @ 3.34 COM R$ 15 STAKE + #57 MULTIPLA PROTEGIDA @ 2.52 COM R$ 20 STAKE + #55 COM R$ 10 STAKE) - SALDO LIVRE R$ 265.00 - RETORNO POTENCIAL ABERTO R$ 143.85 - META R$ 500",
   "banca_start_sessao": 50,
-  "saldo_livre_em_conta": 300,
-  "saldo_em_jogo": 17.72,
-  "patrimonio_atual": 317.72,
-  "retorno_potencial_total_aberto": 93.43,
+  "saldo_livre_em_conta": 265,
+  "saldo_em_jogo": 45,
+  "patrimonio_atual": 310,
+  "retorno_potencial_total_aberto": 143.85,
   "lucro_liquido_acumulado_geral": 267.72,
   "meta_goal_final_brl": 500,
   "taxa_acerto_simples_pct": 83.3,
   "entradas_ativas": [
     {
-      "id": 54,
-      "ticket_id": "8991-EB6IR7",
-      "data_hora": "2026-08-30 18:02",
+      "id": 56,
+      "ticket_id": "890Z-MASTER-56",
+      "data_hora": "2026-08-30 18:35",
       "casa": "Superbet",
-      "formato": "Tripla Sniper In-Play",
+      "formato": "Tripla Criar Aposta Master",
       "qtd_selecoes": 3,
-      "timing": "100% In-Play",
-      "categoria_mercado": "Multi_Ligas_InPlay",
-      "tempo_resolucao_alvo": "Fim de Jogo (20h30)",
-      "odd_total": 6.46,
-      "stake_brl": 7.72,
-      "retorno_potencial": 52.04,
-      "cashout_atual": 14.07,
+      "timing": "In-Play & Pré-Jogo",
+      "categoria_mercado": "Brasileirao_SerieA_Master",
+      "tempo_resolucao_alvo": "Noite (21h30)",
+      "odd_total": 3.34,
+      "stake_brl": 15,
+      "retorno_potencial": 52,
+      "cashout_atual": 10.55,
       "status": "EM ABERTO",
       "selecoes_detalhadas": [
         {
           "perna": 1,
-          "partida": "Celta Vigo vs Athletic Bilbao",
-          "campeonato": "La Liga (Espanha)",
-          "mercado": "3º Gol",
-          "selecao": "Nenhuma equipe @ 2.00",
-          "odd_individual": 2,
-          "status_perna": "GREEN BATIDO (0x2 Bilbao)"
+          "partida": "Grêmio vs Chapecoense",
+          "campeonato": "Brasileirão Série A",
+          "mercado": "Criar Aposta @ 1.40",
+          "selecao": "1º Tempo Menos de 1.5 Gols",
+          "odd_individual": 1.4,
+          "status_perna": "1T 15' (0x0)"
         },
         {
           "perna": 2,
-          "partida": "Famalicão vs Gil Vicente",
-          "campeonato": "Primeira Liga (Portugal)",
-          "mercado": "Total de Gols",
-          "selecao": "Menos de 0.5 Gols @ 1.47",
-          "odd_individual": 1.47,
-          "status_perna": "GREEN BATIDO (0x0)"
+          "partida": "Bahia vs Internacional",
+          "campeonato": "Brasileirão Série A",
+          "mercado": "Criar Aposta @ 1.45",
+          "selecao": "Total de Gols Mais de 0.5",
+          "odd_individual": 1.45,
+          "status_perna": "19h30"
         },
         {
           "perna": 3,
           "partida": "Mirassol vs Palmeiras",
           "campeonato": "Brasileirão Série A",
-          "mercado": "Resultado Final",
-          "selecao": "Palmeiras Vence FT @ 2.20",
-          "odd_individual": 2.2,
-          "status_perna": "Hoje 18h30"
+          "mercado": "Criar Aposta",
+          "selecao": "Palmeiras Vence ou Empate",
+          "odd_individual": 1.64,
+          "status_perna": "1T 17' (0x0)"
         }
       ],
-      "motivo_quant": "Tripla Sniper In-Play com 2 de 3 pernas já cravadas no GREEN! Cashout subiu para R$ 14.07 (+82.3% de lucro). Retorno potencial R$ 52.04 com o Palmeiras."
+      "motivo_quant": "Tripla Criar Aposta Master cobrindo a rodada noturna com Grêmio 1T U1.5, Bahia e Palmeiras. Stake R$ 15.00. Retorno potencial R$ 52.00."
     },
     {
-      "id": 55,
-      "ticket_id": "8906-QKRPQB",
-      "data_hora": "2026-08-30 18:17",
+      "id": 57,
+      "ticket_id": "890Y-PROTEGIDA-57",
+      "data_hora": "2026-08-30 18:38",
       "casa": "Superbet",
-      "formato": "Quíntupla Estruturada",
-      "qtd_selecoes": 5,
+      "formato": "Tripla Criar Aposta Protegida",
+      "qtd_selecoes": 3,
       "timing": "In-Play & Pré-Jogo",
-      "categoria_mercado": "Multi_Ligas_Criar_Aposta",
-      "tempo_resolucao_alvo": "Noite (21h30)",
-      "odd_total": 4.13,
-      "stake_brl": 10,
-      "retorno_potencial": 41.39,
-      "cashout_atual": 7.83,
+      "categoria_mercado": "Brasileirao_SerieA_Protegida",
+      "tempo_resolucao_alvo": "Fim de Jogo (20h30)",
+      "odd_total": 2.52,
+      "stake_brl": 20,
+      "retorno_potencial": 50.46,
+      "cashout_atual": 15.91,
       "status": "EM ABERTO",
       "selecoes_detalhadas": [
         {
           "perna": 1,
           "partida": "Mirassol vs Palmeiras",
           "campeonato": "Brasileirão Série A",
-          "mercado": "Criar Aposta @ 1.50",
+          "mercado": "Criar Aposta @ 1.45",
           "selecao": "Empate ou Palmeiras X2 + Mirassol Menos de 1.5 Gols",
-          "odd_individual": 1.5,
-          "status_perna": "Hoje 18h30"
+          "odd_individual": 1.45,
+          "status_perna": "1T 17' (0x0)"
         },
         {
           "perna": 2,
           "partida": "Grêmio vs Chapecoense",
           "campeonato": "Brasileirão Série A",
-          "mercado": "Resultado Final",
-          "selecao": "Grêmio Vence FT @ 1.55",
-          "odd_individual": 1.55,
-          "status_perna": "Hoje 18h30"
+          "mercado": "Criar Aposta @ 1.45",
+          "selecao": "1º Tempo Menos de 1.5 Gols",
+          "odd_individual": 1.45,
+          "status_perna": "1T 15' (0x0)"
         },
         {
           "perna": 3,
-          "partida": "Bahia vs Internacional",
+          "partida": "Seleção Complementar",
           "campeonato": "Brasileirão Série A",
-          "mercado": "Total de Gols",
-          "selecao": "Mais de 1.5 Gols @ 1.28",
-          "odd_individual": 1.28,
-          "status_perna": "Hoje 19h30"
-        },
-        {
-          "perna": 4,
-          "partida": "CRB vs Criciúma",
-          "campeonato": "Brasileirão Série B",
-          "mercado": "1º Tempo - Total de Gols",
-          "selecao": "Menos de 1.5 Gols @ 1.14",
-          "odd_individual": 1.14,
-          "status_perna": "1T 18' (0x0)"
-        },
-        {
-          "perna": 5,
-          "partida": "Celta Vigo vs Athletic Bilbao",
-          "campeonato": "La Liga (Espanha)",
-          "mercado": "Total de Gols",
-          "selecao": "Menos de 2.5 Gols @ 1.22",
-          "odd_individual": 1.22,
-          "status_perna": "GREEN BATIDO (0x2 Bilbao)"
+          "mercado": "Proteção Série A",
+          "selecao": "Mercado Seguro",
+          "odd_individual": 1.2,
+          "status_perna": "Em andamento"
         }
       ],
-      "motivo_quant": "Quíntupla Estruturada de alta segurança combinando Palmeiras X2 + Mirassol Under 1.5 com Grêmio e Bahia. Stake R$ 10.00 mantendo R$ 300.00 blindados. Retorno potencial R$ 41.39."
+      "motivo_quant": "Tripla Protegida de Alta Confiança combinando Palmeiras X2 & Mirassol U1.5 com Grêmio 1T U1.5. Stake R$ 20.00. Retorno potencial R$ 50.46."
     }
   ],
   "entradas_liquidadas": [
