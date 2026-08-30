@@ -2,13 +2,13 @@
   "sessao_id": 7,
   "data_sessao": "2026-08-30",
   "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
-  "diretriz_operacional": "FASE 7 ATIVA - 4 TICKETS ATIVOS (#36 DUPLA MULTI-MERCADO @ 2.74 + #40 NAPOLI VENCE @ 2.22 + #41 NAPOLI 1X @ 2.15 + #42 DUPLA DE OURO FLAMENGO + INTER @ 1.91) - RETORNO POTENCIAL TOTAL R$ 42.48 - SALDO LIVRE R$ 22.45 - META R$ 500",
+  "diretriz_operacional": "FASE 7 ATIVA - 4 TICKETS ATIVOS (#36 DUPLA MULTI-MERCADO @ 2.74 + #40 NAPOLI VENCE @ 2.22 + #41 NAPOLI 1X @ 2.15 + #43 NAPOLI U3.5 HT @ 1.18) - RETORNO POTENCIAL TOTAL R$ 65.28 - SALDO LIVRE R$ 0.00 - META R$ 500",
   "banca_start_sessao": 50,
-  "saldo_livre_em_conta": 22.45,
-  "saldo_em_jogo": 18.75,
+  "saldo_livre_em_conta": 0,
+  "saldo_em_jogo": 41.2,
   "patrimonio_atual": 41.2,
-  "retorno_potencial_total_aberto": 42.48,
-  "lucro_liquido_acumulado_geral": -2.31,
+  "retorno_potencial_total_aberto": 65.28,
+  "lucro_liquido_acumulado_geral": -8.8,
   "meta_goal_final_brl": 500,
   "taxa_acerto_simples_pct": 80,
   "entradas_ativas": [
@@ -25,7 +25,7 @@
       "odd_total": 2.74,
       "stake_brl": 5,
       "retorno_potencial": 13.73,
-      "cashout_atual": 1.05,
+      "cashout_atual": 0.73,
       "status": "EM ABERTO",
       "selecoes_detalhadas": [
         {
@@ -44,7 +44,7 @@
           "mercado": "Resultado Final",
           "selecao": "SU Sintrense Vence FT (2)",
           "odd_individual": 1.83,
-          "status_perna": "2T 62' (1x1)"
+          "status_perna": "2T 64' (1x1)"
         }
       ],
       "justificativa_quant": "Dupla Multi-Mercado In-Play com stake de R$ 5.00 e odd 2.74."
@@ -62,7 +62,7 @@
       "odd_total": 2.22,
       "stake_brl": 5,
       "retorno_potencial": 11.1,
-      "cashout_atual": 1.7,
+      "cashout_atual": 1.59,
       "status": "EM ABERTO",
       "selecoes_detalhadas": [
         {
@@ -90,7 +90,7 @@
       "odd_total": 2.15,
       "stake_brl": 3.75,
       "retorno_potencial": 8.06,
-      "cashout_atual": 3.46,
+      "cashout_atual": 3.17,
       "status": "EM ABERTO",
       "selecoes_detalhadas": [
         {
@@ -106,41 +106,32 @@
       "justificativa_quant": "Napoli precisa de apenas 1 gol nos 50 minutos restantes para empatar e cravar o Green na Dupla Chance @ 2.15 com stake de R$ 3.75."
     },
     {
-      "id": 42,
-      "ticket_id": "8918-YWB3UA",
-      "data_hora": "2026-08-30 14:14",
+      "id": 43,
+      "ticket_id": "8902-QNMRLF",
+      "data_hora": "2026-08-30 14:16",
       "casa": "Superbet",
-      "formato": "Múltipla",
-      "qtd_selecoes": 2,
-      "timing": "Pré-Jogo (15h45 / 16h00)",
-      "categoria_mercado": "SuperPlacar_Combo_Elite",
-      "tempo_resolucao_alvo": "Full-Time (17h45)",
-      "odd_total": 1.91,
-      "stake_brl": 5,
-      "retorno_potencial": 9.59,
-      "cashout_atual": 5,
+      "formato": "Simples",
+      "qtd_selecoes": 1,
+      "timing": "In-Play (1T 43' • 1x2)",
+      "categoria_mercado": "Total_Gols_HT_Under",
+      "tempo_resolucao_alvo": "Intervalo (14h20)",
+      "odd_total": 1.18,
+      "stake_brl": 27.45,
+      "retorno_potencial": 32.39,
+      "cashout_atual": 26.19,
       "status": "EM ABERTO",
       "selecoes_detalhadas": [
         {
           "perna": 1,
-          "partida": "Flamengo x Botafogo RJ",
-          "campeonato": "Brasileirão Série A",
-          "mercado": "Resultado Final",
-          "selecao": "Flamengo Vence FT (1)",
-          "odd_individual": 1.37,
-          "status_perna": "Pré-Jogo 16:00 (SuperPlacar Ativado)"
-        },
-        {
-          "perna": 2,
-          "partida": "Cagliari x Inter de Milão",
+          "partida": "Napoli x Como",
           "campeonato": "Serie A (Itália)",
-          "mercado": "Resultado Final",
-          "selecao": "Inter de Milão Vence FT (2)",
-          "odd_individual": 1.4,
-          "status_perna": "Pré-Jogo 15:45 (SuperPlacar Ativado)"
+          "mercado": "1º Tempo - Total de Gols",
+          "selecao": "Menos de 3.5 Gols HT",
+          "odd_individual": 1.18,
+          "status_perna": "1T 44' (1x2 no Maradona - reta final do 1T)"
         }
       ],
-      "justificativa_quant": "Dupla de Ouro Pré-Jogo com SuperPlacar Ativado nas 2 pernas. Flamengo invicto há 6 jogos contra o Botafogo e Inter venceu 9 dos últimos 10 contra o Cagliari. Odd 1.91."
+      "justificativa_quant": "Entrada in-play feita pelo operador no finalzinho do 1T para faturar +R$ 4.94 garantindo saldo de R$ 32.39 no apito do intervalo."
     }
   ],
   "entradas_liquidadas": [
