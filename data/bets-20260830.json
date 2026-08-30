@@ -2,15 +2,15 @@
   "sessao_id": 7,
   "data_sessao": "2026-08-30",
   "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
-  "diretriz_operacional": "FASE 7 ATIVA - 4 TICKETS ATIVOS (#36 DUPLA MULTI-MERCADO @ 2.74 + #40 NAPOLI VENCE @ 2.22 + #41 NAPOLI 1X @ 2.15 + #43 NAPOLI U3.5 HT @ 1.18) - RETORNO POTENCIAL TOTAL R$ 65.28 - SALDO LIVRE R$ 0.00 - META R$ 500",
+  "diretriz_operacional": "FASE 7 ATIVA - 3 TICKETS ATIVOS (#36 DUPLA MULTI-MERCADO @ 2.74 + #40 NAPOLI VENCE @ 2.22 + #41 NAPOLI 1X @ 2.15) - SALDO LIVRE R$ 32.39 (R$ 30.00 BLINDADO + R$ 2.39 TRABALHO SNIPER UNDER) - RETORNO POTENCIAL TOTAL R$ 32.89 - META R$ 500",
   "banca_start_sessao": 50,
-  "saldo_livre_em_conta": 0,
-  "saldo_em_jogo": 41.2,
-  "patrimonio_atual": 41.2,
-  "retorno_potencial_total_aberto": 65.28,
-  "lucro_liquido_acumulado_geral": -8.8,
+  "saldo_livre_em_conta": 32.39,
+  "saldo_em_jogo": 13.75,
+  "patrimonio_atual": 46.14,
+  "retorno_potencial_total_aberto": 32.89,
+  "lucro_liquido_acumulado_geral": -3.86,
   "meta_goal_final_brl": 500,
-  "taxa_acerto_simples_pct": 80,
+  "taxa_acerto_simples_pct": 83.3,
   "entradas_ativas": [
     {
       "id": 36,
@@ -35,7 +35,7 @@
           "mercado": "Dicas de Aposta (Faltas e Intensidade)",
           "selecao": "Paz (+0.5 faltas) + Douvikas (+0.5 faltas) + Yan Couto (+0.5 faltas)",
           "odd_individual": 1.5,
-          "status_perna": "Ao Vivo (1T 44' Maradona)"
+          "status_perna": "Intervalo 1x2 (Maradona)"
         },
         {
           "perna": 2,
@@ -44,7 +44,7 @@
           "mercado": "Resultado Final",
           "selecao": "SU Sintrense Vence FT (2)",
           "odd_individual": 1.83,
-          "status_perna": "2T 64' (1x1)"
+          "status_perna": "2T 72' (1x1)"
         }
       ],
       "justificativa_quant": "Dupla Multi-Mercado In-Play com stake de R$ 5.00 e odd 2.74."
@@ -62,7 +62,7 @@
       "odd_total": 2.22,
       "stake_brl": 5,
       "retorno_potencial": 11.1,
-      "cashout_atual": 1.59,
+      "cashout_atual": 1.41,
       "status": "EM ABERTO",
       "selecoes_detalhadas": [
         {
@@ -72,10 +72,10 @@
           "mercado": "Resultado Final",
           "selecao": "Napoli Vence FT (1)",
           "odd_individual": 2.22,
-          "status_perna": "1T 44' (1x2 no Maradona - 50 minutos para buscar a virada)"
+          "status_perna": "Intervalo 1x2 (Maradona - 45 minutos no 2T para virar)"
         }
       ],
-      "justificativa_quant": "Napoli jogando em casa contra o Como recém-promovido. 50 minutos para buscar a virada com elenco estelar. Odd 2.22."
+      "justificativa_quant": "Napoli jogando em casa contra o Como recém-promovido. 45 minutos para buscar a virada com elenco estelar. Odd 2.22."
     },
     {
       "id": 41,
@@ -90,7 +90,7 @@
       "odd_total": 2.15,
       "stake_brl": 3.75,
       "retorno_potencial": 8.06,
-      "cashout_atual": 3.17,
+      "cashout_atual": 3.03,
       "status": "EM ABERTO",
       "selecoes_detalhadas": [
         {
@@ -100,11 +100,13 @@
           "mercado": "Dupla Chance",
           "selecao": "1 ou Empate (Napoli ou Empate)",
           "odd_individual": 2.15,
-          "status_perna": "1T 44' (1x2 no Maradona - basta empatar para GREEN)"
+          "status_perna": "Intervalo 1x2 (Maradona - basta empatar para GREEN)"
         }
       ],
-      "justificativa_quant": "Napoli precisa de apenas 1 gol nos 50 minutos restantes para empatar e cravar o Green na Dupla Chance @ 2.15 com stake de R$ 3.75."
-    },
+      "justificativa_quant": "Napoli precisa de apenas 1 gol nos 45 minutos restantes do 2T para empatar e cravar o Green na Dupla Chance @ 2.15 com stake de R$ 3.75."
+    }
+  ],
+  "entradas_liquidadas": [
     {
       "id": 43,
       "ticket_id": "8902-QNMRLF",
@@ -114,27 +116,14 @@
       "qtd_selecoes": 1,
       "timing": "In-Play (1T 43' • 1x2)",
       "categoria_mercado": "Total_Gols_HT_Under",
-      "tempo_resolucao_alvo": "Intervalo (14h20)",
+      "tempo_resolucao_alvo": "Intervalo",
       "odd_total": 1.18,
       "stake_brl": 27.45,
-      "retorno_potencial": 32.39,
-      "cashout_atual": 26.19,
-      "status": "EM ABERTO",
-      "selecoes_detalhadas": [
-        {
-          "perna": 1,
-          "partida": "Napoli x Como",
-          "campeonato": "Serie A (Itália)",
-          "mercado": "1º Tempo - Total de Gols",
-          "selecao": "Menos de 3.5 Gols HT",
-          "odd_individual": 1.18,
-          "status_perna": "1T 44' (1x2 no Maradona - reta final do 1T)"
-        }
-      ],
-      "justificativa_quant": "Entrada in-play feita pelo operador no finalzinho do 1T para faturar +R$ 4.94 garantindo saldo de R$ 32.39 no apito do intervalo."
-    }
-  ],
-  "entradas_liquidadas": [
+      "resultado_brl": 32.39,
+      "lucro_liquido_brl": 4.94,
+      "status": "GREEN",
+      "observacoes": "1º Tempo terminou em 1x2 (3 gols) cravando o Menos de 3.5 HT! Green que elevou a banca livre para R$ 32.39."
+    },
     {
       "id": 35,
       "ticket_id": "898N-INPLAY-35",
