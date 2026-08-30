@@ -2,43 +2,98 @@
   "sessao_id": 7,
   "data_sessao": "2026-08-30",
   "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
-  "diretriz_operacional": "FASE 7 ATIVA - CASHOUT PARIDADE MAN UTD EXECUTADO (R$ 14.52) - TICKET #32 ATIVO NO NAPOLI @ 2.37 (R$ 20.00 -> R$ 47.40) - SALDO LIVRE R$ 29.52 - PATRIMONIO R$ 49.52",
+  "diretriz_operacional": "FASE 7 ATIVA - APORTE R$ 50.00 - TICKET #34 (ESCANTEIOS @ 2.59 - R$ 25.00 -> R$ 64.93) + TICKET #35 (TRIPLA 100% IN-PLAY @ 3.67 - R$ 4.52 -> R$ 17.22) - SALDO LIVRE R$ 20.00 - PATRIMONIO R$ 49.52 (RETORNO R$ 82.15)",
   "banca_start_sessao": 50,
-  "saldo_livre_em_conta": 29.52,
-  "saldo_em_jogo": 20,
+  "saldo_livre_em_conta": 20,
+  "saldo_em_jogo": 29.52,
   "patrimonio_atual": 49.52,
-  "retorno_potencial_total_aberto": 47.4,
+  "retorno_potencial_total_aberto": 82.15,
   "lucro_liquido_acumulado_geral": -0.48,
   "meta_goal_final_brl": 500,
   "taxa_acerto_simples_pct": 77.8,
   "entradas_ativas": [
     {
-      "id": 32,
-      "ticket_id": "891C-NAPOLI-32",
-      "data_hora": "2026-08-30 13:16",
+      "id": 34,
+      "ticket_id": "891B-YH2MEB",
+      "data_hora": "2026-08-30 13:23",
       "casa": "Superbet",
-      "formato": "Simples",
-      "qtd_selecoes": 1,
-      "timing": "Pre-Jogo (13h30)",
-      "categoria_mercado": "Resultado_Final_1X2",
-      "tempo_resolucao_alvo": "Full-Time (15h20)",
-      "odd_total": 2.37,
-      "stake_brl": 20,
-      "retorno_potencial": 47.4,
-      "cashout_atual": 20,
+      "formato": "Múltipla",
+      "qtd_selecoes": 2,
+      "timing": "In-Play (45') + Pré-Jogo (13h30)",
+      "categoria_mercado": "Escanteios_Corners_Combo",
+      "tempo_resolucao_alvo": "Full-Time (14h25 - 15h20)",
+      "odd_total": 2.59,
+      "stake_brl": 25,
+      "retorno_potencial": 64.93,
+      "cashout_atual": 21.97,
       "status": "EM ABERTO",
       "selecoes_detalhadas": [
         {
           "perna": 1,
+          "partida": "Manchester United x Ipswich",
+          "campeonato": "Premier League",
+          "mercado": "Manchester United - Total de Escanteios",
+          "selecao": "Mais de 7.5 Escanteios",
+          "odd_individual": 1.72,
+          "status_perna": "In-Play (4 escanteios no 1T - faltam 4 no 2T)"
+        },
+        {
+          "perna": 2,
           "partida": "Napoli x Como",
           "campeonato": "Serie A (Itália)",
-          "mercado": "Resultado Final",
-          "selecao": "Napoli Vence FT",
-          "odd_individual": 2.37,
+          "mercado": "Total de Escanteios",
+          "selecao": "Mais de 7.5 Escanteios",
+          "odd_individual": 1.51,
           "status_perna": "Pre-Jogo (Início 13h30 Maradona)"
         }
       ],
-      "justificativa_quant": "Tiro Institucional de Elite da Fase 7. Napoli de Antonio Conte com força máxima no Estádio Diego Armando Maradona. Odd 2.37 com +EV de +26.1% e SuperPlacar ativado (pagamento antecipado com 2 gols de vantagem)."
+      "justificativa_quant": "Dupla Profissional de Escanteios de Alta Pressão. Man United precisando virar em Old Trafford já tem 4 cantos no 1T. Napoli em casa tem média de 8-11 cantos por jogo. Odd 2.59."
+    },
+    {
+      "id": 35,
+      "ticket_id": "898N-INPLAY-35",
+      "data_hora": "2026-08-30 13:27",
+      "casa": "Superbet",
+      "formato": "Múltipla",
+      "qtd_selecoes": 3,
+      "timing": "100% In-Play (Bola Rolando)",
+      "categoria_mercado": "Resultado_Final_1X2",
+      "tempo_resolucao_alvo": "Full-Time (14h25 - 15h15)",
+      "odd_total": 3.67,
+      "stake_brl": 4.52,
+      "retorno_potencial": 17.22,
+      "cashout_atual": 4.01,
+      "status": "EM ABERTO",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "Manchester United x Ipswich",
+          "campeonato": "Premier League",
+          "mercado": "Resultado Final",
+          "selecao": "Manchester United Vence FT",
+          "odd_individual": 1.55,
+          "status_perna": "2T 45' (1x1 Old Trafford)"
+        },
+        {
+          "perna": 2,
+          "partida": "Augsburg x Schalke 04",
+          "campeonato": "Bundesliga",
+          "mercado": "Resultado Final",
+          "selecao": "Augsburg Vence FT",
+          "odd_individual": 1.42,
+          "status_perna": "2T 45' (1x0 WWK Arena)"
+        },
+        {
+          "perna": 3,
+          "partida": "Al Hazem x Al Shabab",
+          "campeonato": "Saudi Pro League",
+          "mercado": "Resultado Final",
+          "selecao": "Al Shabab Vence FT",
+          "odd_individual": 1.67,
+          "status_perna": "1T 21' (0x0)"
+        }
+      ],
+      "justificativa_quant": "Tiro de Alavancagem 100% In-Play com os R$ 4.52. Odd combinada 3.67 com bônus de 5% SuperMúltipla gerando R$ 17.22 de retorno potencial."
     }
   ],
   "entradas_liquidadas": [
@@ -57,7 +112,24 @@
       "resultado_brl": 14.52,
       "lucro_liquido_brl": -0.48,
       "status": "CASHOUT_PARCIAL_OPERADOR",
-      "observacoes": "Encerrado no intervalo por R$ 14.52 para eliminar risco assimétrico negativo (odd 1.55) e focar em odds >= 2.00 com SuperPlacar."
+      "observacoes": "Encerrado estrategicamente por R$ 14.52 no intervalo para eliminar risco assimétrico."
+    },
+    {
+      "id": 32,
+      "ticket_id": "891C-NAPOLI-32",
+      "data_hora": "2026-08-30 13:16",
+      "casa": "Superbet",
+      "formato": "Simples",
+      "qtd_selecoes": 1,
+      "timing": "Pre-Jogo",
+      "categoria_mercado": "Resultado_Final_1X2",
+      "tempo_resolucao_alvo": "Pre-Jogo",
+      "odd_total": 2.37,
+      "stake_brl": 20,
+      "resultado_brl": 20,
+      "lucro_liquido_brl": 0,
+      "status": "CANCELADO_CASHOUT_PARIDADE",
+      "observacoes": "Cancelado pelo operador a R$ 20.00 para migrar para a Dupla de Escanteios Profissional."
     }
   ]
 }
