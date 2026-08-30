@@ -2,15 +2,15 @@
   "sessao_id": 7,
   "data_sessao": "2026-08-30",
   "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
-  "diretriz_operacional": "FASE 7 ATIVA - 5 TICKETS ATIVOS (#34 ESCANTEIOS @ 2.59 + #35 TRIPLA IN-PLAY @ 3.67 + #36 DUPLA MULTI-MERCADO @ 2.74 + #38 NAPOLI PROX GOL @ 1.75 + #39 MULTIPLA IN-PLAY @ 2.79) - RETORNO POTENCIAL TOTAL R$ 115.27 - SALDO LIVRE R$ 20.00 - META R$ 500",
+  "diretriz_operacional": "FASE 7 ATIVA - 5 TICKETS ATIVOS (#34 ESCANTEIOS @ 2.59 + #35 TRIPLA IN-PLAY @ 3.67 + #36 DUPLA MULTI-MERCADO @ 2.74 + #39 MULTIPLA IN-PLAY @ 2.79 + #40 NAPOLI VENCE @ 2.22) - RETORNO POTENCIAL TOTAL R$ 117.62 - SALDO LIVRE R$ 23.75 - META R$ 500",
   "banca_start_sessao": 50,
-  "saldo_livre_em_conta": 20,
+  "saldo_livre_em_conta": 23.75,
   "saldo_em_jogo": 43.32,
-  "patrimonio_atual": 63.32,
-  "retorno_potencial_total_aberto": 115.27,
-  "lucro_liquido_acumulado_geral": -5.48,
+  "patrimonio_atual": 67.07,
+  "retorno_potencial_total_aberto": 117.62,
+  "lucro_liquido_acumulado_geral": -1.73,
   "meta_goal_final_brl": 500,
-  "taxa_acerto_simples_pct": 77.8,
+  "taxa_acerto_simples_pct": 80,
   "entradas_ativas": [
     {
       "id": 34,
@@ -35,7 +35,7 @@
           "mercado": "Manchester United - Total de Escanteios",
           "selecao": "Mais de 7.5 Escanteios",
           "odd_individual": 1.72,
-          "status_perna": "In-Play 2T 72' (3x1 United em abafa)"
+          "status_perna": "In-Play 2T 78' (4x1 United)"
         },
         {
           "perna": 2,
@@ -44,7 +44,7 @@
           "mercado": "Total de Escanteios",
           "selecao": "Mais de 7.5 Escanteios",
           "odd_individual": 1.51,
-          "status_perna": "Ao Vivo 1T 29' (0x1 Como - Napoli pressionando)"
+          "status_perna": "Ao Vivo 1T 34' (1x1 - Napoli pressionando)"
         }
       ],
       "justificativa_quant": "Dupla Profissional de Escanteios de Alta Pressão. Man United precisando manter a virada e Napoli em abafa em casa após sofrer 0x1. Odd 2.59."
@@ -72,7 +72,7 @@
           "mercado": "Resultado Final",
           "selecao": "Manchester United Vence FT",
           "odd_individual": 1.55,
-          "status_perna": "2T 72' (3x1 United)"
+          "status_perna": "2T 78' (4x1 United)"
         },
         {
           "perna": 2,
@@ -81,7 +81,7 @@
           "mercado": "Resultado Final",
           "selecao": "Augsburg Vence FT",
           "odd_individual": 1.42,
-          "status_perna": "2T 72' (1x0 Augsburg)"
+          "status_perna": "2T 78' (1x0 Augsburg)"
         },
         {
           "perna": 3,
@@ -90,7 +90,7 @@
           "mercado": "Resultado Final",
           "selecao": "Al Shabab Vence FT",
           "odd_individual": 1.67,
-          "status_perna": "Intervalo 45' (0x0)"
+          "status_perna": "2T 48' (0x0)"
         }
       ],
       "justificativa_quant": "Tiro de Alavancagem 100% In-Play com os R$ 4.52. Odd combinada 3.67 (+5% SuperMúltipla)."
@@ -118,7 +118,7 @@
           "mercado": "Dicas de Aposta (Faltas e Intensidade)",
           "selecao": "Paz (+0.5 faltas) + Douvikas (+0.5 faltas) + Yan Couto (+0.5 faltas)",
           "odd_individual": 1.5,
-          "status_perna": "Ao Vivo (1T 29' Maradona)"
+          "status_perna": "Ao Vivo (1T 34' Maradona)"
         },
         {
           "perna": 2,
@@ -127,38 +127,10 @@
           "mercado": "Resultado Final",
           "selecao": "SU Sintrense Vence FT (2)",
           "odd_individual": 1.83,
-          "status_perna": "Intervalo (1x1)"
+          "status_perna": "2T 50' (1x1)"
         }
       ],
       "justificativa_quant": "Dupla Multi-Mercado In-Play com stake de R$ 5.00 e odd 2.74."
-    },
-    {
-      "id": 38,
-      "ticket_id": "891P-NAPOLI-38",
-      "data_hora": "2026-08-30 13:57",
-      "casa": "Superbet",
-      "formato": "Simples",
-      "qtd_selecoes": 1,
-      "timing": "In-Play (1T 25' • 0x1)",
-      "categoria_mercado": "Proximo_Gol",
-      "tempo_resolucao_alvo": "In-Play (1T / 2T)",
-      "odd_total": 1.75,
-      "stake_brl": 5,
-      "retorno_potencial": 8.75,
-      "cashout_atual": 4.69,
-      "status": "EM ABERTO",
-      "selecoes_detalhadas": [
-        {
-          "perna": 1,
-          "partida": "Napoli x Como",
-          "campeonato": "Serie A (Itália)",
-          "mercado": "Próximo Gol",
-          "selecao": "2º Gol: Napoli",
-          "odd_individual": 1.75,
-          "status_perna": "1T 29' (0x1 Como - Napoli no abafa)"
-        }
-      ],
-      "justificativa_quant": "Napoli perdendo em casa por 0x1 com time titular completo (Lukaku, Kvara, McTominay). Pressão massiva para empatar o jogo."
     },
     {
       "id": 39,
@@ -183,7 +155,7 @@
           "mercado": "Resultado Final",
           "selecao": "Augsburg Vence FT",
           "odd_individual": 1.12,
-          "status_perna": "2T 73' (1x0)"
+          "status_perna": "2T 78' (1x0)"
         },
         {
           "perna": 2,
@@ -192,7 +164,7 @@
           "mercado": "Total de Gols",
           "selecao": "Menos de 6.5 Gols FT",
           "odd_individual": 1.3,
-          "status_perna": "2T 73' (3x1)"
+          "status_perna": "2T 78' (4x1)"
         },
         {
           "perna": 3,
@@ -201,7 +173,7 @@
           "mercado": "5º Gol",
           "selecao": "Nenhuma Equipe Marca Gol 5",
           "odd_individual": 1.78,
-          "status_perna": "2T 89' (2x2)"
+          "status_perna": "Encerrado (2x2 - GREEN)"
         },
         {
           "perna": 4,
@@ -210,13 +182,58 @@
           "mercado": "1º Tempo - Total de Gols",
           "selecao": "Menos de 2.5 Gols HT",
           "odd_individual": 1.08,
-          "status_perna": "1T 29' (0x1)"
+          "status_perna": "1T 34' (1x1)"
         }
       ],
-      "justificativa_quant": "Entrada 2 com stake fracionada de R$ 3.80 e odd 2.79 aproveitando as partidas em andamento."
+      "justificativa_quant": "Entrada com stake fracionada de R$ 3.80 e odd 2.79 feita pelo operador aproveitando as partidas em andamento."
+    },
+    {
+      "id": 40,
+      "ticket_id": "8917-YWAIHT",
+      "data_hora": "2026-08-30 14:04",
+      "casa": "Superbet",
+      "formato": "Simples",
+      "qtd_selecoes": 1,
+      "timing": "In-Play (1T 32' • 1x1)",
+      "categoria_mercado": "Resultado_Final_1X2",
+      "tempo_resolucao_alvo": "Full-Time (15h20)",
+      "odd_total": 2.22,
+      "stake_brl": 5,
+      "retorno_potencial": 11.1,
+      "cashout_atual": 4.2,
+      "status": "EM ABERTO",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "Napoli x Como",
+          "campeonato": "Serie A (Itália)",
+          "mercado": "Resultado Final",
+          "selecao": "Napoli Vence FT (1)",
+          "odd_individual": 2.22,
+          "status_perna": "1T 34' (1x1 no Maradona)"
+        }
+      ],
+      "justificativa_quant": "Napoli empatou em 1x1 aos 30m e tem 60 minutos pela frente em casa para buscar a virada com elenco estelar. Odd 2.22 (+EV >= 40%)."
     }
   ],
   "entradas_liquidadas": [
+    {
+      "id": 38,
+      "ticket_id": "891P-NAPOLI-38",
+      "data_hora": "2026-08-30 13:57",
+      "casa": "Superbet",
+      "formato": "Simples",
+      "qtd_selecoes": 1,
+      "timing": "In-Play (1T 25' • 0x1)",
+      "categoria_mercado": "Proximo_Gol",
+      "tempo_resolucao_alvo": "In-Play (1T 30')",
+      "odd_total": 1.75,
+      "stake_brl": 5,
+      "resultado_brl": 8.75,
+      "lucro_liquido_brl": 3.75,
+      "status": "GREEN",
+      "observacoes": "Napoli empatou aos 30' do 1T! Green imediato creditando R$ 8.75."
+    },
     {
       "id": 37,
       "ticket_id": "891M-REAL-37",
