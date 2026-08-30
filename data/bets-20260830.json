@@ -2,12 +2,12 @@
   "sessao_id": 6,
   "data_sessao": "2026-08-30",
   "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
-  "diretriz_operacional": "FASE 6 - DOMINGO SUPERBET - BANCA R$ 59.11 INICIAL - TICKET #28 ATIVO NO MAN UNITED 1T @ 1.83 (R$ 15.00 -> R$ 27.45) - SALDO LIVRE R$ 44.11 - META R$ 500",
+  "diretriz_operacional": "FASE 6 ATIVA - 2 TICKETS EM ANDAMENTO (TICKET #28 MAN UTD 1T @ 1.83 E TICKET #29 TRIPLA DE VALOR @ 1.96) - RETORNO POTENCIAL R$ 55.11 - SALDO LIVRE R$ 30.00 - PATRIMONIO R$ 59.11",
   "banca_start_sessao": 59.11,
-  "saldo_livre_em_conta": 44.11,
-  "saldo_em_jogo": 15,
+  "saldo_livre_em_conta": 30,
+  "saldo_em_jogo": 29.11,
   "patrimonio_atual": 59.11,
-  "retorno_potencial_total_aberto": 27.45,
+  "retorno_potencial_total_aberto": 55.11,
   "lucro_liquido_acumulado_geral": 9.11,
   "meta_goal_final_brl": 500,
   "taxa_acerto_simples_pct": 77.8,
@@ -25,7 +25,7 @@
       "odd_total": 1.83,
       "stake_brl": 15,
       "retorno_potencial": 27.45,
-      "cashout_atual": 14.45,
+      "cashout_atual": 13.43,
       "status": "EM ABERTO",
       "selecoes_detalhadas": [
         {
@@ -35,10 +35,56 @@
           "mercado": "1º Tempo - Resultado (1X2)",
           "selecao": "Manchester United Vence 1T",
           "odd_individual": 1.83,
-          "status_perna": "In-Play (8m 1T 0x0 Old Trafford)"
+          "status_perna": "In-Play (11m 1T 0x0 Old Trafford)"
         }
       ],
       "justificativa_quant": "Primeira entrada institucional de Domingo (Padrão G1). Man United com força máxima em Old Trafford buscando o G4 da Premier League contra o Ipswich. Odd 1.83 com alto +EV."
+    },
+    {
+      "id": 29,
+      "ticket_id": "890C-QDCD60",
+      "data_hora": "2026-08-30 12:41",
+      "casa": "Superbet",
+      "formato": "Múltipla",
+      "qtd_selecoes": 3,
+      "timing": "In-Play (77' 2T / 38' 1T / 11' 1T)",
+      "categoria_mercado": "Multipla_Hibrida_InPlay",
+      "tempo_resolucao_alvo": "In-Play (13h00 - 13h15)",
+      "odd_total": 1.96,
+      "stake_brl": 14.11,
+      "retorno_potencial": 27.66,
+      "cashout_atual": 12.3,
+      "status": "EM ABERTO",
+      "selecoes_detalhadas": [
+        {
+          "perna": 1,
+          "partida": "Athletico-PR x Fluminense",
+          "campeonato": "Brasileirão Série A",
+          "mercado": "5º Gol",
+          "selecao": "Nenhuma equipe",
+          "odd_individual": 1.65,
+          "status_perna": "In-Play (77' 2T 2x2)"
+        },
+        {
+          "perna": 2,
+          "partida": "Real Madrid x Málaga",
+          "campeonato": "LaLiga",
+          "mercado": "1º Tempo - Total de Gols",
+          "selecao": "Menos de 4.5 Gols 1T",
+          "odd_individual": 1.08,
+          "status_perna": "In-Play (38' 1T 3x0)"
+        },
+        {
+          "perna": 3,
+          "partida": "Manchester United x Ipswich",
+          "campeonato": "Premier League",
+          "mercado": "1º Tempo - Total de Gols",
+          "selecao": "Menos de 2.5 Gols 1T",
+          "odd_individual": 1.1,
+          "status_perna": "In-Play (11' 1T 0x0)"
+        }
+      ],
+      "justificativa_quant": "Tripla In-Play de alta probabilidade aproveitando saldo residual. Perna 1 (Athletico x Flu 2x2 aos 77' Under), Perna 2 (Real 3x0 aos 38' U4.5 1T) e Perna 3 (Man Utd U2.5 1T)."
     }
   ],
   "entradas_liquidadas": []
