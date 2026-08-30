@@ -2,63 +2,16 @@
   "sessao_id": 7,
   "data_sessao": "2026-08-30",
   "versao_motor": "5.0.0-QUANT-ULTRA-PRECISE",
-  "diretriz_operacional": "FASE 9 ATIVA - LIQUIDAÇÃO DUPLO GREEN FLAMENGO + INTER (#51 PAGA R$ 209.25 + #52 PAGA R$ 67.06) - SALDO LIVRE R$ 276.31 - TICKET #50 ABERTO COM CASHOUT R$ 41.41 - PATRIMÔNIO R$ 300.01 - META R$ 500",
+  "diretriz_operacional": "FASE 10 ATIVA - CASHOUT REALIZADO NO TICKET #50 (+R$ 41.41) - SALDO LIVRE TOTAL 100% LÍQUIDO: R$ 317.72 - FALTAM APENAS R$ 182.28 PARA A META DE R$ 500",
   "banca_start_sessao": 50,
-  "saldo_livre_em_conta": 276.31,
-  "saldo_em_jogo": 23.7,
-  "patrimonio_atual": 300.01,
-  "retorno_potencial_total_aberto": 100.34,
-  "lucro_liquido_acumulado_geral": 226.31,
+  "saldo_livre_em_conta": 317.72,
+  "saldo_em_jogo": 0,
+  "patrimonio_atual": 317.72,
+  "retorno_potencial_total_aberto": 0,
+  "lucro_liquido_acumulado_geral": 267.72,
   "meta_goal_final_brl": 500,
   "taxa_acerto_simples_pct": 83.3,
-  "entradas_ativas": [
-    {
-      "id": 50,
-      "ticket_id": "8939-SYNLG4",
-      "data_hora": "2026-08-30 17:02",
-      "casa": "Superbet",
-      "formato": "Tripla Combinada",
-      "qtd_selecoes": 3,
-      "timing": "In-Play & Pré-Jogo",
-      "categoria_mercado": "Brasileirao_SerieA_Combinada",
-      "tempo_resolucao_alvo": "Noite (20h30)",
-      "odd_total": 4.23,
-      "stake_brl": 23.7,
-      "retorno_potencial": 100.34,
-      "cashout_atual": 41.41,
-      "status": "EM ABERTO",
-      "selecoes_detalhadas": [
-        {
-          "perna": 1,
-          "partida": "Cagliari x Inter de Milão",
-          "campeonato": "Serie A (Itália)",
-          "mercado": "Criar Aposta @ 1.28",
-          "selecao": "Inter Vence e Cagliari Menos de 0.5 Gols",
-          "odd_individual": 1.28,
-          "status_perna": "GREEN BATIDO (0x1 Inter)"
-        },
-        {
-          "perna": 2,
-          "partida": "Flamengo x Botafogo",
-          "campeonato": "Brasileirão Série A",
-          "mercado": "Total de Gols Equipe",
-          "selecao": "Botafogo Menos de 0.5 Gols @ 1.47",
-          "odd_individual": 1.47,
-          "status_perna": "GREEN BATIDO (3x0 Flamengo)"
-        },
-        {
-          "perna": 3,
-          "partida": "Mirassol x Palmeiras",
-          "campeonato": "Brasileirão Série A",
-          "mercado": "Resultado Final",
-          "selecao": "Palmeiras Vence @ 2.25",
-          "odd_individual": 2.25,
-          "status_perna": "Hoje 18h30"
-        }
-      ],
-      "motivo_quant": "Tripla combinada de alta precisão com 2 de 3 pernas no GREEN! Cashout atual R$ 41.41 (+74.7% de lucro). Palmeiras para a noite com retorno potencial R$ 100.34."
-    }
-  ],
+  "entradas_ativas": [],
   "entradas_liquidadas": [
     {
       "id": 43,
@@ -205,6 +158,19 @@
       "pnl_brl": 32.08,
       "status": "GREEN TOTAL",
       "motivo_encerramento": "Flamengo 3x0 Botafogo + Cagliari 0x1 Inter de Milão cravados com perfeição!"
+    },
+    {
+      "id": 50,
+      "ticket_id": "8939-SYNLG4",
+      "data_hora": "2026-08-30 17:02",
+      "casa": "Superbet",
+      "formato": "Tripla Combinada",
+      "odd_total": 4.23,
+      "stake_brl": 23.7,
+      "retorno_obtido": 41.41,
+      "pnl_brl": 17.71,
+      "status": "CASHOUT LUCRO (+74.7%)",
+      "motivo_encerramento": "Cashout executado com +74.7% de lucro após Inter de Milão 1x0 e Flamengo 3x0 baterem no Green!"
     }
   ]
 }
